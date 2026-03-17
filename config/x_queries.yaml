@@ -1,0 +1,21 @@
+queries:
+  - query: "Claude Code tips"
+    category: "claude-code"
+    lang: "ja"
+
+  - query: "Cowork Anthropic"
+    category: "cowork"
+    lang: "ja"
+
+  - query: "Claude MCP活用"
+    category: "ai-workflow"
+    lang: "ja"
+
+  - query: "Claude Code best practices"
+    category: "claude-code"
+    lang: "en"
+
+search_settings:
+  max_results_per_query: 20
+  exclude_retweets: true
+  min_likes: 5

@@ -1,0 +1,32 @@
+ai_feeds:
+  # Anthropic公式（Olshansk/rss-feeds経由）
+  - name: "Anthropic News"
+    url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml"
+    default_category: "ai-workflow"
+
+  - name: "Anthropic Engineering"
+    url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml"
+    default_category: "ai-workflow"
+
+  - name: "Claude Code Changelog"
+    url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_changelog_claude_code.xml"
+    default_category: "claude-code"
+
+  # Zenn
+  - name: "Zenn - Claude"
+    url: "https://zenn.dev/topics/claude/feed"
+    default_category: "ai-workflow"
+
+  - name: "Zenn - AI Agent"
+    url: "https://zenn.dev/topics/ai-agent/feed"
+    default_category: "ai-workflow"
+
+  # note
+  - name: "note - Claude"
+    url: "https://note.com/hashtag/claude?rss"
+    default_category: "ai-workflow"
+
+construction_feeds:
+  # 建設系は Cowork 既存スケジュールから取り込み
+  # 将来的にRSSソースを追加する場合はここに記載
+  []
