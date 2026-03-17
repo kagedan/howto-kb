@@ -169,6 +169,41 @@ def detect_source(url: str, feed_name: str) -> str:
     return "rss"
 
 
+def load_qiita_feeds() -> list[dict]:
+    """feeds.yaml から Qiita API 設定を読み込む。"""
+    data = yaml.safe_load(FEEDS_PATH.read_text(encoding="utf-8"))
+    return data.get("qiita_api", []) or []
+
+
+def fetch_qiita_articles(tag: str, per_page: int = 20) -> list[dict]:
+    """Qiita API v2 でタグ指定の記事一覧を取得する。"""
+    url = f"https://qiita.com/api/v2/tags/{tag}/items?page=1&per_page={per_page}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "howto-kb-crawler/1.0"})
+        with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
+            items = json.loads(resp.read())
+    except Exception as e:
+        print(f"  Warning: Failed to fetch Qiita tag={tag}: {e}", file=sys.stderr)
+        return []
+
+    entries = []
+    for item in items:
+        entry_url = item.get("url", "")
+        if not entry_url:
+            continue
+        created = item.get("created_at", "")
+        date_str = parse_date(created) if created else ""
+        # body先頭を description として使う
+        body = item.get("body", "")
+        entries.append({
+            "title": item.get("title", ""),
+            "url": entry_url,
+            "date_published": date_str,
+            "description": body[:500],
+        })
+    return entries
+
+
 def main():
     existing_urls = load_existing_urls()
     feeds = load_feeds()
@@ -176,6 +211,7 @@ def main():
 
     all_new = []
 
+    # --- RSS/Atom フィード ---
     for feed_info in feeds:
         name = feed_info.get("name", "")
         url = feed_info.get("url", "")
@@ -202,6 +238,32 @@ def main():
             entry["feed_name"] = name
             all_new.append(entry)
             existing_urls.add(entry["url"])  # 同じURL が複数フィードに出る場合の重複防止
+
+    # --- Qiita API v2 ---
+    qiita_feeds = load_qiita_feeds()
+    for qf in qiita_feeds:
+        tag = qf.get("tag", "")
+        name = qf.get("name", f"Qiita - {tag}")
+        default_category = qf.get("default_category", "ai-workflow")
+        per_page = qf.get("per_page", 20)
+
+        if not tag:
+            continue
+
+        print(f"Fetching: {name} (Qiita API tag={tag})", file=sys.stderr)
+        entries = fetch_qiita_articles(tag, per_page)
+        print(f"  Found {len(entries)} entries", file=sys.stderr)
+
+        for entry in entries:
+            if entry["url"] in existing_urls:
+                continue
+
+            entry["source"] = "qiita"
+            entry["default_category"] = default_category
+            entry["date_collected"] = today
+            entry["feed_name"] = name
+            all_new.append(entry)
+            existing_urls.add(entry["url"])
 
     print(f"\nTotal new articles: {len(all_new)}", file=sys.stderr)
 

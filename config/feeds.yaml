@@ -18,13 +18,20 @@ ai_feeds:
     default_category: "ai-workflow"
 
   - name: "Zenn - AI Agent"
-    url: "https://zenn.dev/topics/ai-agent/feed"
+    url: "https://zenn.dev/topics/aiagent/feed"
     default_category: "ai-workflow"
 
   # note
   - name: "note - Claude"
-    url: "https://note.com/hashtag/claude?rss"
+    url: "https://note.com/hashtag/Claude/rss"
     default_category: "ai-workflow"
+
+qiita_api:
+  # Qiita API v2 でタグ検索（認証不要、レート制限あり）
+  - name: "Qiita - Claude"
+    tag: "Claude"
+    default_category: "ai-workflow"
+    per_page: 20
 
 construction_feeds:
   # 建設系は Cowork 既存スケジュールから取り込み
