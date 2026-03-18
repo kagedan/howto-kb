@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo $XAI_API_KEY)",
+      "Bash(python scripts/crawl_x.py)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST \"https://api.x.ai/v1/chat/completions\" -H \"Content-Type: application/json\" -H \"Authorization: Bearer $XAI_API_KEY\" -d '{\"\"model\"\":\"\"grok-3-mini\"\",\"\"messages\"\":[{\"\"role\"\":\"\"user\"\",\"\"content\"\":\"\"hello\"\"}]}')",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2, ensure_ascii=False\\)[:3000]\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(git fetch:*)",
+      "Bash(uv --version)",
+      "Bash(powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\")",
+      "Bash(export PATH=\"$HOME/.local/bin:$PATH\")",
+      "Bash(uv tool:*)",
+      "Bash(nlm auth:*)",
+      "Bash(nlm --help)",
+      "Bash(nlm login:*)",
+      "Bash(export PYTHONIOENCODING=utf-8)",
+      "Bash(chcp.com 65001)",
+      "Bash(nlm notebook:*)",
+      "Bash(nlm source:*)",
+      "Bash(python scripts/crawl_notebooklm.py)"
+    ]
+  }
+}
