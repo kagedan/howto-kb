@@ -25,7 +25,8 @@
       "Read(//c/Users/KazuhisaMiyake/.local/bin//**)",
       "Bash(where nlm:*)",
       "Bash(tr ';' '\\\\n')",
-      "Bash(powershell -c \":*)"
+      "Bash(powershell -c \":*)",
+      "Bash(python scripts/_generate_mds.py)"
     ]
   }
 }
