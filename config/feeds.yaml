@@ -34,6 +34,6 @@ qiita_api:
     per_page: 20
 
 construction_feeds:
-  # 建設系は Cowork 既存スケジュールから取り込み
-  # 将来的にRSSソースを追加する場合はここに記載
-  []
+  - name: "BUILT (ITmedia)"
+    url: "https://rss.itmedia.co.jp/rss/2.0/sj_built.xml"
+    default_category: "construction"
