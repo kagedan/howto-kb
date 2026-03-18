@@ -154,6 +154,31 @@ def parse_date(date_str: str) -> str:
     return date_str[:10] if len(date_str) >= 10 else date_str
 
 
+def detect_paywall(content: str, source: str) -> bool:
+    """有料記事かどうかを判定する。"""
+    paywall_markers = [
+        "この記事は有料です",
+        "続きを読むにはログインが必要",
+        "メンバーシップ限定",
+        "有料マガジン",
+        "この続きをみるには",
+        "購入して続きを読む",
+        "有料記事のため",
+        "ここから先は有料です",
+    ]
+
+    # 本文が短すぎる（導入部分だけの可能性）
+    if len(content.strip()) < 200:
+        return True
+
+    # 有料記事の定型文を検出
+    for marker in paywall_markers:
+        if marker in content:
+            return True
+
+    return False
+
+
 def detect_source(url: str, feed_name: str) -> str:
     """URLからソースを判定する。"""
     if "zenn.dev" in url:
@@ -236,6 +261,7 @@ def main():
             entry["default_category"] = default_category
             entry["date_collected"] = today
             entry["feed_name"] = name
+            entry["is_paywall"] = detect_paywall(entry.get("description", ""), entry["source"])
             all_new.append(entry)
             existing_urls.add(entry["url"])  # 同じURL が複数フィードに出る場合の重複防止
 
@@ -262,6 +288,7 @@ def main():
             entry["default_category"] = default_category
             entry["date_collected"] = today
             entry["feed_name"] = name
+            entry["is_paywall"] = detect_paywall(entry.get("description", ""), entry["source"])
             all_new.append(entry)
             existing_urls.add(entry["url"])
 
