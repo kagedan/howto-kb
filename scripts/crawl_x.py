@@ -1,0 +1,287 @@
+"""
+crawl_x.py - Grok API (xAI) 経由で X (Twitter) から新規記事を検出する。
+
+使い方:
+    python scripts/crawl_x.py
+
+処理:
+    1. config/x_queries.yaml から検索クエリ一覧を読み込む
+    2. 各クエリで xAI Responses API (x_search ツール) を呼び出し、X投稿を検索
+    3. index.json の既存URLと照合し、新規記事のみ抽出
+    4. 新規記事の情報をJSON形式で標準出力に出力
+
+環境変数:
+    XAI_API_KEY - xAI APIキー（必須）
+
+依存パッケージ:
+    pip install pyyaml
+"""
+
+import json
+import os
+import re
+import sys
+import urllib.request
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+
+try:
+    import yaml
+except ImportError:
+    print("Error: PyYAML is required. Install with: pip install pyyaml", file=sys.stderr)
+    sys.exit(1)
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+QUERIES_PATH = REPO_ROOT / "config" / "x_queries.yaml"
+INDEX_PATH = REPO_ROOT / "index.json"
+
+JST = timezone(timedelta(hours=9))
+
+# xAI Responses API（x_search サーバーサイドツールは grok-4 ファミリーのみ対応）
+API_ENDPOINT = "https://api.x.ai/v1/responses"
+MODEL = "grok-4"
+API_TIMEOUT = 300
+
+
+def load_existing_urls() -> set[str]:
+    """index.json から登録済みURLの集合を返す。"""
+    if not INDEX_PATH.exists():
+        return set()
+    data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    return {a["url"] for a in data.get("articles", []) if a.get("url")}
+
+
+def load_queries() -> tuple[list[dict], dict]:
+    """x_queries.yaml からクエリ一覧と検索設定を読み込む。"""
+    data = yaml.safe_load(QUERIES_PATH.read_text(encoding="utf-8"))
+    queries = data.get("queries", [])
+    settings = data.get("search_settings", {})
+    return queries, settings
+
+
+def search_x(query: str, api_key: str, max_results: int = 20, lang: str = "ja") -> list[dict]:
+    """xAI Responses API の x_search ツールで X 投稿を検索する。"""
+    lang_note = f" (in {lang} language)" if lang else ""
+
+    payload = {
+        "model": MODEL,
+        "input": (
+            f"Search X for: {query}{lang_note}\n"
+            f"Return up to {max_results} results. "
+            "For each post, include: the post URL (https://x.com/username/status/ID format), "
+            "author username, full post text, date (YYYY-MM-DD), likes count. "
+            "Return ONLY a JSON array, no other text."
+        ),
+        "tools": [{"type": "x_search"}],
+        "temperature": 0,
+    }
+
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        API_ENDPOINT,
+        data=data,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "User-Agent": "howto-kb-crawler/1.0",
+            "Accept": "application/json",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
+            result = json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"  API Error {e.code}: {body[:500]}", file=sys.stderr)
+        return []
+    except Exception as e:
+        print(f"  Error calling xAI API: {e}", file=sys.stderr)
+        return []
+
+    return parse_responses_output(result)
+
+
+def parse_responses_output(result: dict) -> list[dict]:
+    """xAI Responses APIのレスポンスから検索結果を抽出する。
+
+    レスポンス構造:
+    - output[]: x_search ツール呼び出し結果とテキスト出力
+    - output[].content[].text: モデルの回答テキスト
+    - output[].content[].annotations[]: url_citation（投稿URL）
+    """
+    entries = []
+    annotations_urls = set()
+
+    # output 配列からテキスト出力を探す
+    for item in result.get("output", []):
+        content_list = item.get("content", [])
+        if not isinstance(content_list, list):
+            continue
+
+        for content in content_list:
+            if content.get("type") != "output_text":
+                continue
+
+            text = content.get("text", "")
+
+            # annotations から X 投稿 URL を収集
+            for ann in content.get("annotations", []):
+                if ann.get("type") == "url_citation":
+                    url = ann.get("url", "")
+                    if url and ("x.com" in url or "twitter.com" in url):
+                        annotations_urls.add(url)
+
+            # テキスト本文からJSON配列をパース
+            parsed = try_parse_json_results(text)
+            if parsed:
+                entries = parsed
+                break
+
+            # JSON パース失敗時はテキストからURLを抽出
+            url_entries = extract_urls_from_content(text)
+            if url_entries:
+                entries = url_entries
+                break
+
+    # annotations の URL で補完（パースで取れなかった場合）
+    if not entries and annotations_urls:
+        for url in annotations_urls:
+            entries.append({
+                "title": "",
+                "url": url,
+                "date_published": "",
+                "description": "",
+            })
+
+    return entries
+
+
+def try_parse_json_results(content: str) -> list[dict]:
+    """テキストからJSON配列を抽出してパースする。"""
+    # ```json ... ``` ブロックまたは [ ... ] を検出
+    json_match = re.search(r'```(?:json)?\s*(\[[\s\S]*?\])\s*```', content)
+    if not json_match:
+        json_match = re.search(r'(\[[\s\S]*\])', content)
+    if not json_match:
+        return []
+
+    try:
+        items = json.loads(json_match.group(1))
+    except json.JSONDecodeError:
+        return []
+
+    entries = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        url = item.get("url", "")
+        if not url or ("x.com" not in url and "twitter.com" not in url):
+            continue
+
+        text = item.get("text", item.get("content", ""))
+        author = item.get("author", item.get("username", ""))
+        date = item.get("date", item.get("published_date", ""))
+        title = item.get("title", "")
+
+        if not title and author and text:
+            title = f"@{author}: {text[:60]}"
+        elif not title and text:
+            title = text[:80]
+
+        entries.append({
+            "title": title,
+            "url": url,
+            "date_published": parse_date(date) if date else "",
+            "description": text[:500] if text else "",
+        })
+
+    return entries
+
+
+def extract_urls_from_content(content: str) -> list[dict]:
+    """テキストコンテンツから X/Twitter の URLを抽出する。"""
+    url_pattern = re.compile(r'https?://(?:x\.com|twitter\.com)/\w+/status/\d+')
+    urls = list(dict.fromkeys(url_pattern.findall(content)))  # 重複除去・順序維持
+
+    entries = []
+    for url in urls:
+        entries.append({
+            "title": "",
+            "url": url,
+            "date_published": "",
+            "description": "",
+        })
+    return entries
+
+
+def parse_date(date_str: str) -> str:
+    """日付文字列を YYYY-MM-DD に正規化する。"""
+    if not date_str:
+        return ""
+    for fmt in [
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d",
+    ]:
+        try:
+            return datetime.strptime(
+                date_str[: len("2026-03-15T10:00:00+09:00")], fmt
+            ).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    # "Mar 5, 2026" などの英語日付
+    for fmt in ["%b %d, %Y", "%B %d, %Y"]:
+        try:
+            return datetime.strptime(date_str.strip(), fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return date_str[:10] if len(date_str) >= 10 else date_str
+
+
+def main():
+    api_key = os.environ.get("XAI_API_KEY")
+    if not api_key:
+        print("Error: XAI_API_KEY environment variable is not set.", file=sys.stderr)
+        sys.exit(1)
+
+    existing_urls = load_existing_urls()
+    queries, settings = load_queries()
+    today = datetime.now(JST).strftime("%Y-%m-%d")
+    max_results = settings.get("max_results_per_query", 20)
+
+    all_new = []
+
+    for q in queries:
+        query_text = q.get("query", "")
+        category = q.get("category", "ai-workflow")
+        lang = q.get("lang", "ja")
+
+        if not query_text:
+            continue
+
+        print(f'Searching X: "{query_text}" (lang={lang})', file=sys.stderr)
+        entries = search_x(query_text, api_key, max_results=max_results, lang=lang)
+        print(f"  Found {len(entries)} results", file=sys.stderr)
+
+        for entry in entries:
+            if entry["url"] in existing_urls:
+                continue
+
+            entry["source"] = "x"
+            entry["default_category"] = category
+            entry["date_collected"] = today
+            entry["query"] = query_text
+            all_new.append(entry)
+            existing_urls.add(entry["url"])
+
+    print(f"\nTotal new X posts: {len(all_new)}", file=sys.stderr)
+
+    output = json.dumps(all_new, ensure_ascii=False, indent=2)
+    sys.stdout.buffer.write(output.encode("utf-8"))
+    sys.stdout.buffer.write(b"\n")
+
+
+if __name__ == "__main__":
+    main()
