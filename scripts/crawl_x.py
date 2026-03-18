@@ -7,8 +7,9 @@ crawl_x.py - Grok API (xAI) 経由で X (Twitter) から新規記事を検出す
 処理:
     1. config/x_queries.yaml から検索クエリ一覧を読み込む
     2. 各クエリで xAI Responses API (x_search ツール) を呼び出し、X投稿を検索
-    3. index.json の既存URLと照合し、新規記事のみ抽出
-    4. 新規記事の情報をJSON形式で標準出力に出力
+    3. user_timelines のユーザーのリポスト（RT）を収集
+    4. index.json の既存URLと照合し、新規記事のみ抽出
+    5. 新規記事の情報をJSON形式で標準出力に出力
 
 環境変数:
     XAI_API_KEY - xAI APIキー（必須）
@@ -51,27 +52,20 @@ def load_existing_urls() -> set[str]:
     return {a["url"] for a in data.get("articles", []) if a.get("url")}
 
 
-def load_queries() -> tuple[list[dict], dict]:
-    """x_queries.yaml からクエリ一覧と検索設定を読み込む。"""
+def load_queries() -> tuple[list[dict], dict, list[dict]]:
+    """x_queries.yaml からクエリ一覧、検索設定、ユーザータイムライン設定を読み込む。"""
     data = yaml.safe_load(QUERIES_PATH.read_text(encoding="utf-8"))
     queries = data.get("queries", [])
     settings = data.get("search_settings", {})
-    return queries, settings
+    user_timelines = data.get("user_timelines", [])
+    return queries, settings, user_timelines
 
 
-def search_x(query: str, api_key: str, max_results: int = 20, lang: str = "ja") -> list[dict]:
-    """xAI Responses API の x_search ツールで X 投稿を検索する。"""
-    lang_note = f" (in {lang} language)" if lang else ""
-
+def call_xai_api(input_text: str, api_key: str) -> dict:
+    """xAI Responses API を呼び出して結果を返す。"""
     payload = {
         "model": MODEL,
-        "input": (
-            f"Search X for: {query}{lang_note}\n"
-            f"Return up to {max_results} results. "
-            "For each post, include: the post URL (https://x.com/username/status/ID format), "
-            "author username, full post text, date (YYYY-MM-DD), likes count. "
-            "Return ONLY a JSON array, no other text."
-        ),
+        "input": input_text,
         "tools": [{"type": "x_search"}],
         "temperature": 0,
     }
@@ -91,15 +85,50 @@ def search_x(query: str, api_key: str, max_results: int = 20, lang: str = "ja") 
 
     try:
         with urllib.request.urlopen(req, timeout=API_TIMEOUT) as resp:
-            result = json.loads(resp.read())
+            return json.loads(resp.read())
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
         print(f"  API Error {e.code}: {body[:500]}", file=sys.stderr)
-        return []
+        return {}
     except Exception as e:
         print(f"  Error calling xAI API: {e}", file=sys.stderr)
-        return []
+        return {}
 
+
+def search_x(query: str, api_key: str, max_results: int = 10, lang: str = "ja") -> list[dict]:
+    """xAI Responses API の x_search ツールで X 投稿を検索する。"""
+    lang_note = f" (in {lang} language)" if lang else ""
+
+    input_text = (
+        f"Search X for: {query}{lang_note}\n"
+        f"Return up to {max_results} results. "
+        "For each post, include: the post URL (https://x.com/username/status/ID format), "
+        "author username, full post text, date (YYYY-MM-DD), likes count. "
+        "Return ONLY a JSON array, no other text."
+    )
+
+    result = call_xai_api(input_text, api_key)
+    if not result:
+        return []
+    return parse_responses_output(result)
+
+
+def fetch_user_timeline(username: str, api_key: str, max_results: int | None = None) -> list[dict]:
+    """ユーザーのリポスト（RT）を収集する。RTの元投稿のURL・テキストを取得する。"""
+    limit_note = f"up to {max_results}" if max_results else "all available"
+
+    input_text = (
+        f"Search X for retweets/reposts by @{username}. "
+        f"Return {limit_note} results. "
+        "For each repost, return the ORIGINAL post (not the retweet itself). "
+        "Include: the original post URL (https://x.com/username/status/ID format), "
+        "original author username, full post text, date (YYYY-MM-DD), likes count. "
+        "Return ONLY a JSON array, no other text."
+    )
+
+    result = call_xai_api(input_text, api_key)
+    if not result:
+        return []
     return parse_responses_output(result)
 
 
@@ -247,12 +276,13 @@ def main():
         sys.exit(1)
 
     existing_urls = load_existing_urls()
-    queries, settings = load_queries()
+    queries, settings, user_timelines = load_queries()
     today = datetime.now(JST).strftime("%Y-%m-%d")
-    max_results = settings.get("max_results_per_query", 20)
+    max_results = settings.get("max_results_per_query", 10)
 
     all_new = []
 
+    # --- 検索クエリ ---
     for q in queries:
         query_text = q.get("query", "")
         category = q.get("category", "ai-workflow")
@@ -273,6 +303,39 @@ def main():
             entry["default_category"] = category
             entry["date_collected"] = today
             entry["query"] = query_text
+            all_new.append(entry)
+            existing_urls.add(entry["url"])
+
+    # --- ユーザータイムライン（RT収集） ---
+    for ut in user_timelines:
+        username = ut.get("username", "")
+        if not username:
+            continue
+
+        include_retweets = ut.get("include_retweets", True)
+        if not include_retweets:
+            continue
+
+        category_default = ut.get("category_default", "ai-workflow")
+
+        # 初回実行時（既存URLが少ない＝index.jsonにX投稿がほぼない）は件数制限なし
+        x_urls_in_index = sum(1 for u in existing_urls if "x.com" in u or "twitter.com" in u)
+        is_first_run = x_urls_in_index == 0
+        timeline_max = None if is_first_run else max_results
+
+        limit_label = "全件" if timeline_max is None else f"最大{timeline_max}件"
+        print(f'Fetching RT: @{username} ({limit_label})', file=sys.stderr)
+        entries = fetch_user_timeline(username, api_key, max_results=timeline_max)
+        print(f"  Found {len(entries)} results", file=sys.stderr)
+
+        for entry in entries:
+            if entry["url"] in existing_urls:
+                continue
+
+            entry["source"] = "x"
+            entry["default_category"] = category_default
+            entry["date_collected"] = today
+            entry["query"] = f"RT @{username}"
             all_new.append(entry)
             existing_urls.add(entry["url"])
 
