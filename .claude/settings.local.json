@@ -26,7 +26,9 @@
       "Bash(where nlm:*)",
       "Bash(tr ';' '\\\\n')",
       "Bash(powershell -c \":*)",
-      "Bash(python scripts/_generate_mds.py)"
+      "Bash(python scripts/_generate_mds.py)",
+      "Bash(npm update:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
