@@ -38,9 +38,9 @@ INDEX_PATH = REPO_ROOT / "index.json"
 
 JST = timezone(timedelta(hours=9))
 
-# xAI Responses API（x_search サーバーサイドツールは grok-4 ファミリーのみ対応）
+# xAI Responses API（x_search は grok-4-1-fast 以降のモデルで対応）
 API_ENDPOINT = "https://api.x.ai/v1/responses"
-MODEL = "grok-4"
+MODEL = "grok-4-1-fast-non-reasoning"
 API_TIMEOUT = 300
 
 
@@ -95,13 +95,14 @@ def call_xai_api(input_text: str, api_key: str) -> dict:
         return {}
 
 
-def search_x(query: str, api_key: str, max_results: int = 10, lang: str = "ja") -> list[dict]:
+def search_x(query: str, api_key: str, max_results: int = 10, lang: str = "ja", min_likes: int = 0) -> list[dict]:
     """xAI Responses API の x_search ツールで X 投稿を検索する。"""
     lang_note = f" (in {lang} language)" if lang else ""
 
     input_text = (
         f"Search X for: {query}{lang_note}\n"
         f"Return up to {max_results} results. "
+        f"Only include posts with {min_likes} or more likes. "
         "For each post, include: the post URL (https://x.com/username/status/ID format), "
         "author username, full post text, date (YYYY-MM-DD), likes count. "
         "Return ONLY a JSON array, no other text."
@@ -279,6 +280,7 @@ def main():
     queries, settings, user_timelines = load_queries()
     today = datetime.now(JST).strftime("%Y-%m-%d")
     max_results = settings.get("max_results_per_query", 10)
+    min_likes = settings.get("min_likes", 0)
 
     all_new = []
 
@@ -292,7 +294,7 @@ def main():
             continue
 
         print(f'Searching X: "{query_text}" (lang={lang})', file=sys.stderr)
-        entries = search_x(query_text, api_key, max_results=max_results, lang=lang)
+        entries = search_x(query_text, api_key, max_results=max_results, lang=lang, min_likes=min_likes)
         print(f"  Found {len(entries)} results", file=sys.stderr)
 
         for entry in entries:
