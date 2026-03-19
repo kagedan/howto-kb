@@ -5,7 +5,9 @@ build_index.py - articles/ 配下の全Markdownからfrontmatterを抽出し ind
     python scripts/build_index.py
 
 出力:
-    index.json（リポジトリルート）
+    index.json          — 全件（Claude Code / Coworkでの全文検索用）
+    index-latest.json   — 直近30日分（Claude.aiからの日常参照用）
+    index-YYYY-MM.json  — 月別アーカイブ（特定月の記事を調べたいとき）
 """
 
 import json
@@ -17,6 +19,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = REPO_ROOT / "articles"
 INDEX_PATH = REPO_ROOT / "index.json"
+INDEX_LATEST_PATH = REPO_ROOT / "index-latest.json"
+
+# 直近何日分を index-latest.json に含めるか
+LATEST_DAYS = 30
 
 JST = timezone(timedelta(hours=9))
 
@@ -93,13 +99,59 @@ def build_index() -> dict:
     }
 
 
+def write_index(path: Path, articles: list[dict], now: str):
+    """indexファイルを書き出す共通関数。"""
+    data = {
+        "last_updated": now,
+        "total_count": len(articles),
+        "articles": articles,
+    }
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def build_latest_index(articles: list[dict]) -> list[dict]:
+    """直近30日分の記事を抽出する。"""
+    cutoff = (datetime.now(JST) - timedelta(days=LATEST_DAYS)).strftime("%Y-%m-%d")
+    return [a for a in articles if a.get("date_collected", "") >= cutoff]
+
+
+def build_monthly_indexes(articles: list[dict]) -> dict[str, list[dict]]:
+    """記事を年月別に分類する。キーは 'YYYY-MM' 形式。"""
+    monthly: dict[str, list[dict]] = {}
+    for a in articles:
+        dc = a.get("date_collected", "")
+        if len(dc) >= 7:
+            ym = dc[:7]  # "YYYY-MM"
+            monthly.setdefault(ym, []).append(a)
+    return monthly
+
+
 def main():
     index = build_index()
+    now = index["last_updated"]
+    articles = index["articles"]
+
+    # 1. index.json（全件）
     INDEX_PATH.write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     print(f"index.json updated: {index['total_count']} articles")
+
+    # 2. index-latest.json（直近30日分）
+    latest = build_latest_index(articles)
+    write_index(INDEX_LATEST_PATH, latest, now)
+    print(f"index-latest.json updated: {len(latest)} articles (last {LATEST_DAYS} days)")
+
+    # 3. index-YYYY-MM.json（月別アーカイブ）
+    monthly = build_monthly_indexes(articles)
+    for ym, month_articles in sorted(monthly.items()):
+        month_path = REPO_ROOT / f"index-{ym}.json"
+        write_index(month_path, month_articles, now)
+        print(f"index-{ym}.json updated: {len(month_articles)} articles")
 
 
 if __name__ == "__main__":

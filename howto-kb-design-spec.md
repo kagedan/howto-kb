@@ -141,6 +141,24 @@ howto-kb/
 }
 ```
 
+### index分割
+
+記事数の増加に対応するため、以下の3種類のindexファイルを自動生成する。
+
+| ファイル | 内容 | 主な用途 |
+|---|---|---|
+| `index.json` | 全件 | Claude Code / Coworkでの全文検索 |
+| `index-latest.json` | 直近30日分 | Claude.aiからの日常参照 |
+| `index-YYYY-MM.json` | 月別アーカイブ | 特定月の記事を調べたいとき |
+
+build_index.py の実行時に3種類すべてを自動生成する。
+Claude.aiからの参照には index-latest.json を使用する。
+
+参照URL:
+- 最新30日分: https://raw.githubusercontent.com/kagedan/howto-kb/main/index-latest.json
+- 全件: https://raw.githubusercontent.com/kagedan/howto-kb/main/index.json
+- 月別: https://raw.githubusercontent.com/kagedan/howto-kb/main/index-YYYY-MM.json
+
 ---
 
 ## 6. 情報ソースと取得方法
@@ -222,7 +240,7 @@ howto-kb リポジトリのナレッジベースを更新してください。
    - カテゴリ判定（claude-code / cowork / antigravity / ai-workflow / construction）
    - 英語タグ3〜5個
 5. Markdownファイルを articles/{category}/ に保存
-6. index.json を再生成
+6. index.json を再生成（同時に index-latest.json と月別indexも生成）
 7. GitHubにコミット＆プッシュ
 
 カテゴリ判定基準:
