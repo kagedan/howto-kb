@@ -2,8 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(git *)",
-      "Bash(cd /c/Users/KazuhisaMiyake/projects/howto-kb && git *)",
-      "Bash(cd /c/Users/KazuhisaMiyake/projects/howto-kb && python scripts/*)"
+      "Bash(python scripts/*)"
     ]
   }
 }
