@@ -1,0 +1,50 @@
+queries:
+  # claude-code（日本語）
+  - query: "Claude Code tips OR CLAUDE.md"
+    category: "claude-code"
+    lang: "ja"
+
+  # claude-code（英語）
+  - query: "Claude Code best practices OR agentic coding"
+    category: "claude-code"
+    lang: "en"
+
+  # cowork
+  - query: "Claude Cowork OR Claude Desktop automation"
+    category: "cowork"
+    lang: "ja"
+
+  # ai-workflow（日本語）
+  - query: "Claude MCP server"
+    category: "ai-workflow"
+    lang: "ja"
+
+  # ai-workflow（英語）
+  - query: "Claude MCP setup OR MCP tools"
+    category: "ai-workflow"
+    lang: "en"
+
+  # claude-code 新機能
+  - query: "Claude Code hooks OR subagents"
+    category: "claude-code"
+    lang: "ja"
+
+  # 建設系（日本語）
+  - query: "AI 建設業 OR AI 土木"
+    category: "construction"
+    lang: "ja"
+
+  # 建設系（英語）
+  - query: "AI construction industry"
+    category: "construction"
+    lang: "en"
+
+user_timelines:
+  - username: "kagedan_k"
+    include_retweets: true
+    category_default: "ai-workflow"
+
+search_settings:
+  max_results_per_query: 10
+  exclude_retweets: true
+  min_likes: 5
