@@ -1,8 +1,6 @@
 ---
 id: "2026-03-02-bnbchain-building-ai-agents-on-bnb-chain-you-can-n-01"
-title: "@BNBCHAIN: Building AI agents on BNB Chain? 🤖
-
-You can now equip your a"
+title: "@BNBCHAIN: Building AI agents on BNB Chain? 🤖"
 url: "https://x.com/BNBCHAIN/status/2028494627083571592"
 source: "x"
 category: "ai-workflow"
@@ -11,7 +9,6 @@ date_published: "2026-03-02"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Building AI agents on BNB Chain? 🤖
 
 You can now equip your agent with skills to access BNB Chain with MCP tools:

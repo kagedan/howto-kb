@@ -1,8 +1,6 @@
 ---
 id: "2025-12-13-docker-san-francisco-look-up-docker-e2b-just-hit-t-01"
-title: "@Docker: San Francisco, look up.
-
-Docker + @E2B just hit the skyline."
+title: "@Docker: San Francisco, look up."
 url: "https://x.com/Docker/status/1999932455524999448"
 source: "x"
 category: "ai-workflow"
@@ -11,7 +9,6 @@ date_published: "2025-12-13"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 San Francisco, look up.
 
 Docker + @E2B just hit the skyline.

@@ -1,10 +1,6 @@
 ---
 id: "2026-02-18-oikon48-claude-code-2147-多いので抜粋-機能-stop-とsubagents-01"
-title: "@oikon48: Claude Code 2.1.47 (多いので抜粋)
-
-【機能】
-
-・Stop とSubagentStop Hooks"
+title: "@oikon48: Claude Code 2.1.47 (多いので抜粋)"
 url: "https://x.com/oikon48/status/2024251736597344473"
 source: "x"
 category: "claude-code"
@@ -13,7 +9,6 @@ date_published: "2026-02-18"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 Claude Code 2.1.47 (多いので抜粋)
 
 【機能】

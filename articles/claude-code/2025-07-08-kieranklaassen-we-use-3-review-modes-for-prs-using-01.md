@@ -1,8 +1,6 @@
 ---
 id: "2025-07-08-kieranklaassen-we-use-3-review-modes-for-prs-using-01"
-title: "@kieranklaassen: We use 3 review modes for PRs using Claude Code:
-
-1. Regular"
+title: "@kieranklaassen: We use 3 review modes for PRs using Claude Code:"
 url: "https://x.com/kieranklaassen/status/1942645039081087223"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2025-07-08"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 We use 3 review modes for PRs using Claude Code:
 
 1. Regular review (catches basics)

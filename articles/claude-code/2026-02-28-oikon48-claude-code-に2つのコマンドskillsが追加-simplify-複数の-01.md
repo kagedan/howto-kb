@@ -1,8 +1,6 @@
 ---
 id: "2026-02-28-oikon48-claude-code-に2つのコマンドskillsが追加-simplify-複数の-01"
-title: "@oikon48: Claude Code に、2つのコマンド(Skills)が追加
-
-- /simplify: 複数のSubagentsが"
+title: "@oikon48: Claude Code に、2つのコマンド(Skills)が追加"
 url: "https://x.com/oikon48/status/2027607820125036868"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-02-28"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Claude Code に、2つのコマンド(Skills)が追加
 
 - /simplify: 複数のSubagentsが、コードを自動で「きれいにする・速くする・ルールに合わせる」

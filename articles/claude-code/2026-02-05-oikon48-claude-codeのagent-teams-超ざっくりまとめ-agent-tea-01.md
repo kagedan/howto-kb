@@ -1,9 +1,6 @@
 ---
 id: "2026-02-05-oikon48-claude-codeのagent-teams-超ざっくりまとめ-agent-tea-01"
-title: "@oikon48: 【Claude CodeのAgent Teams 超ざっくりまとめ】
- 
-・Agent Teams とは: 
-チームリー"
+title: "@oikon48: 【Claude CodeのAgent Teams 超ざっくりまとめ】"
 url: "https://x.com/oikon48/status/2019533240537878581"
 source: "x"
 category: "claude-code"
@@ -12,7 +9,6 @@ date_published: "2026-02-05"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 【Claude CodeのAgent Teams 超ざっくりまとめ】
  
 ・Agent Teams とは: 

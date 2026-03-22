@@ -1,8 +1,6 @@
 ---
 id: "2026-02-25-commte-claude-md-は-32-行でも十分論文で証明された-agents-md-や-cl-01"
-title: "@commte: CLAUDE .md は 32 行でも十分。論文で証明された
-
-AGENTS .md や CLAUDE .md の効果を"
+title: "@commte: CLAUDE .md は 32 行でも十分。論文で証明された"
 url: "https://x.com/commte/status/2026780381140472274"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-02-25"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 CLAUDE .md は 32 行でも十分。論文で証明された
 
 AGENTS .md や CLAUDE .md の効果を初めて厳密に検証した研究

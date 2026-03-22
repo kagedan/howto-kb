@@ -1,8 +1,6 @@
 ---
 id: "2026-03-17-aitipsforali-claude-code-claude-inside-your-termin-01"
-title: "@AiTipsForAlI: Claude Code
-
-Claude inside your terminal as an autonomous co"
+title: "@AiTipsForAlI: Claude Code"
 url: "https://x.com/AiTipsForAlI/status/2034027599656047000"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-03-17"
 date_collected: "2026-03-18"
 summary_by: "auto-x"
 ---
-
 Claude Code
 
 Claude inside your terminal as an autonomous coding agent.

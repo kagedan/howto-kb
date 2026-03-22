@@ -1,12 +1,6 @@
 ---
 id: "2025-12-28-commte-年末年始で差がつく-claude-code-tips-処理を中止-esc-コード会話を-01"
-title: "@commte: 年末年始で差がつく Claude Code Tips
-
-処理を中止
-Esc
-
-コード、会話を巻き戻す
-Esc + Esc"
+title: "@commte: 年末年始で差がつく Claude Code Tips"
 url: "https://x.com/commte/status/2005111686890693079"
 source: "x"
 category: "claude-code"
@@ -15,7 +9,6 @@ date_published: "2025-12-28"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 年末年始で差がつく Claude Code Tips
 
 処理を中止

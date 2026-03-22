@@ -1,9 +1,6 @@
 ---
 id: "2026-03-13-masahirochaen-claude-codeユーザー必見-claude公式のclaude-md-01"
-title: "@masahirochaen: Claude Codeユーザー必見。
-Claude公式のCLAUDE. mdを改善するプラグインが良い。
-
-できること2"
+title: "@masahirochaen: Claude Codeユーザー必見。"
 url: "https://x.com/masahirochaen/status/2032245312761512173"
 source: "x"
 category: "claude-code"
@@ -12,7 +9,6 @@ date_published: "2026-03-13"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Claude Codeユーザー必見。
 Claude公式のCLAUDE. mdを改善するプラグインが良い。
 

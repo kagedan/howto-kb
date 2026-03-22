@@ -1,10 +1,6 @@
 ---
 id: "2026-02-27-masahirochaen-速報claude-codeに自動記憶機能が実装-claude-codeも-01"
-title: "@masahirochaen: 【速報】Claude Codeに「自動記憶」機能が実装
-
-Claude CodeもOpenClawに近づきつつある。
-
-"
+title: "@masahirochaen: 【速報】Claude Codeに「自動記憶」機能が実装"
 url: "https://x.com/masahirochaen/status/2027256786647158957"
 source: "x"
 category: "claude-code"
@@ -13,7 +9,6 @@ date_published: "2026-02-27"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 【速報】Claude Codeに「自動記憶」機能が実装
 
 Claude CodeもOpenClawに近づきつつある。

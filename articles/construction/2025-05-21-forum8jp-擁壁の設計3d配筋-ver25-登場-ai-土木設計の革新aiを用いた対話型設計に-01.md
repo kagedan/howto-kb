@@ -1,8 +1,6 @@
 ---
 id: "2025-05-21-forum8jp-擁壁の設計3d配筋-ver25-登場-ai-土木設計の革新aiを用いた対話型設計に-01"
-title: "@FORUM8JP: 📣擁壁の設計・3D配筋 Ver.25 登場！
-AI × 土木設計の革新！AIを用いた対話型設計に対応
-片持梁式、U型、重"
+title: "@FORUM8JP: 📣擁壁の設計・3D配筋 Ver.25 登場！"
 url: "https://x.com/FORUM8JP/status/1925302808523518419"
 source: "x"
 category: "construction"
@@ -11,7 +9,6 @@ date_published: "2025-05-21"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 📣擁壁の設計・3D配筋 Ver.25 登場！
 AI × 土木設計の革新！AIを用いた対話型設計に対応
 片持梁式、U型、重力式、もたれ式、任意形状擁壁の設計計算、図面作成プログラム

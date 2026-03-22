@@ -1,10 +1,6 @@
 ---
 id: "2026-03-20-masahirochaen-速報claude-codeが遂にopenclaw化する-claude本当-01"
-title: "@masahirochaen: 【⚡️速報】Claude Codeが遂にOpenClaw化する。
-
-Claude本当に毎日アプデあってヤバい…
-
-・Te"
+title: "@masahirochaen: 【⚡️速報】Claude Codeが遂にOpenClaw化する。"
 url: "https://x.com/masahirochaen/status/2034819565180657857"
 source: "x"
 category: "claude-code"
@@ -13,7 +9,6 @@ date_published: "2026-03-20"
 date_collected: "2026-03-22"
 summary_by: "auto-x"
 ---
-
 【⚡️速報】Claude Codeが遂にOpenClaw化する。
 
 Claude本当に毎日アプデあってヤバい…

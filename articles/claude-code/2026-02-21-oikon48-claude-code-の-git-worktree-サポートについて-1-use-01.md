@@ -1,8 +1,6 @@
 ---
 id: "2026-02-21-oikon48-claude-code-の-git-worktree-サポートについて-1-use-01"
-title: "@oikon48: Claude Code の git worktree サポートについて⬇️
-  
-1. Use claude --wor"
+title: "@oikon48: Claude Code の git worktree サポートについて⬇️"
 url: "https://x.com/oikon48/status/2025010861321126333"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-02-21"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Claude Code の git worktree サポートについて⬇️
   
 1. Use claude --worktree for isolation

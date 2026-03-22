@@ -1,10 +1,6 @@
 ---
 id: "2026-03-19-yamashoyevskii-これ本当に衝撃のレポートでした-税理士claude-codeの話ですが-01"
-title: "@yamashoyevskii: これ、本当に衝撃のレポートでした。
-
-税理士×Claude Codeの話ですが、
-構造はどの職種にも使えますし、
-Cla"
+title: "@yamashoyevskii: これ、本当に衝撃のレポートでした。"
 url: "https://x.com/yamashoyevskii/status/2034449827392901473"
 source: "x"
 category: "claude-code"
@@ -13,7 +9,6 @@ date_published: "2026-03-19"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 これ、本当に衝撃のレポートでした。
 
 税理士×Claude Codeの話ですが、

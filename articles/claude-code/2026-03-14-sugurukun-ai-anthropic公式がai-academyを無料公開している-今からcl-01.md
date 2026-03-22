@@ -1,7 +1,6 @@
 ---
 id: "2026-03-14-sugurukun-ai-anthropic公式がai-academyを無料公開している-今からcl-01"
-title: "@SuguruKun_ai: Anthropic公式が「AI Academy」を無料公開している...
-今からClaude Codeを体系的に学びたい"
+title: "@SuguruKun_ai: Anthropic公式が「AI Academy」を無料公開している..."
 url: "https://x.com/SuguruKun_ai/status/2032676305368658029"
 source: "x"
 category: "claude-code"
@@ -10,7 +9,6 @@ date_published: "2026-03-14"
 date_collected: "2026-03-22"
 summary_by: "auto-x"
 ---
-
 Anthropic公式が「AI Academy」を無料公開している...
 今からClaude Codeを体系的に学びたい人向けで良い。
 ㅤ

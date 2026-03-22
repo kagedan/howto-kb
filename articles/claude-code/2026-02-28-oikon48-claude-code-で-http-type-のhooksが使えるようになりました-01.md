@@ -1,8 +1,6 @@
 ---
 id: "2026-02-28-oikon48-claude-code-で-http-type-のhooksが使えるようになりました-01"
-title: "@oikon48: Claude Code で \"http type\" のHooksが使えるようになりました。
- 
-今までは command"
+title: "@oikon48: Claude Code で http type のHooksが使えるようになりました。"
 url: "https://x.com/oikon48/status/2027658781895889312"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-02-28"
 date_collected: "2026-03-19"
 summary_by: "auto-x"
 ---
-
 Claude Code で "http type" のHooksが使えるようになりました。
  
 今までは command, prompt, agent の3 typeでしたが、新たに http が追加されています。http Hook は既存のHooks システムに新しいトランスポート層を追加したもの。

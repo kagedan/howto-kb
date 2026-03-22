@@ -1,9 +1,6 @@
 ---
 id: "2026-03-20-sugurukun-ai-claude-codeでwebスライドを-かなりデザイン良く自動生成するス-01"
-title: "@SuguruKun_ai: Claude Codeで「Webスライド」を
-かなりデザイン良く自動生成するスキルが公開されててかなり良かった！
-ㅤ
-こ"
+title: "@SuguruKun_ai: Claude Codeで「Webスライド」を"
 url: "https://x.com/SuguruKun_ai/status/2034972789569200479"
 source: "x"
 category: "claude-code"
@@ -12,7 +9,6 @@ date_published: "2026-03-20"
 date_collected: "2026-03-22"
 summary_by: "auto-x"
 ---
-
 Claude Codeで「Webスライド」を
 かなりデザイン良く自動生成するスキルが公開されててかなり良かった！
 ㅤ

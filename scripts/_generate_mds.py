@@ -89,6 +89,27 @@ def extract_tags(title: str, description: str, source: str, category: str) -> li
     return tags[:6]  # 最大6タグ
 
 
+def sanitize_title(title: str) -> str:
+    """タイトルを YAML frontmatter の double-quoted value に安全に使える形にする。
+
+    - 改行・制御文字を除去してスペースに置換
+    - バックスラッシュ+クォート (\\") を除去
+    - ダブルクォートを除去（YAML double-quoted value 内で安全に扱えないため）
+    - 連続スペースを正規化
+    """
+    # 改行・CR・タブをスペースに置換
+    title = title.replace("\r\n", " ").replace("\n", " ").replace("\r", " ").replace("\t", " ")
+    # バックスラッシュ+クォートのペアを除去（ソースデータのアーティファクト）
+    title = title.replace('\\"', "")
+    # 残りのダブルクォートを除去
+    title = title.replace('"', "")
+    # バックスラッシュ単体も除去（ファイルパス由来等）
+    title = title.replace("\\", "")
+    # 連続スペースを正規化
+    title = re.sub(r"\s+", " ", title).strip()
+    return title
+
+
 def slugify(title: str) -> str:
     """タイトルから URL フレンドリーな slug を生成する。"""
     slug = title.lower()
@@ -107,7 +128,7 @@ def make_id(date: str, slug: str, counter: int) -> str:
 
 def write_md(article: dict, article_id: str, category: str, tags: list[str]) -> Path:
     tags_str = "[" + ", ".join(f'"{t}"' for t in tags) + "]"
-    title = article["title"].replace('"', '\\"')
+    title = sanitize_title(article["title"])
     summary = article.get("description", "").strip()
     source = article.get("source", "")
 

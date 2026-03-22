@@ -1,8 +1,6 @@
 ---
 id: "2026-03-18-lin142535lin-mcp-fans-wont-like-this-ok-heres-my-m-01"
-title: "@Lin142535Lin: MCP fans won't like this...
-
-ok here's my mcp vs cli take af"
+title: "@Lin142535Lin: MCP fans won't like this..."
 url: "https://x.com/Lin142535Lin/status/2034129975595647137"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-03-18"
 date_collected: "2026-03-18"
 summary_by: "auto-x"
 ---
-
 MCP fans won't like this...
 
 ok here's my mcp vs cli take after months of building agents

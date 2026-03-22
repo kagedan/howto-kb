@@ -1,9 +1,6 @@
 ---
 id: "2026-03-17-tjworld-eth-openaiがgpt-54-mini-nanoを出しました-ここ地味に大きい-01"
-title: "@tjworld_eth: OpenAIがGPT-5.4 mini / nanoを出しました。
-ここ、地味に大きい変化です。
-
-miniはGPT-5"
+title: "@tjworld_eth: OpenAIがGPT-5.4 mini / nanoを出しました。"
 url: "https://x.com/tjworld_eth/status/2034048796909506869"
 source: "x"
 category: "claude-code"
@@ -12,7 +9,6 @@ date_published: "2026-03-17"
 date_collected: "2026-03-18"
 summary_by: "auto-x"
 ---
-
 OpenAIがGPT-5.4 mini / nanoを出しました。
 ここ、地味に大きい変化です。
 

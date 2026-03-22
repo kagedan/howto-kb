@@ -1,7 +1,6 @@
 ---
 id: "2025-07-04-shotovim-claude-code-hooks-の中でgemini-呼んだら最強だった件-cl-01"
-title: "@shotovim: 【Claude Code Hooks の中でGemini 呼んだら最強だった件】
-Claude Code の Hooks"
+title: "@shotovim: 【Claude Code Hooks の中でGemini 呼んだら最強だった件】"
 url: "https://x.com/shotovim/status/1940968054638493800"
 source: "x"
 category: "claude-code"
@@ -10,7 +9,6 @@ date_published: "2025-07-04"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 【Claude Code Hooks の中でGemini 呼んだら最強だった件】
 Claude Code の Hooks で Gemini を呼ぶことで、Claude Code が生成した結果に対して、さらに追加のプロンプトを即座に適用できた。この体験めちゃくちゃいい。
 

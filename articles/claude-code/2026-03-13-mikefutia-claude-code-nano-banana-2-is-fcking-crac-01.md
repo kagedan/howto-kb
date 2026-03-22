@@ -1,8 +1,6 @@
 ---
 id: "2026-03-13-mikefutia-claude-code-nano-banana-2-is-fcking-crac-01"
-title: "@mikefutia: Claude Code + Nano Banana 2 is f*cking cracked 🤯
-
-I built a "
+title: "@mikefutia: Claude Code + Nano Banana 2 is f*cking cracked 🤯"
 url: "https://x.com/mikefutia/status/2032494512774525064"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-03-13"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Claude Code + Nano Banana 2 is f*cking cracked 🤯
 
 I built a system inside Claude Code that researches any brand, writes 40 ad prompts from scratch, and fires them all to Nano Banana 2.

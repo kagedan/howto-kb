@@ -1,8 +1,6 @@
 ---
 id: "2026-01-13-jasonzhou1993-vercels-agent-browser-is-wild-70-les-01"
-title: "@jasonzhou1993: Vercel's agent-browser is wild 
-
-- 70% less token consumptio"
+title: "@jasonzhou1993: Vercel's agent-browser is wild"
 url: "https://x.com/jasonzhou1993/status/2011021383451754886"
 source: "x"
 category: "ai-workflow"
@@ -11,7 +9,6 @@ date_published: "2026-01-13"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 Vercel's agent-browser is wild 
 
 - 70% less token consumption compared with Chrome dev tool MCP in my test 🤯

@@ -1,8 +1,6 @@
 ---
 id: "2026-03-17-oikon48-anthropic-チームのskillsをカテゴリ分けして開発を加速させるためのti-01"
-title: "@oikon48: Anthropic チームのSkillsをカテゴリ分けして、開発を加速させるためのTipsを紹介している。
-
-Lesso"
+title: "@oikon48: Anthropic チームのSkillsをカテゴリ分けして、開発を加速させるためのTipsを紹介している。"
 url: "https://x.com/oikon48/status/2033957507958485414"
 source: "x"
 category: "claude-code"
@@ -11,7 +9,6 @@ date_published: "2026-03-17"
 date_collected: "2026-03-18"
 summary_by: "auto-x"
 ---
-
 Anthropic チームのSkillsをカテゴリ分けして、開発を加速させるためのTipsを紹介している。
 
 Lessons from Building Claude Code: How We Use Skills (抜粋)

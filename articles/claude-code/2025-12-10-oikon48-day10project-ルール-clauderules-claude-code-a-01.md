@@ -1,7 +1,6 @@
 ---
 id: "2025-12-10-oikon48-day10project-ルール-clauderules-claude-code-a-01"
-title: "@oikon48: 【Day10】Project ルール `.claude/rules/`
-#claude_code_advent_cale"
+title: "@oikon48: 【Day10】Project ルール `.claude/rules/`"
 url: "https://x.com/oikon48/status/1998717425223872974"
 source: "x"
 category: "claude-code"
@@ -10,7 +9,6 @@ date_published: "2025-12-10"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 【Day10】Project ルール `.claude/rules/`
 #claude_code_advent_calendar  
 

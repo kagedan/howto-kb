@@ -1,8 +1,6 @@
 ---
 id: "2025-12-06-langchain-open-programmatic-tool-calling-agent-mad-01"
-title: "@LangChain: 🔧 Open \"Programmatic Tool Calling\" Agent
-
-Made by the LangCh"
+title: "@LangChain: 🔧 Open Programmatic Tool Calling Agent"
 url: "https://x.com/LangChain/status/1997365444580389139"
 source: "x"
 category: "ai-workflow"
@@ -11,7 +9,6 @@ date_published: "2025-12-06"
 date_collected: "2026-03-20"
 summary_by: "auto-x"
 ---
-
 🔧 Open "Programmatic Tool Calling" Agent
 
 Made by the LangChain Community

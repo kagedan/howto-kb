@@ -58,7 +58,13 @@ def parse_frontmatter(text: str) -> dict | None:
             ]
         else:
             # クォートを除去
-            data[key] = value.strip('"').strip("'")
+            val = value.strip('"').strip("'")
+            # 防御的処理: \" (バックスラッシュ+クォート) のアンエスケープ
+            val = val.replace('\\"', '"')
+            # 残存バックスラッシュの除去（ファイルパス由来等のアーティファクト）
+            if key == "title":
+                val = val.replace("\\", "")
+            data[key] = val
 
     return data
 
