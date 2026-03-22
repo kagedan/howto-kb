@@ -101,6 +101,12 @@ def search_x(query: str, api_key: str, max_results: int = 10, lang: str = "ja", 
 
     input_text = (
         f"Search X for: {query}{lang_note}\n"
+        "Prioritize posts that contain specific how-to steps, "
+        "configuration examples, code snippets, or practical tips. "
+        "Exclude simple announcements, retweets of official news, "
+        "and posts that only say 'I tried X' without details.\n"
+        "If a post is part of a thread (self-replies by the same author), "
+        "include the full thread text combined.\n"
         f"Return up to {max_results} results. "
         f"Only include posts with {min_likes} or more likes. "
         "For each post, include: the post URL (https://x.com/username/status/ID format), "
@@ -122,6 +128,8 @@ def fetch_user_timeline(username: str, api_key: str, max_results: int | None = N
         f"Search X for retweets/reposts by @{username}. "
         f"Return {limit_note} results. "
         "For each repost, return the ORIGINAL post (not the retweet itself). "
+        "If the original post is part of a thread (self-replies by the same author), "
+        "include the full thread text combined.\n"
         "Include: the original post URL (https://x.com/username/status/ID format), "
         "original author username, full post text, date (YYYY-MM-DD), likes count. "
         "Return ONLY a JSON array, no other text."

@@ -1,41 +1,46 @@
 queries:
-  # claude-code（日本語）
-  - query: "Claude Code tips OR CLAUDE.md"
+  # claude-code（日本語）- ノウハウ・設定方法に絞る
+  - query: "Claude Code CLAUDE.md 書き方 OR コンテキスト管理 OR Handover"
     category: "claude-code"
     lang: "ja"
 
-  # claude-code（英語）
-  - query: "Claude Code best practices OR agentic coding"
+  # claude-code（英語）- 実践的なtipsに絞る
+  - query: "Claude Code workflow tips OR CLAUDE.md setup OR context window"
     category: "claude-code"
     lang: "en"
 
-  # cowork
-  - query: "Claude Cowork OR Claude Desktop automation"
+  # cowork - 具体的な活用法に絞る
+  - query: "Cowork スケジュール OR Cowork スキル作成 OR Cowork 自動化"
     category: "cowork"
     lang: "ja"
 
-  # ai-workflow（日本語）
-  - query: "Claude MCP server"
+  # ai-workflow（日本語）- 設定手順・活用事例に絞る
+  - query: "MCP server 設定 OR MCP 活用事例 OR MCP 連携"
     category: "ai-workflow"
     lang: "ja"
 
-  # ai-workflow（英語）
-  - query: "Claude MCP setup OR MCP tools"
+  # ai-workflow（英語）- セットアップ・実例に絞る
+  - query: "MCP server tutorial OR MCP integration example"
     category: "ai-workflow"
     lang: "en"
 
-  # claude-code 新機能
-  - query: "Claude Code hooks OR subagents"
+  # claude-code 新機能 - 使い方に絞る
+  - query: "Claude Code hooks 使い方 OR subagents 設定 OR Claude Code スケジュール"
     category: "claude-code"
     lang: "ja"
 
-  # 建設系（日本語）
-  - query: "AI 建設業 OR AI 土木"
+  # プロンプト技法・AI活用の実践（新規追加）
+  - query: "Claude プロンプト 書き方 OR Claude 業務効率化 実例"
+    category: "ai-workflow"
+    lang: "ja"
+
+  # 建設系（日本語）- 具体的な活用に絞る
+  - query: "AI 施工管理 OR AI 建設 業務効率化 OR ICT施工"
     category: "construction"
     lang: "ja"
 
   # 建設系（英語）
-  - query: "AI construction industry"
+  - query: "AI construction management OR AI civil engineering workflow"
     category: "construction"
     lang: "en"
 
