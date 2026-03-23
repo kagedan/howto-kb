@@ -11,6 +11,11 @@ crawl_x.py - Grok API (xAI) 経由で X (Twitter) から新規記事を検出す
     4. index.json の既存URLと照合し、新規記事のみ抽出
     5. 新規記事の情報をJSON形式で標準出力に出力
 
+出力 (stdout):
+    新規記事のリスト (JSON)。Claude Code Desktop スケジュールタスクが
+    この出力を受け取り、要約・カテゴリ判定・タグ付与・MD生成を行う。
+    （crawl_rss.py と同じ後工程フロー）
+
 環境変数:
     XAI_API_KEY - xAI APIキー（必須）
 
@@ -101,16 +106,12 @@ def search_x(query: str, api_key: str, max_results: int = 10, lang: str = "ja", 
 
     input_text = (
         f"Search X for: {query}{lang_note}\n"
-        "Prioritize posts that contain specific how-to steps, "
-        "configuration examples, code snippets, or practical tips. "
-        "Exclude simple announcements, retweets of official news, "
-        "and posts that only say 'I tried X' without details.\n"
+        f"Return up to {max_results} results.\n"
+        f"Only include posts with {min_likes} or more likes.\n"
+        "For each post, return: the post URL (https://x.com/username/status/ID format), "
+        "author username, full post text, date (YYYY-MM-DD), likes count.\n"
         "If a post is part of a thread (self-replies by the same author), "
         "include the full thread text combined.\n"
-        f"Return up to {max_results} results. "
-        f"Only include posts with {min_likes} or more likes. "
-        "For each post, include: the post URL (https://x.com/username/status/ID format), "
-        "author username, full post text, date (YYYY-MM-DD), likes count. "
         "Return ONLY a JSON array, no other text."
     )
 
@@ -214,13 +215,13 @@ def try_parse_json_results(content: str) -> list[dict]:
     for item in items:
         if not isinstance(item, dict):
             continue
-        url = item.get("url", "")
+        url = item.get("url") or item.get("post_url", "")
         if not url or ("x.com" not in url and "twitter.com" not in url):
             continue
 
-        text = item.get("text", item.get("content", ""))
-        author = item.get("author", item.get("username", ""))
-        date = item.get("date", item.get("published_date", ""))
+        text = item.get("text") or item.get("full_post_text") or item.get("content", "")
+        author = item.get("author") or item.get("author_username") or item.get("username", "")
+        date = item.get("date") or item.get("published_date", "")
         title = item.get("title", "")
 
         if not title and author and text:
