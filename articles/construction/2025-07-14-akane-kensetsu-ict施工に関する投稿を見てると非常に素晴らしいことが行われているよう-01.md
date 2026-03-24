@@ -1,0 +1,13 @@
+---
+id: "2025-07-14-akane-kensetsu-ict施工に関する投稿を見てると非常に素晴らしいことが行われているよう-01"
+title: "@akane_kensetsu: ICT施工に関する投稿を見てると、非常に素晴らしいことが行われているように思えるが、実際には素晴らしいのはツールであり、"
+url: "https://x.com/akane_kensetsu/status/1944871663734284324"
+source: "x"
+category: "construction"
+tags: ["construction-mgmt", "x"]
+date_published: "2025-07-14"
+date_collected: "2026-03-24"
+summary_by: "auto-x"
+---
+
+ICT施工に関する投稿を見てると、非常に素晴らしいことが行われているように思えるが、実際には素晴らしいのはツールであり、人ではない。
