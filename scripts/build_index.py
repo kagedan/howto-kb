@@ -160,5 +160,14 @@ def main():
         print(f"index-{ym}.json updated: {len(month_articles)} articles")
 
 
+    # Supabase同期（失敗してもindex生成には影響させない）
+    try:
+        from sync_supabase import sync_to_supabase
+        sync_to_supabase(articles)
+        print("Supabase同期完了")
+    except Exception as e:
+        print(f"Supabase同期エラー（続行）: {e}")
+
+
 if __name__ == "__main__":
     main()
