@@ -1,0 +1,22 @@
+---
+id: "2025-03-05-robertjsalvador-llms-and-ai-agents-will-reduce-was-01"
+title: "@RobertJSalvador: LLMs and AI agents will reduce waste on government Construct"
+url: "https://x.com/RobertJSalvador/status/1897412837867446402"
+source: "x"
+category: "construction"
+tags: ["AI-agent", "LLM", "x"]
+date_published: "2025-03-05"
+date_collected: "2026-03-26"
+summary_by: "auto-x"
+---
+
+LLMs and AI agents will reduce waste on government Construction projects.
+
+Those typically create 800,000+ documents. Most of the paperwork is done manually or via email.
+
+THE CURRENT WORKFLOW:
+Supplier to Subcontractor to GC back to Subcontractor back to Supplier. Supplier back to Subcontractor back to GC and then to Architect.
+
+Here an LLM automates the workflow. This is tens of millions in labor hours at scale.
+
+@DOGE

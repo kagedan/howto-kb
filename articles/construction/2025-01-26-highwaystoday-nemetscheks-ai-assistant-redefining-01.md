@@ -1,0 +1,20 @@
+---
+id: "2025-01-26-highwaystoday-nemetscheks-ai-assistant-redefining-01"
+title: "@HighwaysToday: 🤖 Nemetschek’s AI Assistant Redefining Construction Workflow"
+url: "https://x.com/HighwaysToday/status/1883591116131373283"
+source: "x"
+category: "construction"
+tags: ["x"]
+date_published: "2025-01-26"
+date_collected: "2026-03-26"
+summary_by: "auto-x"
+---
+
+🤖 Nemetschek’s AI Assistant Redefining Construction Workflow 🏗️
+
+🌟 Nemetschek is transforming the construction industry with its AI-powered assistant. From optimizing project management to enhancing collaboration, discover how this cutting-edge tool is streamlining workflows and driving innovation.
+
+📖 Read the full article on Highways Today:
+https://t.co/Su15WJzdhI
+
+#AIinConstruction #NemetschekInnovation #SmartWorkflow #HighwaysToday #ConstructionNews #DigitalTransformation #FutureOfConstructio

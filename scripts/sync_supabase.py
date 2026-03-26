@@ -13,9 +13,21 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = REPO_ROOT / "index.json"
 
+
+def load_env():
+    env_path = Path(__file__).parent.parent / ".env"
+    if env_path.exists():
+        for line in env_path.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, value = line.split("=", 1)
+                os.environ[key.strip()] = value.strip().strip('"')
+
+load_env()
+
 SUPABASE_URL = "https://gryrgjnfekwptyngbmao.supabase.co"
 SUPABASE_ANON_KEY = "sb_publishable_How0RxnjdME_nNlnAhJ9Vg_Y982jDum"
-# 書き込みには service_role key が必要（環境変数から取得）
+# 書き込みには service_role key が必要（.env または環境変数から取得）
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", SUPABASE_ANON_KEY)
 
 
