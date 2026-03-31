@@ -1,12 +1,12 @@
 ---
 id: "2025-08-03-masahirochaen-これはブクマして見返したいclaudeが公式でclaude-codeを学-01"
 title: "@masahirochaen: これはブクマして見返したい。Claudeが公式でClaude Codeを学べる無料の講座を公開。日本語字幕付きの動画、図"
-url: "https://x.com/masahirochaen/status/1951887400151761050"
+url: "https://x.com/masahirochaen/status/1993491123457999160"
 source: "x"
 category: "claude-code"
 tags: ["claude-code", "MCP", "x"]
 date_published: "2025-08-03"
-date_collected: "2026-03-24"
+date_collected: "2026-03-31"
 summary_by: "auto-x"
 ---
 
