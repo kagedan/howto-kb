@@ -47,9 +47,9 @@ def parse_frontmatter(text: str) -> dict | None:
         key = key.strip()
         value = value.strip()
 
-        # 配列値の処理: ["tag1", "tag2"]
-        list_match = LIST_VALUE_RE.search(value)
-        if list_match:
+        # 配列値の処理: ["tag1", "tag2"] — 値全体が[...]形式の場合のみ
+        list_match = LIST_VALUE_RE.match(value) if value.startswith('[') else None
+        if list_match and value.endswith(']'):
             items = list_match.group(1)
             data[key] = [
                 s.strip().strip('"').strip("'")
@@ -82,8 +82,13 @@ def build_index() -> dict:
         # file_path は リポジトリルートからの相対パス (forward slash)
         rel_path = md_path.relative_to(REPO_ROOT).as_posix()
 
+        # IDにカテゴリをプレフィックスとして付与し、異カテゴリ間の重複を防ぐ
+        category = fm.get("category", "")
+        raw_id = fm.get("id", "")
+        unique_id = f"{category}/{raw_id}" if category else raw_id
+
         articles.append({
-            "id": fm.get("id", ""),
+            "id": unique_id,
             "title": fm.get("title", ""),
             "url": fm.get("url", ""),
             "source": fm.get("source", ""),
