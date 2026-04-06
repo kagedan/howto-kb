@@ -195,7 +195,9 @@ def main():
         print(f"  New sources: {new_count}", file=sys.stderr)
 
         # 同期状態を更新（現在のソース全IDを記録）
-        sync_state[notebook_id] = current_ids
+        # APIエラー等でソース0件の場合は既存の同期状態を保持する
+        if current_ids:
+            sync_state[notebook_id] = current_ids
 
     # 同期状態を保存
     save_sync_state(sync_state_path, sync_state)
