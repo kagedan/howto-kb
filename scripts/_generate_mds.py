@@ -143,6 +143,8 @@ def write_md(article: dict, article_id: str, category: str, tags: list[str]) -> 
             feed_name = article.get("feed_name", source or "RSS")
             summary = f"{feed_name} より収集。詳細は URL を参照。"
 
+    query = article.get("query", "")
+
     content = f"""---
 id: "{article_id}"
 title: "{title}"
@@ -153,6 +155,7 @@ tags: {tags_str}
 date_published: "{article.get('date_published', '')}"
 date_collected: "{article.get('date_collected', '')}"
 summary_by: "{summary_by}"
+query: "{query}"
 ---
 
 {summary}

@@ -5,7 +5,7 @@ queries:
     lang: "ja"
 
   # claude-code（英語）- 実践的なtipsに絞る
-  - query: "Claude Code workflow tips OR CLAUDE.md setup OR context window"
+  - query: "\"Claude Code\" workflow OR CLAUDE.md setup OR \"Claude context\""
     category: "claude-code"
     lang: "en"
 
@@ -20,7 +20,7 @@ queries:
     lang: "ja"
 
   # ai-workflow（英語）- セットアップ・実例に絞る
-  - query: "MCP server tutorial OR MCP integration example"
+  - query: "\"Model Context Protocol\" tutorial OR \"Claude MCP\" integration"
     category: "ai-workflow"
     lang: "en"
 
@@ -40,7 +40,7 @@ queries:
     lang: "ja"
 
   # 建設系（英語）
-  - query: "AI construction management OR AI civil engineering workflow"
+  - query: "\"AI construction\" site management OR \"AI civil engineering\" project"
     category: "construction"
     lang: "en"
 
@@ -50,6 +50,6 @@ user_timelines:
     category_default: "ai-workflow"
 
 search_settings:
-  max_results_per_query: 10
+  max_results_per_query: 5
   exclude_retweets: true
   min_likes: 5
