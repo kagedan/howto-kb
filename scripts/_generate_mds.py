@@ -231,13 +231,13 @@ def main():
     print(f"  RSS: {len(rss_articles)} new articles", flush=True)
     all_articles.extend(rss_articles)
 
-    # 2. X (Twitter) — XAI_API_KEY が未設定ならスキップ
-    if os.environ.get("XAI_API_KEY"):
+    # 2. X (Twitter) — SOCIALDATA_API_KEY が未設定ならスキップ
+    if os.environ.get("SOCIALDATA_API_KEY"):
         x_articles = run_crawler("crawl_x.py")
         print(f"  X: {len(x_articles)} new posts", flush=True)
         all_articles.extend(x_articles)
     else:
-        print("  X: skipped (XAI_API_KEY not set)", flush=True)
+        print("  X: skipped (SOCIALDATA_API_KEY not set)", flush=True)
 
     if not all_articles:
         print("No new articles.")
