@@ -1,0 +1,43 @@
+---
+id: "2026-04-07-unburnablee-paste-this-into-claude-code-窶-it-audit-01"
+title: "@Unburnablee: Paste this into Claude Code 窶? it audits your setup: Find a"
+url: "https://x.com/Unburnablee/status/2041612771427557528"
+source: "x"
+category: "claude-code"
+tags: ["claude-code", "CLAUDE-md", "prompt-engineering", "AI-agent", "x"]
+date_published: "2026-04-07"
+date_collected: "2026-04-08"
+summary_by: "auto-x"
+---
+
+櫨 85% OF YOUR CLAUDE CODE TOKENS ARE GOING STRAIT TO TRASH.
+
+Not on bad prompts. Not on wrong models.
+
+On config files your scripts don't even read.
+
+筮??ｸ就t the end a ready prompt you筮??ｸ? copy-paste into Claude Code and it fixes this for you https://t.co/c2qouzhL87
+
+I run 6 AI agents on autopilot in Claude Code.
+
+Every one loaded my FULL config on each run. 50K tokens of personality rules, project maps, conversation tone.
+
+For tasks that just summarize text.
+
+笶? 310K tokens/day. All wasted.
+
+笞｡ The fix: one flag.
+
+--system-prompt replaces your full config with just what the script needs.
+
+50K tokens per run 竊? 200.
+
+笶? 310K tokens/day 笨? 30K tokens/day
+
+Same results.
+
+Paste this into Claude Code 窶? it audits your setup:
+
+"Find all my scripts that call claude -p. Check if each uses --system-prompt. If not 窶? it loads full CLAUDE.md every run. Show which are safe and which leak tokens."
+
+Try it. Takes 10 sec 笞｡
