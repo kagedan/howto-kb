@@ -33,6 +33,13 @@ import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+# Windows環境でのcp932文字化け対策
+os.environ.setdefault("PYTHONUTF8", "1")
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8")
+
 try:
     import yaml
 except ImportError:

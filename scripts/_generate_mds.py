@@ -20,6 +20,13 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+# Windows環境でのcp932文字化け対策
+os.environ.setdefault("PYTHONUTF8", "1")
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8")
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = REPO_ROOT / "articles"
 
