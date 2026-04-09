@@ -4,7 +4,7 @@ title: "@yuichisatoeco: 「AIが賢くなり続けるシステム」を作るの
 url: "https://x.com/yuichisatoeco/status/2040716467600081327"
 source: "x"
 category: "claude-code"
-tags: ["x"]
+tags: ["claude-code", "x"]
 date_published: "2026-04-05"
 date_collected: "2026-04-08"
 summary_by: "auto-x"
