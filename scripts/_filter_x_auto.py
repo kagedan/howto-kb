@@ -112,6 +112,7 @@ def is_useful(art):
 
 
 def main():
+    sys.stdin.reconfigure(encoding='utf-8')
     data = json.load(sys.stdin)
     counter_map = defaultdict(int)
     written = 0
