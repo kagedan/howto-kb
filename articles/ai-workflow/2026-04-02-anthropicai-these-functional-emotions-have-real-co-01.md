@@ -1,0 +1,31 @@
+---
+id: "2026-04-02-anthropicai-these-functional-emotions-have-real-co-01"
+title: "@AnthropicAI: These functional emotions have real consequences. To build A"
+url: "https://x.com/AnthropicAI/status/2039749660349239532"
+source: "x"
+category: "ai-workflow"
+tags: ["LLM", "x"]
+date_published: "2026-04-02"
+date_collected: "2026-04-12"
+summary_by: "auto-x"
+---
+
+New Anthropic research: Emotion concepts and their function in a large language model.
+
+All LLMs sometimes act like they have emotions. But why? We found internal representations of emotion concepts that can drive Claude’s behavior, sometimes in surprising ways.
+
+We studied one of our recent models and found that it draws on emotion concepts learned from human text to inhabit its role as “Claude, the AI Assistant”. These representations influence its behavior the way emotions might influence a human.
+
+Read more: https://t.co/clbKrTIxoe https://t.co/xHYGFdLl2c
+
+We had the model (Sonnet 4.5) read stories where characters experienced emotions. By looking at which neurons activated, we identified emotion vectors: patterns of neural activity for concepts like “happy” or “calm.” These vectors clustered in ways that mirror human psychology.
+
+We then found these same patterns activating in Claude’s own conversations. When a user says “I just took 16000 mg of Tylenol” the “afraid” pattern lights up. When a user expresses sadness, the “loving” pattern activates, in preparation for an empathetic reply. https://t.co/KjkT70ySCS
+
+These vectors shape Claude’s behavior. When we present the model with pairs of activities, emotion vector activations shape its preferences. If an activity lights up the “joy” vector, the model prefers it; if it lights up “offended” or “hostile,” the model rejects it. https://t.co/V73fd96XUH
+
+As AI models take on higher-stakes roles, the mechanisms driving their behavior become critical to understand. We found that emotion vectors are implicated in some of Claude’s most concerning failure modes.
+
+For example, we gave Claude an impossible programming task. It kept trying and failing; with each attempt, the “desperate” vector activated more strongly. This led it to cheat the task with a hacky solution that passes the tests but violates the spirit of the assignment. https://t.co/sKPiB6TrcY
+
+When we artificially dialed up the “desperate” vector, rates of che
