@@ -57,6 +57,33 @@ def load_existing_urls() -> set[str]:
     return {a["url"] for a in data.get("articles", []) if a.get("url")}
 
 
+def get_catchup_multiplier() -> int:
+    """index.jsonの最新date_collectedと今日の差分から取得倍率を返す。
+    前日に更新がなかった場合（ギャップ2日以上）に倍率を上げる。"""
+    if not INDEX_PATH.exists():
+        return 1
+    try:
+        data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return 1
+    articles = data.get("articles", [])
+    if not articles:
+        return 1
+    dates = [a.get("date_collected", "") for a in articles if a.get("date_collected")]
+    if not dates:
+        return 1
+    latest = max(dates)
+    try:
+        last_date = datetime.strptime(latest, "%Y-%m-%d").date()
+        today = datetime.now(JST).date()
+        gap = (today - last_date).days
+        if gap > 1:
+            return min(gap, 5)  # 最大5倍
+        return 1
+    except ValueError:
+        return 1
+
+
 def load_feeds() -> list[dict]:
     """feeds.yaml からフィード一覧を読み込む。"""
     data = yaml.safe_load(FEEDS_PATH.read_text(encoding="utf-8"))
@@ -241,6 +268,10 @@ def main():
     existing_urls = load_existing_urls()
     feeds = load_feeds()
     today = datetime.now(JST).strftime("%Y-%m-%d")
+    multiplier = get_catchup_multiplier()
+
+    if multiplier > 1:
+        print(f"Catchup mode: {multiplier}日分のギャップを検出（Qiita取得件数を{multiplier}倍に増加）", file=sys.stderr)
 
     all_new = []
 
@@ -280,6 +311,8 @@ def main():
         name = qf.get("name", f"Qiita - {tag}")
         default_category = qf.get("default_category", "ai-workflow")
         per_page = qf.get("per_page", 20)
+        if multiplier > 1:
+            per_page = min(per_page * multiplier, 100)
 
         if not tag:
             continue

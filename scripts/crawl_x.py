@@ -67,6 +67,33 @@ def load_existing_urls() -> set[str]:
     return {a["url"] for a in data.get("articles", []) if a.get("url")}
 
 
+def get_catchup_multiplier() -> int:
+    """index.jsonの最新date_collectedと今日の差分から取得倍率を返す。
+    前日に更新がなかった場合（ギャップ2日以上）に倍率を上げる。"""
+    if not INDEX_PATH.exists():
+        return 1
+    try:
+        data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return 1
+    articles = data.get("articles", [])
+    if not articles:
+        return 1
+    dates = [a.get("date_collected", "") for a in articles if a.get("date_collected")]
+    if not dates:
+        return 1
+    latest = max(dates)
+    try:
+        last_date = datetime.strptime(latest, "%Y-%m-%d").date()
+        today = datetime.now(JST).date()
+        gap = (today - last_date).days
+        if gap > 1:
+            return min(gap, 5)  # 最大5倍
+        return 1
+    except ValueError:
+        return 1
+
+
 def load_queries() -> tuple[list[dict], dict, list[dict]]:
     """x_queries.yaml からクエリ一覧、検索設定、ユーザータイムライン設定を読み込む。"""
     data = yaml.safe_load(QUERIES_PATH.read_text(encoding="utf-8"))
@@ -304,6 +331,11 @@ def main():
     max_results = settings.get("max_results_per_query", 10)
     min_likes = settings.get("min_likes", 5)
     exclude_retweets = settings.get("exclude_retweets", True)
+
+    multiplier = get_catchup_multiplier()
+    if multiplier > 1:
+        max_results = max_results * 2  # X は2倍固定
+        print(f"Catchup mode: {multiplier}日分のギャップを検出（X取得件数を2倍: {max_results}件/クエリ）", file=sys.stderr)
 
     all_new = []
 
