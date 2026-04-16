@@ -242,12 +242,32 @@ def main():
     all_articles.extend(rss_articles)
 
     # 2. X (Twitter) — SOCIALDATA_API_KEY が未設定ならスキップ
+    x_articles = []
     if os.environ.get("SOCIALDATA_API_KEY"):
         x_articles = run_crawler("crawl_x.py")
         print(f"  X: {len(x_articles)} new posts", flush=True)
         all_articles.extend(x_articles)
     else:
         print("  X: skipped (SOCIALDATA_API_KEY not set)", flush=True)
+
+    # 2.5 RT記事からObsidian clippingsを生成
+    rt_articles = [a for a in x_articles if a.get("is_retweet")]
+    if rt_articles:
+        print(f"\nExporting {len(rt_articles)} RT clippings ...", flush=True)
+        clip_result = subprocess.run(
+            [sys.executable, str(REPO_ROOT / "scripts" / "export_clippings.py")],
+            input=json.dumps(rt_articles, ensure_ascii=False),
+            capture_output=True,
+            encoding="utf-8",
+            errors="replace",
+            text=True,
+        )
+        if clip_result.stderr:
+            print(clip_result.stderr, file=sys.stderr)
+        if clip_result.returncode == 0:
+            print("Clippings exported.", flush=True)
+        else:
+            print("WARNING: export_clippings.py failed.", file=sys.stderr)
 
     if not all_articles:
         print("No new articles.")

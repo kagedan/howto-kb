@@ -260,6 +260,33 @@ def enrich_and_format(tweet: dict) -> dict:
                 description_parts.append(f"\n--- Article ---\n{article['text']}")
             break
 
+    # 4. 外部URL収集（X内部リンクを除外）
+    external_urls = []
+    all_url_entities = list(urls)
+    if quoted_id:
+        qt_entities = (tweet.get("quoted_status") or {}).get("entities", {})
+        all_url_entities.extend(qt_entities.get("urls", []))
+    for url_entity in all_url_entities:
+        expanded = url_entity.get("expanded_url", "")
+        if not expanded:
+            continue
+        if any(d in expanded for d in ("x.com", "twitter.com", "t.co")):
+            continue
+        if expanded not in external_urls:
+            external_urls.append(expanded)
+
+    # 5. 添付画像URL収集
+    image_urls = []
+    media_entities = entities.get("media", [])
+    ext_entities = tweet.get("extended_entities", {})
+    if ext_entities:
+        media_entities = ext_entities.get("media", media_entities)
+    for media in media_entities:
+        if media.get("type") in ("photo", "animated_gif"):
+            img_url = media.get("media_url_https", "")
+            if img_url and img_url not in image_urls:
+                image_urls.append(img_url)
+
     # --- 出力形式変換 ---
     description = "\n\n".join(description_parts).strip()
 
@@ -275,6 +302,9 @@ def enrich_and_format(tweet: dict) -> dict:
         "date_published": date_published,
         "description": description[:2000],
         "source": "x",
+        "external_urls": external_urls,
+        "image_urls": image_urls,
+        "tweet_datetime": date_str,
     }
 
 
@@ -404,6 +434,7 @@ def main():
             entry["default_category"] = category_default
             entry["date_collected"] = today
             entry["query"] = f"RT @{username}"
+            entry["is_retweet"] = True
             all_new.append(entry)
             existing_urls.add(entry["url"])
 
