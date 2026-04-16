@@ -45,6 +45,7 @@ Supabase経由でのクエリ参照も可能（詳細はCLAUDE.mdを参照）。
 - `_generate_mds.py` — RSS+Xクロール→MD生成→index構築を一括実行
 - `_generate_rss_mds.py` — RSS記事のMD生成（stdin JSON入力）
 - `_filter_x_auto.py` — X投稿の自動フィルタリング+MD生成（stdin JSON入力）
+- `export_clippings.py` — RT記事の外部リンク先を全文取得し、Obsidian clippings/にMD出力（readability-lxml使用）
 
 ### インデックス・同期
 - `build_index.py` — articles/配下からindex.json, index-latest.json, 月別アーカイブを生成
