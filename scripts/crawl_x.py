@@ -217,15 +217,16 @@ def enrich_and_format(tweet: dict) -> dict:
 
     description_parts = [full_text]
 
-    # 1. スレッド判定: セルフリプライかどうか
-    in_reply_to = tweet.get("in_reply_to_user_id_str")
+    # 1. スレッド判定: ルート/途中どちらでもスレッドを取得する
+    # conversation_id_str で取得し、同一ユーザーによる自己返信チェーンが
+    # 2件以上あればスレッドと判定する（ルートのみの場合は len==1 なのでスキップ）。
     user_id = tweet.get("user", {}).get("id_str")
-    if in_reply_to and in_reply_to == user_id:
-        conv_id = tweet.get("conversation_id_str", tweet_id)
-        thread = fetch_thread(conv_id)
-        if len(thread) > 1:
-            thread_texts = [t.get("full_text", "") for t in thread]
-            description_parts = thread_texts  # スレッド全体で置き換え
+    conv_id = tweet.get("conversation_id_str", tweet_id)
+    thread = fetch_thread(conv_id)
+    if len(thread) > 1:
+        self_thread = [t for t in thread if t.get("user", {}).get("id_str") == user_id]
+        if len(self_thread) > 1:
+            description_parts = [t.get("full_text", "") for t in self_thread]
 
     # 2. 引用ツイートの元記事を取得
     quoted_id = tweet.get("quoted_status_id_str")
@@ -239,14 +240,15 @@ def enrich_and_format(tweet: dict) -> dict:
             quoted_text = quoted.get("full_text", "")
             description_parts.append(f"\n--- 引用元 @{quoted_author} ---\n{quoted_text}")
 
-            # 引用元がスレッドの場合も深掘り
-            qt_reply_to = quoted.get("in_reply_to_user_id_str")
+            # 引用元がスレッドの場合も深掘り（ルート/途中どちらでも取得）
             qt_user_id = quoted.get("user", {}).get("id_str")
-            if qt_reply_to and qt_reply_to == qt_user_id:
-                qt_conv_id = quoted.get("conversation_id_str", quoted_id)
-                qt_thread = fetch_thread(qt_conv_id)
-                if len(qt_thread) > 1:
-                    qt_texts = [t.get("full_text", "") for t in qt_thread[1:]]
+            qt_conv_id = quoted.get("conversation_id_str", quoted_id)
+            qt_thread = fetch_thread(qt_conv_id)
+            if len(qt_thread) > 1:
+                qt_self = [t for t in qt_thread if t.get("user", {}).get("id_str") == qt_user_id]
+                if len(qt_self) > 1:
+                    # 先頭（本文と重複）を除いた残りを追加
+                    qt_texts = [t.get("full_text", "") for t in qt_self[1:]]
                     description_parts.append("\n".join(qt_texts))
 
     # 3. Article（長文記事）があるか確認
