@@ -310,11 +310,52 @@ def enrich_and_format(tweet: dict) -> dict:
 
 # --- RT収集 ---
 
+def get_user_id(username: str) -> str:
+    """screen_name から数値ユーザーIDを解決する。"""
+    data = socialdata_get(f"/twitter/user/{username}")
+    return data.get("id_str", "") or str(data.get("id", ""))
+
+
 def fetch_user_retweets(username: str, max_results: int = 10) -> list[dict]:
-    """ユーザーのリツイート（引用RT含む）を検索で取得。"""
-    query = f"from:{username} filter:nativeretweets"
-    return search_tweets(query, max_results=max_results, min_likes=0,
-                         exclude_retweets=False)
+    """ユーザーのタイムラインを取得し、リツイートのみ抽出する。
+
+    /twitter/search の filter:nativeretweets は検索インデックスの制限で
+    最近のネイティブRTを拾えないため、/twitter/user/{user_id}/tweets
+    エンドポイント経由でタイムラインを取得し retweeted_status を持つ
+    投稿だけを返す方式に変更。
+    """
+    user_id = get_user_id(username)
+    if not user_id:
+        print(f"  ユーザーID取得失敗: @{username}", file=sys.stderr)
+        return []
+
+    results: list[dict] = []
+    cursor: str | None = None
+    # タイムラインは非RT投稿も混ざるため、必要件数より多めに取得して絞り込む
+    page_budget = max(max_results * 4, 40)
+
+    while len(results) < max_results:
+        params = {}
+        if cursor:
+            params["cursor"] = cursor
+
+        data = socialdata_get(f"/twitter/user/{user_id}/tweets", params)
+        tweets = data.get("tweets", [])
+        if not tweets:
+            break
+
+        for t in tweets:
+            if t.get("retweeted_status"):
+                results.append(t)
+                if len(results) >= max_results:
+                    break
+
+        cursor = data.get("next_cursor")
+        page_budget -= len(tweets)
+        if not cursor or page_budget <= 0:
+            break
+
+    return results[:max_results]
 
 
 # --- 日付パース ---
