@@ -48,6 +48,8 @@ user_timelines:
   - username: "kagedan_3"
     include_retweets: true
     category_default: "ai-workflow"
+    # 1日分のRTを取りこぼさないように大きめに設定（実際のRT数＋キャッチアップ分）
+    max_results: 50
 
 search_settings:
   max_results_per_query: 5

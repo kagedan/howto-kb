@@ -451,14 +451,14 @@ def main():
 
         category_default = ut.get("category_default", "ai-workflow")
 
-        # 初回実行判定（既存ロジック移植）
-        x_urls_in_index = sum(1 for u in existing_urls if "x.com" in u or "twitter.com" in u)
-        is_first_run = x_urls_in_index == 0
-        timeline_max = None if is_first_run else max_results
+        # user_timelines は検索クエリと独立した上限を持つ。
+        # config未指定時は50をデフォルトにする（1日分のRTを取りこぼさない値）。
+        timeline_max = ut.get("max_results", 50)
+        if multiplier > 1:
+            timeline_max = timeline_max * 2
 
-        limit_label = "全件" if timeline_max is None else f"最大{timeline_max}件"
-        print(f'Fetching RT: @{username} ({limit_label})', file=sys.stderr)
-        tweets = fetch_user_retweets(username, max_results=timeline_max or 50)
+        print(f'Fetching RT: @{username} (最大{timeline_max}件)', file=sys.stderr)
+        tweets = fetch_user_retweets(username, max_results=timeline_max)
         print(f"  Found {len(tweets)} results", file=sys.stderr)
 
         for tweet in tweets:
