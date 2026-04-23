@@ -385,10 +385,75 @@ def main():
 
     print(f"\nTotal new articles: {len(all_new)}", file=sys.stderr)
 
+    # --- 全文取得 (readability) ---
+    # RSS/Atom は要約しか配信しないフィードが多いため、記事URLから実本文を取得して
+    # description を差し替える。description が既に1000文字以上ある (Qiita API等) は
+    # 再取得不要なのでスキップ。
+    if all_new:
+        enrich_with_fulltext(all_new)
+
     # 新規記事をJSON形式で標準出力（Windows cp932対策）
     output = json.dumps(all_new, ensure_ascii=False, indent=2)
     sys.stdout.buffer.write(output.encode("utf-8"))
     sys.stdout.buffer.write(b"\n")
+
+
+def enrich_with_fulltext(articles: list[dict], skip_existing: int = 1000) -> None:
+    """記事の description を readability で全文に差し替える (in-place)。
+
+    - description が skip_existing 文字以上あるものはスキップ (Qiita API 等で既に長文)
+    - readabilityで100文字以上取れたら description を置き換え
+    - 取得失敗・短すぎる場合は元の description を保持
+    - レート制御 1秒/req
+    """
+    import time
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    try:
+        from export_clippings import fetch_article_markdown
+    except ImportError as e:
+        print(f"  enrich skipped (import failed): {e}", file=sys.stderr)
+        return
+
+    last_req = 0.0
+    enriched = 0
+    skipped = 0
+    failed = 0
+    short = 0
+    for art in articles:
+        desc = (art.get("description") or "").strip()
+        if len(desc) >= skip_existing:
+            skipped += 1
+            continue
+        url = art.get("url", "")
+        if not url:
+            continue
+
+        # レート制御 1秒/req
+        elapsed = time.time() - last_req
+        if elapsed < 1.0:
+            time.sleep(1.0 - elapsed)
+        last_req = time.time()
+
+        try:
+            result = fetch_article_markdown(url)
+        except Exception as e:
+            failed += 1
+            print(f"  enrich fetch error ({url}): {e}", file=sys.stderr)
+            continue
+
+        if not result:
+            failed += 1
+            continue
+
+        body = (result.get("body") or "").strip()
+        if len(body) >= 100:
+            art["description"] = body
+            enriched += 1
+        else:
+            short += 1
+
+    print(f"Enriched {enriched} articles (skipped={skipped} short={short} failed={failed})",
+          file=sys.stderr)
 
 
 if __name__ == "__main__":
