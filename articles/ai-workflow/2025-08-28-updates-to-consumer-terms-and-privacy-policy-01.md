@@ -10,4 +10,26 @@ date_collected: "2026-03-18"
 summary_by: "auto-rss"
 ---
 
-Anthropic News より収集。詳細は URL を参照。
+Today, we're rolling out updates to our Consumer Terms and Privacy Policy that will help us deliver even more capable, useful AI models. We're now giving users the choice to allow their data to be used to improve Claude and strengthen our safeguards against harmful usage like scams and abuse. Adjusting your preferences is easy and can be done at any time.
+
+These updates apply to users on our Claude Free, Pro, and Max plans, including when they use Claude Code from accounts associated with those plans. They do **not** apply to services under our Commercial Terms, including Claude for Work, Claude for Government, Claude for Education, or API use, including via third parties such as Amazon Bedrock and Google Cloud’s Vertex AI.
+
+By participating, you’ll help us improve model safety, making our systems for detecting harmful content more accurate and less likely to flag harmless conversations. You’ll also help future Claude models improve at skills like coding, analysis, and reasoning, ultimately leading to better models for all users.
+
+You’re always in control of this setting and whether we use your data in this way. If you’re a new user, you can select your preference in the signup process. Existing users will see the choice in a pop-up window like the one below.
+
+![App screen showing the modal presented to users](/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F0d48d7f71fe2b5ccc537b48394313a91636bb329-3840x2160.png&w=3840&q=75)
+
+In-app notification for existing Claude app users
+
+Starting today, we’re rolling out notifications so you can review these updates and manage your settings. If you’re an existing user, you have until October 8, 2025 to accept the updated Consumer Terms and make your decision. If you choose to accept the new policies now, they will go into effect immediately. These updates will apply only to new or resumed chats and coding sessions. After October 8, you’ll need to make your selection on the model training setting in order to continue using Claude. You can change your choice in your [Privacy Settings](https://claude.ai/redirect/website.v1.efb5e3ee-6a76-4493-bb6e-baa44aff5b89/settings/data-privacy-controls) at any time.
+
+## Extended data retention
+
+We are also extending data retention to five years, if you allow us to use your data for model training. This updated retention length will only apply to new or resumed chats and coding sessions, and will allow us to better support model development and safety improvements. If you delete a conversation with Claude it will not be used for future model training. If you do not choose to provide your data for model training, you’ll continue with our existing 30-day data retention period.
+
+The new five-year retention period will also apply to [feedback](https://privacy.anthropic.com/en/articles/10023548-how-long-do-you-store-my-data) you submit to us about Claude’s responses to prompts.
+
+To protect users’ privacy, we use a combination of tools and [automated processes](https://www.anthropic.com/research/clio) to filter or obfuscate sensitive data. We do not sell users’ data to third parties.
+
+You can find more details about the Consumer Terms and Privacy Policy updates in our FAQ section below.

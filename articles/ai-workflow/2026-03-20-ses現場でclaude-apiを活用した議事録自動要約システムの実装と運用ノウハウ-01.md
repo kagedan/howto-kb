@@ -10,24 +10,239 @@ date_collected: "2026-03-20"
 summary_by: "auto-rss"
 ---
 
-## はじめに
+```
+import Fastify, { FastifyInstance } from 'fastify';
+import multipart from '@fastify/multipart';
+import cors from '@fastify/cors';
+import { AudioTranscriber, TranscriptionResult } from './transcriber';
+import { MeetingSummarizer, MeetingSummary } from './summarizer';
+import { SlackNotifier } from './slack-notifier';
+import path from 'path';
+import fs from 'fs/promises';
 
-2026年現在、SES現場では日々の会議や打ち合わせが多く、議事録作成に多大な時間を要しているプロジェクトが少なくありません。経済産業省の「DX白書2026」によると、IT人材不足が深刻化する中、業務効率化への投資が急務とされています。
+interface ProcessingJob {
+  id: string;
+  status: 'processing' | 'completed' | 'error';
+  result?: MeetingSummary;
+  error?: string;
+  createdAt: Date;
+}
 
-本記事では、Claude APIを活用して議事録の自動要約システムを構築し、SES現場での生産性向上を実現した実装方法と運用ノウハウを詳しく解説します。実際の導入により、議事録作成時間を従来の90%削減（45分→5分）し、プロジェクトマネージャーから高い評価を得ることができました。
+class MeetingMinutesServer {
+  private server: FastifyInstance;
+  private transcriber: AudioTranscriber;
+  private summarizer: MeetingSummarizer;
+  private slackNotifier: SlackNotifier;
+  private jobs: Map<string, ProcessingJob> = new Map();
 
-## システム要件と技術選定
+  constructor(
+    openaiApiKey: string,
+    claudeApiKey: string,
+    slackWebhookUrl?: string
+  ) {
+    this.server = Fastify({ 
+      logger: { level: 'info' },
+      bodyLimit: 104857600 // 100MB
+    });
+    
+    this.transcriber = new AudioTranscriber(openaiApiKey);
+    this.summarizer = new MeetingSummarizer(claudeApiKey);
+    this.slackNotifier = new SlackNotifier(slackWebhookUrl);
+    
+    this.setupMiddleware();
+    this.setupRoutes();
+  }
 
-### 要件定義
+  private async setupMiddleware(): Promise<void> {
+    await this.server.register(multipart, {
+      limits: {
+        fileSize: 100 * 1024 * 1024 // 100MB
+      }
+    });
+    
+    await this.server.register(cors, {
+      origin: true
+    });
+  }
 
-- 音声ファイル（mp3, wav）からテキスト変換
-- 長時間の会議（最大2時間）に対応
-- 要点を3つのカテゴリで整理（決定事項、課題、次回アクション）
-- Slack連携で即座に共有
-- コスト効率の良い運用
+  private setupRoutes(): void {
+    // 音声ファイルアップロードエンドポイント
+    this.server.post('/api/upload-meeting', {
+      schema: {
+        consumes: ['multipart/form-data'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              jobId: { type: 'string' },
+              message: { type: 'string' }
+            }
+          }
+        }
+      }
+    }, async (request, reply) => {
+      try {
+        const data = await request.file();
+        if (!data) {
+          return reply.code(400).send({ error: 'ファイルが指定されていません' });
+        }
 
-### 技術スタック選定理由
+        // ファイル検証
+        const allowedMimeTypes = ['audio/mpeg', 'audio/wav', 'audio/mp4', 'video/mp4'];
+        if (!allowedMimeTypes.includes(data.mimetype)) {
+          return reply.code(400).send({ 
+            error: 'サポートされていないファイル形式です。MP3, WAV, MP4のみ対応しています。' 
+          });
+        }
 
-| 技術 | 選定理由 | 代替案との比較 |
-|------|----------|----------------|
-| Claude API | 長
+        // 一時ファイルに保存
+        const jobId = this.generateJobId();
+        const tempDir = path.join(process.cwd(), 'temp');
+        await fs.mkdir(tempDir, { recursive: true });
+        
+        const tempFilePath = path.join(tempDir, `${jobId}.${this.getFileExtension(data.mimetype)}`);
+        await data.file.pipe(require('fs').createWriteStream(tempFilePath));
+
+        // 非同期処理開始
+        const job: ProcessingJob = {
+          id: jobId,
+          status: 'processing',
+          createdAt: new Date()
+        };
+        
+        this.jobs.set(jobId, job);
+        
+        // バックグラウンド処理
+        this.processAudioFile(jobId, tempFilePath, {
+          title: request.body?.title as string,
+          expectedParticipants: request.body?.participants as string[],
+          slackChannel: request.body?.slackChannel as string
+        }).catch(error => {
+          console.error(`Job ${jobId} processing error:`, error);
+          this.jobs.set(jobId, {
+            ...job,
+            status: 'error',
+            error: error.message
+          });
+        });
+
+        return reply.send({
+          jobId,
+          message: '処理を開始しました。進捗は /api/job/{jobId} で確認できます。'
+        });
+        
+      } catch (error) {
+        console.error('Upload error:', error);
+        return reply.code(500).send({ error: 'ファイルアップロードに失敗しました' });
+      }
+    });
+
+    // ジョブ状態確認エンドポイント
+    this.server.get('/api/job/:jobId', async (request, reply) => {
+      const { jobId } = request.params as { jobId: string };
+      const job = this.jobs.get(jobId);
+      
+      if (!job) {
+        return reply.code(404).send({ error: 'ジョブが見つかりません' });
+      }
+      
+      return reply.send(job);
+    });
+
+    // 健全性チェック
+    this.server.get('/health', async () => {
+      return { status: 'OK', timestamp: new Date().toISOString() };
+    });
+  }
+
+  /**
+   * 音声ファイルの非同期処理メイン関数
+   */
+  private async processAudioFile(
+    jobId: string,
+    filePath: string,
+    options: {
+      title?: string;
+      expectedParticipants?: string[];
+      slackChannel?: string;
+    }
+  ): Promise<void> {
+    try {
+      console.log(`Job ${jobId}: 音声認識開始`);
+      const transcription = await this.transcriber.transcribeAudio(filePath);
+      
+      console.log(`Job ${jobId}: 議事録要約開始`);
+      const summary = await this.summarizer.summarizeMeeting(
+        transcription.text,
+        {
+          title: options.title,
+          expectedParticipants: options.expectedParticipants
+        }
+      );
+      
+      // ジョブ完了
+      this.jobs.set(jobId, {
+        id: jobId,
+        status: 'completed',
+        result: summary,
+        createdAt: this.jobs.get(jobId)!.createdAt
+      });
+      
+      // Slack通知（オプション）
+      if (options.slackChannel) {
+        await this.slackNotifier.sendMeetingMinutes(summary, options.slackChannel);
+      }
+      
+      console.log(`Job ${jobId}: 処理完了`);
+      
+    } catch (error) {
+      console.error(`Job ${jobId}: 処理エラー`, error);
+      throw error;
+    } finally {
+      // 一時ファイル削除
+      try {
+        await fs.unlink(filePath);
+      } catch (cleanupError) {
+        console.error('Temp file cleanup error:', cleanupError);
+      }
+    }
+  }
+
+  private generateJobId(): string {
+    return `job_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
+  }
+
+  private getFileExtension(mimeType: string): string {
+    const mimeMap: { [key: string]: string } = {
+      'audio/mpeg': 'mp3',
+      'audio/wav': 'wav',
+      'audio/mp4': 'm4a',
+      'video/mp4': 'mp4'
+    };
+    return mimeMap[mimeType] || 'unknown';
+  }
+
+  async start(port: number = 3000): Promise<void> {
+    try {
+      await this.server.listen({ port, host: '0.0.0.0' });
+      console.log(`Meeting Minutes Server started on port ${port}`);
+    } catch (error) {
+      console.error('Server start error:', error);
+      process.exit(1);
+    }
+  }
+}
+
+// サーバー起動
+if (require.main === module) {
+  const server = new MeetingMinutesServer(
+    process.env.OPENAI_API_KEY!,
+    process.env.CLAUDE_API_KEY!,
+    process.env.SLACK_WEBHOOK_URL
+  );
+  
+  server.start(parseInt(process.env.PORT || '3000'));
+}
+
+export { MeetingMinutesServer };
+```

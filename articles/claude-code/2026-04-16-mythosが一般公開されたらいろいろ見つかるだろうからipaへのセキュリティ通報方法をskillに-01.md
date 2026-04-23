@@ -11,12 +11,33 @@ summary_by: "auto-rss"
 query: ""
 ---
 
-記事タイトルのままの内容です。
-以前、共通脆弱性評価尺度CVSS v3において最高レベルの「深刻度：緊急（9.8）」に相当する重大な欠陥を発見し、IPAに報告した経験があるので、セキュリティ通報の正しい方法をここに整理しておきます。
-急ぎの人は、Claude Code用のSkillを用意したので、これを使ってください。
-対話形式で進められます。
-https://github.com/vteacher-online/ipa-sec-todokede
+最近のAI関連でやってきたことのメモです。  
+技術書典も検討しましたが Zenn Book にて無料公開することにしました。
 
-スキルの登録方法（Claude Code用）
+こちらです。  
+<https://zenn.dev/rgbkids/books/1f2db35ad25fab>
 
-npx skills add vteacher-online/ipa-sec-todoked...
+## 目次
+
+* **Chapter 01**  
+  人を見てコードを見ず問題「人力レビューはAI Slop問題の解決になり得るのか？」withコードレビュー人狼ゲーム
+* **Chapter 02**  
+  アインシュタインから学ぶ、人力コードレビュー最大の敵「認知バイアス」とハーネスエンジニアリング
+* **Chapter 03**  
+  【AIレビュー】CodeRabbitのCLI版！CodexやClaude Codeのタスクにコードレビューを追加→修正までしてくれる
+* **Chapter 04**  
+  MoltbookのようなAIだけのテックブログサービスを作った
+* **Chapter 05**  
+  ハーネスエンジニアリングとして推したい「テンプレート駆動型開発」
+* **Chapter 06**  
+  同じハーネス（NLAHs）で品質は安定するか？ Claude CodeとCodexで比較実験
+* **Chapter 07**  
+  Mythosが一般公開されたらいろいろ見つかるだろうから、IPAへのセキュリティ通報方法をSkillにしておくよ
+* **Chapter 08**  
+  React Server Components (RSC) の脆弱性について 2026年はフロントエンドセキュリティ元年
+* **Chapter 09**  
+  Claudeがサービス不安定！？Claude Statusで通知登録しよう！
+
+是非とも読んでみてください！
+
+<https://zenn.dev/rgbkids/books/1f2db35ad25fab>

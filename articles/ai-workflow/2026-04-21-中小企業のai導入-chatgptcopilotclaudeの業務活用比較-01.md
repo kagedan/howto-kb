@@ -14,26 +14,38 @@ query: ""
 ## 3つのAIサービスの概要
 
 ### ChatGPT（OpenAI）
+
 最も知名度が高い。GPT-4o搭載。月額$20/ユーザー（Plus）。ブラウザ/アプリから利用。
 
 ### Microsoft 365 Copilot
+
 M365と統合されたAI。Word/Excel/PowerPoint/Teams内で直接利用。月額約4,500円/ユーザー。
 
 ### Claude（Anthropic）
+
 長文の処理能力が高い。コード生成にも強い。月額$20/ユーザー（Pro）。
 
 ## 業務別おすすめ
-- メールの下書き → Copilot（Outlookと統合）
-- 議事録の要約 → Copilot（Teams連携）
-- 長文の分析・要約 → Claude
-- プログラミング支援 → ChatGPT / Claude
-- プレゼン資料作成 → Copilot（PowerPoint連携）
+
+* メールの下書き → Copilot（Outlookと統合）
+* 議事録の要約 → Copilot（Teams連携）
+* 長文の分析・要約 → Claude
+* プログラミング支援 → ChatGPT / Claude
+* プレゼン資料作成 → Copilot（PowerPoint連携）
 
 ## 中小企業の導入ステップ
+
 1. まずは無料版で社員に試してもらう
 2. 効果の高い業務を特定
 3. 有料版をパワーユーザーに限定導入
 4. 効果を測定し、横展開を判断
 
 ## まとめ
-「どれが最強か」では
+
+「どれが最強か」ではなく「自社のどの業務に効くか」で選びましょう。
+
+---
+
+**筆者**: 株式会社BTNコンサルティング 亀田 英佑  
+情シスアウトソーシング「情シス365」を運営しています。  
+<https://www.josis365.com>

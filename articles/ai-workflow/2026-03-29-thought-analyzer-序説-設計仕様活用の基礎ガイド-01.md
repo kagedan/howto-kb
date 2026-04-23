@@ -10,4 +10,4 @@ date_collected: "2026-03-30"
 summary_by: "auto-rss"
 ---
 
-thought-analyzerの設計思想から全軸仕様・出力フォーマット・活用法まで。Zenn記事・noteシリーズで概略を把握した上で、より深く理解・活用・改造したい人向けの基礎リファレンス。データ蓄積・応用編への起点となる一冊。
+Claude codeを用いて、心理学・認知科学の知見をもとに、思考の特徴を調べるフレームワーク　「thought-analyzer」を開発中。/ Building thought-analyzer — a framework for mapping cognitive patterns

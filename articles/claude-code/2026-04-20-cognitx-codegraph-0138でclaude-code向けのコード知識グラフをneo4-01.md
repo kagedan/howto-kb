@@ -11,4 +11,12 @@ summary_by: "auto-rss"
 query: ""
 ---
 
-<figure name="7553764b-c23b-4a3d-80f9-1d3929b3eb75" id="7553764b-c23b-4a3d-80f9-1d3929b3eb75" data-src="https://pypi.org/project/cognitx-codegraph/0.1.38/" data-identifier="null" embedded-service="external-article" embedded-content-key="emb8f534b6e10b9"> <a href="https://pypi.org/project/cognitx-codegraph/0.1.38/" rel="nofollow noopener" target="_blank"><strong>Client Challenge</strong><em></em><em>pypi.org</em></a><a href="https://pypi.org/project/cognitx-codegraph/0.1.38/" rel="nofollow noopen
+コード理解、AI任せにする前に“地図”を作る時代です🧭
+
+cognitx-codegraph 0.1.38は、Claude CodeやAIコーディングエージェント向けに、コード知識グラフを作るための仕組みです。TypeScript/Python/NestJS/FastAPI/Reactなどをインデックス化し、Neo4jへ登録してCypherでクエリできます。なおv0.2.0は非推奨で、0.1.x系を使う案内です。
+
+AIに「このコードどうなってる？」と聞いても、結局は文脈探しがボトルネックになりがちです。ここがこのツールの良いところで、構造化した“知識グラフ”にしておくことで、必要な箇所へ素早く辿れます🙂 さらに、対応スタックが実務寄り（NestJS/FastAPI/React）なので、既存プロジェクトに載せやすいのも注目点です。Claude Codeやエージェントの調査・設計支援を、より再現性高く進められる発想ですね。
+
+一方で、Neo4jの導入やCypherでのクエリ設計など、一定の学習コストは避けられません。また、コードベース全体をどうインデックスするかでコストや運用負荷が変わりそうです。
+
+AIコーディングの精度は“情報の置き場所”で決まることが多いので、こういう基盤はじわじわ効いてきそうです。

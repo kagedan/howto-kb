@@ -10,4 +10,30 @@ date_collected: "2026-03-20"
 summary_by: "auto-rss"
 ---
 
-<pre name="f3b6fc89-c536-4f52-aa9e-89992df452e5" id="f3b6fc89-c536-4f52-aa9e-89992df452e5"><code>4GBメモリ仮想3コアNVMe50GB	host02-101	Claude Code	</code></pre><p name="ea23ecb8-62d3-426d-b6a2-abf9f9100cd0" id="ea23ecb8-62d3-426d-b6a2-abf9f9100cd0">シンVPS<br>Claude Codeアプリイメージを利用する</p><br/><a href='https://note.com/yellowbirdjp/n/n6be15a209397'>続きをみる</a>
+```
+4GBメモリ
+仮想3コア
+NVMe50GB	host02-101	Claude Code	
+```
+
+シンVPS  
+Claude Codeアプリイメージを利用する
+
+メッセージあり！  
+Claude Code has switched from npm to native installer. Run claude install or see ….
+
+```
+Claude Codeは、従来のnpmパッケージ形式からネイティブインストーラー（Bunベースの単一バイナリ）へと完全に移行しました。 
+
+現在、npm経由のインストールは**非推奨（Deprecated）**となっており、公式はネイティブ版への移行を強く推奨しています。 
+
+移行・インストールの手順
+既存のnpm版を利用している場合、ターミナルで以下のコマンドを実行するだけでネイティブ版への移行が開始されます。 
+
+移行コマンド: claude install
+
+設定の継承: このコマンドを実行しても、過去の会話履歴、ログイン状態、設定（~/.claude/内のデータ）はそのまま保持されます。
+```
+
+iPhoneでは下記のSSHアプリを利用  
+Termius - Modern SSH Clientアプリ - App Store - Apple

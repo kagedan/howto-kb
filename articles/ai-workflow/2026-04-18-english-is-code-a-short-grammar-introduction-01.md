@@ -11,4 +11,8 @@ summary_by: "auto-rss"
 query: ""
 ---
 
+# English is Code: A Short Grammar Introduction
+
+無料で読める本
+
 How to Code in the World’s Most Powerful Programming Language.

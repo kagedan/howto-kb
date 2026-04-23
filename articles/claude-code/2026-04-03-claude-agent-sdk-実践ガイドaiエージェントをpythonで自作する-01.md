@@ -10,4 +10,6 @@ date_collected: "2026-04-04"
 summary_by: "auto-rss"
 ---
 
-Anthropic公式のClaude Agent SDKを使い、AIエージェントをPythonで構築す実践ガイドです。環境構築からビルトインツール、Hooks、MCP連携、サブエージェント、本番デプロイまで、コピペで動くコード例とともに解説します。
+AI会社を経営。PythonでAIエージェントを作る実践ガイドを毎日執筆中。
+Claude Agent SDK / LangGraph / MCP / CrewAI / PydanticAI など最新フレームワークをZenn Booksで体系解説中。
+動くコードサンプルにこだわっています。

@@ -11,4 +11,4 @@ summary_by: "auto-rss"
 query: ""
 ---
 
-思考パターン8類型・コーディング指示力7モードの深層解釈、holistic_profileの読み方、分析精度の上げ方、コンテキスト同期の問題まで。序説で仕様を把握した上で、分析結果を実際に活かしたい人向けの実践ガイド。
+Claude codeを用いて、心理学・認知科学の知見をもとに、思考の特徴を調べるフレームワーク　「thought-analyzer」を開発中。/ Building thought-analyzer — a framework for mapping cognitive patterns

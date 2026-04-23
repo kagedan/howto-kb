@@ -10,4 +10,6 @@ date_collected: "2026-03-27"
 summary_by: "auto-rss"
 ---
 
-OpenAI Agents SDK（Swarmの正式進化版）を使って、Pythonでマルチエージェントワークフローを構築する実践ガイドです。Agent・Tool・Handoff・Guardrail・Tracingの全機能を実動コードで解説。カスタマーサポートBotとコード生成パイプラインの完全実装付き。本番デプロイ・コスト最適化まで網羅。
+AI会社を経営。PythonでAIエージェントを作る実践ガイドを毎日執筆中。
+Claude Agent SDK / LangGraph / MCP / CrewAI / PydanticAI など最新フレームワークをZenn Booksで体系解説中。
+動くコードサンプルにこだわっています。
