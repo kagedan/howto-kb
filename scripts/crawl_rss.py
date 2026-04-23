@@ -20,6 +20,7 @@ crawl_rss.py - feeds.yaml のRSSフィードから新規記事を検出する。
 
 import json
 import os
+import re
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -47,6 +48,28 @@ JST = timezone(timedelta(hours=9))
 
 # RSSフィードの取得タイムアウト（秒）
 FETCH_TIMEOUT = 30
+
+# description の文字数上限（尻切れ防止のため十分大きい値）
+MAX_DESCRIPTION_CHARS = 20000
+
+# content:encoded の名前空間（RSS 2.0 でよく使われる拡張）
+CONTENT_NS_URI = "http://purl.org/rss/1.0/modules/content/"
+
+
+def html_to_markdown(raw: str) -> str:
+    """HTML文字列をMarkdown文字列に変換する。プレーンテキストならそのまま返す。"""
+    if not raw:
+        return ""
+    raw = raw.strip()
+    if not re.search(r"<[^>]+>", raw):
+        return re.sub(r"\n{3,}", "\n\n", raw).strip()
+    try:
+        from markdownify import markdownify as md
+        result = md(raw, heading_style="ATX", strip=["script", "style"])
+    except Exception:
+        # markdownify が無い／失敗した場合はHTMLタグ除去で代替
+        result = re.sub(r"<[^>]+>", "", raw)
+    return re.sub(r"\n{3,}", "\n\n", result).strip()
 
 
 def load_existing_urls() -> set[str]:
@@ -107,13 +130,22 @@ def fetch_feed(url: str) -> ET.Element | None:
 
 
 def parse_rss_entries(root: ET.Element) -> list[dict]:
-    """RSS 2.0 の <item> をパースする。"""
+    """RSS 2.0 の <item> をパースする。
+
+    本文は ``content:encoded``（全文）を優先、無ければ ``description``（多くは要約）を使う。
+    取得結果は HTML → Markdown へ変換する。
+    """
     entries = []
+    content_tag = f"{{{CONTENT_NS_URI}}}encoded"
     for item in root.iter("item"):
         title = item.findtext("title", "").strip()
         link = item.findtext("link", "").strip()
         pub_date = item.findtext("pubDate", "").strip()
-        description = item.findtext("description", "").strip()
+        content_encoded = (item.findtext(content_tag, "") or "").strip()
+        description = (item.findtext("description", "") or "").strip()
+
+        raw_body = content_encoded if content_encoded else description
+        body_md = html_to_markdown(raw_body)
 
         date_str = parse_date(pub_date) if pub_date else ""
 
@@ -122,13 +154,17 @@ def parse_rss_entries(root: ET.Element) -> list[dict]:
                 "title": title,
                 "url": link,
                 "date_published": date_str,
-                "description": description[:500],  # 長すぎる場合は切り詰め
+                "description": body_md[:MAX_DESCRIPTION_CHARS],
             })
     return entries
 
 
 def parse_atom_entries(root: ET.Element) -> list[dict]:
-    """Atom フィードの <entry> をパースする。"""
+    """Atom フィードの <entry> をパースする。
+
+    本文は ``<content>``（全文を載せる慣行）を優先、無ければ ``<summary>`` を使う。
+    ``<content type="xhtml">`` の場合は子要素をシリアライズしてHTMLとして扱う。
+    """
     ns = {"atom": "http://www.w3.org/2005/Atom"}
     entries = []
     for entry in root.findall("atom:entry", ns):
@@ -142,8 +178,22 @@ def parse_atom_entries(root: ET.Element) -> list[dict]:
 
         updated = entry.findtext("atom:updated", "", ns).strip()
         published = entry.findtext("atom:published", "", ns).strip()
-        summary = entry.findtext("atom:summary", "", ns).strip()
-        content = entry.findtext("atom:content", "", ns).strip()
+        summary = (entry.findtext("atom:summary", "", ns) or "").strip()
+
+        content_elem = entry.find("atom:content", ns)
+        content = ""
+        if content_elem is not None:
+            ctype = (content_elem.get("type") or "text").lower()
+            if ctype == "xhtml":
+                # xhtmlは子要素をXML化してHTML相当として扱う
+                content = "".join(
+                    ET.tostring(c, encoding="unicode", method="xml") for c in content_elem
+                )
+            else:
+                content = (content_elem.text or "").strip()
+
+        raw_body = content if content else summary
+        body_md = html_to_markdown(raw_body)
 
         date_str = parse_date(published or updated) if (published or updated) else ""
 
@@ -152,7 +202,7 @@ def parse_atom_entries(root: ET.Element) -> list[dict]:
                 "title": title,
                 "url": link,
                 "date_published": date_str,
-                "description": (summary or content)[:500],
+                "description": body_md[:MAX_DESCRIPTION_CHARS],
             })
     return entries
 
@@ -253,13 +303,13 @@ def fetch_qiita_articles(tag: str, per_page: int = 20) -> list[dict]:
             continue
         created = item.get("created_at", "")
         date_str = parse_date(created) if created else ""
-        # body先頭を description として使う
-        body = item.get("body", "")
+        # Qiita API は Markdown本文を body に返す
+        body = item.get("body", "") or ""
         entries.append({
             "title": item.get("title", ""),
             "url": entry_url,
             "date_published": date_str,
-            "description": body[:500],
+            "description": body[:MAX_DESCRIPTION_CHARS],
         })
     return entries
 
