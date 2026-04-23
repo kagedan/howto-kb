@@ -353,6 +353,26 @@ def fetch_quoted_tweet(tweet_id: str) -> dict | None:
         return None
 
 
+def normalize_to_thread_root(tweet: dict) -> dict:
+    """ツイートを所属スレッドの起点ツイートに正規化する。
+
+    同一ユーザーのセルフリプライ・チェーン（ぶら下がりスレッド）の
+    途中/末尾だった場合、起点ツイートに置き換えて返す。
+    起点が取れない・別ユーザーのスレッドへの自己返信等では元のままを返す。
+    """
+    tid = tweet.get("id_str")
+    conv = tweet.get("conversation_id_str")
+    if not tid or not conv or conv == tid:
+        return tweet
+    user_id = tweet.get("user", {}).get("id_str")
+    root = fetch_quoted_tweet(conv)
+    if not root:
+        return tweet
+    if root.get("user", {}).get("id_str") == user_id:
+        return root
+    return tweet
+
+
 # --- 深掘り＋出力形式変換 ---
 
 def enrich_and_format(tweet: dict) -> dict:
@@ -576,6 +596,8 @@ def main():
         print(f"Catchup mode: {multiplier}日分のギャップを検出（X取得件数を2倍: {max_results}件/クエリ）", file=sys.stderr)
 
     all_new = []
+    # スレッド重複排除: このバッチで既に処理した conversation_id を保持
+    seen_conv_ids: set = set()
 
     # --- 検索クエリ ---
     for q in queries:
@@ -594,12 +616,17 @@ def main():
         print(f"  Found {len(tweets)} results", file=sys.stderr)
 
         for tweet in tweets:
-            tweet_url = f"https://x.com/{tweet.get('user', {}).get('screen_name', '')}/status/{tweet.get('id_str', '')}"
+            target = normalize_to_thread_root(tweet)
+            tweet_url = f"https://x.com/{target.get('user', {}).get('screen_name', '')}/status/{target.get('id_str', '')}"
 
             if tweet_url in existing_urls:
                 continue
+            conv_id = target.get("conversation_id_str") or target.get("id_str")
+            if conv_id in seen_conv_ids:
+                continue
+            seen_conv_ids.add(conv_id)
 
-            entry = enrich_and_format(tweet)
+            entry = enrich_and_format(target)
             entry["default_category"] = category
             entry["date_collected"] = today
             entry["query"] = query_text
@@ -632,11 +659,17 @@ def main():
             # RTの場合、元ツイートを深掘り
             rt_source = tweet.get("retweeted_status")
             target = rt_source if rt_source else tweet
+            # スレッドの起点に正規化（ぶら下がりの途中/末尾をRTしていても起点として扱う）
+            target = normalize_to_thread_root(target)
 
             tweet_url = f"https://x.com/{target.get('user', {}).get('screen_name', '')}/status/{target.get('id_str', '')}"
 
             if tweet_url in existing_urls:
                 continue
+            conv_id = target.get("conversation_id_str") or target.get("id_str")
+            if conv_id in seen_conv_ids:
+                continue
+            seen_conv_ids.add(conv_id)
 
             entry = enrich_and_format(target)
             entry["default_category"] = category_default
