@@ -190,12 +190,158 @@ def fetch_thread(tweet_id: str) -> list[dict]:
 
 
 def fetch_article(tweet_id: str) -> dict | None:
-    """Xの長文記事（Article）を取得。"""
+    """Xの長文記事（Article）を取得。
+
+    SocialData のレスポンスはツイート全体で、本文は ``article`` キー配下。
+    """
     try:
-        return socialdata_get(f"/twitter/tweets/{tweet_id}/article")
+        data = socialdata_get(f"/twitter/article/{tweet_id}")
+        if isinstance(data, dict):
+            return data.get("article")
+        return None
     except Exception as e:
         print(f"  Article取得失敗 (tweet_id={tweet_id}): {e}", file=sys.stderr)
         return None
+
+
+# --- Draft.js → Markdown 変換 ---
+
+def _apply_inline_decorations(text: str, inline_ranges: list, entity_ranges: list,
+                              emap: dict) -> str:
+    """inlineStyleRanges と entityRanges をテキストに反映し Markdown 化する。"""
+    edits = []  # (offset, length, pre, post, replace)
+    for r in inline_ranges or []:
+        style = r.get("style", "")
+        offset = r.get("offset", 0)
+        length = r.get("length", 0)
+        if style in ("Bold", "BOLD"):
+            edits.append((offset, length, "**", "**", None))
+        elif style in ("Italic", "ITALIC"):
+            edits.append((offset, length, "*", "*", None))
+        elif style in ("Code", "CODE"):
+            edits.append((offset, length, "`", "`", None))
+    for r in entity_ranges or []:
+        offset = r.get("offset", 0)
+        length = r.get("length", 0)
+        entity = emap.get(str(r.get("key")), {})
+        etype = entity.get("type", "")
+        edata = entity.get("data") or {}
+        if not isinstance(edata, dict):
+            continue
+        if etype == "LINK":
+            url = edata.get("url", "")
+            if url:
+                edits.append((offset, length, "[", f"]({url})", None))
+        elif etype == "MARKDOWN":
+            md = edata.get("markdown", "")
+            edits.append((offset, length, "", "", md))
+        # TWEMOJI は元テキストの絵文字をそのまま残す
+
+    edits.sort(key=lambda x: x[0], reverse=True)
+    result = text
+    for offset, length, pre, post, replace in edits:
+        end = offset + length
+        if offset < 0 or end > len(result):
+            continue
+        if replace is not None:
+            result = result[:offset] + replace + result[end:]
+        else:
+            result = result[:offset] + pre + result[offset:end] + post + result[end:]
+    return result
+
+
+def _render_atomic_block(entity_ranges: list, emap: dict,
+                         media_dict: dict, media_queue: list) -> str:
+    """atomic block を Markdown に変換する（区切り線・画像・MD埋込）。"""
+    if not entity_ranges:
+        return ""
+    entity = emap.get(str(entity_ranges[0].get("key")), {})
+    etype = entity.get("type", "")
+    edata = entity.get("data") or {}
+    if not isinstance(edata, dict):
+        return ""
+    if etype == "DIVIDER":
+        return "---"
+    if etype == "MEDIA":
+        items = edata.get("mediaItems", [])
+        if items:
+            mid = str(items[0].get("mediaId", ""))
+            url = media_dict.get(mid)
+            if not url and media_queue:
+                url = media_queue.pop(0)
+            if url:
+                return f"![]({url})"
+        return ""
+    if etype == "MARKDOWN":
+        return edata.get("markdown", "")
+    return ""
+
+
+def draftjs_to_markdown(content_state: dict, media_entities: list = None) -> str:
+    """Draft.js content_state を Markdown 文字列に変換する。"""
+    if not isinstance(content_state, dict):
+        return ""
+    blocks = content_state.get("blocks", []) or []
+    entity_list = content_state.get("entityMap", []) or []
+
+    if isinstance(entity_list, list):
+        emap = {str(e.get("key")): (e.get("value") or {}) for e in entity_list}
+    elif isinstance(entity_list, dict):
+        emap = {str(k): v for k, v in entity_list.items()}
+    else:
+        emap = {}
+
+    media_dict = {}
+    media_queue = []
+    for me in media_entities or []:
+        mid = str(me.get("media_id", ""))
+        url = ((me.get("media_info") or {}).get("original_img_url")
+               or me.get("media_url_https") or "")
+        if url:
+            if mid:
+                media_dict[mid] = url
+            media_queue.append(url)
+
+    lines = []
+    for block in blocks:
+        btype = block.get("type", "unstyled")
+        text = block.get("text", "")
+        inline_ranges = block.get("inlineStyleRanges", [])
+        entity_ranges = block.get("entityRanges", [])
+
+        if btype == "atomic":
+            rendered = _render_atomic_block(entity_ranges, emap, media_dict, media_queue)
+            if rendered:
+                lines.append(rendered)
+                lines.append("")
+            continue
+
+        decorated = _apply_inline_decorations(text, inline_ranges, entity_ranges, emap)
+
+        if btype == "header-one":
+            lines.append(f"# {decorated}")
+        elif btype == "header-two":
+            lines.append(f"## {decorated}")
+        elif btype == "header-three":
+            lines.append(f"### {decorated}")
+        elif btype == "unordered-list-item":
+            lines.append(f"- {decorated}")
+        elif btype == "ordered-list-item":
+            lines.append(f"1. {decorated}")
+        elif btype == "blockquote":
+            lines.append(f"> {decorated}")
+        elif btype == "code-block":
+            lines.append(f"```\n{text}\n```")
+        else:
+            lines.append(decorated)
+
+        if btype not in ("unordered-list-item", "ordered-list-item"):
+            lines.append("")
+
+    result = "\n".join(lines)
+    # 過剰な空行を整理
+    result = re.sub(r"\n{3,}", "\n\n", result).strip()
+    return result
 
 
 def fetch_quoted_tweet(tweet_id: str) -> dict | None:
@@ -254,12 +400,28 @@ def enrich_and_format(tweet: dict) -> dict:
     # 3. Article（長文記事）があるか確認
     entities = tweet.get("entities", {})
     urls = entities.get("urls", [])
+    article_info = None
     for url_entity in urls:
         expanded = url_entity.get("expanded_url", "")
         if ("x.com" in expanded or "twitter.com" in expanded) and "/i/article" in expanded:
             article = fetch_article(tweet_id)
-            if article and article.get("text"):
-                description_parts.append(f"\n--- Article ---\n{article['text']}")
+            if article:
+                body_md = draftjs_to_markdown(
+                    article.get("content_state"),
+                    article.get("media_entities", []),
+                )
+                article_info = {
+                    "title": article.get("title", ""),
+                    "body_markdown": body_md,
+                    "cover_url": article.get("cover_url", ""),
+                    "preview_text": article.get("preview_text", ""),
+                }
+                if body_md:
+                    description_parts.append(f"\n--- Article ---\n{body_md}")
+                elif article.get("preview_text"):
+                    description_parts.append(
+                        f"\n--- Article ---\n{article['preview_text']}"
+                    )
             break
 
     # 4. 外部URL収集（X内部リンクを除外）
@@ -298,7 +460,7 @@ def enrich_and_format(tweet: dict) -> dict:
     date_str = tweet.get("tweet_created_at", "")
     date_published = parse_date(date_str)
 
-    return {
+    result = {
         "title": title,
         "url": f"https://x.com/{author}/status/{tweet_id}",
         "date_published": date_published,
@@ -308,6 +470,9 @@ def enrich_and_format(tweet: dict) -> dict:
         "image_urls": image_urls,
         "tweet_datetime": date_str,
     }
+    if article_info:
+        result["article"] = article_info
+    return result
 
 
 # --- RT収集 ---

@@ -249,6 +249,65 @@ tags:
     return out_path
 
 
+# --- パターンC: X Article（長文記事） ---
+
+def write_x_article(article: dict, today: str) -> Path | None:
+    """X の Article 投稿を Web記事フォーマットで出力する。
+
+    source は X のツイートURL、author は投稿者。cover_url があれば本文先頭に配置。
+    """
+    art_info = article.get("article") or {}
+    title = art_info.get("title") or ""
+    body_md = art_info.get("body_markdown") or ""
+    cover_url = art_info.get("cover_url") or ""
+    preview = art_info.get("preview_text") or ""
+
+    if not title and not body_md:
+        return None
+
+    author = ""
+    m = re.match(r"@(\w+):", article.get("title", ""))
+    if m:
+        author = m.group(1)
+
+    tweet_url = article.get("url", "")
+    published = article.get("date_published", "")
+    desc_source = preview or body_md
+    description = escape_yaml_str(make_description(desc_source))
+
+    filename = sanitize_filename(title or f"{author}_article") + ".md"
+    out_path = CLIPPINGS_DIR / filename
+
+    if out_path.exists():
+        return None
+
+    body_parts = []
+    if cover_url:
+        body_parts.append(f"![cover]({cover_url})")
+        body_parts.append("")
+    if body_md:
+        body_parts.append(body_md)
+
+    body = "\n".join(body_parts).strip()
+
+    content = f'''---
+title: "{escape_yaml_str(title)}"
+source: "{tweet_url}"
+author:
+  - "[[@{author}]]"
+published: {published}
+created: {today}
+description: "{description}"
+tags:
+  - "clippings"
+---
+
+{body}
+'''
+    out_path.write_text(content, encoding="utf-8")
+    return out_path
+
+
 # --- パターンB: X投稿 Clipperフォーマット ---
 
 def write_x_post(article: dict, today: str) -> Path | None:
@@ -361,6 +420,7 @@ def main():
     for art in rt_articles:
         tweet_url = art.get("url", "")
         external_urls = art.get("external_urls", [])
+        has_article = bool((art.get("article") or {}).get("body_markdown"))
 
         # 重複チェック（ツイートURL and 外部URL）
         if tweet_url in existing_sources:
@@ -370,7 +430,21 @@ def main():
             skipped += 1
             continue
 
-        if external_urls:
+        if has_article:
+            # パターンC: X Article（長文記事）を Web記事フォーマットで出力
+            result = write_x_article(art, today)
+            if result:
+                print(f"  -> {result.name}", file=sys.stderr)
+                written += 1
+            else:
+                # 出力失敗 → X投稿フォーマットにフォールバック
+                result = write_x_post(art, today)
+                if result:
+                    print(f"  -> {result.name} (fallback)", file=sys.stderr)
+                    written += 1
+                else:
+                    skipped += 1
+        elif external_urls:
             # パターンA: 外部記事の全文取得
             ext_url = external_urls[0]
             print(f"  Fetching: {ext_url}", file=sys.stderr)
