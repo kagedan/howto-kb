@@ -3,3 +3,9 @@ CLAUDE.md
 .env
 __pycache__/
 archive/
+
+# crawl作業ファイル（毎朝のスケジュール実行で書き換わる）
+_crawl_rss_stderr.txt
+_crawl_x_stderr.txt
+_new_rss.json
+_new_x.json
