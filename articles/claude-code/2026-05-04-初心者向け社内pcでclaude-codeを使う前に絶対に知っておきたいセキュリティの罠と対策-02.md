@@ -1,0 +1,353 @@
+---
+id: "2026-05-04-初心者向け社内pcでclaude-codeを使う前に絶対に知っておきたいセキュリティの罠と対策-02"
+title: "【初心者向け】社内PCでClaude Codeを使う前に。絶対に知っておきたいセキュリティの罠と対策"
+url: "https://qiita.com/honey-0326-honey/items/c16d628aee898e3f9f72"
+source: "qiita"
+category: "claude-code"
+tags: ["claude-code", "API", "qiita"]
+date_published: "2026-05-04"
+date_collected: "2026-05-05"
+summary_by: "auto-rss"
+---
+
+# 【初心者向け】社内PCでClaude Codeを安全に使うための設定ガイド
+
+AIコーディングツール、便利ですよね。
+
+でも、ちょっと待ってください。
+
+もし、あなたのPCにある「社内システムのAPIキー」が、気づかないうちに外部に送信されていたら？
+もし、AIが勘違いして「本番環境のデータベースを消去するコマンド」を実行してしまったら？
+
+「そんなこと起きるわけないでしょ」と思うかもしれません。
+ですが、AIエージェントは「あなたの代わりに、あなたの権限で」動くツールです。
+
+設定を一つ間違えるだけで、あなたのPCは「誰でも操作できる状態」になってしまう危険性を秘めているんです。
+
+この記事では、社内ローカルPCでClaude Codeを使い始めた方向けに、「これだけはやっておきたい」必須のセキュリティ設定を、公式ドキュメントに基づいて正確に解説します。
+
+> この記事では `settings.json` を手動で設定する手順を中心に解説しますが、すべての設定はClaude Codeに直接お願いすることでも対応できます。また、Claude Codeの画面内で `/permissions` と入力すると、今どんなルールが効いているかをUI上で確認・管理できるので、困ったときはまずここを見てみてください。
+
+---
+
+この記事で紹介する5つのチェックポイントは、こんな構造になっています。「なんで5つもあるの？」という疑問への答えも込めて、最初に全体像を見ておきましょう。
+
+| Layer | チェックポイント | 制御レベル |
+|:---:|---|:---:|
+| Layer 1 | APIキー保護（チェックポイント1） | — |
+| Layer 2 | permissions設定（チェックポイント2・3） | アプリレベル |
+| Layer 3 | Hooks（チェックポイント4） | アプリレベル・動的 |
+| Layer 4 | Sandbox（チェックポイント5） | **OSレベル（最終防衛線）** |
+
+Layer 2〜3は「Claude Codeへのお願い」、Layer 4は「OSレベルの強制」です。この違いが、後半でじわじわ効いてきます。
+
+---
+
+## チェックポイント1：APIキーを「そのまま」置いていませんか？
+
+まず最初に確認してほしいのが、APIキーの管理方法です。
+
+Claude Codeを動かすには「APIキー」というパスワードのようなものが必要で、これを `.env` ファイルに直接書いている方が意外と多いんです。
+
+```bash
+# これ、やってしまいがちですが危険です
+ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxx...
+```
+
+何が怖いかというと、AIはエラーを解決しようとするとき、プロジェクト内のファイルを片っ端から読み込もうとします。その中に `.env` があったら、最悪の場合、**あなたのAPIキーがAIへの指示文に混じって外部サーバーに送られてしまう**可能性があるんです。
+
+### 対策：APIキーは「環境変数」として永続化する
+
+解決策はシンプルで、APIキーを `.env` ファイルではなくOSの「環境変数」として登録することです。
+
+「ターミナルで `export` すれば良いんじゃないの？」と思うかもしれませんが、それだとターミナルを閉じた瞬間に消えてしまいます。毎回入力するのは現実的じゃないので、設定ファイルに書き込んで永続化しましょう。
+
+#### Mac / Linux の場合（Zsh）
+
+```bash
+# .zshrcの末尾に追記する
+echo 'export ANTHROPIC_API_KEY="あなたのAPIキー"' >> ~/.zshrc
+
+# 設定を今すぐ反映させる
+source ~/.zshrc
+```
+
+これで、どのフォルダでClaude Codeを起動しても自動的に読み込まれます。
+
+#### Windows で WSL を使っている場合
+
+Mac / Linux とまったく同じ手順でOKです。WSLのターミナル上でそのまま実行してください。
+
+#### Windows ネイティブの場合（PowerShell）
+
+```powershell
+# 環境変数を永続的に設定する（ユーザー単位）
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "あなたのAPIキー", "User")
+```
+
+設定後はPowerShellを再起動してから動作確認してください。
+
+WSLを使わずWindowsネイティブで開発している場合、後述の `settings.json` の権限ルールはBash用とは別に `PowerShell()` 構文で書く必要があります。詳細は公式ドキュメントをご参照ください。
+
+> **💡 複数プロジェクトでAPIキーを切り替えたい場合**
+> `direnv` というツールが便利です。フォルダを移動するだけで環境変数を自動で切り替えてくれます。詳しい使い方は別途ブログ記事で解説予定です。
+
+---
+
+## チェックポイント2：`deny` 設定で「絶対に実行させない操作」を明示する
+
+「このコマンドを実行してもいいですか？」——Claude Codeを使っていると、こんな確認が何度も来ます。
+
+正直、慣れてくると「どうせ大丈夫でしょ」と「y」を連打したくなるんですよね。でも、これが一番危険な状態です。**白紙の小切手にサインしているのと同じ**なので。
+
+もしAIが勘違いして `rm -rf /`（全データ消去）を提案してきたとき、うっかり「y」を押したら——そのまま実行されます。
+
+### `deny` ルールで防衛線を張る
+
+Claude Codeには `settings.json` で「これだけは絶対にやらせない」を事前に宣言できる仕組みがあります。権限チェックは **`deny → ask → allow` の順**で評価されるので、`deny` に書いたものは何があっても実行されません。
+
+プロジェクトのフォルダに `.claude/settings.json` を作成してください。
+（ユーザー全体に適用したい場合は `~/.claude/settings.json` に作成します）
+
+以下はあくまで設定例です。`curl` や `wget` は開発上どうしても必要なケースもあるので、そのまま使うのではなく自分の環境に合わせて調整してください。
+
+```json
+{
+  "permissions": {
+    "deny": [
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)"
+    ]
+  }
+}
+```
+
+これで以下の操作がブロックされます。
+
+- `rm` によるファイル削除
+- `git push` による外部への送信
+- `curl` や `wget` による外部通信
+- `.env` や `secrets` フォルダ内の読み取り
+
+> **⚠️ ここだけは絶対に読んでください**
+>
+> `Read(./.env)` という deny ルールは、ClaudeのReadツールをブロックします。でも、**Bashで `cat .env` と打った場合はブロックされません。**
+>
+> Bashコマンド経由のアクセスを制限したい場合は、次のチェックポイント3で `Bash(cat .env)` を deny に追加できます。ただし、`less .env` や `head .env` など他のコマンドまでは防ぎきれないため、**完全に守りたいならサンドボックス（チェックポイント5）を使うのが確実です。**
+
+---
+
+## チェックポイント3：`allow` 設定で「確認なしで実行できる操作」を絞る
+
+deny で危険な操作を締め出したら、今度は「これは確認なしで動かしてOK」というリストを作りましょう。
+
+ひとつ知っておいてほしいのですが、`ls` や `grep`、`git status` などの読み取り専用コマンドは、Claude Codeがデフォルトで安全と判断して自動実行します。なので、実は明示的に `allow` に書かなくても動きます。それでも設定の意図をはっきりさせたい場合は書いておいて損はないので、以下を参考にしてください。
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls *)",
+      "Bash(grep *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(cat .env)",
+      "Bash(cat .env.*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)"
+    ]
+  }
+}
+```
+
+リストにないコマンド（例：`npm install`）は、今まで通り「実行してもいいですか？」と聞いてきます。
+
+> **💡 ワイルドカードの書き方で挙動が変わります**
+> `Bash(ls *)` と `Bash(ls*)` は別物です。
+> スペースあり `Bash(ls *)` → `ls -la` にはマッチするが `lsof` にはマッチしない
+> スペースなし `Bash(ls*)` → 両方にマッチする
+> 意図せず広い範囲を許可してしまわないよう、スペースの有無を意識して書きましょう。
+
+---
+
+## チェックポイント4：Hooks機能で動的な制御を実現する
+
+ここで少し立ち止まって、チェックポイント2・3の「限界」について話しておきたいと思います。
+
+実は、`Read(./.env)` という deny ルールはClaudeの組み込みReadツールをブロックするものの、Bashで `cat .env` と打たれると止められません。`Bash(cat .env)` を deny に書けばそれは防げますが、今度は `less .env` で開かれたらアウトです。設定ファイルのルールって、結局「想定済みのコマンド」しか防げないんです。
+
+これが `settings.json` が"お願い"と呼ばれる理由で、**完全な保護にはチェックポイント5のサンドボックスが必要**です。
+
+では Hooks は何のためにあるかというと、「静的なルールでは書けない、条件付きの制御」ができるんです。
+
+たとえば「`rm` は使いたいけど、`rm -rf` だけは絶対に止めたい」という場合。deny ルールのパターンマッチングだけではこの細かい制御は難しく、ここで Hooks の出番になります。
+
+### PreToolUse Hookで危険なコマンドをブロックする
+
+まず `settings.json` にHookの設定を追加します（後で permissions と統合します）。
+
+`.claude/hooks/block-destructive.sh` というスクリプトを作成してください。
+（作成後は `chmod +x .claude/hooks/block-destructive.sh` で実行権限を付与してください）
+
+```bash
+#!/bin/bash
+# 実行されようとしているコマンドをstdinから取得する
+COMMAND=$(jq -r '.tool_input.command')
+
+# rm -rf が含まれていたらブロックする
+if echo "$COMMAND" | grep -q 'rm -rf'; then
+  jq -n '{
+    hookSpecificOutput: {
+      hookEventName: "PreToolUse",
+      permissionDecision: "deny",
+      permissionDecisionReason: "rm -rf コマンドはセキュリティポリシーによりブロックされています"
+    }
+  }'
+  exit 0
+fi
+
+exit 0  # 許可
+```
+
+> **💡 ブロックの仕組みについて**
+> スクリプトの終了コードとJSONの組み合わせでブロックを制御します。
+> - `exit 0` ＋ JSONで `permissionDecision: "deny"` → ブロック（推奨）
+> - `exit 0` のみ（JSONなし）→ 許可
+> - `exit 2` ＋ stderrにメッセージ → ブロック（現在も動作しますが非推奨の旧形式）
+
+### 最終的な settings.json の統合例
+
+チェックポイント2・3のpermissionsと、チェックポイント4のhooksは **1つの `settings.json` にまとめて書きます**。別ファイルにする必要はありません。
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls *)",
+      "Bash(grep *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(cat .env)",
+      "Bash(cat .env.*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block-destructive.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+---
+
+## チェックポイント5：ネイティブサンドボックスを活用する
+
+ここまでの設定はどれも「ソフトウェアレベルの制御」、つまりClaude Codeへのお願いです。Hooksを使えばかなり強固になりますが、それでもBash経由での迂回は完全にはゼロにできません。
+
+「じゃあ結局、どうすれば安心できるの？」——その答えがサンドボックスです。
+
+サンドボックスはOSレベルでアクセスを強制的に制限する機能で、Claudeがどんなコマンドを実行しようとしても、設定した境界の外には出られなくなります。これまでの設定とは制御の次元が違います。
+
+> サンドボックスとは、プログラムが外部に影響を与えないよう隔離された実行環境のことです。「砂場の中だけで遊んでいい」というイメージで、砂場の外には出られません。
+
+有効化するには、**Claude Codeの画面内**で以下のコマンドを入力します。
+
+```
+/sandbox
+```
+
+> **⚠️ 注意**
+> これはClaude Codeの画面内で入力するスラッシュコマンドです。通常のターミナルで打っても何も起きません。
+
+入力するとメニューが開くので、モードを選択してください。
+
+| モード | 動作 |
+|---|---|
+| Auto-allowモード | サンドボックス内のコマンドは自動で許可。サンドボックス外のコマンドは確認が来る |
+| Regular permissionsモード | サンドボックスが有効でも、すべてのコマンドに確認が来る |
+
+社内PCで使い始めるなら、まずは **Regular permissionsモード** からがおすすめです。「あれ、これも止まるの？」という想定外の動作を確認しながら、徐々に Auto-allow に移行するのが安全です。
+
+サンドボックスが有効になると、以下の制限がOSレベルでかかります。
+
+| 制限の種類 | 内容 |
+|---|---|
+| ファイルシステム制限 | 現在のプロジェクトフォルダ以外への書き込みを禁止 |
+| ネットワーク制限 | 許可されていない外部ドメインへの通信を禁止 |
+
+Macは標準の `Seatbelt`、Linux/WSL2は `bubblewrap` という技術が使われており、Dockerなしで使える点も助かります。
+
+#### Mac の場合
+
+追加インストール不要で、そのまま使えます。
+
+#### Linux / WSL2 の場合
+
+事前に以下のパッケージをインストールしてください。
+
+```bash
+# Ubuntu/Debian の場合
+sudo apt-get install bubblewrap socat
+```
+
+> **⚠️ WSL1はサポート外です**
+> WSL1はサンドボックスに必要なLinuxカーネルの機能が使えないため、サポートされていません。
+> WSL2へのアップグレードを検討するか、チェックポイント2〜4のpermissions設定とHooksを丁寧に組み合わせた上で利用してください。その場合、OSレベルの保護はないということを理解した上で運用することが大切です。
+
+---
+
+## まとめ：今日からできる5つのアクション
+
+読んでみてどうでしたか。「思ったより怖い話だったな」と感じた方もいるかもしれません。
+
+でも逆に言えば、この記事の設定を一通りやっておけば、あとは安心してClaude Codeを使い倒せます。最初の数十分を惜しまないことが、あとの大きな安心につながります。
+
+- [ ] **APIキーを `.env` から削除し、`.zshrc` などの環境変数に移動する**
+- [ ] **`.claude/settings.json` を作成し、`deny` ルールで危険な操作をブロックする**
+- [ ] **`allow` ルールで安全なコマンドだけを自動許可する**
+- [ ] **必要に応じてHooks機能で動的な制御を追加する**
+- [ ] **Claude Codeの画面内で `/sandbox` と入力し、サンドボックスを有効にする**
+
+安全な環境を整えて、快適なAIコーディングライフを楽しんでください。
+
+---
+
+### 参考リソース
+
+- [Claude Code Permissions | Anthropic](https://docs.anthropic.com/en/docs/claude-code/permissions)
+- [Claude Code Hooks | Anthropic](https://docs.anthropic.com/en/docs/claude-code/hooks)
+- [Claude Code Sandboxing | Anthropic](https://docs.anthropic.com/en/docs/claude-code/sandboxing)
+- [Claude Code Security | Anthropic](https://docs.anthropic.com/en/docs/claude-code/security)
+- [Claude Code Settings | Anthropic](https://docs.anthropic.com/en/docs/claude-code/settings)

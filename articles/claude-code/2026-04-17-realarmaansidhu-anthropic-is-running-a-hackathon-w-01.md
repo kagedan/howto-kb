@@ -1,12 +1,12 @@
 ---
 id: "2026-04-17-realarmaansidhu-anthropic-is-running-a-hackathon-w-01"
 title: "@realarmaansidhu: Anthropic is running a hackathon with $100K in API credits f"
-url: "https://x.com/realarmaansidhu/status/2045249858076807655"
+url: "https://x.com/realarmaansidhu/status/2045249882038882770"
 source: "x"
 category: "claude-code"
 tags: ["claude-code", "API", "Gemini", "GPT", "x"]
 date_published: "2026-04-17"
-date_collected: "2026-05-01"
+date_collected: "2026-05-05"
 summary_by: "auto-x"
 ---
 
