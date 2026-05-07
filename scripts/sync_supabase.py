@@ -57,6 +57,17 @@ def upsert_articles(articles: list[dict]):
             print(f"Upserted {len(batch)} articles (batch {i // batch_size + 1})")
 
 
+def strip_nulls(value):
+    """Postgres text型が拒否する \\u0000（null文字）を文字列から除去する。
+    list は要素ごとに再帰、それ以外は素通し。
+    """
+    if isinstance(value, str):
+        return value.replace("\x00", "")
+    if isinstance(value, list):
+        return [strip_nulls(v) for v in value]
+    return value
+
+
 def read_content(file_path: str) -> str:
     """Markdownファイルからfrontmatterを除去した本文を返す。"""
     md_path = REPO_ROOT / file_path
@@ -88,7 +99,7 @@ def transform_article(article: dict) -> dict:
     file_path = article.get("file_path", "")
     content = read_content(file_path) if file_path else ""
 
-    return {
+    row = {
         "id": article.get("id", ""),
         "title": title,
         "url": article.get("url", ""),
@@ -100,6 +111,8 @@ def transform_article(article: dict) -> dict:
         "file_path": file_path,
         "content": content or None,
     }
+    # Postgres text 型が拒否する (null文字) を全フィールドから除去
+    return {k: strip_nulls(v) for k, v in row.items()}
 
 
 def sync_to_supabase(articles: list[dict]):
