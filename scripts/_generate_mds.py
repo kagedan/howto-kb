@@ -133,26 +133,46 @@ def make_id(date: str, slug: str, counter: int) -> str:
     return f"{date}-{slug}-{counter:02d}"
 
 
-def write_md(article: dict, article_id: str, category: str, tags: list[str]) -> Path:
+def extract_body(md_content: str) -> str:
+    """frontmatter ('---\\n...\\n---\\n') 後の本文を返す。"""
+    if md_content.startswith("---\n"):
+        end = md_content.find("\n---\n", 4)
+        if end > 0:
+            return md_content[end + 5:].strip()
+    return md_content.strip()
+
+
+def find_safe_path(base_dir: Path, date: str, slug: str, new_body: str,
+                   counter_map: dict) -> tuple[Path | None, str | None]:
+    """衝突を避けつつ安全な保存先パスを決める。
+    - 既存ファイルと本文一致 → (None, None) でスキップを指示
+    - 空きスロットを見つけたら (Path, article_id) を返す
+    必ず n=1 から探索するので、同一実行内で先に書かれた -01 とも重複比較される。
+    """
+    key = f"{date}-{slug}"
+    n = 1
+    while n <= 99:
+        article_id = make_id(date, slug, n)
+        candidate = base_dir / f"{article_id}.md"
+        if not candidate.exists():
+            counter_map[key] = n
+            return candidate, article_id
+        existing_body = extract_body(candidate.read_text(encoding="utf-8", errors="replace"))
+        if existing_body == new_body.strip():
+            return None, None
+        n += 1
+    return None, None
+
+
+def build_md_content(article: dict, article_id: str, category: str,
+                     tags: list[str], summary: str) -> str:
     tags_str = "[" + ", ".join(f'"{t}"' for t in tags) + "]"
     title = sanitize_title(article["title"])
-    summary = article.get("description", "").strip()
     source = article.get("source", "")
-
-    # summary_by を source に応じて設定
-    if source == "x":
-        summary_by = "auto-x"
-        if not summary or summary == article["title"]:
-            summary = "X (Twitter) より収集。詳細は URL を参照。"
-    else:
-        summary_by = "auto-rss"
-        if not summary or summary == article["title"]:
-            feed_name = article.get("feed_name", source or "RSS")
-            summary = f"{feed_name} より収集。詳細は URL を参照。"
-
+    summary_by = "auto-x" if source == "x" else "auto-rss"
     query = article.get("query", "")
 
-    content = f"""---
+    return f"""---
 id: "{article_id}"
 title: "{title}"
 url: "{article['url']}"
@@ -167,10 +187,17 @@ query: "{query}"
 
 {summary}
 """
-    out_path = ARTICLES_DIR / category / f"{article_id}.md"
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(content, encoding="utf-8")
-    return out_path
+
+
+def resolve_summary(article: dict) -> str:
+    summary = article.get("description", "").strip()
+    source = article.get("source", "")
+    if not summary or summary == article["title"]:
+        if source == "x":
+            return "X (Twitter) より収集。詳細は URL を参照。"
+        feed_name = article.get("feed_name", source or "RSS")
+        return f"{feed_name} より収集。詳細は URL を参照。"
+    return summary
 
 
 def run_crawler(script_name: str, env: dict | None = None) -> list[dict]:
@@ -208,10 +235,11 @@ def run_crawler(script_name: str, env: dict | None = None) -> list[dict]:
         return []
 
 
-def process_articles(articles: list[dict]) -> int:
-    """記事リストからMDファイルを生成し、書き込み件数を返す。"""
+def process_articles(articles: list[dict]) -> tuple[int, int]:
+    """記事リストからMDファイルを生成し、(書き込み件数, 重複スキップ件数) を返す。"""
     counter_map: dict[str, int] = defaultdict(int)
     written = 0
+    duplicates = 0
 
     for art in articles:
         date = art.get("date_published") or art.get("date_collected", "2026-01-01")
@@ -223,14 +251,22 @@ def process_articles(articles: list[dict]) -> int:
         category = detect_category(title, description, default_cat)
         tags = extract_tags(title, description, source, category)
         slug = slugify(title)
-        key = f"{date}-{slug}"
-        counter_map[key] += 1
-        article_id = make_id(date, slug, counter_map[key])
+        summary = resolve_summary(art)
 
-        write_md(art, article_id, category, tags)
+        target_path, article_id = find_safe_path(
+            ARTICLES_DIR / category, date, slug, summary, counter_map
+        )
+        if target_path is None:
+            duplicates += 1
+            print(f"Skipped (duplicate body): {date}-{slug}", file=sys.stderr)
+            continue
+
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        content = build_md_content(art, article_id, category, tags, summary)
+        target_path.write_text(content, encoding="utf-8")
         written += 1
 
-    return written
+    return written, duplicates
 
 
 def main():
@@ -274,8 +310,8 @@ def main():
         return
 
     print(f"\nProcessing {len(all_articles)} articles ...", flush=True)
-    written = process_articles(all_articles)
-    print(f"MD files written: {written}", flush=True)
+    written, duplicates = process_articles(all_articles)
+    print(f"MD files written: {written} (skipped {duplicates} duplicates)", flush=True)
 
     # 3. build_index.py を実行して index.json を再生成
     print("\nRunning build_index.py ...", flush=True)
@@ -292,7 +328,7 @@ def main():
     else:
         print("WARNING: build_index.py failed.", file=sys.stderr)
 
-    print(f"\nDone. {written} articles processed.")
+    print(f"\nDone. {written} articles processed (skipped {duplicates} duplicates).")
 
 
 if __name__ == "__main__":

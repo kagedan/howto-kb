@@ -74,11 +74,43 @@ def slugify(t):
     return s.strip("-")[:50].rstrip("-") or "article"
 
 
+def extract_body(md_content: str) -> str:
+    """frontmatter ('---\\n...\\n---\\n') 後の本文を返す。"""
+    if md_content.startswith("---\n"):
+        end = md_content.find("\n---\n", 4)
+        if end > 0:
+            return md_content[end + 5:].strip()
+    return md_content.strip()
+
+
+def find_safe_path(base_dir: Path, date: str, slug: str, new_body: str,
+                   counter_map: dict) -> tuple[Path | None, str | None]:
+    """衝突を避けつつ安全な保存先パスを決める。
+    - 既存ファイルと本文一致 → (None, None) でスキップを指示
+    - 空きスロットを見つけたら (Path, article_id) を返す
+    必ず n=1 から探索するので、同一実行内で先に書かれた -01 とも重複比較される。
+    """
+    key = f"{date}-{slug}"
+    n = 1
+    while n <= 99:
+        article_id = f"{date}-{slug}-{n:02d}"
+        candidate = base_dir / f"{article_id}.md"
+        if not candidate.exists():
+            counter_map[key] = n
+            return candidate, article_id
+        existing_body = extract_body(candidate.read_text(encoding="utf-8", errors="replace"))
+        if existing_body == new_body.strip():
+            return None, None
+        n += 1
+    return None, None
+
+
 def main():
     sys.stdin.reconfigure(encoding='utf-8')
     data = json.load(sys.stdin)
     counter_map = defaultdict(int)
     written = 0
+    skipped = 0
 
     for art in data:
         date = art.get("date_published") or art.get("date_collected", "2026-04-08")
@@ -91,12 +123,18 @@ def main():
         category = detect_category(title, desc, default_cat)
         tags = extract_tags(title, desc, source, category)
         slug = slugify(title)
-        key = f"{date}-{slug}"
-        counter_map[key] += 1
-        article_id = f"{date}-{slug}-{counter_map[key]:02d}"
 
         clean_title = sanitize_title(title)
         summary = desc.strip() or f"{feed_name} より収集。詳細は URL を参照。"
+
+        target_path, article_id = find_safe_path(
+            ARTICLES_DIR / category, date, slug, summary, counter_map
+        )
+        if target_path is None:
+            skipped += 1
+            print(f"Skipped (duplicate body): {date}-{slug}", file=sys.stderr)
+            continue
+
         tags_str = "[" + ", ".join(f'"{t}"' for t in tags) + "]"
 
         content = f"""---
@@ -113,13 +151,12 @@ summary_by: "auto-rss"
 
 {summary}
 """
-        out_path = ARTICLES_DIR / category / f"{article_id}.md"
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        out_path.write_text(content, encoding="utf-8", errors="replace")
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        target_path.write_text(content, encoding="utf-8", errors="replace")
         written += 1
-        print(f"Written: {out_path.name}")
+        print(f"Written: {target_path.name}")
 
-    print(f"Total RSS MD written: {written}")
+    print(f"Total RSS MD written: {written} (skipped {skipped} duplicates)")
 
 
 if __name__ == "__main__":
