@@ -30,6 +30,17 @@ if sys.stderr.encoding != "utf-8":
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = REPO_ROOT / "articles"
 
+# X投稿フィルター用キーワード（_filter_x_auto.py と同期）
+X_TECH_KEYWORDS = [
+    "claude", "mcp", "agent", "llm", "prompt", "api", "ai", "gpt", "gemini",
+    "コード", "スクリプト", "プログラム", "自動化", "ワークフロー", "ツール", "モデル",
+    "プロンプト", "エージェント", "機械学習", "深層学習", "ファインチューニング",
+    "hooks", "subagent", "handover", "context", "workflow", "automation",
+    "python", "javascript", "typescript", "git", "docker", "supabase",
+    "rag", "vector", "embedding", "fine-tuning", "フレームワーク",
+]
+X_EXCLUDE_KEYWORDS = ["無料プレゼント", "お得情報", "募集中", "フォロバ", "相互フォロー"]
+
 # カテゴリ判定キーワード（タイトル・説明文を小文字で照合）
 CATEGORY_RULES = [
     ("claude-code", [
@@ -189,6 +200,18 @@ query: "{query}"
 """
 
 
+def is_x_useful(article: dict) -> bool:
+    """X投稿が技術系の有益コンテンツか判定する（_filter_x_auto.py と同期）。"""
+    desc = article.get("description", "")
+    title = article.get("title", "")
+    text = (title + " " + desc).lower()
+    if any(kw in text for kw in X_EXCLUDE_KEYWORDS):
+        return False
+    if len(desc.strip()) < 30:
+        return False
+    return any(kw in text for kw in X_TECH_KEYWORDS)
+
+
 def resolve_summary(article: dict) -> str:
     summary = article.get("description", "").strip()
     source = article.get("source", "")
@@ -278,16 +301,20 @@ def main():
     all_articles.extend(rss_articles)
 
     # 2. X (Twitter) — SOCIALDATA_API_KEY が未設定ならスキップ
-    x_articles = []
+    x_raw: list[dict] = []
+    x_articles: list[dict] = []
     if os.environ.get("SOCIALDATA_API_KEY"):
-        x_articles = run_crawler("crawl_x.py")
-        print(f"  X: {len(x_articles)} new posts", flush=True)
+        x_raw = run_crawler("crawl_x.py")
+        x_articles = [a for a in x_raw if is_x_useful(a)]
+        x_filtered = len(x_raw) - len(x_articles)
+        print(f"  X: {len(x_articles)} new posts (filtered out {x_filtered} non-tech)",
+              flush=True)
         all_articles.extend(x_articles)
     else:
         print("  X: skipped (SOCIALDATA_API_KEY not set)", flush=True)
 
-    # 2.5 RT記事からObsidian clippingsを生成
-    rt_articles = [a for a in x_articles if a.get("is_retweet")]
+    # 2.5 RT記事からObsidian clippingsを生成（フィルター前のx_rawから抽出）
+    rt_articles = [a for a in x_raw if a.get("is_retweet")]
     if rt_articles:
         print(f"\nExporting {len(rt_articles)} RT clippings ...", flush=True)
         clip_result = subprocess.run(
