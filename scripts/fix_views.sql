@@ -1,7 +1,11 @@
 -- howto-kb ビュー定義SQL
 -- 実行場所: Supabase Dashboard → SQL Editor
 -- 作成日: 2026-04-03
--- 更新日: 2026-04-03
+-- 更新日: 2026-05-22
+--
+-- 2026-05-22: 全ビューに WITH (security_invoker = true) を付与。
+--             Supabase Security Advisor の Security Definer View エラー対策。
+--             ビューはクエリ実行者の権限・RLSに従って動作するようになる。
 --
 -- ビュー一覧:
 --   articles_recent_Nd  — 従来の一覧ビュー（content無し）
@@ -14,28 +18,28 @@
 
 -- 直近3日（通常の週明け用）
 DROP VIEW IF EXISTS articles_recent_3d;
-CREATE VIEW articles_recent_3d AS
+CREATE VIEW articles_recent_3d WITH (security_invoker = true) AS
 SELECT id, title, url, source, category, tags, date_published, date_collected, file_path
 FROM articles
 WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '3 days';
 
 -- 直近4日（3連休明け用）
 DROP VIEW IF EXISTS articles_recent_4d;
-CREATE VIEW articles_recent_4d AS
+CREATE VIEW articles_recent_4d WITH (security_invoker = true) AS
 SELECT id, title, url, source, category, tags, date_published, date_collected, file_path
 FROM articles
 WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '4 days';
 
 -- 直近7日
 DROP VIEW IF EXISTS articles_recent_7d;
-CREATE VIEW articles_recent_7d AS
+CREATE VIEW articles_recent_7d WITH (security_invoker = true) AS
 SELECT id, title, url, source, category, tags, date_published, date_collected, file_path
 FROM articles
 WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '7 days';
 
 -- 直近14日
 DROP VIEW IF EXISTS articles_recent_14d;
-CREATE VIEW articles_recent_14d AS
+CREATE VIEW articles_recent_14d WITH (security_invoker = true) AS
 SELECT id, title, url, source, category, tags, date_published, date_collected, file_path
 FROM articles
 WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '14 days';
@@ -48,7 +52,7 @@ WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '14 d
 
 -- 直近3日
 DROP VIEW IF EXISTS articles_list_3d;
-CREATE VIEW articles_list_3d AS
+CREATE VIEW articles_list_3d WITH (security_invoker = true) AS
 SELECT
   id, title, date_published, category, tags, source, url,
   'https://gryrgjnfekwptyngbmao.supabase.co/rest/v1/articles?select=title,content&id=eq.'
@@ -59,7 +63,7 @@ WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '3 da
 
 -- 直近7日
 DROP VIEW IF EXISTS articles_list_7d;
-CREATE VIEW articles_list_7d AS
+CREATE VIEW articles_list_7d WITH (security_invoker = true) AS
 SELECT
   id, title, date_published, category, tags, source, url,
   'https://gryrgjnfekwptyngbmao.supabase.co/rest/v1/articles?select=title,content&id=eq.'
@@ -70,7 +74,7 @@ WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '7 da
 
 -- 直近14日
 DROP VIEW IF EXISTS articles_list_14d;
-CREATE VIEW articles_list_14d AS
+CREATE VIEW articles_list_14d WITH (security_invoker = true) AS
 SELECT
   id, title, date_published, category, tags, source, url,
   'https://gryrgjnfekwptyngbmao.supabase.co/rest/v1/articles?select=title,content&id=eq.'
@@ -86,18 +90,18 @@ WHERE date_published >= (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '14 d
 
 -- 今日の記事
 DROP VIEW IF EXISTS articles_today;
-CREATE VIEW articles_today AS
+CREATE VIEW articles_today WITH (security_invoker = true) AS
 SELECT * FROM articles
 WHERE date_published = (now() AT TIME ZONE 'Asia/Tokyo')::date;
 
 -- 昨日の記事
 DROP VIEW IF EXISTS articles_yesterday;
-CREATE VIEW articles_yesterday AS
+CREATE VIEW articles_yesterday WITH (security_invoker = true) AS
 SELECT * FROM articles
 WHERE date_published = (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '1 day';
 
 -- 一昨日の記事
 DROP VIEW IF EXISTS articles_2days_ago;
-CREATE VIEW articles_2days_ago AS
+CREATE VIEW articles_2days_ago WITH (security_invoker = true) AS
 SELECT * FROM articles
 WHERE date_published = (now() AT TIME ZONE 'Asia/Tokyo')::date - INTERVAL '2 days';
