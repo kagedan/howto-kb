@@ -9,3 +9,6 @@ _crawl_rss_stderr.txt
 _crawl_x_stderr.txt
 _new_rss.json
 _new_x.json
+
+# Supabase差分同期の状態ファイル（ローカル管理・毎回書き換わる）
+scripts/.sync_state.json
