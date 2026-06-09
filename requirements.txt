@@ -1,0 +1,19 @@
+# howto-kb 依存パッケージ一覧
+#
+# 収集スクリプト（scripts/）が動くために必要な外部パッケージの記録です。
+# 環境を作り直すときは、次のコマンドでまとめてインストールできます:
+#
+#     python -m pip install -r requirements.txt
+#
+# ※ urllib3 / lxml / charset_normalizer などは下記パッケージに付随して
+#   自動的に入るため、ここには直接書いていません。
+#
+# requests を 2.34 以上に固定している理由（2026-06-09 対応）:
+#   2.34 未満だと chardet 7 系との相性表が合わず、実行のたびに
+#   「urllib3 ... doesn't match a supported version」という
+#   無害だが紛らわしい警告が出ていたため。2.34 でこの問題は解消済み。
+
+requests>=2.34.2          # HTTP通信（Supabase同期・記事の全文取得）
+PyYAML>=6.0               # config/*.yaml（フィード設定など）の読み込み
+readability-lxml>=0.8.4   # 記事URLから本文を抽出（lxml も自動で入る）
+markdownify>=1.2          # 抽出した本文を Markdown に変換
