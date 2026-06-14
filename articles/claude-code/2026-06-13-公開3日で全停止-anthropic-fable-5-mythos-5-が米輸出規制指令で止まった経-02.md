@@ -1,0 +1,146 @@
+---
+id: "2026-06-13-公開3日で全停止-anthropic-fable-5-mythos-5-が米輸出規制指令で止まった経-02"
+title: "公開3日で全停止 — Anthropic Fable 5 / Mythos 5 が米輸出規制指令で止まった経緯を一次ソースで整理する"
+url: "https://qiita.com/sa-san/items/7d71e8722d11368bcbb9"
+source: "qiita"
+category: "claude-code"
+tags: ["claude-code", "OpenAI", "GPT", "qiita"]
+date_published: "2026-06-13"
+date_collected: "2026-06-14"
+summary_by: "auto-rss"
+query: ""
+---
+
+:::note info
+この記事は Zenn にも投稿しています → https://zenn.dev/satoyoshi/articles/anthropic-fable5-mythos5-halt
+最新の更新は Zenn 側を正としています。
+:::
+
+:::note info
+本稿は 2026/6/13 時点の一次・主要ソースに基づくスナップショットで、復旧時期や法廷展開はまだ動いている最中の話です。
+:::
+
+## TL;DR
+
+- Anthropic が 2026/6/9 に公開した最上位モデル Fable 5 と、限定提供だった Mythos 5 が、米政府の輸出規制指令を受けて 6/12 に全ユーザー停止された。公開からわずか3日後のことだ。
+- 指令の中身は「外国籍者（社内の外国籍従業員を含む）による Fable 5 / Mythos 5 へのアクセス停止」で、外国籍だけをリアルタイムに弾けないため、Anthropic は全顧客向けに止めた。
+- きっかけは別の企業による「Mythos を jailbreak できた」という主張で、Axios によれば、政府はまずリリース自体の延期を求め、それが通らなかったあとで輸出規制レターに踏み切っている。
+- これに対して Anthropic は、問題の抜け道は限定的で、GPT-5.5 など他社モデルでも同じことができると反論し、商用モデルの全面回収はやり過ぎだ、同じ基準を業界に当てはめれば新しいモデルが一切出せなくなると警告している。
+- 既存の Opus 4.8 / Sonnet / Haiku は影響を受けず、Anthropic は「誤解だ」として早期復旧を目指し政府と協議している。
+
+## 公開3日での急停止
+
+まず時系列を並べておきたい。
+
+- **6/9** — Anthropic が Claude Fable 5 と Claude Mythos 5 を発表。
+- **6/12 17:21 ET** — 米政府から、外国籍者によるアクセス停止を命じる指令が届く。
+- **同日** — Anthropic が両モデルを全ユーザーに対して停止。
+
+商用展開されたばかりのフロンティアモデルが、政府の指令ひとつで公開から数日のうちに引っ込められるというのは、これまでほとんど例がなかった。だからこそ Bloomberg や CNBC、NBC、TechCrunch が一斉に報じているわけだが、なかでも一次資料として重いのは、Anthropic 自身が出した声明だ。
+
+https://www.anthropic.com/news/fable-mythos-access
+
+## 指令の中身：なぜ「全停止」になったのか
+
+Anthropic の声明を読むと、指令の中心は「Fable 5 と Mythos 5 への、いかなる外国籍者によるアクセスも止めよ」という一点にある。対象は米国内外を問わず、Anthropic で働く外国籍の従業員まで含まれる。
+
+やっかいなのは、これを技術的にきれいに実装できないことだ。アクセスのたびに国籍を判定して外国籍だけを弾く、というのは現実には難しい。結局、確実にコンプライアンスを満たす唯一の方法として、Anthropic は本来は対象外であるはずの米国籍ユーザーまで含めて、全員のアクセスを止めることになった。
+
+> この命令の正味の効果は、コンプライアンスを担保するために全顧客向けに Fable 5 / Mythos 5 を突然無効化せざるを得ない、ということだ。
+
+「外国籍だけ」という建て付けからも分かるように、これは輸出規制（export control）という昔ながらの枠組みを、そのまま AI モデルに当てはめたものだ。モデルの輸出・再輸出・国内移転には政府の事前承認がいる、という形になっている。
+
+## きっかけ：jailbreak の主張と、その前段の交渉
+
+複数の報道を突き合わせると、引き金になったのは技術的な指摘だったらしい。
+
+Axios のスクープによれば、別の企業が「Mythos を jailbreak できた」と主張したことで、政権が安全保障上のリスクを警戒しはじめた。そこから商務長官 Howard Lutnick が CEO の Dario Amodei 宛にレターを送り、両モデルが輸出規制の対象になっている。
+
+:::note info
+誤解されやすいのだが、この指令はある日突然降ってきたわけではないらしい。Axios の報道では、政権はまず最新モデルのリリースそのものを延期させようと動き、それがうまくいかなかったあとで輸出規制レターに踏み切っている。突然の措置というより、事前の交渉がこじれた末の結果に近い。
+:::
+
+## なぜ Mythos / Fable が標的になったのか
+
+技術的な背景を、Anthropic 自身の発表から拾っておく。Fable 5 と Mythos 5 はじつは同じ基盤モデルで、両者を分けているのは safeguard（安全装置）の強さだけだ。Fable はサイバーや生物学の領域に堅牢なガードをかけたもので、Mythos はそのガードを一部外してサイバーセキュリティ能力を最大限まで引き出したもの、という関係になっている。
+
+Mythos クラスは「ソフトウェアの脆弱性を見つけて突くのがうまく、エージェントとしてのハッキングにも強い」とされていて、生物学の領域でも、内部テストでは専用の protein モデルを上回る設計結果が出たという。要するに軍民両用（dual-use）の色がかなり濃いわけで、しかも Mythos 5 はもともと一般提供されておらず、米政府との連携プログラム「Project Glasswing」を通じて、サイバー防御者やインフラ提供者にだけ限定的に渡されていた。
+
+そのうえ Fable / Mythos は、長い時間にわたって自律的に動けることを売りにしていた。Anthropic は、本来チームで2か月かかる5,000万行規模のコード移行を Fable 5 が1日でやり切った例を挙げている。攻撃コードを生成するところから実行まで自動でつながってしまう、という能力が、政府にとっては見過ごせないリスクに映ったのだと思う。
+
+## Anthropic の反論：限定的な抜け道で全面回収は行き過ぎ
+
+Anthropic は、法令そのものには従いながらも、その判断の根拠には正面から異を唱えている。声明の言い分は、大きく3つに整理できる。
+
+1. **問題の抜け道は限定的だ。** 今回の jailbreak は「特定のコードベースを読ませて、そこにあるソフトウェアの欠陥を直させる」程度のもので、どんなケースでも通る汎用的な手口ではない、と説明している。
+2. **他社のモデルでも同じことができる。** デモされた能力は「OpenAI の GPT-5.5 を含む、ほかの公開モデルでも普通に使える」もので、Fable 5 に固有の危険ではない、というのが主張だ[^gpt]。
+3. **この基準だと業界全体が止まる。** 「限定的な抜け道が一つ見つかっただけで、すでに数億人が使っている商用モデルを回収しろというのは行き過ぎだ。同じ基準を業界に当てはめれば、どのフロンティアモデルも新しく出せなくなる」と警告している。
+
+そのうえで「これは誤解だと考えていて、できるだけ早くアクセスを戻せるよう動いている」と結んでいる。
+
+[^gpt]: 元になった素材では "GPT-5" と表記されていたが、Anthropic 公式声明の表記は GPT-5.5。本稿は公式表記に合わせた。
+
+## 多角的に見る：安全性アピールは裏目に出たのか
+
+ここから先は事実というより、各社の見立ての話になる。出典をはっきりさせたうえで並べておきたい。
+
+- **TechCrunch の皮肉な読み:** Anthropic は Mythos を「公開するには危険すぎる」と safeguard で囲い込み、その卓越した脆弱性発見能力をむしろ強調してきた。その安全性アピールこそが、恐れていたはずの政府介入を自分から招いてしまった——という backfire（裏目）論を出している。
+- **Sam Altman の以前からの批判:** OpenAI の Altman は、Anthropic のやり方を「fear-based marketing（恐怖を煽るマーケティング）」と評していた、と TechCrunch は触れている。危険性を売りにしてプレミアムを正当化している、という見方だ。
+- **安保 vs 商業自由:** 政府側は national security を前面に出すものの、具体的な根拠は口頭での説明にとどまっている、と複数の報道が指摘している。一方の Anthropic は商用展開の自由と業界の前例を盾にしていて、今回はこの境界線をどこに引くかの試金石になりそうだ、という論調が多い。
+
+:::note alert
+SeekingAlpha 系の見出しには「DOJ が裁判所命令を不服として控訴」という法廷展開をにおわせるものもあったが、ほかの一次・主要ソースで裏が取れなかった。本稿では事実としては扱わない。続報が出たら直したい。
+:::
+
+## 開発者にとっての実務インパクト
+
+自分の手元の開発にどう響くのかが気になるところだけど、Fable 5 / Mythos 5 を直接使っていなければ、当面の影響はそれほど大きくない。
+
+逆に、Fable 5 を選んで作業していた人は、Claude Code でこんなエラーに出くわしているはずだ。
+
+```text
+There's an issue with the selected model (claude-fable-5). It may not exist or you may not have access to it. Run /model to pick a different model.
+```
+
+文面は「モデルが存在しないか、アクセス権がないかのどちらかだ」と二択で書かれているが、今回はまさに後者で、アクセスそのものが止められたことが原因になっている。`/model` で Opus 4.8 などに切り替えれば、そのまま作業は続けられる。
+
+- 既存モデルはこれまで通り使える。Anthropic は「ほかのすべてのモデルへのアクセスは影響しない」と明言していて、Opus 4.8 や Sonnet、Haiku は問題なく動く。
+- 止まっているのは Fable 5 / Mythos 5 だけなので、これらを前提に組んでいた自律コーディングのワークフローは、しばらく Opus 4.8 あたりに寄せることになる。
+- フォールバックについては少し補足がいる。Fable 5 は、サイバーや生物学まわりのリクエストが classifier に引っかかると Opus 4.8 へ自動で回される設計だった（引っかかるのは平均で全セッションの5%未満とされる）。ただ、いまは Fable 5 そのものが止まっているので、この内部フォールバックは関係ない。最初から Opus 4.8 系を指定すればいいだけだ。
+
+## まだ確定していないこと
+
+最後に、いま分かっていることと、まだ分からないことを分けて置いておきたい。
+
+| 区分 | 内容 |
+|---|---|
+| 未確定 | 復旧時期（Anthropic は「できるだけ早く」とだけ言っていて、日付はない） |
+| 未確定 | 法廷闘争の有無（前述のとおり裏取りできていない） |
+| 確定 | 影響範囲は Fable 5 / Mythos 5 のみで、他モデルは継続 |
+| 確定 | 指令の日時は 6/12 17:21 ET |
+| 確定 | きっかけは jailbreak の主張と、リリース延期交渉の決裂 |
+
+数日のうちに Anthropic から追加のアップデートが出る可能性は高いと思う。
+
+## 参考リンク
+
+<details><summary>一次・主要ソース一覧</summary>
+
+- Anthropic — Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+  https://www.anthropic.com/news/fable-mythos-access
+- Anthropic — Claude Fable 5 and Claude Mythos 5（モデル発表）
+  https://www.anthropic.com/news/claude-fable-5-mythos-5
+- Anthropic — Claude Mythos（製品ページ）
+  https://www.anthropic.com/claude/mythos
+- Axios — Scoop: Trump admin blocks foreign access to Anthropic's most powerful AI
+  https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security
+- Bloomberg — Anthropic Says US Orders Halt to Foreign Access for Fable 5, Mythos 5
+  https://www.bloomberg.com/news/articles/2026-06-13/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5
+- CNBC — Anthropic disables access to Fable 5 and Mythos 5 to comply with government directive
+  https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html
+- NBC News — Anthropic suspends new AI models after government directive
+  https://www.nbcnews.com/tech/tech-news/anthropic-suspends-new-ai-models-fable-mythos-government-directive-rcna349901
+- TechCrunch — Anthropic's safety warnings may have just backfired
+  https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/
+
+</details>
