@@ -12,3 +12,6 @@ _new_x.json
 
 # Supabase差分同期の状態ファイル（ローカル管理・毎回書き換わる）
 scripts/.sync_state.json
+
+# 月次棚卸しの中間生成物（candidates/scores/shortlist。都度生成・追跡不要）
+scripts/_inventory/
