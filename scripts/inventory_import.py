@@ -1,16 +1,18 @@
 """
-inventory_import.py - ショートリストで [x] を付けた記事を vault に取り込む。
+inventory_import.py - reviewed.json から vault 取り込み確定分を clippings/ へ書き出す。
 
-shortlist-*.md の中で `- [x]` が付いた項目だけを対象に、
-  - web記事 (source != x) … 元URLを readability で再取得しマークダウン化
-  - X投稿   (source == x) … KB に既にある本文(ツイート全文)を流用
-vault の clippings/ にフロントマター付きで書き出す（その後 clippings-to-sources が
-sources/web/ に振り分ける）。重複(URL一致)は自動でスキップ。LLM は使わない。
+棚卸し新フロー Step ③:
+  - reviewed-{tag}-{date}.json の "reviewed_for_import" を対象に、
+    本文 (取得済み) を vault clippings/ にフロントマター付きで書き出す
+  - 旧版が担っていた「[x] 拾い→本文取得→書き出し」のうち、本文取得と精査は
+    inventory_fetch.py / inventory_review.py に分離した。当スクリプトは「書き出し専任」
+
+t.co 解決系の補助関数 (extract_tco_urls / resolve_tco / is_article_url) は
+inventory_fetch.py から import されているので、ここで定義したまま残す。
 
 使い方:
-    python scripts/inventory_import.py --md scripts/_inventory/shortlist-construction-2026-06-16.md \
-        --scores scripts/_inventory/scores-construction-2026-06-16.json            # dry-run（何を入れるか表示）
-    python scripts/inventory_import.py --md ... --scores ... --apply               # 実際に書き出す
+    python scripts/inventory_import.py --reviewed scripts/_inventory/reviewed-construction-2026-06-16.json
+    python scripts/inventory_import.py --reviewed ... --apply
 """
 
 import argparse
@@ -21,6 +23,8 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+import requests
+
 os.environ.setdefault("PYTHONUTF8", "1")
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8")
@@ -28,13 +32,26 @@ if sys.stdout.encoding != "utf-8":
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-# web記事の本文取得は export_clippings の実績ある実装を再利用（readability+markdownify）
-from export_clippings import fetch_article_markdown, sanitize_filename, escape_yaml_str  # noqa: E402
+from export_clippings import sanitize_filename, escape_yaml_str  # noqa: E402
 
 CLIPPINGS_DIR = Path(r"D:\Obsidian\kagedan-work\clippings")
 SOURCES_WEB_DIR = Path(r"D:\Obsidian\kagedan-work\sources\web")
 FRONTMATTER_RE = re.compile(r"^---\s*\n.*?\n---\s*\n", re.DOTALL)
 JST = timezone(timedelta(hours=9))
+
+SNS_DOMAINS = (
+    "x.com", "twitter.com", "t.co",
+    "youtube.com", "youtu.be",
+    "instagram.com", "facebook.com", "threads.net", "tiktok.com",
+)
+TCO_RE = re.compile(r"https?://t\.co/[A-Za-z0-9]+")
+HTTP_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0 Safari/537.36"
+    )
+}
 
 
 def normalize_url(u: str) -> str:
@@ -45,6 +62,17 @@ def normalize_url(u: str) -> str:
     if u.endswith("/"):
         u = u[:-1]
     return u.lower()
+
+
+def kb_body(file_path: str) -> str:
+    md = REPO_ROOT / file_path
+    if not md.exists():
+        return ""
+    try:
+        text = md.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return ""
+    return FRONTMATTER_RE.sub("", text, count=1).strip()
 
 
 def parse_checked(md_path: Path) -> list[dict]:
@@ -70,6 +98,36 @@ def parse_checked(md_path: Path) -> list[dict]:
     return checked
 
 
+def extract_tco_urls(body: str) -> list[str]:
+    seen, out = set(), []
+    for u in TCO_RE.findall(body or ""):
+        if u not in seen:
+            seen.add(u)
+            out.append(u)
+    return out
+
+
+def resolve_tco(tco_url: str, timeout: float = 10.0) -> str:
+    try:
+        r = requests.head(tco_url, allow_redirects=True, timeout=timeout, headers=HTTP_HEADERS)
+        final = r.url or ""
+        if final and final != tco_url and not final.startswith("https://t.co/"):
+            return final
+        r = requests.get(tco_url, allow_redirects=True, timeout=timeout,
+                         headers=HTTP_HEADERS, stream=True)
+        r.close()
+        return r.url or ""
+    except requests.RequestException:
+        return ""
+
+
+def is_article_url(url: str) -> bool:
+    if not url:
+        return False
+    low = url.lower()
+    return not any(d in low for d in SNS_DOMAINS)
+
+
 def load_vault_urls() -> set[str]:
     urls = set()
     for d in (SOURCES_WEB_DIR, CLIPPINGS_DIR):
@@ -88,17 +146,6 @@ def load_vault_urls() -> set[str]:
     return urls
 
 
-def kb_body(file_path: str) -> str:
-    md = REPO_ROOT / file_path
-    if not md.exists():
-        return ""
-    try:
-        text = md.read_text(encoding="utf-8")
-    except (OSError, UnicodeDecodeError):
-        return ""
-    return FRONTMATTER_RE.sub("", text, count=1).strip()
-
-
 def unique_path(base_dir: Path, filename: str) -> Path:
     out = base_dir / filename
     if not out.exists():
@@ -110,17 +157,24 @@ def unique_path(base_dir: Path, filename: str) -> Path:
     return base_dir / f"{stem}_{i}{suf}"
 
 
-def write_clipping(title: str, source_url: str, body: str, today: str) -> Path:
+def write_clipping(title: str, source_url: str, body: str, today: str,
+                   review_reason: str = "", review_tags: list | None = None) -> Path:
     fname = sanitize_filename(title) + ".md"
     out = unique_path(CLIPPINGS_DIR, fname)
+    tag_lines = '  - "clippings"\n  - "howto-kb-inventory"\n'
+    for t in (review_tags or [])[:5]:
+        tag_lines += f'  - "{escape_yaml_str(str(t))}"\n'
+    reason_line = (f'review_reason: "{escape_yaml_str(review_reason)}"\n'
+                   if review_reason else "")
     content = (
         "---\n"
         f'title: "{escape_yaml_str(title)}"\n'
         f'source: "{source_url}"\n'
         f"created: {today}\n"
         'source-type: "web"\n'
+        f"{reason_line}"
         "tags:\n"
-        '  - "clippings"\n'
+        f"{tag_lines}"
         "---\n\n"
         f"{body}\n"
     )
@@ -129,80 +183,61 @@ def write_clipping(title: str, source_url: str, body: str, today: str) -> Path:
 
 
 def main():
-    p = argparse.ArgumentParser(description="ショートリストの[x]をvaultに取り込む")
-    p.add_argument("--md", required=True, help="shortlist md")
-    p.add_argument("--scores", required=True, help="scores json（id/file_path等の照合用）")
+    p = argparse.ArgumentParser(description="reviewed.json から vault clippings/ へ書き出し")
+    p.add_argument("--reviewed", required=True, help="inventory_review.py 出力 JSON")
     p.add_argument("--apply", action="store_true", help="実際に clippings/ へ書き出す")
     p.add_argument("--limit", type=int, default=0, help="先頭N件だけ処理（0=全件）")
     args = p.parse_args()
 
-    checked = parse_checked(Path(args.md))
-    if not checked:
-        print("[x] の付いた項目がありません。md に [x] を付けて保存してください。")
+    data = json.loads(Path(args.reviewed).read_text(encoding="utf-8"))
+    items = data.get("reviewed_for_import", [])
+    if args.limit:
+        items = items[: args.limit]
+    if not items:
+        print("reviewed_for_import が空です。")
         return
 
-    scores = json.loads(Path(args.scores).read_text(encoding="utf-8"))["items"]
-    meta_by_url = {normalize_url(m["url"]): m for m in scores}
-
     vault_urls = load_vault_urls()
-    if args.limit:
-        checked = checked[: args.limit]
-
-    print(f"[x] 選択: {len(checked)}件 / モード: {'APPLY' if args.apply else 'dry-run'}")
     today = datetime.now(JST).strftime("%Y-%m-%d")
     if args.apply:
         CLIPPINGS_DIR.mkdir(parents=True, exist_ok=True)
 
+    print(f"取り込み対象: {len(items)} 件 / モード: {'APPLY' if args.apply else 'dry-run'}")
     done = skipped = failed = 0
-    web_n = x_n = 0
-    for c in checked:
-        nurl = normalize_url(c.get("url", ""))
-        m = meta_by_url.get(nurl)
-        source = (m or {}).get("source", c.get("source", ""))
-        title = (m or {}).get("title", c.get("title", ""))
+    for it in items:
+        save_url = it.get("fetch_url") or it.get("url", "")
+        title = it.get("review_title") or it.get("title", "")
+        body = it.get("body", "")
+        n_save = normalize_url(save_url)
 
-        if nurl in vault_urls:
-            print(f"  skip(既存): {title[:40]}")
+        if n_save and n_save in vault_urls:
+            print(f"  skip(既存): score{it.get('score','?')} {title[:40]}")
             skipped += 1
             continue
-
-        is_x = source == "x"
-        tag = "X" if is_x else "web"
-        if not args.apply:
-            print(f"  [{tag}] {title[:50]}")
-            (x_n := x_n + 1) if is_x else (web_n := web_n + 1)
-            continue
-
-        # 本文を用意
-        if is_x:
-            body = kb_body((m or {}).get("file_path", ""))
-        else:
-            fetched = fetch_article_markdown(c["url"])
-            if fetched and fetched.get("body"):
-                body = fetched["body"]
-                if fetched.get("title"):
-                    title = fetched["title"]
-            else:
-                body = kb_body((m or {}).get("file_path", ""))  # フォールバック
         if not body:
             print(f"  FAIL(本文なし): {title[:40]}")
             failed += 1
             continue
 
-        out = write_clipping(title, c["url"], body, today)
-        vault_urls.add(nurl)
-        print(f"  -> [{tag}] {out.name}")
+        if not args.apply:
+            print(f"  [score{it.get('score','?')}] {title[:55]} -> {save_url[:60]}")
+            continue
+
+        out = write_clipping(title, save_url, body, today,
+                             review_reason=it.get("review_reason", ""),
+                             review_tags=it.get("review_tags", []))
+        if n_save:
+            vault_urls.add(n_save)
+        print(f"  -> [score{it.get('score','?')}] {out.name}")
         done += 1
-        x_n += 1 if is_x else 0
-        web_n += 0 if is_x else 1
 
     print("\n--- 結果 ---")
     if args.apply:
-        print(f"書き出し: {done}件（web {web_n} / X {x_n}） / 既存skip {skipped} / 失敗 {failed}")
+        print(f"書き出し: {done} 件 / 既存skip {skipped} / 失敗 {failed}")
         print(f"出力先: {CLIPPINGS_DIR}")
         print("次: vault で clippings-to-sources を実行すると sources/web/ に振り分けられます。")
     else:
-        print(f"取り込み予定: {len(checked) - skipped}件（web {web_n} / X {x_n}） / 既存skip {skipped}")
+        print(f"取り込み予定: {len(items) - skipped} 件 / 既存skip {skipped}")
         print("問題なければ --apply を付けて再実行してください。")
 
 
