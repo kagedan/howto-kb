@@ -100,6 +100,43 @@ python scripts/inventory_review.py \
 
 出力: `reviewed-{tag}-YYYY-MM-DD.json`
 
+### Step 5.5. 方法D：score=3 予備プールの最終判定（Sonnet 厳しめ二分化）
+
+score=3 は Haiku 1次採点でボーダーラインに残った「業界事例・トレンド寄り」記事。
+かげだん手動では件数が多すぎる場合 (~100件以上)、Sonnet で adopt/skip 二分化する。
+
+```bash
+# 1. 全カテゴリの pending_review を集約してバッチ化
+python scripts/inventory_method_d_prep.py
+#  -> scripts/_inventory/method_d_batches/batch_NNN.json （5件 / batch）
+
+# 2. Claude 側で Workflow を起動：
+#  - script: .claude/workflows/inventory-method-d.js（保存済み、/inventory-method-d で起動可）
+#  - 採点基準: 厳しめ。具体ノウハウ＋業務への応用可能性の双方を満たすもののみ adopt
+#  - schema: {id, decision:'adopt'|'skip', confidence, reason}
+#  - model: claude-sonnet-4-6（並列最大16、5件×130バッチ ≒ 4〜5分）
+
+# 3. Workflow 結果を decisions.json に保存後、未判定/phantom ID を補正
+#  -> scripts/_inventory/method_d_decisions.json
+
+# 4. adopt 分を inventory_import.py 用 json に整形
+python scripts/inventory_method_d_build_import.py
+#  -> scripts/_inventory/reviewed-method-d-YYYY-MM-DD.json （reviewed_for_import 配列）
+
+# 5. user 確認用 shortlist md を出力（カテゴリ別、confidence 順）
+python scripts/inventory_method_d_shortlist.py
+#  -> scripts/_inventory/method_d_adopt-YYYY-MM-DD.md
+
+# 6. dry-run → apply で vault 取り込み（Step 6 に合流）
+python scripts/inventory_import.py --reviewed scripts/_inventory/reviewed-method-d-YYYY-MM-DD.json
+python scripts/inventory_import.py --reviewed scripts/_inventory/reviewed-method-d-YYYY-MM-DD.json --apply
+```
+
+注意点:
+- Workflow の Sonnet 出力で稀に「phantom ID」（バッチに無い id を勝手に生成）が出るので、pending_review と突合して除外する
+- 同様に未判定 id が数件出ることがある。補完 agent で個別判定して decisions に追記
+- 中間生成物は使い終わったら `_progress/method_d_YYYY-MM-DD/` に退避し、`method_d_batches/` は削除
+
 ### Step 6. vault 取り込み
 
 ```bash
@@ -190,3 +227,19 @@ git commit -m "session: 月次棚卸し YYYY-MM 実行（...内訳...）"
 - articles 残: 5,840件（45%削減）
 - index.json: 6.6MB → 3.7MB（44%削減）
 - Supabase orphan 4,378件削除 → index.json と完全一致
+
+## 方法D 実行記録 (2026-06-16)
+
+score=3 予備プール 658件を Sonnet で再判定 (Workflow 並列、約4.5分)。
+
+| カテゴリ | pending_review | adopt | skip |
+|---|---:|---:|---:|
+| antigravity | 9 | 0 | 9 |
+| construction | 17 | 0 | 17 |
+| cowork | 32 | 4 | 28 |
+| ai-workflow | 305 | 12 | 293 |
+| claude-code | 295 | 54 | 241 |
+| **合計** | **658** | **70** | **588** |
+
+vault 取込: 70件 (vault `clippings/` 経由 → `clippings-to-sources` で `sources/web/` へ振り分け)。
+中間生成物・判定履歴は `_progress/method_d_2026-06-16/` に退避。

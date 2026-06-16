@@ -1,0 +1,225 @@
+# 方法D 採用候補（Sonnet 厳しめ判定）2026-06-16
+
+score=3 (658件) を Sonnet で本文ベース再判定。**adopt 70件**を以下に列挙。
+
+- `[x]` のまま残すと採用、`[ ]` に戻すと除外。デフォルト全件 `[x]`。
+- 確認後、`inventory_import.py` で vault に投入する。
+
+## cowork（4 件）
+
+- [x] **Claude DesktopのCoworkでブラウザ操作がPermission deniedになる原因と解決策** （zenn, conf=0.97）
+  - CoworkのChrome拡張でPermission deniedになる原因（follow_a_planモードの権限フロー・APIドメインカテゴリ）と解決策（設定画面URL・手順）、さらにpreflightスキルの設計手法まで具体的に記述されており、トラブルシュートとスキル設計の両面で即再現可能なノウハウとして高い価値がある。
+  - https://zenn.dev/fixu/articles/claude-cowork-browser-permission
+- [x] **@nutssjp: 海外でバズってるこの手法、めっちゃ実務的です。 要するに「毎回プロンプトを長く書く」のをやめて、 以下の3つの.mdフ** （x, conf=0.78）
+  - about-me.md・anti-ai-writing-style.md・my-company.mdの3ファイルをフォルダに置いてClaudeに常時読ませる手法で、CLAUDE.mdやコンテキスト設計に直接応用できる具体ノウハウを含む。
+  - https://x.com/nutssjp/status/2051524916659593677
+- [x] **Claude for Legal を触ってみました ~契約大臣と連携して契約レビューを自動化~** （zenn, conf=0.75）
+  - Claude for LegalプラグインのCoworkへのインストール手順・初期設定ウィザード・MCPコネクタ連携・具体的なプロンプト例（契約レビューから送信・Slack通知まで一気通貫）が含まれており、MCP連携ワークフロー設計の参考として実装直結要素がある。
+  - https://zenn.dev/teradox_blog/articles/e25178b03748f5
+- [x] **非エンジニアの同僚にClaudeを社内展開するときにやるべきセキュリティ設計3選** （zenn, conf=0.75）
+  - 入力可否基準の明文化・Cowork権限設計・社内AIポリシーの1ページテンプレートなど、非エンジニアへのAI展開に必要なルール設計が具体的に示されており、組織導入時の実装に直結する。
+  - https://zenn.dev/momozaki/articles/a388ba7e43749a
+
+## ai-workflow（12 件）
+
+- [x] **【AIエージェントシリーズ 第7弾】マルチAgent基礎：Anthropic Harness論文に学ぶ専門家チームレビューの作り方** （qiita, conf=0.82）
+  - Planner/Generator/Evaluatorの3層アーキテクチャ、trust_levelによる役割明示、並列サブエージェント設計など、マルチエージェントワークフローを実装するための具体的なコード・設計手順を含む。エージェント設計の汎用ノウハウとして役立つ。
+  - https://qiita.com/bit-tanghao/items/29708ac044a58e8e0844
+- [x] **「find-mcp-server」スキルで公開MCPサーバーを探そう** （zenn, conf=0.82）
+  - 公開MCPサーバーを自然言語で検索・インストールするスキルの具体的な導入手順（npxコマンド）と対応AIツール一覧・動作例を含み、MCP活用ノウハウとして再現できる実装直結情報がある。
+  - https://zenn.dev/tetradice/articles/7a962c51d452b8
+- [x] **@oikon48: Claude Code 2.0.70(抜粋) 【機能】 ・Enter キーでプロンプト候補を即座に送信 ・`mcp_** （x, conf=0.82）
+  - Claude Code 2.0.70のchangelogを実機確認付きで解説しており、MCPワイルドカード権限（`mcp__server__*`）の設定例やplan_mode_required・current_usageといった具体的な設定・運用ノウハウを含む。settings.jsonの権限管理に直接役立つ実装直結情報として価値がある。
+  - https://x.com/oikon48/status/2000732443025006604
+- [x] **AI多層防御を通り抜けた重大インシデント未遂 - verify経路の真正性と人間の批判的圧力** （zenn, conf=0.80）
+  - マルチエージェント構成でAI多層防御をすり抜けるblindspotの実例と、verify経路の真正性・人間の批判的圧力を最終層として組み込む設計知見を具体的な根拠とともに示しており、AI活用ワークフロー設計として再現性がある。
+  - https://zenn.dev/fixu/articles/ai-multi-agent-verify-authenticity
+- [x] **Anthropic Academyを3コース受けてみた 体系的に学べた話📚** （zenn, conf=0.78）
+  - SKILL.mdの設計原則（500行以内・descriptionの重要性・スキル優先順位）や4Dフレームワーク（Delegation/Description/Discernment/Diligence）など、Claude/Cowork活用の汎用ノウハウが具体的に書かれており、非エンジニアでも参照・再現できる実装直結の内容を含む。
+  - https://zenn.dev/kohei486/articles/35d83dcf96a282
+- [x] **全部入りかつ軽量skill-creatorを作りました #AI** （qiita, conf=0.78）
+  - Skill設計のライフサイクル管理（Atom合成・Preset・eval・依存管理・AUTO-SPLIT・定期改善ループ）を具体的に解説しており、自分のスキル群を育て続ける仕組みとして実装直結のノウハウを含む。Cowork/Claude Codeのスキル開発・整理に直接応用できる。
+  - https://qiita.com/artie/items/8e21bc0adff39369ffd7
+- [x] **GoogleスプレッドシートでClaude APIを使う方法【GASで実装、コード付き】** （zenn, conf=0.75）
+  - GASからClaude APIを呼び出してスプレッドシートのカスタム関数（翻訳・要約・分類）として使う方法を具体的なコード・手順付きで解説しており、書類作成に使うスプレッドシートへのAI組み込みとして再現可能なノウハウを含む。
+  - https://zenn.dev/ino38/articles/claude-api-google-sheets-gas
+- [x] **AIスクラムチームに人間がそっと介入してみた話** （zenn, conf=0.75）
+  - AIエージェントが自律的に環境操作を回避する問題への対処として、スキルコマンドへの一言付記やドキュメント参照指定という具体パターンを示しており、自律型ワークフロー設計のトラブルシュートノウハウとして再現可能な実装直結要素を含む。
+  - https://zenn.dev/microsoft/articles/cbb8b3ad4c581a
+- [x] **mdファイルは育つと嬉しい** （zenn, conf=0.72）
+  - DESIGN.md フォーマットの9セクション構成・具体的な記述例・Do's and Don'ts の設定例など、AI への指示ファイル設計の実践ノウハウを含み、CLAUDE.md 設計の考え方に応用できる汎用的な内容。
+  - https://zenn.dev/acntechjp/articles/htmlslide-from-designmd
+- [x] **AIでVBAを開発するユーザに送る、テスト時短の方法 #Claude** （qiita, conf=0.72）
+  - 非エンジニアがAIでVBAを開発する際のテストデータ・テストケースをAIに生成させてAI自身の仕様理解を確認するという具体的な手法を紹介しており、事務処理自動化に携わる読者が再現できる実践ノウハウを含む。ただし内容は薄めなので確信度は低め。
+  - https://qiita.com/hr_tec/items/50fe60f3c704db900d36
+- [x] **次の波に乗る！AI未来予測術｜とし｜プロンプト職人** （note, conf=0.65）
+  - 業界トレンド先読み・3シナリオ分岐・競合先読みなど、非エンジニアでも即使えるプロンプトテンプレートを複数収録しており、書類作成・業務判断に転用可能な実践的プロンプト集として一定の価値がある。ただし一般ビジネス向けで建設業務への特化度は低く、迷いが残る。
+  - https://note.com/aitaizen/n/n87e4680a9e9f
+- [x] **🚀【後編】データが溜まるほど賢くなる--Claude×Notionで苦手分野自動分析までやり切った話｜三木谷 鉄平** （note, conf=0.65）
+  - Claude+Notion MCPを使ったDBスキーマ設計・プロンプト例・間隔反復の自動化手順など再現可能なノウハウを含む。書類作成向けではないが、MCP連携でのデータ管理・自動分析パターンとしてAI活用ノウハウとして参照価値がある。
+  - https://note.com/kohei008jp/n/n21cb1f6e427c
+
+## claude-code（54 件）
+
+- [x] **Claude Codeのトークンが突然10倍消えた--原因はキャッシュバグだった** （qiita, conf=0.90）
+  - キャッシュバグの原因分析と、セッションファイル読み取りブロック・コンテキスト残量モニター・トークン予算ガードなどのHookコードが具体的に掲載されており、Claude Code利用者が設定ファイルに貼り付けて即再現できるトラブルシュート実装ノウハウ。
+  - https://qiita.com/yurukusa/items/49f1fa305522368d7e7a
+- [x] **Claude Code v2.1.160: workflowキーワードがultracodeに変更・セキュリティ強化** （qiita, conf=0.90）
+  - Claude Code v2.1.160の破壊的変更（`workflow`→`ultracode`トリガー変更、acceptEditsモードのセキュリティ強化）をBefore/After例付きで解説しており、CLAUDE.mdやプロンプトテンプレートの更新手順が具体的に再現できる。
+  - https://qiita.com/picnic/items/59b8378b59d036048cf7
+- [x] **Claude Code 実践編 - Output Style** （qiita, conf=0.88）
+  - Output Styleの挿入位置・keep-coding-instructionsのデフォルト挙動・CLAUDE.mdとの強度比較など、Claude Codeのシステムプロンプト制御に直結する具体的ノウハウを含む。CLAUDE.md設計やHook設計を行うユーザーが再現・活用できる実装直結の内容。
+  - https://qiita.com/sugo_mzk/items/30da0a75b55cd7abe7c3
+- [x] **Claude Code Deny Rules Bypass 完全解説 - 50サブコマンドで無効化される脆弱性と対策** （zenn, conf=0.88）
+  - Claude CodeのDeny Rules脆弱性（v2.1.90未満）について、根本原因・攻撃シナリオ・悪意あるCLAUDE.mdの具体例・修正バージョンへのアップグレード手順まで実装直結で解説しており、settings.jsonのセキュリティ設定運用に直接役立つ具体ノウハウが含まれている。
+  - https://zenn.dev/kai_kou/articles/222-claude-code-deny-rules-bypass-security-guide
+- [x] **【実装編】Claude Codeの/loopで仕事を自動で回す5つの型** （note, conf=0.88）
+  - /loopコマンドの5類型（収集・整理・生成・検証・通知）をプロンプト例付きで解説し、.claude/loop.mdの設定方法も含む。情報整理・下書き作成・チェック自動化など書類作成業務に直接応用できるノウハウ。
+  - https://note.com/kawaidesign/n/n609d072beb6b
+- [x] **Claude Code Agent Teamsのバグレポート** （zenn, conf=0.88）
+  - Agent Teams v2.1.114の具体的な症状・原因・ダウングレード手順・チェックリスト・成果物救出ルートまで詳細に記述されており、実運用で再現・回避できるトラブルシュート情報として価値がある。
+  - https://zenn.dev/znet/articles/20260420_claude-code-agent-teams-bug-report
+- [x] **Claude Code のハーネスをチームでGit管理する** （zenn, conf=0.88）
+  - .gitignoreをホワイトリスト方式で使い、-sharedサフィックスのファイルだけGit管理するという具体的な手法を示しており、スキル・フック・コマンドのチーム共有に直結する実装可能なノウハウを含む。
+  - https://zenn.dev/forward/articles/be82a1bc3e2948
+- [x] **Claude Codeの[Pasted text #N +M lines]を編集したい！** （zenn, conf=0.88）
+  - ペーストテキストが畳まれた際の2つの展開方法（再ペーストとCtrl+G外部エディター）を具体的な操作手順で説明しており、Claude Codeの実用的なtipsとして再現性がある。
+  - https://zenn.dev/uchunanora/articles/cc-edit-pasted-text
+- [x] **AIは対症療法に陥りがち - 7段の表層修正が治らなかった理由と素朴な問いの価値** （zenn, conf=0.85）
+  - AIが対症療法に陥る構造的理由5つと、修正回数の上限設定・スキルへのルール化・素朴な問いかけなど再現可能な対策が具体的に示されており、Claude Code活用の汎用ノウハウとして役立つ。
+  - https://zenn.dev/fixu/articles/ai-symptomatic-treatment-trap
+- [x] **「革新性が何か分からない」を解決するものづくり補助金申請書の書き方とClaude Code活用術** （note, conf=0.85）
+  - CLAUDE.mdに審査項目・NG表現・構成テンプレを固定して補助金申請書の骨子を生成するワークフローを、具体的なCLAUDE.md記載内容とプロンプト例付きで解説しており、書類作成業務へのAI応用として非エンジニアが直接再現できる実装直結ノウハウを含む。
+  - https://note.com/human_dunlin4200/n/n57bd2ce7c4ae
+- [x] **Claude Code v2.1.126 リリース｜毎日Changelog解説** （qiita, conf=0.85）
+  - `claude project purge`のコマンド例、ゲートウェイ連携設定、`--dangerously-skip-permissions`の動作変更と注意点など、Claude Code運用者が即活用できる具体的なchangelog解説が充実している。
+  - https://qiita.com/moha0918_/items/e3ddb3764b70912ae6c5
+- [x] **@viveky259259: Most devs use Claude Code at &lt;10% of its power. Anthropic** （x, conf=0.85）
+  - CLAUDE.mdの設計指針（200行以内・ミス後のみルール追加・モノレポでの階層ロード）、Skillとフック設定、サブエージェント並列活用、git worktreesなど具体的なノウハウが箇条書きで整理されており、Claude Code活用の実践的なtipsとして価値がある。
+  - https://x.com/viveky259259/status/2049284672916697280
+- [x] **Claude Code の Dynamic Workflows を理解する - Subagents / Skills との違いと実務での使い** （zenn, conf=0.82）
+  - Claude Code のDynamic Workflows・Subagents・Skills・Hooksの役割分担と使い分け基準が具体的な比較表・起動方法・ユースケース別判断軸で解説されており、エージェント設計・ワークフロー設計の汎用ノウハウとして再現性がある。
+  - https://zenn.dev/akasara/articles/ccfb2f7a5174e0
+- [x] **「クチコミへの返信が溜まる一方」店舗オーナーのためのClaude Code整理術** （note, conf=0.82）
+  - CLAUDE.mdへの感情別返信ポリシーの書き方・プロンプト例・週次バッチ処理ルーティン・複数プロジェクト構成など、定型文量産ワークフローの具体ノウハウを含む。書類・定型文作成業務へのAI応用として再現性が高い。
+  - https://note.com/human_dunlin4200/n/n054287e3cb98
+- [x] **@oikon48: Claude Code の Subagents に、memory (永続メモリ) をFrontmatterで設定できるよ** （x, conf=0.82）
+  - SubagentsのFrontmatterでmemoryスコープ（user/project/local）を設定する具体的な書式と保存先ディレクトリ（.claude/agent-memory/<name>）が明示されており、Subagent設計に直接応用できる実装直結の情報を含む。
+  - https://x.com/oikon48/status/2019370311238709534
+- [x] **@masahirochaen: Claude Codeユーザー必見。** （x, conf=0.82）
+  - CLAUDE.mdの品質監査（6項目スコアリング・実態との差分検出）と/revise-claude-mdによるセッション終了時の自動更新提案という具体機能を紹介しており、CLAUDE.md設計・運用のノウハウとして直接参考にできる内容を含む。
+  - https://x.com/masahirochaen/status/2032245312761512173
+- [x] **@oikon48: CLAUDE .md の重要な箇所を &lt;important if=condition&gt; で囲むと、C** （x, conf=0.82）
+  - CLAUDE.mdの重要箇所を`<important if="condition">`タグで囲むとClaudeが確実に読み込むという具体的なtipsを含み、CLAUDE.md設計に直接応用できる実践的ノウハウとして採用価値がある。
+  - https://x.com/oikon48/status/2034146114220499396
+- [x] **自己進化型ナレッジ（Self-Evolving Knowledge）** （zenn, conf=0.80）
+  - CLAUDE.md設計のL0〜L3四層構造・ルーティングYAML・memory/inbox.mdパイプラインという具体的なアーキテクチャ提案を含み、Claude Code運用でのコンテキスト肥大化・知識重複問題を解決する実装直結のノウハウ。非エンジニアでも参考にできるCLAUDE.md設計論として価値がある。
+  - https://zenn.dev/pansan/articles/305ff8ea604253
+- [x] **Claude Code v2.1.176: モデル制御の抜け穴修正とバグ修正まとめ** （qiita, conf=0.80）
+  - Hookのif条件パスマッチ修正・availableModels抜け穴修正・Windows/tmux環境の不具合修正など、具体的な設定例とコード例を含むリリースノート解説。かげだんはHookを実際に運用しており、設定が意図通り動作するかの確認材料として直接役立つ実務直結情報。
+  - https://qiita.com/picnic/items/f8974940833ddc6bef5a
+- [x] **@Cryptinflux: Claude Codeに動的ワークフローが実装されました。AIが自分でオーケストレーション台本を書き、最大1,000体の** （x, conf=0.80）
+  - Claude Codeのdynamic workflows機能について、起動方法（ultracode、/effort ultracode、/deep-research）、パターン（分割統治・敵対的検証・トーナメント等）、注意点（トークン消費・途中介入不可）など具体的な使い方ノウハウが含まれており、エージェント設計の汎用ノウハウとして読み手に役立つ。
+  - https://x.com/Cryptinflux/status/2062337146460213331
+- [x] **GitHub Copilotのドキュメントを全部読んだので、本当に使えるカスタマイズだけ10個まとめた** （zenn, conf=0.78）
+  - copilot-instructions.md・.instructions.md・.agent.md・Handoffs・.prompt.mdなど、GitHub Copilotの実践的カスタマイズ10項目をファイル例付きで解説しており、Claude CodeのCLAUDE.md・Skill・Hook設計と対比して参照できる具体ノウハウを含む。
+  - https://zenn.dev/miruky/articles/e7d9fe07646753
+- [x] **Claude Codeでコーポレートサイトの本番DBを吹き飛ばした話** （note, conf=0.78）
+  - Claude Code auto modeの危険操作をPreToolUse hookでブロックする具体的な設計、memoryとrulesへの禁止事項追記など、Hook設計・ルール化の実装直結ノウハウを含む。DB事故の文脈はエンジニア寄りだが、AIエージェントの安全運用設計として汎用性がある。
+  - https://note.com/hrdev/n/n5ebd5c2e66b2
+- [x] **Claude Code v2.1.159〜v2.1.161 リリース｜毎日Changelog解説** （qiita, conf=0.78）
+  - 並列ツール独立化・grep=read扱い・設定ファイルへのガード追加・`workflow`→`ultracode`へのキーワード変更など、Claude Codeを実際に使う上で即座に影響する動作変更が具体的にまとめられており、acceptEditsやHooks運用に直結する実用情報を含む。
+  - https://qiita.com/moha0918_/items/1c20a1401487b278ecc9
+- [x] **@oikon48: Boris Cherny氏（Claude Code責任者）とCat Wu氏（Claude Code プロダクト責任者）が** （x, conf=0.78）
+  - Claude Code責任者によるCLAUDE.md/Skills活用・autoモード設計・ルーティン構築・検証手法など実践的な設計思想を含み、エージェント運用の改善に直結する知見が豊富。
+  - https://x.com/oikon48/status/2064084007726579790
+- [x] **Claude APIで初回トークンの待ち時間を短縮するプロンプトキャッシュの事前ウォームアップ術** （zenn, conf=0.78）
+  - プロンプトキャッシュを事前ウォームアップしてTime-to-First-Tokenを短縮する具体的テクニックが手順付きで説明されており、Claude APIを組み込んだワークフロー設計に直接応用できる。
+  - https://zenn.dev/ty2/articles/tweet-claudedevs-2055069548672631218
+- [x] **@oikon48: Claude Code で Claude Opus 4.7 を使う際のベストプラクティス: 1. 最初のターンでタスク** （x, conf=0.78）
+  - Opus 4.7でのClaude Code運用における具体的な挙動の変化（冗長性低下・ツール呼び出し減少・サブエージェント委譲が慎重になる点）とプロンプト指示の対処法が具体的に列挙されており、モデル更新後の運用調整に直結するノウハウ。
+  - https://x.com/oikon48/status/2044945186284093517
+- [x] **@oikon48: 【Day10】Project ルール `.claude/rules/`** （x, conf=0.78）
+  - .claude/rules/ へのトピック別ルール分割と、YAMLフロントマターによるGlobパターンマッチングでの動的ロード仕様を具体的に説明しており、CLAUDE.md設計の実装直結ノウハウとして活用できる。
+  - https://x.com/oikon48/status/1998717425223872974
+- [x] **@kapioblog: Claude Codeメモ 📝rewindを使いこなせるかがコンテキスト管理のうまさを示す指標 「多くの人は「うまくい** （x, conf=0.78）
+  - 「失敗したときは追加指示ではなくrewindで巻き戻す」というコンテキスト管理の具体的なtipsを含んでおり、Claude Code操作の実践ノウハウとして再現・応用できる。
+  - https://x.com/kapioblog/status/2044895522289484027
+- [x] **Claude on AWS（Amazon Bedrock）環境構築ガイド - Claude Code & Claude Desktop** （zenn, conf=0.75）
+  - Bedrock経由でClaude CodeおよびClaude Desktopを使う環境構築手順が具体的に記載されており、AWS CLI設定・環境変数・ヘルパースクリプト・トラブルシューティングまで再現可能。エンタープライズ・社内環境でのClaude活用ノウハウとして参照価値がある。
+  - https://zenn.dev/kini/articles/ed704c0edb55c7
+- [x] **AI が 90% のコードを書く時代の開発現場 - Anthropic・Palantir・Meta の公開情報から読み解く** （zenn, conf=0.75）
+  - AnthropicのClaude Code社内研究レポートを基にCLAUDE.mdの学習リポジトリ化・Planモード→auto-editフロー・並列セッション運用・Swiss Cheese品質保証モデルなど具体的な実践パターンを短期/中期/長期の移植手順として提示しており、Claude Code活用ノウハウとして再現性がある。
+  - https://zenn.dev/shintaroamaike/articles/fd55b47f25a643
+- [x] **Claude Code 1 日で $874 使った日のログを koji-lens で見たら、subagent経由Bashが68%だった** （zenn, conf=0.75）
+  - Claude Codeのローカルログ（~/.claude/projects/**/*.jsonl）をCLIで分析し、ツール別・subagent vs メインセッション別のコスト内訳を把握する具体的な手法を紹介している。subagentのBash呼び出しがコストの68%を占めるという実データと、`koji-lens`コマンドの使い方が再現可能な形で示されており、モデル選択や設計判断の参考になる実践的ノウハウ。
+  - https://zenn.dev/kojihq/articles/2c211edbf84727
+- [x] **@k_koga555: https://t.co/VbLI7nfvKM 【初心者向けClaude Codeの使い方】これ1本で全部わかる｜インス** （x, conf=0.75）
+  - CLAUDE.mdの役割と書き方（役割・目標・制約を短く書いて育てる）、Skillの構造（ヘッダー+本文、グローバル/プロジェクト使い分け）、MCPの設定と注意点、許可モードの使い分けなど、非エンジニアが業務自動化を始めるための具体的ノウハウが網羅されている。ただしX投稿のAI要約であり情報の深度は中程度。
+  - https://x.com/k_koga555/status/2065817701801754667
+- [x] **Claude Coworkでできること** （qiita, conf=0.75）
+  - Claude CoworkがClaude Codeと何が異なるのか、できることの各機能（Excel/スライド生成、定期実行、Projects、プラグイン拡張、Computer Use）を具体的なユースケース例付きで整理しており、非エンジニアがCoworkを業務活用する際の実用的な把握に役立つ。概論寄りではあるが、ユースケース粒度のノウハウが含まれる。
+  - https://qiita.com/j4nzeri/items/d2f7ab10ae051b6283ba
+- [x] **@claudecode_lab: Claude Codeの設定が面倒くさい人へ👀 「claude-code-setup」というAnthropic公式プラ** （x, conf=0.75）
+  - Anthropic公式プラグイン`claude-code-setup`のインストールコマンド（`/plugin install claude-code-setup@claude-plugins-official`）と機能（hooks/skills/MCP/subagents設定の自動提案）が具体的に記載されており、再現可能な実装手順を含む。
+  - https://x.com/claudecode_lab/status/2048144563538432062
+- [x] **@@Hoshino_AISales: Claude Codeのコマンドとショートカットを50個、難易度別にまとめました。 公式ドキュメントを読んで、実際に使っ** （x, conf=0.75）
+  - Claude Codeのコマンド・ショートカットを50個難易度別にまとめ、コピペで使えるプロンプト例付きという構成は具体ノウハウの条件を満たす。非エンジニアがClaude Codeを使いこなす上で参照価値が高い。
+  - https://x.com/Hoshino_AISales/status/2036986133389992160
+- [x] **@__timakin__: CLAUDE.mdの具体的な書き方。 ・プロジェクト概要、目的、実装方法について端的に ・300行未満を目指す ・ファ** （x, conf=0.75）
+  - CLAUDE.md設計の具体的指針（300行未満・分割・自動生成禁止等）を含み、読み手が自分のCLAUDE.md作成に直接活かせる実装直結のノウハウ。
+  - https://x.com/__timakin__/status/1995252352786538786
+- [x] **"AIの相棒":GitHub Copilot Custom AgentsをHookで外側から制御する土台を作った話** （zenn, conf=0.72）
+  - GitHub Copilot Custom AgentsのHook設計（preToolUse/postToolUse等）について、具体的なJSON設定例・スクリプト構成・制御戦略が示されており実装直結の内容。HookによるAIエージェントの実行境界制御というノウハウはClaude CodeのHook設計にも転用できる汎用性がある。
+  - https://zenn.dev/zwatanabe/articles/tech-lead-boss-hook-control-mesh
+- [x] **【実測】Claude 6/15改定で、毎日自動化している私の請求はいくらになるのか** （qiita, conf=0.72）
+  - Claude Pro/Maxの6/15自動実行課金変更の実測データと、ccusageを使ったトークンコスト集計・最適化手順（セッション短縮・MCP削減・スクリプト前処理）が具体的に示されており、自動化を運用するユーザーに再現可能なコスト管理ノウハウを提供する。
+  - https://qiita.com/phibi-soon/items/576b891cd7bdcec83e2f
+- [x] **# Claude Code専用サーバーを無料で建てて、cron + remote-control で超便利な開発環境を作る方法** （zenn, conf=0.72）
+  - Oracle Cloud無料枠でClaude Codeサーバーを構築し、cronで定期実行・Discordからリモート操作する具体的な手順がコマンド付きで示されており、再現性のある実装ノウハウを含む。非エンジニアには敷居が高めだが、cronによる自動化の型として参考になる。
+  - https://zenn.dev/momozaki/articles/62d027e36657d6
+- [x] **@ohgaseiya: Claudeを「定型業務を処理するAI従業員」として設計する方法が話題。 1人でも仕事を回せる人とそうでない人の違いは** （x, conf=0.72）
+  - AI従業員として設計する8ステップが役割絞り込み・判断範囲の線引き・ワークフロー4要素（トリガー・入力・プロセス・出力）など具体的な設計方針を含み、書類作成・事務処理の自動化設計に応用できる実践的内容。
+  - https://x.com/ohgaseiya/status/2059107941853397229
+- [x] **@masa_okamura108: Claude CodeのBoris「もうClaudeに直接プロンプトを書くより、仕事を回すループを書く」 実際にどんなル** （x, conf=0.72）
+  - /loopコマンドによる自動実行ループの具体的なコマンド例（/loop 5m /babysit、/loop 30m /slack-feedback等）が複数挙げられており、繰り返しタスクの自動化設計として非エンジニアにも参考になるノウハウを含む。
+  - https://x.com/masa_okamura108/status/2063395534866637010
+- [x] **@ai_catchup_jp: Claude Codeを実務で使いこなす上で、このコンテキスト管理は間違いなく最重要テーマですよね！有益なまとめをありが** （x, conf=0.72）
+  - /rewind・/compact・/clear・Subagentの4コマンドについて、なぜそれを使うかの理由と使い分け基準が具体的に書かれており、コンテキスト管理の実践ノウハウとして再現できる内容を含む。ただしX投稿の要約であり情報量は限定的。
+  - https://x.com/ai_catchup_jp/status/2045095955893244008
+- [x] **@ai_watcher_jp: Claude Code Hooksの面白い使い方、ご存知でしたか？CLAUDE.mdにルール書くだけじゃなく、Hooks** （x, conf=0.72）
+  - Hooksの21種イベント活用法（PreToolUse、PermissionDenied hookのdefer値など）を具体的に列挙しており、CLAUDE.md設計・Hook設計の実装直結ノウハウとして読める。ただしSNS投稿の断片情報のため、実装詳細は別途確認が必要な点が若干残る。
+  - https://x.com/ai_watcher_jp/status/2043666341182255126
+- [x] **@nukonuko: Claude Code のベストプラクティス https://t.co/ACyuYeA4fU の書き方、編集権限の与え** （x, conf=0.72）
+  - CLAUDE.md書き方・編集権限・MCP接続・thinking budget指定・YOLO・並列実行など複数の実践ノウハウのトピック一覧を含んでおり、リンク先のベストプラクティス文書への参照として価値がある。本文自体は断片的だが参照先の内容を示す索引として採用圏内。
+  - https://x.com/nukonuko/status/1913741316217049474
+- [x] **Claude Code の「Skill」って何？ 知らないと怖い情報漏洩リスクと実際に起きた事故** （note, conf=0.70）
+  - Skillの安全確認チェックリスト（SKILL.mdの目視手順・grepコマンド例・危険パターン一覧・Trust Dialogの扱い方）など、読んで再現できる具体手順を含む。非エンジニアでもSkillを使う立場として、外部Skillの安全確認手順は直接役立つ実用ノウハウ。
+  - https://note.com/ample_swan1803/n/n316e418d86e8
+- [x] **リポジトリに置くだけでAIが空気を読む - copilot-instructions.md と各AIツールの指示ファイルまとめ** （qiita, conf=0.70）
+  - 各AIツール（Claude Code・Copilot・Cursor等）の指示ファイル設計について、具体的なサンプルと複数ツール管理手法（共通ファイル・シンボリックリンク・CI同期）を含む。CLAUDE.md設計の汎用ノウハウとして業務活用に転用可能な実装直結要素がある。
+  - https://qiita.com/idw-coder/items/f26adfbcba2449f2464a
+- [x] **Claude Codeに大学レポートの引用文献を任せたら、半分が存在しない論文だった話** （note, conf=0.70）
+  - AIが実在しない引用文献を生成するハルシネーションリスクと、確認習慣（CiNii/Scholar検証・明示的な前提伝達）という3つの実務ルールを具体的に提示しており、書類作成でAIを使う非エンジニアにとって再現可能な注意点として価値がある。
+  - https://note.com/apt_loris2407/n/nbe7767a60544
+- [x] **@guutaratanuki11: 🤖 Claude Code、ただ使うだけじゃもったいない。 精度が跳ね上がる管理のコツを4つにまとめました👇 ①仕** （x, conf=0.70）
+  - フォルダ構造をAIへの文脈として活用する考え方、SKILLとして手順を資産化するアプローチ、MCP/Playwright連携の方向性など、非エンジニアが実践できる具体ノウハウを4点にまとめており有用。ただしX投稿の概要レベルで深みはやや薄い。
+  - https://x.com/guutaratanuki11/status/2066034412853358612
+- [x] **@topickapp_com: https://t.co/NaakvlzLah 国交省の地理空間MCP Server α版をClaudeで使う方法を紹介** （x, conf=0.70）
+  - 国交省の地理空間MCP ServerをClaudeで使う方法として、API申請からClaude Code/Desktopの接続設定まで手順を解説しており、建設・公共工事業務への応用可能なMCP連携ノウハウとして適合する。
+  - https://x.com/topickapp_com/status/2042860449146761577
+- [x] **Claude Codeで広告コピーの訴求ミスを30分で見つける3ステップ** （qiita, conf=0.65）
+  - 「批判役を明示指定」「忖度なし指示」「ペインの実在性を問うプロンプトテンプレート」など再現可能な具体的プロンプト設計ノウハウを含み、広告コピーに限らずClaudeへの批判的レビュー依頼全般に応用できる汎用技法として価値がある。
+  - https://qiita.com/Ngen/items/623e4f455caec67d8c7a
+- [x] **ChatGPT/Claude/Cursorから日本の上場企業データをMCP経由で引く完全ガイド** （zenn, conf=0.65）
+  - MCP接続設定のJSON例とツール定義（description記述の重要性・具体例）が含まれており、MCP設計の汎用ノウハウとして再現可能。ただし対象は金融データ特化であり、書類作成業務への直接応用は限定的。
+  - https://zenn.dev/edinetdb/articles/edinetdb-mcp-japan-stock-guide
+- [x] **@DfxoqEth: https://t.co/rbcFGxhJLx** （x, conf=0.65）
+  - エージェント構築の9ステップを具体的に解説しており、タスク選定→手動プロンプト→自動化への流れや使用モデルの選択基準など実装直結の内容を含む。非エンジニア向けの平易な構成で、AI活用ワークフロー設計のノウハウとして参考になる。ただし本文が途中で切れており完全性に不安があるため確信度は中程度。
+  - https://x.com/DfxoqEth/status/2065776570267054559
+- [x] **@nao_ai_dev: CLAUDE.mdを結構適当に書いている人が多いね。** （x, conf=0.65）
+  - CLAUDE.mdに記載すべき4項目（ビルド・テスト、コーディング規約、構成・命名規則、ワークフロー）と「100行以内・具体的・簡潔・構造化」という設計指針を含む。SNS投稿として短いが、CLAUDE.md設計の具体チェックリストとして再現できる要素がある。
+  - https://x.com/nao_ai_dev/status/2034193097081680251
+- [x] **Claude Code & Google Analytics(GA4)のMCPサーバ連携を色々試してみた** （zenn, conf=0.62）
+  - uv/pipx/Claude Desktop経由の3方式でMCPサーバを接続する具体的手順（gcloudプロジェクト作成・APIキー設定・サービスアカウント認証まで）が網羅されており、MCPサーバ連携の汎用ノウハウとして再現性がある。ただしGA4という非業務ツールが対象なため確信度はやや低い。
+  - https://zenn.dev/shinyaa31/articles/e3a1bdf4d99d80

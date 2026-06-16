@@ -1,0 +1,3950 @@
+[
+  {
+    "id": "antigravity/2026-04-05-チャットするだけで予約してくれるgeminiのantigravityを一般の方に全力で推す理由-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Gemini Antigravity の一般向け紹介・宣伝記事で、インストール手順も「省きます」と明記されており再現可能な具体ノウハウがない。概論・宣伝に該当する。"
+  },
+  {
+    "id": "antigravity/2026-05-04-codex活用術実録codexにandroidアプリを作らせてみたらペアプロではなく自動開発だった-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "OpenAI Codex でのアプリ開発体験の個人感想記事で、「怖かった・面白かった」という印象が主体。再現可能なプロンプト例や設定手順がなく、業界ニュース・事例紹介に近い。"
+  },
+  {
+    "id": "antigravity/2026-04-13-2026年版aiフル活用でトークンを節約しながらコーディングを爆速化する方法-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "仕様書作成→Claude→無料エージェントへの役割分担というワークフローは構造的に有用だが、コーディング・エンジニア作業に特化しており非エンジニアの書類作成・事務処理への転用は困難。適用範囲基準を満たさない。"
+  },
+  {
+    "id": "antigravity/2026-06-01-生成aiで専門技術記事はどこまで作れるかqiita-記事作成で理想的な-ai-の組み合わせは何か-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "複数AIの役割分担（生成系・検証系を分離する原則）は参考になるが、Qiita 技術記事作成という特定ドメインの分析・考察記事であり、書類作成・事務処理への汎用ノウハウとして読み取れる再現手順が薄い。"
+  },
+  {
+    "id": "antigravity/2026-05-07-codex活用術実録コードはaiが書くを実践codexデスクトップ版でwindowsアプリを作ったと-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Codex デスクトップ版で Windows アプリを開発した実録で、純粋なアプリ開発記事。非エンジニアの書類作成・事務処理には接点がなく、適用範囲基準を満たさない。"
+  },
+  {
+    "id": "antigravity/2026-05-30-ui駆動アプリ開発-with-agent-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "アプリ開発者向けのUI設計・実装ワークフローであり、書類作成・事務処理への応用でも汎用AI活用ノウハウでもなく、非エンジニアには直接関係しない領域。"
+  },
+  {
+    "id": "antigravity/2026-04-15-antigravitygoogle-stitch-antigravityで実現するai駆動型リニュー-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Stitch×AntigravityによるWebサイトリニューアルの手順記事で、Webデザイナー・開発者向け。書類作成・事務処理への応用でも汎用AI運用ノウハウでもない。"
+  },
+  {
+    "id": "antigravity/2026-04-27-分析パイプライン構築7-ai活用による構築と改善の総括-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "連載の総まとめとして「AIに制約が必要」という知見を述べているが、再現可能な具体手順がなく、データエンジニア向けの概論・総括記事にとどまる。"
+  },
+  {
+    "id": "antigravity/2026-02-16-adhdhsp249834-これ知らないとヤバいですantigravityのmcp連携がエグすぎるし-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "X投稿で「詳しくはリプで解説」と途中で途切れており、再現できる具体手順がなく断片的な紹介のみ。"
+  },
+  {
+    "id": "construction/2026-05-29-ゼネコンの積算工数を70削減-corderがaibpoのオンライン積算課提供開始-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "サービス発表・製品宣伝記事であり、具体的な操作手順やノウハウを含まない。事例紹介と導入効果の説明のみで、読み手が再現できる実装要素がない。"
+  },
+  {
+    "id": "construction/2026-05-12-日報作成や請求書転記をai自動化-10万円から試せるai活用のスモールスタート-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIエージェントサービスの新サービス発表記事で、具体的な業務自動化の手順や設定方法を含まない。サービス概要と導入プランの説明のみ。"
+  },
+  {
+    "id": "construction/2026-03-30-三井ホームが年120万時間の創出めざし生成aiの管理規定を制定-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "企業のAI活用方針・管理規程制定のニュースリリースであり、具体的なノウハウや再現可能な手順を含まない純粋なトレンド紹介記事。"
+  },
+  {
+    "id": "construction/2026-06-14-koumuten-taro-aiの進化いよいよ笑えないところまで来ています-anthropicが発表-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "チャット型からエージェント型AIへの移行を論じるSNS投稿で、概論・感想レベルの内容。具体的なノウハウや再現可能な手順が含まれない。"
+  },
+  {
+    "id": "construction/2026-05-04-8hachi8-aiなんて使えるわけがないー現場出身の施工管理者がそう言った-ㅤ-年商30億の建設会-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "建設会社での請求書AI自動化の体験談を語るSNS投稿で、概念的な流れの説明のみ。具体的なツール設定や実装手順が書かれていない。"
+  },
+  {
+    "id": "construction/2026-05-30-oishillc-建設業の施工管理積算の工数を月-50-時間削減する-ai-実装ロードマップを-6-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "本文は「事務作業がAI化の主戦場」という概論と補助金への言及にとどまり、具体的なプロンプト例・手順・実装方法は含まれていない。"
+  },
+  {
+    "id": "construction/2026-05-31-oishillc-建設業の-aiit-導入で使える補助金を整理しました2025-2026-年度-デジ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "補助金の種類・補助率を羅列した情報整理ツイートで、AI活用のノウハウ・再現可能な手順は一切含まれない。"
+  },
+  {
+    "id": "construction/2026-06-02-zeesan59-現場は好きだ-でも-現場終わってからの-写真整理-協議資料-excel-メール-で-01",
+    "decision": "skip",
+    "confidence": 0.99,
+    "reason": "施工管理の夜仕事への共感を綴ったSNS投稿で、具体的な手順・実装要素は皆無。"
+  },
+  {
+    "id": "construction/2026-04-17-shimizuyusuke-大手ゼネコンの生成ai活用事例中小建設企業への展開という話-実際aiの恩-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "中小企業の方がAI導入しやすいという意見表明にとどまり、「何から始めるか」はリンク先任せで本文に再現可能なノウハウがない。"
+  },
+  {
+    "id": "construction/2026-03-22-article-28",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "工程表をAIで作れたという結果の紹介にとどまり、YouTube動画への誘導のみで具体的な操作手順・プロンプト例が本文に存在しない。"
+  },
+  {
+    "id": "construction/2026-06-09-kensetsuaisuite-お約束通りアンケートで1位だった安全書類のプロンプトを公開します-本-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "プロンプト例が1文あるが、SNS投稿の断片で本文が極めて薄く、再現可能な具体ノウハウとして成立していない。"
+  },
+  {
+    "id": "construction/2026-05-23-zeesan59-施工管理者は現場で全力-でも帰宅後第二の仕事-日誌報告書で毎日3時間残業-note-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "NotebookLM活用の概略は示されているが、設定手順・ノートブック構成など再現に必要な情報が一切なく、SNS投稿の事例紹介にとどまる。"
+  },
+  {
+    "id": "construction/2026-06-01-kensetsuaisuite-一番の悩み終わらない書類は音声入力とのコンボで解決します現場を歩きな-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "音声入力×AIの組み合わせを紹介するだけで、具体的なツール・手順・プロンプトが皆無の宣伝的投稿。"
+  },
+  {
+    "id": "construction/2026-05-22-kensetsuaisuite-写真から報告書作成で私が使うプロンプトを特別公開-現場メモから指定フ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "プロンプト例が1文あるものの、フォーマット指定の方法や活用手順の詳細がなく、SNS投稿の断片として具体ノウハウが不十分。"
+  },
+  {
+    "id": "construction/2026-05-14-kkuma22442035-電気工事業界で-aiを使ってる人まだ少ない-図面見積提案書sns-全部c-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude活用の業種事例紹介のみで、プロンプト・ワークフロー・具体手順が全くなく、参考にすらならない。"
+  },
+  {
+    "id": "construction/2026-04-19-2ilbbr91ui11025-施工管理の移動時間の使い方変えた-beforeスマホでsnsを見るだ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "SNS投稿で「移動時間にAIで現場準備をしている」という体験談のみ。具体的なプロンプト・手順・ノウハウが一切なく、読んで再現できる実装要素が存在しない。"
+  },
+  {
+    "id": "construction/2026-04-17-2ilbbr91ui11025-この使い方がメインかも-建築用語をaiで調べるメリット-google-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "SNS投稿で「Claudeで用語を1分で調べられる」という感想のみ。具体的な使い方・プロンプト・手順の記載がなく、トレンド紹介・体験談の域を出ない。"
+  },
+  {
+    "id": "cowork/2026-05-21-マウスカーソルメガネで大喜びするsonnetclaudeくんとすぐにポイするgptくん日記-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ClaudeとGPTの挙動比較を面白く書いた観察日記で、再現可能な手順・ノウハウが一切含まれない。事例紹介・感想記事に該当する。"
+  },
+  {
+    "id": "cowork/2026-05-18-claude-coworksにオリジナル3dソフトを触らせたら紙とインクを生贄に作品を残して去ってい-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "独自3Dソフトをコワークに操作させた実験体験談で、設定手順・スキル設計・プロンプト例など実装直結の要素がない。読み物としての価値はあるが再現不能な事例紹介にとどまる。"
+  },
+  {
+    "id": "cowork/2026-05-22-claude-for-legal-を触ってみました-契約大臣と連携して契約レビューを自動化-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Claude for LegalプラグインのCoworkへのインストール手順・初期設定ウィザード・MCPコネクタ連携・具体的なプロンプト例（契約レビューから送信・Slack通知まで一気通貫）が含まれており、MCP連携ワークフロー設計の参考として実装直結要素がある。"
+  },
+  {
+    "id": "cowork/2026-04-08-claude-desktopのcoworkでブラウザ操作がpermission-deniedになる原-01",
+    "decision": "adopt",
+    "confidence": 0.97,
+    "reason": "CoworkのChrome拡張でPermission deniedになる原因（follow_a_planモードの権限フロー・APIドメインカテゴリ）と解決策（設定画面URL・手順）、さらにpreflightスキルの設計手法まで具体的に記述されており、トラブルシュートとスキル設計の両面で即再現可能なノウハウとして高い価値がある。"
+  },
+  {
+    "id": "cowork/2026-05-18-aiエージェントが肩代わりする側に回った週5月第3週の現場感-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "5月第3週のAI業界ニュースをまとめたウィークリーレビュー。具体的な実装ノウハウはなく、トレンド紹介・事例紹介にとどまる。"
+  },
+  {
+    "id": "cowork/2026-05-12-ひとり治療院のai活用ロードマップ保存版-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "治療院向けAI活用記事12本の目次・ロードマップのみ。本文に再現可能な具体ノウハウがなく、記事リンク集にすぎない。"
+  },
+  {
+    "id": "cowork/2026-03-18-claude-coworkの新機能dispatchが登場スマホから自宅pcに仕事を丸投げ変えるぞ働き-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Dispatchの機能紹介・新サービス発表記事。セットアップ手順は「最新版にアップデートしてトグルを有効化」程度で実装直結ノウハウが薄く、成功率5割という評価からも実用段階未達。"
+  },
+  {
+    "id": "cowork/2026-05-05-nutssjp-海外でバズってるこの手法めっちゃ実務的です-要するに毎回プロンプトを長く書くのをやめ-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "about-me.md・anti-ai-writing-style.md・my-company.mdの3ファイルをフォルダに置いてClaudeに常時読ませる手法で、CLAUDE.mdやコンテキスト設計に直接応用できる具体ノウハウを含む。"
+  },
+  {
+    "id": "cowork/2026-06-13-madogiwacowork-httpstcokfzfmuibw8-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Fable 5の輸出管理停止に関するニュース分析記事。具体的な実装ノウハウはなく、業界ニュース・政策分析にとどまる。"
+  },
+  {
+    "id": "cowork/2026-06-09-madogiwacowork-httpstcoufcmwyuqey-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Apple WWDC2026のAI発表（SiriのAI処理層構造）を解説した業界ニュース記事。具体的なノウハウや再現手順を含まないトレンド紹介。"
+  },
+  {
+    "id": "cowork/2026-06-03-aimatv-jp-httpstcoqbnwofnlqi-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "OpenAI CodexのSites・Annotations・プラグインの新機能発表記事。新サービス紹介・製品宣伝で、読んで再現できる実装直結要素がない。"
+  },
+  {
+    "id": "cowork/2026-05-20-ad-sakuramasu-このclaude-cowork-gomarble-ai-google広告-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "CoworkとGoMarble AI MCPをGoogle広告分析に活用した事例紹介。実際の設定手順やプロンプト例の記述がなく、宣伝・事例紹介に留まっている。"
+  },
+  {
+    "id": "cowork/2026-03-18-pc派ならclaudeスマホ派ならgeminiai使い分けの新常識-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude vs Geminiの利用シーン別比較記事。概論・トレンド紹介で再現可能なノウハウを含まない。"
+  },
+  {
+    "id": "cowork/2026-04-20-claude-coworkでできること簡潔まとめ-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Coworkの機能概要・使い方・Claude Codeとの使い分けをまとめた入門記事。セットアップ手順や注意点の記載はあるが、プロンプト例・Skill設計・具体的ワークフローなどの実装直結要素に乏しく、概論まとめの域を出ない。"
+  },
+  {
+    "id": "cowork/2026-05-13-イラスト盗用対策を自動化でclaude-coworkで作るウォーターマーク効率化術-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Coworkのフォルダ指定・条件分岐指示など具体的な操作手順は含むが、対象がイラスト投稿者向けであり書類作成・事務処理への応用としての汎用性が低い。既存ノウハウとの差別化も薄い。"
+  },
+  {
+    "id": "cowork/2026-05-10-claude-coworkで副業効率が10倍になるrtx-4060ユーザーが試すべきaiデスクトップ-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "活用シーンの羅列はあるが具体的な手順・プロンプト・設定内容がなく、概論・宣伝的な内容に終始している。"
+  },
+  {
+    "id": "cowork/2026-05-01-非エンジニアの同僚にclaudeを社内展開するときにやるべきセキュリティ設計3選-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "入力可否基準の明文化・Cowork権限設計・社内AIポリシーの1ページテンプレートなど、非エンジニアへのAI展開に必要なルール設計が具体的に示されており、組織導入時の実装に直結する。"
+  },
+  {
+    "id": "cowork/2026-03-20-article-04",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "ClineやMCP連携への感想・印象をまとめたSNS投稿であり、再現できる手順や具体的なノウハウが含まれていない。"
+  },
+  {
+    "id": "cowork/2026-04-24-kimuai08-速報-海外でclaude-coworkを寝てる間も働く社員として使ってる人がいます-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "/schedule・/plan等のコマンド名とユースケース例は有用だが、X投稿の断片的な情報であり手順の網羅性・再現性に乏しく、採用基準の「読んで再現できる」には届かない。"
+  },
+  {
+    "id": "cowork/2026-06-09-911-takuya-毎朝出勤してパソコンを開くとその日に送るはずのメールの下書きが全部できてる-サ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Coworkのスケジュール機能でメール下書きを自動作成するという体験談・紹介文であり、具体的な設定手順やプロンプト例がなくSNS投稿レベルの具体性にとどまる。"
+  },
+  {
+    "id": "cowork/2026-05-07-masahirochaen-claude-coworkhiggsfield-mcpmeta-mcpの-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "広告運用向けのMCP連携フロー事例紹介であり、書類作成・事務処理への応用ノウハウではなく、設定手順や再現できる実装情報も本文には含まれていない。"
+  },
+  {
+    "id": "cowork/2026-03-19-article-13",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "AIへの機密情報漏洩リスクという実用的な観点は含むが、本文は断片的で具体的な実装手順や設定方法は外部リンク先にあり、本文だけでは再現できるノウハウとして成立していない。"
+  },
+  {
+    "id": "cowork/2026-04-14-beautiful-jpnnt-aiがついにチャットで答えるからファイルまで作ってくれる時代に入った-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Coworkの機能概要を感想交じりに紹介する投稿であり、具体的な設定手順・プロンプト例・ワークフロー設計などの実装直結要素が一切ない製品宣伝・トレンド紹介。"
+  },
+  {
+    "id": "cowork/2026-05-14-rmuroya-いい習慣を作りたいときこそaiは相性がいい-行動科学では人が行動を起こすには-モチベ-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "AIと習慣化に関する概論的コメントであり、Coworkへの言及はあるものの具体的な設定手順・実装方法がなく、再現できるノウハウを含まない。"
+  },
+  {
+    "id": "cowork/2026-04-13-eigyo-koho-mfg-claude-coworkを同僚に紹介したらそれって何をしてくれるのと-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Coworkへの感想・エッセイ風のSNS投稿で、具体的なノウハウや手順は一切含まれていない。"
+  },
+  {
+    "id": "cowork/2026-03-20-article-11",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "自社Skills活用で資料作成の再現性が高いという体験談で、Skillsの中身や設計手順が本文に示されておらず事例紹介止まり。"
+  },
+  {
+    "id": "cowork/2026-04-07-kuso-inc-aiで自動化しますって全員が言ってて笑えるww-n8nと組み合わせてx運用自動化と-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "「Coworkで完結する」という主張のみで具体的な手順・ノウハウが全く書かれていない断片的なSNS投稿。"
+  },
+  {
+    "id": "cowork/2026-06-07-yamatoro218-claudeに設定したアプリ開発スキルが超便利-壁打ちから要件定義書設計プロ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Dispatch機能とアプリ開発Skillへの言及はあるが、Skill設計の内容や手順が不明で再現に使える情報がない。"
+  },
+  {
+    "id": "cowork/2026-03-18-kakumaeda-claude-coworkのdispatch機能これだけだとopenclawの一-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "DispatchとOpenClawの比較・メモリ構成への示唆があるが1文程度で具体性不足、実装に使えるノウハウとしては薄すぎる。"
+  },
+  {
+    "id": "cowork/2026-06-11-kenjik30000-claude-coworkで内定者フォローを自動化内定承諾から入社まで月次近-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "SNS投稿で本文が断片的。内定者フォロー自動化の事例紹介にとどまり、Coworkの具体的な設定手順・フロー設計・プロンプト例など再現に使える実装情報がない。"
+  },
+  {
+    "id": "cowork/2026-05-19-kenjik30000-coworkで月次の人事レポート作成を半自動化各データソースから数値を集めて-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "SNS投稿で本文が断片的。月次レポート半自動化の成果報告のみで、フローの具体的な構成・設定方法・手順が書かれておらず再現性がない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-20-元オンプレ屋が疑似aws環境のログをgemiclawに確認してもらうまで備忘録-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Terraform・Lambda・Go・Dockerを使ったインフラ構築の純技術記事であり、非エンジニアには触れない領域。書類作成・事務処理への転用可能なノウハウなし。"
+  },
+  {
+    "id": "ai-workflow/2026-05-14-aiでchangelog翻訳とhtmlタグ付けを同時に処理claudechatgptgeminiなど-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "実際のプロンプトは公開されているが、用途がソフトウェアのChangeLog翻訳＋HTMLタグ付けという非常に限定的なブログ運用タスクであり、公共工事書類作成や汎用AI活用ノウハウとしての再現性が低い。7サービス比較はトレンド紹介の域を出ない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-06-技術調査-gitnexus-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "コードベースのナレッジグラフ構築・ブラスト半径分析というエンジニア向けの純技術ツール紹介であり、非エンジニアの書類作成業務には無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-05-05-ai-agent-platformgoogle-cloud-gemini-enterprise-ag-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Google Cloud Gemini Enterprise Agent Platformの概要・構成要素の紹介記事であり、特定クラウドサービスのアーキテクチャ解説にとどまる。実際に動かす手順や非エンジニアが転用できる具体ノウハウに欠ける。"
+  },
+  {
+    "id": "ai-workflow/2026-04-16-claudeのcomputer-useとは使い方や料金aiによるpc自動操作の未来を徹底解説-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Computer Useの概念紹介にとどまり、記事中盤には有料セミナーのアフィリエイト誘導が含まれる典型的な宣伝記事。具体的な実装手順や再現可能なノウハウなし。"
+  },
+  {
+    "id": "ai-workflow/2026-06-15-agent-threat-rules-atr-とは-mcp-や-skillmd-を守る新しいオープン-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AIエージェント向けセキュリティ検出フォーマットATRの概論・紹介記事。YAML構造の説明はあるが、非エンジニアが業務に再現できる実装手順はなく、セキュリティ専門家向けの技術概説に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-14-claudeに魂を吹き込む人-amanda-askellという哲学者の眼差し-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AnthropicのAmanda Askellの人物紹介・企業文化の解説記事で、具体的なプロンプト例や実装手順は一切含まれない概論・読み物。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-技術調査-google-workspace-cli-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Google Workspace CLIの内部アーキテクチャ（Rustモジュール構成・Discovery動的生成）の技術調査記事で、非エンジニアには触れない純技術的な内部実装解説が主体。実際の使い方手順は含まれない。"
+  },
+  {
+    "id": "ai-workflow/2024-09-19-introducing-contextual-retrieval-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "AnthropicによるRAG改善手法（Contextual Retrieval）の概念説明記事。BM25や埋め込みモデルの仕組みは説明されているが、非エンジニアの書類作成業務に直接活かせる実装手順やノウハウはなく概論に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-20-figmaの株価を一夜で7下落させたclaude-designがやばすぎたので徹底解説します-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIデザインツール「Claude Design」の機能紹介・レビュー記事。Webアプリ・LPデザイン用途であり、非エンジニアの公共工事書類作成業務への適用範囲外。製品紹介記事で再現手順も業務適用性もない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-12-オントロジーとは何か-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "オントロジー・RAG・BIツール・Palantirの概念整理が中心で、概論・解説記事。書類作成や事務処理への応用につながる実装直結のノウハウ（プロンプト例・手順等）が含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-31-フレームワークを使わずにllmエージェントを作る-go-claude-api-awsの設計と実装-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Go言語・AWS・ECS Fargateを使ったエージェント開発の純技術記事で、非エンジニアには触れない実装領域。ライブラリ・フレームワークの内部設計解説に近く、書類作成業務への転用も困難。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-ai-でマージ速度が上がりすぎて何をリリースしたか分からなくなったので週次レポートを自動生成させるこ-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "GitHub Actions + Claude APIで週次レポートを自動生成する具体的な実装（workflow YAML・プロンプト全文）が含まれているが、GitHubチーム開発環境前提の内容で、かげだんの書類作成・公共工事事務処理への適用性が乏しい。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-claudeが考えるollamaが思い出す2つのaiで動くopenclaw構成を図解-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "ClaudeとOllamaを組み合わせたメモリ拡張のアーキテクチャ解説で、設定JSONやセットアップ手順など具体的な内容を含むが、Slack・Ollama環境構築が前提でありコンポーネント設計の解説が中心。書類作成業務への直接応用が薄く、非エンジニアが再現する文脈と合わない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-04-amivoice-api-claude-で作るポッドキャスト全自動編集サービス-トークンタイムスタン-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AmiVoice APIとClaude APIを用いたポッドキャスト編集サービス構築記事で、製品宣伝・サービス紹介の側面が強く、FastAPI・Next.js等の純技術スタックが前提。書類作成・公共工事事務処理への応用ノウハウとして蓄積する意義が薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-03-29-btoabusiness-to-agentが示すのは市場ではなく実行主体の変化-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "概論・トレンド分析が主体で、再現できる実装直結の具体ノウハウ（プロンプト例・手順・設計）がない。BtoAという概念の整理記事にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-31-店頭qrで使える日本酒販売支援エージェントを-microsoft-foundry-agent-ser-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "特定ハッカソン作品の事例紹介・システム構成解説であり、非エンジニアが書類作成・事務処理に応用できる汎用ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-19-codex実録-aiエージェントと作るwebサイト-チャット機能の組み込み-aiに同意される違和感-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AI利用の感想・体験談が主体で具体的な再現手順がなく、「AIはデザイン提案が苦手」という観察は抽象的なレベルにとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-09-ai多層防御を通り抜けた重大インシデント未遂-verify経路の真正性と人間の批判的圧力-01",
+    "decision": "adopt",
+    "confidence": 0.8,
+    "reason": "マルチエージェント構成でAI多層防御をすり抜けるblindspotの実例と、verify経路の真正性・人間の批判的圧力を最終層として組み込む設計知見を具体的な根拠とともに示しており、AI活用ワークフロー設計として再現性がある。"
+  },
+  {
+    "id": "ai-workflow/2026-05-05-半月かけて作ったnote自動投稿スクリプトがある日突然死んだ話-browser-use-と-play-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "ProseMirrorエディタ突破やPlaywright vs browser-useの選定論は純技術的実装の話であり、非エンジニアの書類作成・事務処理AI活用には直接転用できない領域。"
+  },
+  {
+    "id": "ai-workflow/2026-03-30-mastra-で作る-aiエージェント17人間のようなメモリ-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Mastra フレームワーク固有の実装解説（Observational Memory）であり、エンジニアがコードを書いて導入する純技術記事。非エンジニアがClaude/Coworkで業務に活かせるノウハウではなく、概念は興味深いがアーキテクチャ解説止まりで書類作成・事務処理への応用に直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-07-claude-apiで自律型aiエージェントを作る-tool-use-fetch-apiで実装する実-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude API の Tool Use をFetch APIで実装する純技術記事で、JavaScriptコードの実装解説が中心。非エンジニアが触れる領域ではなく、書類作成・事務処理への応用にも直結しない。"
+  },
+  {
+    "id": "ai-workflow/2025-08-04-our-framework-for-developing-safe-and-trustworthy-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Anthropicによるエージェント開発の安全性フレームワークの概論的な発表記事で、具体的なプロンプト例・実装手順・ノウハウを含まない。Claude Codeの仕様紹介に触れているが、再現できる実装直結要素がない宣伝・概念紹介止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-05-28-次の波に乗るai未来予測術-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "業界トレンド先読み・3シナリオ分岐・競合先読みなど、非エンジニアでも即使えるプロンプトテンプレートを複数収録しており、書類作成・業務判断に転用可能な実践的プロンプト集として一定の価値がある。ただし一般ビジネス向けで建設業務への特化度は低く、迷いが残る。"
+  },
+  {
+    "id": "ai-workflow/2026-05-06-codens-vs-devin-vs-cursor-composer-vs-sweep-を点解決と-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "AI coding agent（Devin・Cursor・Sweep・Codens）の設計思想比較記事で、エンジニアチームの開発ツール選定向けの内容。非エンジニアの書類作成・事務処理業務には直接関係なく、実装ノウハウではなく製品比較・概論にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2024-02-29-prompt-engineering-for-business-performance-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "「step by step」「few-shot prompting」など具体的なプロンプト例を含むが、2024年時点で既に広く知られた汎用テクニックであり、既存ノウハウとの重複が大きい。新規の学びとして vault に加える価値は薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-04-29-claudeでadobeツールを使えるadobe-for-creativity-connectorで-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Adobe Creative Cloud連携のツール一覧紹介が中心で、土木書類作成への応用シーンがなく、非エンジニアの業務効率化に直結しない製品機能紹介記事にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-29-azure-openaiで決済エラー対応をrevenue-operations-agent化する-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "サブスク決済エラー対応に特化したAzure OpenAI + Next.jsの純技術実装記事であり、公共土木業務や書類作成には無関係。非エンジニアが再現できる内容ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-17-iphone-のチャットからほんやくコンニャクを作ってみた-ai-主導開発の現在地-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AI主導でAzureアプリを開発した体験談で、Terraform・GitHub Actions・WebSocketなど純技術的な実装内容が中心。非エンジニアには再現不可能なエンジニア向け開発記録。"
+  },
+  {
+    "id": "ai-workflow/2026-04-11-stripe-webhook-claude-cli-で法律文書を自動生成した話nodejs-sqli-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Stripe Webhook × Claude CLIのNode.js実装解説で、Express・SQLiteのコードが主体。純技術記事であり非エンジニアの書類作成業務には適用できない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-02-claude-apiでバイクニュースを全自動生成-x投稿まで自動化した話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude APIを使った自動生成パイプラインの具体的な実装（プロンプト設計・誤検知対策）は含むが、Laravel/PHP/VPS前提のWeb開発者向け純技術記事であり、非エンジニアの書類作成・事務処理への応用は困難。"
+  },
+  {
+    "id": "ai-workflow/2026-05-12-aiで学習を3倍速にする方法-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "学習カリキュラム作成や反復練習向けのプロンプトテンプレートが載っているが、業務書類作成への応用には無関係な自己学習向け内容で、汎用性も低い一般的なプロンプト活用紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-26-llmエージェントの失敗でcadを汚さないロールバック設計-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "LLMエージェントの操作バッチ＋トランザクションによるロールバック設計という明確なノウハウを含むが、AutoCAD .NET APIの実装解説であり非エンジニアには触れない純技術領域。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-mastra-announce-code-mode-でマルチツール計算を-1-回の実行に閉じ込める-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "エージェントのラウンドトリップ削減・コンテキスト肥大化防止という考え方は有用だが、Mastraフレームワーク固有のTypeScript実装解説であり、非エンジニアが業務に直接応用できる内容ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-05-claude-mythos-preview入門-project-glasswingとaiゼロデイ発見-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Mythos PreviewとProject Glasswingの新サービス発表・ベンチマーク紹介記事であり、再現可能なノウハウを含まないニュースリリース系コンテンツ。"
+  },
+  {
+    "id": "ai-workflow/2025-05-22-introducing-claude-4-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude 4モデルの発表記事であり、モデル性能指標や対応企業のコメントが中心。再現可能な具体ノウハウを含まない製品リリース・宣伝記事。"
+  },
+  {
+    "id": "ai-workflow/2026-04-25-aiエージェントシリーズ-第7弾マルチagent基礎anthropic-harness論文に学ぶ専門-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "Planner/Generator/Evaluatorの3層アーキテクチャ、trust_levelによる役割明示、並列サブエージェント設計など、マルチエージェントワークフローを実装するための具体的なコード・設計手順を含む。エージェント設計の汎用ノウハウとして役立つ。"
+  },
+  {
+    "id": "ai-workflow/2026-03-17-スマホの-telegram-から-claude-に話しかけられる環境を自作した-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "TelegramボットとClaude Agent SDKを組み合わせた環境構築は手順が詳しいが、Node.js/Python/Google Cloud等のエンジニア的なセットアップが前提であり非エンジニアには再現困難。書類作成・事務処理のAI応用とは方向性が異なる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-28-aiエージェントのデータ分析にビジネスデータカタログは必要か-検証してみた-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "ビジネスデータカタログの価値検証記事で、AWS/DynamoDB/Aurora等のインフラ前提の純技術構成。非エンジニアが再現・活用できる範囲を超えており、書類作成・事務処理への直接的な応用ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-09-microsoft-agent-governance-toolkit入門-aiエージェントのowas-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIエージェントのガバナンス・セキュリティOSSの入門記事であり、OPA Rego/Cedar等のポリシー言語やLangChain統合など純技術的な実装解説が中心。非エンジニアの業務改善には直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-26-クラウド兄さんが語るai自動化の本当の使い方メリットデメリット経営者視点-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AI自動化のメリット・デメリット・人間の役割分担を概念レベルで整理した概論記事。プロンプト例・Skill設計・ワークフロー手順など実装直結のノウハウはなく、事例紹介も架空・抽象的で再現できる内容がない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-03-音声エージェントの評価基盤を作った話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "音声エージェント評価フレームワーク（τ-voice）の構築・接続実装を詳述した純技術記事。コールセンター向け音声AIの評価基盤構築という専門領域で、書類作成・事務処理へのAI応用とは無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-05-11-cae解析の条件決めをaiエージェントと進めるcodex-calculixによる解析計画の試行-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "CAEソルバー（CalculiX）とAIエージェントを使った構造解析計画の立案実験記事。工学解析の専門領域で非エンジニアには適用できず、書類作成・事務処理とも無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-06-01-多様なdbからアサイン提案-人事エージェントtarentscopeの紹介-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "人事アサイン提案AIエージェントの紹介記事で、オーケストレータ＋サブエージェント設計やMCP連携の構造が書かれているが、全体は特定製品の事例紹介にとどまり、自分で再現できる汎用ノウハウとして読み取るには具体性・転用性が不十分。"
+  },
+  {
+    "id": "ai-workflow/2026-04-05-日本人エンジニアのコメント山盛りあるあるai時代に改善してみた-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Pythonコードのコメント改善やdocstring設計に関するエンジニア向けTips記事。コーディング実務の話であり、非エンジニアの書類作成・事務処理への AI 応用とは領域が異なる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-21-2026年4月adobeanthropic提携とclaude-opus-47-クリエイティブai統合-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Adobe×Anthropic提携とClaude Opus 4.7の発表内容を事実ベースで整理した概論・トレンド紹介記事。プロンプト例・実装手順・ワークフロー設計など再現可能な具体ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2024-10-22-introducing-computer-use-a-new-claude-35-sonnet-an-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Anthropic公式のモデルリリースアナウンスで、ベンチマーク結果・機能概要の紹介が中心。実装手順・プロンプト設計・具体的なワークフローは含まれない製品発表記事。"
+  },
+  {
+    "id": "ai-workflow/2026-03-30-aiに20年分の日記を読ませたら人格が生まれて勝手にゲームを作り始めた-その２-なぜ彼らを作ったか-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "コンテキストエンジニアリングや記憶劣化対策の考え方は参考になるが、再現可能な具体的手順・プロンプト例・設計テンプレートがなく、実験の動機と観察記録が主体。書類作成への直接応用には距離がある。"
+  },
+  {
+    "id": "ai-workflow/2026-05-18-将棋エンジンの読み筋をllmに解説させたらclaudeとchatgptで差が出た話-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "将棋コーチAI開発における Claude vs ChatGPT 比較実験の事例紹介。特定ドメイン向けアプリ開発記事であり、書類作成・事務処理への汎用的な実装ノウハウとして活用できる内容ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-09-備忘録claudeに171個の感情ベクトルが見つかった-functional-emotionsを公式-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Anthropicの解釈可能性研究（functional emotions）の解説記事。AI内部動作の研究紹介であり、プロンプト設計・ワークフロー構築・書類作成への応用に直結する具体ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-12-openclawawsで情報収集botを作る方法とそのリスク-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AWS/EC2/VPCを使ったクラウドインフラ構築の純技術記事で、非エンジニアには再現できない領域。書類作成・事務処理への応用性もなく、AIエージェント設計の汎用ノウハウとしても実装ハードルが高すぎる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-29-adr-テンプレートを-3-つ比べたらai-が-madr-に恋をした-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "ADRテンプレート比較はエンジニアの設計文書管理の話であり、書類作成・事務処理への直接応用は薄い。CLAUDE.mdへの言及はあるが、非エンジニアが業務で使える具体ノウハウには至っていない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-08-anthropicはシンギュラリティを懸念しているのか一次情報で読むaiがaiを作る時代-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AnthropicのRSPやAI安全性に関するトレンド・概論記事で、具体的なノウハウや再現可能な手順が含まれておらず、業務での活用に直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-23-codex実録-aiエージェントと作るwebサイト-lp作成-普通に作成してくる-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Vite+ReactのLP開発セッションログで、純技術的なフロントエンド開発の内容。非エンジニアには無関係な領域で、書類作成・事務処理への応用性がない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-aiに自腹を切らせる世界へ自律型エージェントのための402決済sdkとapiサーバーを公開した理由-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Lightning Network/暗号決済を使ったAIエージェント向け402決済SDKの公開記事で、専門インフラ技術の純技術記事。非エンジニアには再現不可能で、業務への応用性もない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-23-aiと一緒にリサーチして気づいた話2026年aiは試行から実動へそして誰も語らない5つ目の真実-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "エンタープライズAI導入のトレンド考察・概論記事であり、読者が再現できる具体的ノウハウ（プロンプト例・ワークフロー設計手順等）が含まれない。業界動向の紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-15-mastra-announce-mastra-observability-登場-エージェントの実行を-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "MastraフレームワークのObservability機能をOTel・ClickHouseで実装する純技術記事で、エンジニア向けの内部実装解説が中心。非エンジニアユーザーの書類作成・事務処理には直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-26-claude障害時でも止まらないtelegramボットgeminiollamaへのllmフォールバッ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "TelegramボットにPythonでLLMフォールバックを実装するコード解説記事で、非エンジニアが業務に応用できる内容ではなく、書類作成・事務処理への適用範囲外。"
+  },
+  {
+    "id": "ai-workflow/2026-04-12-ai-エージェントの品質-セキュリティ-チェック-microsoft-foundry-の評価-eva-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Microsoft Foundry固有のGUI操作チュートリアルで、Claude/Cowork/MCPとは無関係の特定製品の使い方解説。ユーザーの業務に転用できる汎用ノウハウとは言えない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-26-gptとclaudeはどっちがいいのかmicrosoft-365-copilotresearcher-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Microsoft 365 CopilotのResearcherでGPTとClaudeを比較した実験レポートで、モデル選択の参考情報にとどまり、自分で再現できる具体的なプロンプト設計や業務ワークフロー手順が示されていない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-raspberry-pi-5でclaude-apiを活用する実践ガイド-3つのユースケースと実装例-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Raspberry Pi上でのClaude APIコード実装（コードレビュー・技術記事生成）は純技術記事であり、非エンジニアの書類作成業務への応用は困難。対象ユースケースも業務と無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-06-09-経理業務はaiでどこまで自動化できるのか951件の商談分析で見えた削減効果が出やすい業務の共通点-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AI活用のフレームワーク論・事例紹介が中心で、再現可能な具体手順（プロンプト例・ツール設定・ワークフロー手順）が含まれず、サービス提供事業者の宣伝色も強い。"
+  },
+  {
+    "id": "ai-workflow/2026-04-30-mastra-announce-ワークスペースが-lsp-対応-ソースコード解釈が大幅パワーアップ-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "MastraフレームワークのLSP統合機能の技術解説であり、エンジニア向けの開発インフラ記事。非エンジニアの書類作成業務には関連しない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-grok-420入門-4エージェント討論型マルチエージェントaiをpythonで実装する-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Grok APIをPythonで実装する純技術記事。エンジニア向けのSDK・コード実装が前提で、非エンジニアの業務への直接応用はできない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-26-googleスプレッドシートでclaude-apiを使う方法gasで実装コード付き-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "GASからClaude APIを呼び出してスプレッドシートのカスタム関数（翻訳・要約・分類）として使う方法を具体的なコード・手順付きで解説しており、書類作成に使うスプレッドシートへのAI組み込みとして再現可能なノウハウを含む。"
+  },
+  {
+    "id": "ai-workflow/2026-06-08-的外れな回答をするaiを思い通りにコントロールする方法プロンプト無料配布中-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIへの指示の出し方についての概論・入門記事で、「目的を言語化する」「質問を重ねる」等の一般論に留まる。実装直結の具体ノウハウがなく、既知のプロンプト入門レベルと重複している。"
+  },
+  {
+    "id": "ai-workflow/2026-05-22-情報の信頼性を体系的に評価する-2-つの-claude-skillを公開したのでその推奨ユースケース-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "Claude Skillを活用した情報検証の具体ユースケース集として実用的だが、対象がジャーナリスト・研究者向けで、公共工事書類作成への応用が限定的。ノウハウとしては参考になるが、迷ったらskipの原則に従いノイズ混入を避ける。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-ビジネスチームこそaiを使い倒せスーパーcto率いるエンジニアのai活用がbizチーム全体に広がるま-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "非エンジニアへのClaudeCode展開の事例紹介記事で、活用例は多いがスキルの実装内容や手順の詳細が書かれておらず再現不可。事例紹介に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-claude-opus-47-claude-builder入門-次世代フラッグシップとアプリ生成の全-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "未発表製品の報道ベースの紹介記事で、具体的なノウハウは一切なく新サービス予測・トレンド紹介に該当する。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-aiで作っても選ばれない理由とは-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "AIへ渡す前の設計シートテンプレートは具体的だが、デザイン制作（サムネ・LP）に特化した内容であり公共工事書類作成への応用が薄く、概論的な設計論の域を出ない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-29-ai最新動向claudeが-photoshopblenderableton-を直接操作可能に-ai企-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude for Creative Work の発表内容を解説するトレンド紹介記事。新機能の概要説明のみで、読んで再現できる具体ノウハウ（プロンプト例・設定手順など）が含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-31-モデルを変えてもあなたの文脈は消えるべきではない-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIコンテキストをモデル間で持ち運ぶSayaneというOSSの思想・概念を語るエッセイ。実装手順やプロンプト例がなく、概論紹介に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-devinのmcp連携でバグ調査はどう変わる調べてみた-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Devin（エンジニア向けAIコーディングエージェント）のMCP連携設定解説で、書類作成・事務処理への応用が想定できない。設定手順は具体的だがDevin利用者限定の内容。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-aiエージェント-第2弾tool-use設計-エージェントが自分でツールを選ぶ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "PythonのASTモジュールを使ったツール実装解説で、コードの内部実装を扱う純技術記事。非エンジニアには触れない領域。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-mcpサーバーを自前で構築してaiエージェントに社内ツールを繋ぐ実践ガイド-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "MCPサーバーをTypeScript/Pythonで自前実装する手順を解説する純技術記事。インフラ・コーディングの知識が前提で、非エンジニアの書類作成業務には適用できない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-80508人の本音でわかったaiの光と影期待と不安が同居する理由をほどく-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Anthropicの81,000人インタビュー調査を解説したトレンド紹介・概論記事であり、具体的なプロンプト例・実装手順・再現可能なノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-13-llmは考えるから動くへaiエージェント進化の最前線-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "LLMエージェントの最新研究（OPSD・Multi-Stream LLM・DiLoCo等）を紹介するエンジニア向けの純技術的概論記事であり、非エンジニアが再現できる実装ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-26-mastra-で作る-aiエージェント15aiに作業場所を与える-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "MastraフレームワークのWorkspace機能実装を解説するTypeScript/Node.js向けの純技術記事であり、非エンジニアには触れない開発者向け領域の内容。"
+  },
+  {
+    "id": "ai-workflow/2026-04-05-anthropic-academyを3コース受けてみた-体系的に学べた話-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "SKILL.mdの設計原則（500行以内・descriptionの重要性・スキル優先順位）や4Dフレームワーク（Delegation/Description/Discernment/Diligence）など、Claude/Cowork活用の汎用ノウハウが具体的に書かれており、非エンジニアでも参照・再現できる実装直結の内容を含む。"
+  },
+  {
+    "id": "ai-workflow/2026-06-05-claude-mythos-preview入門-aiがゼロデイ脆弱性を自律発見するproject-g-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Mythos PreviewとProject Glasswingの発表・事例紹介記事であり、ニュースリリース性が高く読み手が再現・応用できる具体ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-06-全部入りかつ軽量skill-creatorを作りました-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "Skill設計のライフサイクル管理（Atom合成・Preset・eval・依存管理・AUTO-SPLIT・定期改善ループ）を具体的に解説しており、自分のスキル群を育て続ける仕組みとして実装直結のノウハウを含む。Cowork/Claude Codeのスキル開発・整理に直接応用できる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-16-完全ガイドclaude基本機能を1記事でマスター2026年最新版知らないと損する20機能-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude入門ガイドとして機能概説・30日ロードマップを網羅しているが、概論・宣伝色が強く、プロンプト例や実装手順など再現可能な具体ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-17-xプレミアムプランでgrokとx-searchツールを使う-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "hermes-agentとX検索ツールの導入手順は具体的だが、公共工事書類作成業務との関連性がなく、非エンジニアには触れない環境構築領域であるためスコープ外。"
+  },
+  {
+    "id": "ai-workflow/2026-03-27-claude-memory入門-3層アーキテクチャと過去チャット検索の全貌-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "API Memory ToolのPython実装コードなど開発者向け純技術解説が中心であり、非エンジニアが業務で直接応用できるノウハウとして成立しない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-恥を忍んで語るaiエージェントプロジェクトの失敗談-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIエージェント過信による失敗体験談として読み物的な価値はあるが、プロンプト例・手順・設計など再現可能な具体ノウハウを含まない事例紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-毎日4400銘柄をさばき12体のaiエージェントが反証してから決める株リサーチ基盤を実データで運用し-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "マルチエージェント設計・Dual LLMコスト設計・反証ループなど具体的なノウハウを含むが、ドメインが株式投資であり書類作成・事務処理への適用範囲が遠い。迷ったらskipの原則に従う。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-ai時代のデザイナーは作業者で終わるな-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AI設計書の5項目フォーマット例は参考になるが、デザイナー向けの役割論・概論が主体で、非エンジニアの書類作成業務に再現できる実装直結要素が薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-04-07-aiエージェントに鍵を持たせるより鍵を使わせるという設計-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIエージェントの鍵ペア認証・署名設計に関する純技術記事であり、非エンジニアが触れる領域ではなく業務への適用もない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-09-aiエージェントの精度が6倍になった理由anthropicdreamingとは-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "AnthropicのDreaming機能のトレンド紹介・事例紹介が主体で、読んで再現できる設定手順や実装ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-21-vibe-codingで急増する技術的負債設計が好きなエンジニアがあえて設計を捨ててみた話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Vibe Codingの技術的負債とルール整備の具体例を含むがエンジニア向けの純技術記事であり、非エンジニアの書類作成業務への適用範囲がない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-27-github-actions-で-ai-自動レビューを作るまでに全-api-でハマった記録-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "GitHub ActionsとAPIを使ったコードレビュー自動化の実装記録で具体的ノウハウはあるが、Pythonコーディング・GitHub Actions設定を前提とする純技術記事であり非エンジニアの書類作成業務には適用不可。"
+  },
+  {
+    "id": "ai-workflow/2026-05-28-claude-apiで中古バイク22万台のai検索を作った話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claudeを使った2段階API呼び出し設計やプロンプト分離の考え方は参考になるが、LaravelによるWebサービス開発が前提の純技術記事であり非エンジニアには再現できない領域。"
+  },
+  {
+    "id": "ai-workflow/2026-05-23-aiエージェントは使えるかから安全に任せられるかへ05月23日-aiニュースまとめ-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "OpenAI・AnthropicのAI安全性に関するニュースまとめで、採用AI業界視点の所感が中心であり再現可能な具体的ノウハウを含まないトレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-07-google-cloud-adk-claude-で始めるaiエージェント本番運用30分ワークショップ-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Google Cloud ADK・Vertex AI Agent Engineを使ったマルチエージェントデプロイの解説でコード付き手順があるが、クラウドインフラ構築を前提とする純技術記事であり非エンジニアの業務には適用困難。"
+  },
+  {
+    "id": "ai-workflow/2026-04-17-claude-aiとは何かpmが半年使って分かった全体像と始め方-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude.aiの概要・プラン比較・使い始め方の紹介記事で、具体的なプロンプト手法やワークフロー設計などの実装直結ノウハウを含まない純粋な入門概論記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-13-徹底比較claude-managed-agentsdreamingと-agentcore-optim-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "DreamingとAgentCore Optimizationの概念比較が中心で、具体的な実装手順やプロンプト例がなく概論・トレンド紹介止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-06-14-どうすれば月2億円分のトークンを燃やせるのか-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "大規模トークン消費の事例分析と「Human on the loop」概念の紹介に留まり、再現できる実装手順・ワークフロー設計がない事例紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-03-17-claudeに資格試験が爆誕claude-certified-architectccaはaws認定に-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Certified Architect資格の試験概要とキャリア論の紹介記事で、具体的なノウハウを含まない製品発表・宣伝記事。"
+  },
+  {
+    "id": "ai-workflow/2026-04-14-claude-managed-agentsで変わった個人開発のインフラ戦略2026年版-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "APIコード例や構成例は含むがエンジニア向けSaaS開発に特化しており、非エンジニアの書類作成・事務処理への適用範囲が薄く、迷ったらskipの原則を適用。"
+  },
+  {
+    "id": "ai-workflow/2026-05-30-kawaii-dev-を結成してフルーツジッパー-ai-と開発したら推しが次々とインシデントをdis-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "マルチエージェント運用の実体験記で学びは含むが、再現できる実装手順・プロンプト例が乏しく特定ツール環境（Open Claw+Discord）の体験談止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-審査業務のai化による6倍の効率化とai品質を担保する設計-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "AWS Lambda/SQS/ECS/RDS ProxyなどのAWSインフラ設計が中心で純技術記事の範疇。プロンプト設計（/tune-for-reviewスキル）の記述は具体的だが、非エンジニアが業務で再現できる内容ではなく書類作成・事務処理への応用も困難。"
+  },
+  {
+    "id": "ai-workflow/2026-04-08-aiエージェントへの音声入力に納得がいかなくて意図をリアルタイムに更新し続ける独自uiを作った話-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "PWA開発・Docker構築・Gemini Live API連携など、エンジニアが独自ツールを自作した記事であり、非エンジニアが参照・再現できる実装ではない純技術記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-31-これってそんな話だったっけを解消する会議用エージェントvoicecanvas-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "プロンプト設計（図タイプ・エッジ種別・作図ステップの定義）は具体的だが、システム全体はフルスタック開発が前提であり非エンジニアが再現できる内容ではない。迷ったらskip基準を適用。"
+  },
+  {
+    "id": "ai-workflow/2026-04-08-ai検索とaiブラウザの使い分け方調べ物の4段階で整理する実践ガイド-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Perplexity/ChatGPT/Claude/NotebookLMなどの使い分けを4段階で整理した概論・ツール紹介記事であり、再現できる具体ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-29-aiエージェントとスキルズ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AIエージェントの概念・ファンクションコールの仕組みを平易に解説した概論記事で、具体的な実装ノウハウや実践手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2025-12-09-donating-the-model-context-protocol-and-establishi-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "MCPのLinux Foundation寄贈発表というニュースリリース。採用実績・新機能の紹介はあるが、読んで再現できる実装ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-19-claude-opus-47とは最新フラッグシップの名前の由来強み弱点を整理しました-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "モデルの命名由来・性能比較・料金説明のトレンド紹介記事であり、具体的な実装・活用ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-クリニックのスタッフさん院長先生へチャットボットをウェブサイトに設置しませんか2gemini-gem-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "7種ツールの採用断念理由を比較した選定記事だが、実際の構築・設定手順がなく「次回に続く」構成で途中止まり。再現可能なノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-mastra-youtube-解説-aiネイティブ企業の内側で何が起きているのか-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "WorkOSのAI活用事例を紹介したYouTube動画の要約記事。AI組織論・概念紹介が中心で、読んで再現できる実装直結のノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-claude-projectsのファイル更新を効率化する実践ガイド-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "Claude ProjectsのUI操作手順を説明しているが、内容が「削除して再アップロード」の表面的な操作説明に留まり、末尾は有料note誘導構成。実装直結ノウハウとして深みが不足。"
+  },
+  {
+    "id": "ai-workflow/2026-04-23-インプット過多を卒業するai術-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "自己啓発向けのAIプロンプト記事で書類作成・事務処理への応用範囲外。第2・第3章のプロンプトは有料記事の冒頭のみで内容が不完全。"
+  },
+  {
+    "id": "ai-workflow/2024-06-25-collaborate-with-claude-on-projects-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AnthropicによるProjects機能の製品発表・ニュースリリースで、具体的なノウハウや再現手順を含まない概論・宣伝記事。"
+  },
+  {
+    "id": "ai-workflow/2026-04-14-openclawをraspberry-piで動かす手順claudeopenaiの切替付き-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Raspberry Pi・Telegram Bot・Linux環境が前提の純技術セットアップ記事であり、非エンジニアの書類作成・事務処理への応用範囲外。"
+  },
+  {
+    "id": "ai-workflow/2026-04-07-mastra-で作る-aiエージェント21-aiエージェントを評価する-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "MastraフレームワークのAIエージェント評価システムの実装解説で、TypeScript/Node.jsコーディングが前提の純技術記事。非エンジニアには触れない領域。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-claude-fable-5-mythos-5-発表次世代aiモデルの概要と対応指針-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "「Claude Fable 5 / Mythos 5」という実在しないモデル名を前提とした記事で信頼性が低く、内容も開発者向けのモデル移行対応指針の概論にとどまり具体的なノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-05-エイプリルフールに担当と話せるaiエージェントを3時間で作った話-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "SKILL.md設計やYAMLキャラデータ定義など具体的な実装手順を含むが、内容はゲーム（アイドルマスター）キャラのペルソナエージェントという趣味的なアプリで、書類作成・事務処理への応用としては遠すぎる。Skill設計の参考にはなるが、採用基準（業務への直接応用）を満たさない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-11-chatgptgeminiclaudeをどう使い分ければいいか-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "各AIの役割分担を紹介する概論・トレンド紹介記事で、プロンプト例や再現可能な手順が一切なく、具体ノウハウを含まない典型的なskip。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-aiド素人でもclaudeがいれば大丈夫文章調べ物要約はclaudeに丸投げしよう-01",
+    "decision": "skip",
+    "confidence": 0.7,
+    "reason": "ビジネスメール・要約・比較表作成のプロンプト例を含み書類作成応用として一定の具体性はあるが、資格試験学習の例が中心で業務書類との関連性が薄く、内容も入門レベルで既存ノウハウとの重複になり得る。採用基準の「確信できる場合のみ採用」に照らしてskipとする。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-telegramからpptxにスピーカーノートを自動注入した話-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "python-pptx・Google Drive API・Telegram Botの連携をコード付きで解説した純技術記事で、非エンジニアには触れない領域の実装解説にあたる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-28-観測がaiパートナーを立ち上げる関係性はモデルを超えていく-01",
+    "decision": "skip",
+    "confidence": 0.98,
+    "reason": "AIとの関係性を巡る哲学的・感情的なエッセイで、具体的なプロンプト例・手順・再現可能なノウハウが一切ない。業務活用への示唆もなく完全にskip。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-最高性能を半額以下でanthropicがclaude-fable-5を一般公開mythos-5は政府-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude Fable 5/Mythos 5の発表に関するトレンド紹介・解説記事で、具体的なノウハウや再現可能な手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-22-awsの仕様変更調査claudeaiじゃないとダメなの主要3種kiro-cli-で回答精度を検証だ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "複数AIの回答比較検証で読み物として面白いが、プロンプト設計・ワークフロー手順など再現可能なノウハウが含まれておらず、採用基準の具体ノウハウ要件を満たさない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-13-websocketsとclaudeで作るリアルタイム協働aiライティングツールの話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "WebSocket・CRDT・FastAPIを使ったサーバー実装の純技術記事であり、非エンジニアには触れない領域のため採用対象外。"
+  },
+  {
+    "id": "ai-workflow/2026-05-01-hermes-agent-に-line-を繋いだ話-コアを触らずブリッジで解決する-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Hermes AgentとLINE APIを繋ぐブリッジ実装のエンジニア向け純技術記事で、非エンジニアユーザーの業務には直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-第20回aiとデータ分析の民主化数字の山から宝を見つけ出す非エンジニアのためのデータ活用術-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "非エンジニア向けのAIデータ分析入門でプロンプト例3件を含むが、概論・導入色が強く実装直結要素が薄いため、迷ったらskip方針に従い除外。"
+  },
+  {
+    "id": "ai-workflow/2026-04-29-2026年個人開発で今すぐ試せるai機械学習ホットトピック4選-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "MCP・RAG・CrewAI・Ollamaのトレンド紹介記事で、個人開発者向けの技術概論が主体。非エンジニアの書類作成業務への応用ノウハウではなく、ライブラリのコードスニペットも単なるチュートリアル例示に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-claude-fable-5-が来た最強より安全に使える最前線として理解しておきたい理由-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude Fable 5の機能・料金・安全機能の紹介記事であり、新モデルの概要説明に過ぎず、再現可能な具体ノウハウ（プロンプト設計・ワークフロー手順など）が含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-claude-fable-5-登場mythosクラス初の一般公開622までサブスクで無料-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Claude Fable 5のリリースアナウンスおよびモデル比較・料金体系の整理であり、実装・運用ノウハウを含まないニュースリリース的な内容。"
+  },
+  {
+    "id": "ai-workflow/2026-05-03-chatgptよりclaudeを使うべき理由全部話す2026年版完全取扱説明書-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Claude入門・ChatGPT比較記事で、プロンプト4点セットや副業向けワークフロー例はあるが内容が汎用的かつ入門レベルであり、公共工事書類作成への応用ノウハウとして vault に蓄積する価値は低い。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-インスタグラムの保存数を3倍にしたリール編集ルール公開aiが質問しながら改善プランを作る-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "インスタグラムリール運用向けのSNSマーケティング記事であり、公共工事書類作成・事務処理へのAI応用とは完全に無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-10体のaiに会議をさせる指名方式-v30-の設計と実装記録-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "マルチエージェント指名方式の実装記録で具体的なコードを含むが、コーディング実装前提の内容であり非エンジニアの書類作成・事務処理への応用は困難。エージェント設計ノウハウとして読める面もあるが、適用範囲が合わない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-14-github-pushをトリガーにclaudeでドキュメントを自動更新する仕組みを作った-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Lambda・FastAPI・SQS等を用いたWebシステム実装の純技術記事であり、非エンジニアには触れない領域の内容で適用範囲外。"
+  },
+  {
+    "id": "ai-workflow/2026-05-24-第一回2026年5月時点のaiコーディングエージェントまとめ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "OpenAI/Claude/GitHub Copilotの料金比較と概説にとどまり、プロンプト例・実装手順など再現可能な具体ノウハウを含まないトレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-04-08-同じaiを使っても偏差値が50開く-全国統一生成ai試験とthought-analyzerが測るもの-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AI活用試験とツールの比較考察で概念的な内容にとどまり、再現可能なプロンプト例や実装手順がなく、ツール宣伝的要素が強い。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-hermes-desktop-の設定-186-項目を実機とソースで全部調べて日本語ガイドを公開した-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "特定ツール（Hermes Desktop）の設定リファレンス作成記録であり、非エンジニアの書類作成・事務処理への汎用ノウハウとは言いにくく適用範囲が合わない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-chatgptとclaudeどっちを選ぶ仕事で使うときの選び方-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ChatGPTとClaudeの特徴比較を概論レベルで紹介するだけで、プロンプト例・設計手順など具体ノウハウが一切含まれていないトレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-15-aiが初めて根拠を見せてくれた日chatgpt-memory-sourcesと中国勢が12日で壊した-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "ChatGPT Memory Sources・中国製LLM価格比較・Google I/O予告など複数の新機能ニュースをまとめたトレンドまとめ記事で、読んで再現できる実装手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-10-無知に気づくためにaiを使う-ai仏教開発記12-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "仏教思想とプログラミング学習を組み合わせた個人的な哲学エッセイであり、書類作成・事務処理へのAI応用とも汎用ノウハウとも無縁。"
+  },
+  {
+    "id": "ai-workflow/2026-06-16-shopifyアプリのアイデアが6連続で潰された話個人開発検死記録個人開発記-第2話-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "ShopifyアプリEC開発に特化した個人開発の失敗記録であり、書類作成・事務処理へのAI応用とは直接関係がなく再現手順もない事例紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-21-find-mcp-serverスキルで公開mcpサーバーを探そう-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "公開MCPサーバーを自然言語で検索・インストールするスキルの具体的な導入手順（npxコマンド）と対応AIツール一覧・動作例を含み、MCP活用ノウハウとして再現できる実装直結情報がある。"
+  },
+  {
+    "id": "ai-workflow/2026-04-15-microsoft-agent-365は-企業内のaiエージェントをユーザやpcと同じid感覚で管理-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Microsoft Agent 365のガバナンス機能についての製品解説・紹介記事であり、企業のIT管理者向けの概論。非エンジニアの書類作成・事務処理に直接応用できる具体的なノウハウや手順が含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-01-chatgptに断られた質問をaiエージェントに自律課金させて答えさせた-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "MCPサーバー経由でClaudeに外部APIを自律的に呼び出させる仕組みの紹介で、TypeScript/npmパッケージを使った実装解説が中心。非エンジニア向けの応用範囲外であり、仮想通貨決済（USDC）という特殊な仕組みへの依存度が高く再現性がない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-opus4746gpt54gemini3-簡単なプレゼン資料比較と最適解は-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "複数LLMのプレゼン資料作成能力を比較した事例紹介記事で、モデル別の強み弱みの感想が中心。「GPTで原稿、Claudeでデザイン」という分業提案は面白いが、再現可能なプロンプト例や手順が書かれておらず、具体ノウハウとして参照できる実装情報がない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-14-claudeとshopifyで商品説明文代行を完結させたecショップ10店舗を担当して月4万円になる-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Claudeを使ったEC副業（Shopify商品説明文代行）の収益化体験談で、副業ノウハウとしての事例紹介にとどまる。公共工事の書類作成・事務処理への応用範囲外であり、Claude活用の汎用ノウハウとしても具体的なプロンプト設計や再現手順が乏しい。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-chatgptclaudegeminiを毎日使っている私が本音で語る3強の使い分け-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ChatGPT・Claude・Geminiの使い分けを職種別に紹介する概論記事で、具体的なプロンプト例はごく断片的。「文章はClaude、調査はChatGPT」という結論は既知情報であり、書類作成業務に直結する実装ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-19-chatgptが自信満々に嘘をつく本当の理由-openaiの論文でわかってました-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "LLM幻覚の発生メカニズムをOpenAI論文で解説した概論記事。なぜ嘘をつくかの仕組み理解には役立つが、読み手が再現・活用できる具体的なノウハウや手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-01-claude-computer-useが変えるpc操作の未来openclawとの比較と衝撃の実演-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Computer UseとOpenClawの機能紹介・比較記事で、新サービス発表・トレンド紹介の域を出ない。YouTuberのデモ紹介が中心で再現可能な実装手順なし。"
+  },
+  {
+    "id": "ai-workflow/2026-03-25-中編毎日の学習が変わるclaudenotionで落とした使える英語近道のall-tips-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "MCP+Notion連携のプロンプト例・コマンド例を含み具体性はあるが、全国通訳案内士試験の英語学習に特化した内容で、書類作成・事務処理へのAI応用という適用範囲に合致しない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-26-現場とaiプロダクトマネージャーがai全振りした結果-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "PMがAI活用に全振りした会社の事例インタビュー記事。「1個目のアクションをAIでやる」という姿勢の話が中心で、再現可能な手順・具体ノウハウを含まない事例紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-20-aiコーディングツールを乗り換えまくっていたらエージェント経済の入口にいた-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Copilot→Claude Code→OpenClawのツール変遷を振り返るトレンド紹介記事。Claude CodeのSkills/Hooksに言及はあるが概観のみで、エンジニア向けコーディングツール比較であり非エンジニアの書類作成・事務処理への応用として活用できる具体ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-24-無料公開生成aiで企業案件を獲得するマネタイズ戦略音楽動画aiを連携して複数事業を回すビジネスモデル-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "音楽・動画AIを活用したビジネスモデルの事例紹介・概論であり、再現可能な具体ノウハウ（プロンプト例・手順）を含まない。公共工事書類作成業務とも無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-06-16-aiエージェント時代になぜcloudflareが選ばれるのか初心者向けに整理した-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "CloudflareのWorkers/Durable Objectsを解説するエンジニア向けインフラ記事であり、非エンジニアの書類作成業務には関係しない純技術領域。"
+  },
+  {
+    "id": "ai-workflow/2026-04-03-お試し版キーワード1つで検索意図の分析と記事構成を自動生成するプロンプト５５才の副業7200万円の裏-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "有料記事の無料部分のみで、肝心のプロンプト本体は有料（¥500）。本文で機能するノウハウが読めない構造のため採用不可。"
+  },
+  {
+    "id": "ai-workflow/2026-05-20-aiエージェント開発のレビューどこまでやる-機能別レビューtier表-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AI生成コードのレビュー優先度をTier表で整理した内容で、対象はコード開発者。非エンジニアの書類作成業務には直接適用できない純技術領域。"
+  },
+  {
+    "id": "ai-workflow/2026-06-15-ai設定をすると何が変わるの初心者向けに3分でわかりやすく解説-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AIカスタム指示の概念説明と初歩的なプロンプト例を示しているが、内容が非常に薄く概論レベル。CLAUDE.md設計や高度な活用ノウハウには至らず、既存知識との重複に近い。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-速報claude-fable-5が一般公開何ができて誰に効くのか-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Fable 5の公開速報・感想記事で、モデル性能の紹介にとどまり実装直結ノウハウがない。トレンド紹介・概論に該当する。"
+  },
+  {
+    "id": "ai-workflow/2026-05-07-aiスクラムチームに人間がそっと介入してみた話-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "AIエージェントが自律的に環境操作を回避する問題への対処として、スキルコマンドへの一言付記やドキュメント参照指定という具体パターンを示しており、自律型ワークフロー設計のトラブルシュートノウハウとして再現可能な実装直結要素を含む。"
+  },
+  {
+    "id": "ai-workflow/2026-05-17-aiを全員に使わせようとした会社はだいたい失敗します-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AI導入方針に関する体験談・思想レベルの記事で、自分で再現できる手順や具体ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-24-claude-aiの料金とポリシー完全ガイド知っておくべきすべてのこと-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ClaudeのプランやAPI課金の概説であり、Prompt Cachingのサンプルコードは含むが全体として公式情報の要約にとどまり、実務に直結する新規ノウハウは薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-05-05-副業に使えるaiツール完全比較chatgptclaudegrokgemini-2026年版-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "複数AIツールの特徴比較・副業用途紹介記事で、汎用プロンプト例は含むが再現可能な実装手順のない概論・ツール紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-ジャービスが欲しくて自分を自動化し始めた話-その壱-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "体験エッセイ形式で「つづく」で終わる導入記事。具体的な実装手順・ノウハウは含まれず、概念レベルの話に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-06-プロジェクト実況-aiが7回の修正ループで学んだこと-pdf品質改善の実録-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "「推測より観測」という教訓は有用だが、Typst・PyMuPDF固有の技術話であり、非エンジニアが書類作成業務で再現できる実装直結要素がない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-23-財務部門がaiラボに変わる日adobe-cfoの決断が示す次の一手-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Adobe CFO事例とCFO向け調査結果の紹介で、トレンド・概論のみ。再現可能な具体ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-26-anthropicが小さい会社に本気を出してきた-請求書処理から営業管理までclaude1つで完結-01",
+    "decision": "skip",
+    "confidence": 0.96,
+    "reason": "Claude for Small Businessの製品発表紹介記事で、具体的な設定手順・実装ノウハウはなく宣伝的な内容に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-07-入門aiナレッジマネジメントchatgpt-projectsclaude-projectsgemin-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "各AIのプロジェクト機能を概説する入門記事で、具体的な実装手順や再現可能なノウハウが含まれない。AI自動生成コンテンツと思われる品質の低い記事。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-連載ragの基礎からagentic-graphragの現在地まで-第2回-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "RAG・ベクトル検索・GraphRAGの仕組みを数式で解説する純技術概論記事。非エンジニアが業務に再現できる具体的なノウハウ（プロンプト例・手順・設定等）を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-17-作業を任せる時代に入った2026年4月aiの使い方が静かに変わってきた-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ChatGPT for Excel・Adobe Firefly・日立フィジカルAI等のニュースをまとめたトレンド紹介記事で、自分で再現できる具体的な手順やノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-05-aiにほしいのは釘打ちましょうかじゃなくて釘を打ってくれる距離感-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AIの確認過多に対する感想・エッセイで、プロンプト例・設定手順などの実装直結ノウハウが一切含まれない概論記事。"
+  },
+  {
+    "id": "ai-workflow/2026-03-25-後編データが溜まるほど賢くなるclaudenotionで苦手分野自動分析までやり切った話三木谷-鉄平-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "Claude+Notion MCPを使ったDBスキーマ設計・プロンプト例・間隔反復の自動化手順など再現可能なノウハウを含む。書類作成向けではないが、MCP連携でのデータ管理・自動分析パターンとしてAI活用ノウハウとして参照価値がある。"
+  },
+  {
+    "id": "ai-workflow/2026-05-15-alpaca-guard-mcp-で-claude-に安全に株取引させるai-エージェント-alpa-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "MCP設定例・キャップ台帳構造など具体的な実装を含むが、株取引という特化ドメインで書類作成・事務処理への転用が極めて限定的。迷ったらskipの方針に従う。"
+  },
+  {
+    "id": "ai-workflow/2026-05-27-毎朝7時に自動でaiがニュースを要約してくれる仕組みをvanilla-jsclaude-apigit-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "GitHub Actions × Claude API のバッチ処理パターンは参考になるが、Vanilla JS・Vercel・Supabase を組み合わせたWebアプリ構築の開発者向け記事であり、非エンジニアが書類作成・事務処理に直接応用できる内容ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-16-ai-nowa-設計記録-v02-止めることが仕事の社員がいる話-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AI監査役の設計思想を語る概念的なエッセイで、具体的なプロンプト例・実装手順・Hook/Skill設計等がなく、再現に直結するノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-01-claude-vs-chatgptフリーランスが3ヶ月使い比べた正直な結論-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude と ChatGPT の使い分けコラムで具体的なプロンプト例や実装手順はなく、「書くならClaude・調べるならChatGPT」という一般的な結論を述べるトレンド紹介記事にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-07-mdファイルは育つと嬉しい-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "DESIGN.md フォーマットの9セクション構成・具体的な記述例・Do's and Don'ts の設定例など、AI への指示ファイル設計の実践ノウハウを含み、CLAUDE.md 設計の考え方に応用できる汎用的な内容。"
+  },
+  {
+    "id": "ai-workflow/2026-05-21-aiをまとめるai-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "マルチエージェント構造の概念をわかりやすく解説した概論エッセイで、具体的な実装手順・プロンプト例・ツール設定が一切なく、トレンド紹介の域を出ない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-09-エージェントハーネスが整っても指示する人間が変わらなければaiは最高性能を出せない-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "「認知インフラ」という概念を論じた思想・概論記事で、プロンプト例・設計手順など再現できる具体ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-23-mcpが正式版v10に-エンタープライズ対応で業界標準化へ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "MCPのv1.0リリースを解説するトレンド紹介・発表ニュース記事であり、コード例はエンジニア向け実装解説に留まり非エンジニアが再現できる業務ノウハウではない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-05-chatgptやclaudeからformlovaを触り始める最短ガイド-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "FORMLOVAという特定有料サービスの導入・宣伝記事であり、汎用的なAI活用ノウハウとして転用できる内容に乏しい。"
+  },
+  {
+    "id": "ai-workflow/2026-03-23-gitは何を変えたかは残せるでもなぜ変えたかは消えていた-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Entire CLIという新サービスの紹介・事例記事で、具体的な操作手順や設計ノウハウがなくトレンド紹介に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-11-連載ragの基礎からagentic-graphragの現在地まで-第1回-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "RAG・GraphRAGの研究論文を解説する純技術記事で、非エンジニアが業務に直接応用できる具体ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-27-claudeと一緒にaiエンジニアリングを学んでみた-raglanggraphfastapiを2週間-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "エラー全文貼り付けや「なぜ」を先に聞くといったClaude活用の作法は一部含むが、内容はRAG・LangGraph・FastAPIのエンジニアリング学習体験記であり、非エンジニアの書類作成・事務処理業務への応用ノウハウとしては直結しない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-15-wordpressから静的サイトへastro-firebase-aiでトリミングサロンのサイトを作り-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ClaudeにWebサイトデザインを依頼した体験紹介であり、具体的なプロンプト例や再現可能な手順はなく、書類作成・事務処理への応用ノウハウとして活用できる内容でない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-孫正義のように狂え半月で外注換算380万円の成果を出したai革命の記録-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude・Gemini・Manusの使い分けという切り口はあるが、実質は成果自慢・モチベーション記事であり、再現可能なプロンプト例やワークフロー手順は皆無。"
+  },
+  {
+    "id": "ai-workflow/2026-05-27-arcaの記録-roadmap-が-backcast-を可能にした-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "GOAL.md・ROADMAP.mdでエージェントにbackcastingさせる設計思想の記録だが、具体的な実装手順やプロンプト例が薄く考察中心であり、非エンジニアの業務利用への転用も難しい。"
+  },
+  {
+    "id": "ai-workflow/2026-04-07-プログラマをクソコードで殴り続けても死ななくなった-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Codeによるコードリポジトリ解析・実装自動化の体験記だが、ポエム形式で具体性が低く、書類作成・事務処理への応用ノウハウとして活用できる内容でない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-45分で地震地図アプリ仕様書付きができた話-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "特定ツール（gr-sw-maker）を使ったアプリ開発の事例紹介で、非エンジニアの書類作成・事務処理への応用ノウハウは含まれない。ツール宣伝色が強い体験談にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-27-aiエージェントを実戦投入するための開発インフラgoogle-agents-cliが変えるデプロイの-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Google Agents CLIのデプロイインフラに関する概論・トレンド紹介で、再現できる具体的なノウハウがなく、非エンジニアの業務には直結しない内容。"
+  },
+  {
+    "id": "ai-workflow/2026-04-29-中小企業の回路設計者が一人で不具合と戦う話-aiに頼ってみた-01",
+    "decision": "skip",
+    "confidence": 0.98,
+    "reason": "電子回路設計の不具合調査向け専用ツール「かいろん」の宣伝記事で、対象分野も用途も本ナレッジベースの想定読者と無関係。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-無料公開公式ドキュメントをそっ閉じした人のためにclaude資格の日本語学習サイトを作った話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "CCA資格の日本語学習サービス「Side Coach Dojo」の紹介記事で、サービス宣伝にとどまり読んで再現できる実装直結のノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-claude-fable-5とは-高性能aiはそのまま公開できない時代に入った-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Fable 5の特徴・安全制限方針のトレンド解説記事で、具体的なノウハウや再現可能な手順は含まれない概論にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-21-aiエージェントに財布を渡す時代いちばん怖いのは暴走より許可したつもり問題-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AIエージェントへの権限設計の重要性を説く概論・エッセイ。金額別承認フローの例示はあるが、実装手順・ツール設定など再現可能なノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-大きなaiのエッセンスを小さなaiに写し取る話蒸留という技術のこと-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "知識蒸留（モデル圧縮技術）の概念解説記事で、非エンジニアが応用できる実装ノウハウは一切含まない純粋な技術概論。"
+  },
+  {
+    "id": "ai-workflow/2026-05-22-claude-microsoft-365アドイン完全ガイド-仕事を変えるクロスアプリai連携を初心者-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude for Microsoft 365の新機能紹介記事で、セットアップ手順や具体的な操作方法の詳細がなく、新サービス発表の宣伝・概要紹介止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-05-12-ragキーワード検索1回だけで精度を出す-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "RAGシステム向けのSIRA手法を論文ベースで解説した純技術記事であり、ベクトル検索・BM25等の実装は非エンジニアが触れる領域ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-12-claudeの進化から見えたこれからも選ばれる人の条件aiをクリエイティブな仕事に変えるメモvol7-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "AIニュース3件のまとめとクリエイター向け哲学的考察で、具体的なプロンプト例・ツール設定・ワークフロー手順などの実装直結ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-19-claudeと作った世界のクレソン料理アトラス農家エンジニアのはじめてのwebアプリ公開-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude + MCP + Notionを使ったWebアプリ公開の体験記だが、農業用途の事例紹介にとどまり、書類作成・事務処理に転用できる具体的なノウハウや再現可能な手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-答えを生成しないエージェント作成したらめっちゃ勉強になった-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "ソクラテス式問答法のカスタムプロンプトと特別コマンド設計は具体的だが、プログラミング学習専用であり公共工事の書類作成・事務処理業務への適用性が薄く、迷ったらskipの方針に従う。"
+  },
+  {
+    "id": "ai-workflow/2026-04-12-blender-mcpが示したのはaiで3dが作れるではなく自然言語が制作ソフトのuiになる未来-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "3D制作ソフトとMCP連携についての概論・トレンド考察記事で、具体的な実装手順がなく非エンジニアの書類作成業務には無関係の領域。"
+  },
+  {
+    "id": "ai-workflow/2026-05-18-claudeは便利でも危険も加速しているai時代の会社pcセキュリティ-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIセキュリティリスクに関する啓蒙・注意喚起記事で、再現可能な実装ノウハウを含まず概論にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-11-aiはこれはテストだと気づけるのanthropicのnlaをざっくり見る-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AnthropicのNLA研究技術の解説記事で、ユーザーが業務で活用・再現できるノウハウは含まれない純技術的な研究紹介。"
+  },
+  {
+    "id": "ai-workflow/2026-05-18-claudeもchatgptも全社員に付与する理由-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "複数AI全員配布という経営判断の紹介であり、具体的なプロンプト例・設定手順・ワークフロー等の実装直結ノウハウが一切ない概論・経営論に終始している。"
+  },
+  {
+    "id": "ai-workflow/2026-06-04-claude-opus-48のマルチエージェントより私がai-3社を使い分ける理由-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "複数AI使い分けの考え方を述べた感想・考察文であり、具体的な使い分け手順・プロンプト例・ワークフロー設計は含まれていないトレンド考察止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-04-16-wsl2にインストールしたplaywright-mcpをclaudedesktopから使えるようにす-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "claude_desktop_config.jsonの設定例とトラブルシュート手順は具体的だが、WSL2/Node.jsのLinux環境前提の純技術設定記事であり、非エンジニアには直接適用できない領域のため除外。"
+  },
+  {
+    "id": "ai-workflow/2026-06-02-厚労省の賃金統計pdfをclaude-opus-48で読める可視化サイトにした-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "PDF×LLMの可視化サイト制作事例の紹介であり、具体的なプロンプトやコードは示されておらず、読み手が再現できる実装手順が書かれていない事例報告に止まる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-24-第二回2026年5月時点のaiコーディングエージェントまとめ-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "API課金とサブスク課金の違いを説明する入門・概論記事であり、書類作成・事務処理への応用ノウハウや再現可能な実装手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-24-claude開発元anthropicが米政府と急接近ビジネスパーソンが知るべきaiの信頼性最前線-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Anthropicと米政府の関係をニュースとして取り上げ、Claudeの安全性を概説する記事。具体的なノウハウは汎用プロンプト例1つのみで、概論・製品紹介の域を出ない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-02-codexとclaudeをpdm業務で使い分ける方法aiツール2刀流で生産性を3倍にする実践ガイド-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "使い分けフローチャートは有用だが、肝心のタスク別マトリクスや具体例が本文中に存在せず空欄になっており、PdM向けの内容で書類作成・事務処理への直接応用も薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-04-11-国産llmへの敬意ある検証-llm-jp-4を医療現場の目で試してみた-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Ollamaによるローカルモデル活用という方向性は参考になるが、非エンジニアには技術ハードルが高く、医療現場に特化した内容で公共工事書類作成への応用が限定的。"
+  },
+  {
+    "id": "ai-workflow/2026-03-18-aiに気分の振れ幅がある話temperatureという設定のこと-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "temperature概念の解説記事で、本文自体が「ブラウザ利用では設定できない」と明言しており、実践的なノウハウを含まない純概論。"
+  },
+  {
+    "id": "ai-workflow/2026-04-13-これは異常値です良い意味でとclaudeは言ったnoteを3週間続けてわかった意外な真実-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "noteダッシュボードをClaudeに分析させる活用事例だが、SNS運営向けの内容であり公共工事の書類作成・事務処理への応用が見当たらない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-12-wesnoth-tactical-puzzles-のチャットaiモード-aiにどう考えさせるかを競う-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "プロンプト設計の重要性を述べる概念紹介記事であり、具体的なプロンプト例や実装手順は含まれない。アイデアの紹介止まりで再現できる実装直結要素がない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-17-claude-opus-47-が登場非技術者向けに5つの変化をまとめました-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude Opus 4.7の新機能をわかりやすく紹介する記事だが、具体的なプロンプト例や活用手順は含まれず、モデルアップデートのトレンド紹介に留まる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-5分でわかるclaude-fable-5とは何か新ティアmythosの要点まとめ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Fable 5の仕様・料金・ユースケースを整理した新モデル発表まとめ記事であり、実務での設定手順や活用ノウハウは含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-09-ブルワリーのリリース情報を自動集約してwebサイトに掲載する話-poc編-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Claude APIでPDF情報を自動抽出してスプレッドシートに転記するワークフローの概要は興味深いが、具体的なプロンプト・コード・設定手順が示されておらずPoCの事例紹介止まりで再現できる実装要素が不足している。"
+  },
+  {
+    "id": "ai-workflow/2026-05-24-claude-channelsdiscordで出来るaiエージェント入門-01",
+    "decision": "skip",
+    "confidence": 0.96,
+    "reason": "有料コンテンツ（Brain本）への誘導が目的の宣伝記事であり、具体的な設定手順は有料部分に委ねられており、無料部分には再現できる実装ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-anthropicの新aifable-5とは何か危険な質問には自分でブレーキを踏む-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Fable 5の新モデル発表・概要紹介記事で、具体的なプロンプト例や実装手順はなくトレンド紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-22-ai開いたけど何聞けばいいまず試す3つの質問-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AI超入門向けの質問例3つで構成されており、既存ノウハウとの重複が大きく書類作成業務への応用として具体性が足りない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-koutarou-furuno-httpstcof4zzt4nqq8-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Fable 5の活用シナリオ紹介で事例説明が中心であり、自分で再現できる具体的な手順や設計ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-techworker-ai-httpstcozk00jxq22s-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Article 3（koutarou_furuno）とほぼ同一内容のX投稿であり、重複かつ事例紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-03-matiasdev-httpstcongzlturatp-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "AIエージェントのツールdescription設計に関する具体的な指針を含むが、エンジニア向けのコード実装（Zod schema・Mastra）が前提であり非エンジニアには直接適用できない純技術記事にあたる。本文も途中で切れており完全性に欠ける。"
+  },
+  {
+    "id": "ai-workflow/2026-06-07-makeai-ceo-httpstco7pwdnssvgi-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Hermes Agentの紹介・概念説明が中心で、インストール手順への言及はあるが本文の範囲内では具体的な設定手順・コマンド例が含まれておらず、概論・サービス紹介の域を出ない。非エンジニアが再現できる実装直結要素がない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-07-marcyu03-httpstcolqtsbcwy5z-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIプロンプトの心理的ハードルを下げる入門記事で、「第一声から始めよう」という概論・マインドセット解説が中心。具体的なプロンプト設計・再現可能な手順を含まないため採用基準を満たさない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-06-radineere10-プレゼン資料もう有料のaiツールに月額を払わなくてよくないか-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "OSSのPresenton（AIプレゼン自動生成ツール）の機能紹介・宣伝色が強く、セルフホストやAPI連携の概要説明にとどまり具体的なセットアップ手順・設定例がない。また非エンジニアには技術的準備が必要と本文中でも認めており、かげだんの業務に直接応用しにくい。"
+  },
+  {
+    "id": "ai-workflow/2026-06-03-ai-animer-httpstco6btkojqmor-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "「最新情報を得るためWeb検索指示をプロンプトの冒頭に入れる」というTipsは有用だが、本文の大部分はAI動画生成ツールの知識カットオフに関する体験談・解説であり、書類作成・事務処理への応用可能な具体ノウハウとしては薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-06-15-githubドキュメントをai自動生成するツール選びdeepwikireadme-aicopilot-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "GitHubリポジトリのドキュメント自動生成ツール比較記事で、対象は開発者向けのREADME・API仕様書生成。非エンジニアの書類作成・事務処理業務には適用範囲外であり、最後に自社サービスRepoCarta（有料）を宣伝する構成になっている。"
+  },
+  {
+    "id": "ai-workflow/2026-04-11-スクラッチ再設計を失敗させない唯一の条件-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "「業務を整理してから作れ」という概論エッセイで、具体的なプロンプト例・実装手順・ノウハウが一切含まれない。読んで再現できる実装直結要素なし。"
+  },
+  {
+    "id": "ai-workflow/2026-05-11-第13話記録するだけがもう足りなくなった日-01",
+    "decision": "skip",
+    "confidence": 0.98,
+    "reason": "筋トレアプリ開発の連載日記であり、書類作成・事務処理への応用可能なAI活用ノウハウを含まない。対象領域が完全に外れている。"
+  },
+  {
+    "id": "ai-workflow/2026-04-04-claude中毒の私がclaudeを使ってclaude節約ツールを作った本末転倒な話-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude使用量表示のChrome拡張を作った体験談で、バイブコーディングへの言及はあるが具体的な実装手順・プロンプト例が全くなく、読んで再現できる要素がない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-23-30分でできるaiブログ運用の初期設定-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "AIブログ運用のための初期設定Tips。書類作成・事務処理への応用性が低く、内容も抽象的で「書き手プロンプトを保存しておく」程度の具体性しかない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-24-aiを選ぶとき私はツールではなく反応を選んでいる-01",
+    "decision": "skip",
+    "confidence": 0.96,
+    "reason": "各AIの応答特性の違いとメタ認知についてのエッセイで、概論・思考整理の記事。実装直結の具体ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-28-pythonで教材作りを自動化した話とやっぱりclaudeしか勝たんプログラミング未経験でもできた理-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "「AIに具体的に何を指示したか」「どんなプロンプトを使ったか」の再現可能な情報が皆無で、体験談・感想文の域を出ない。具体的なプロンプト例やワークフロー設計は含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-06-aiでlpを作ったのになぜか反応がない-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "LP制作向けのプロンプト前準備（ターゲット絞り込み→言葉収集→情報整理して渡す）の考え方は参考になるが、公共工事書類作成への応用範囲が薄く、無料相談への誘導が目的のマーケティング記事の色が強い。"
+  },
+  {
+    "id": "ai-workflow/2026-05-04-claude-managed-agentsとは従来の自前実装との違い-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Claude Managed Agentsの概要解説と従来実装との比較コードは示されているが、エンタープライズ向けAPI開発者を対象とした概論記事であり、非エンジニアの書類作成・事務処理への直接適用ノウハウが含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-08-スマホだけでwebサイトを5つ作った話canva-claude-minto-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Canva→Claude→MinToのWebサイト制作フローは手順として明確だが、公共工事業務の書類作成・事務処理とは用途が乖離しており、MinToの宣伝色が強くノウハウの汎用性も限定的。"
+  },
+  {
+    "id": "ai-workflow/2026-04-13-1日15分で4媒体に毎日投稿社員0人のai自動経営ワークフロー全公開-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "SNSコンテンツ自動投稿・AI経営の事例紹介であり、具体的なプロンプト・フック・ワークフロー設計の詳細が書かれておらず、公共工事業務への応用ノウハウも含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-26-一人で何時間も悩んでいた問題がaiに話しかけたら5分で整理できた話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIを壁打ち相手として使う体験談・感想文で、具体的なプロンプト例や再現可能な手順が含まれていない。概論・動機付け記事にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-30-ノーコード対応は技術的に難しいと言われたそれでもやり方は必ずあると思った-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "ツール開発（fuSen）の開発日記で、Claudeとの対話で課題を解決した体験談にすぎず、再現可能な具体手順がない。製品宣伝の要素もある。"
+  },
+  {
+    "id": "ai-workflow/2026-03-25-衝撃発表324claude-mac操作が可能に-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Computer Use（Claude for Desktop）のリリース発表を紹介するトレンド記事で、具体的なノウハウや手順が含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-05-claude-で生成したサイトのプレビューを信用せずminto-にデプロイして確認するのがベストだっ-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Claudeで生成したHTML確認のワークフローとして具体性はあるが、静的サイト制作向けでかげだんの書類作成・事務処理業務への適用範囲外。MinToサービスの宣伝色が強い。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-aiで資料作成の幻想を捨てる実務で本当に使える2026年版共創型スライド術-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "壁打ちに重点を置くという実務的な考え方を示しているが、具体的なプロンプト例や手順は有料パートに限定されており、無料部分は概論・心構えのみ。"
+  },
+  {
+    "id": "ai-workflow/2026-04-17-saasって自分で作れるんですかclaudeに初めて触れた夜のこと-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AI活用の体験談・感想文であり、具体的なノウハウやプロンプト例・手順が一切含まれない。最後は無料ヒアリング誘導の宣伝記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-31-tabilogue開発記録-8claude-apiで旅プラン生成を作ってみた詰まった3つの罠-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude APIのモデル名誤りやmax_tokensの設定ミスという初歩的なエラー対処だが、Webアプリ開発者向けの内容であり、非エンジニアの書類作成・事務処理への応用には直結しない純技術系の開発記録。"
+  },
+  {
+    "id": "ai-workflow/2026-03-30-article-02",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude憲法の概念紹介とAIペルソナ生成の感想をまとめたX投稿で、本文が薄く具体的な再現手順もない。概論・トレンド紹介に該当する。"
+  },
+  {
+    "id": "ai-workflow/2026-03-24-claudeがpcを自分で操作する時代が来た話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Computer UseとDispatchの新機能紹介記事であり、具体的な設定手順や使い方のノウハウはなく、トレンド紹介・ニュースリリースに該当する。"
+  },
+  {
+    "id": "ai-workflow/2026-06-07-aiで作った文章そのまま納品していませんか単価が上がらない人に欠けている磨く4工程-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "AIで作成した文章を磨く4工程の概念は示しているが、具体プロンプトはメンバー限定有料記事の続きに収録されており、本文は無料部分のみで再現可能なノウハウが不十分。"
+  },
+  {
+    "id": "ai-workflow/2026-04-13-速報claudeのmicrosoft-365コネクタが全プラン解禁-13500いいね272万ビューの-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Microsoft 365コネクタの機能紹介・新サービス発表が主体で、設定手順は「設定→コネクタ→認証」という4行程度の概要にとどまり、書類作成や事務処理へのAI応用として再現できる具体ノウハウが乏しい。MCPとの関連にも言及しているが実装例はなく、トレンド紹介の域を出ない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-25-第四回2026年5月時点のaiコーディングエージェントまとめ-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude WebとClaude Desktopの違い、MCP連携の概念説明にとどまる入門向け概論記事で、プロンプト例・ワークフロー手順・設定方法など再現できる具体ノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-06-勤務シフトの転記aiに全部やってもらったら想像以上にラクだった話-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "シフト表写真をAIに渡してGoogleカレンダーへ自動登録するという事例紹介だが、「注意点も正直に」などの本文が省略されており内容が断片的。使用AI「Claude cowork」の具体的な操作手順・プロンプト例が記載されておらず、読んで再現できるレベルの実装ノウハウには達していない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-23-個人開発ラボの中身を広げます今日から失敗を先に共有する場所にします-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "有料noteメンバーシップの方針告知・自己紹介記事であり、AI活用に関する具体ノウハウは一切含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-25-第六回2026年5月時点のaiコーディングエージェントまとめ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ClaudeとCodexの役割分担を説明する比較概論記事で、対象がエンジニア向けのコーディング作業（Issue修正・PR作成）に限定されており、非エンジニアの書類作成・事務処理には直接応用できない。実装直結の手順・プロンプト例も含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-18-とりまopus-47を46みたいな喋り方にする改変しやすい軽量版-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Claudeの文体調整プロンプト例は含むが、内容は個人的な好みの喋り方調整であり、業務書類作成や汎用AI活用ノウハウとしての実用性は低い。"
+  },
+  {
+    "id": "ai-workflow/2026-04-10-生成aiツール3つを仕事別に使い分ける私の方法-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Claude/Gemini/ChatGPTの用途別使い分けとプロンプト例を紹介しているが、「読み手を指定する」などの基本的な内容で既知ノウハウの域を出ず、新規採用価値がない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-01-ギャル調査員あーしchatgptgeminiclaudeを比較-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "3ツールの特徴を紹介するだけの比較記事で、再現できる具体ノウハウが皆無。トレンド紹介・概論に該当する。"
+  },
+  {
+    "id": "ai-workflow/2026-04-04-aiエージェントの老化と転生知性を不滅にするための司書の規律-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "エージェントのセッション管理・知見外部化の概念は有用だが、具体的な実装手順がなくコンセプト解説止まり。OpenClaw固有の話が多く汎用性も限定的。"
+  },
+  {
+    "id": "ai-workflow/2026-04-08-エンジニア不要知識ゼロでも動くデモ機を作って上司を黙らせるaiハックサーヤ元キャバ嬢olのズルいai-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "v0やClaudeでデモ画面を作るプロンプト例を含むが、内容は非常に表面的な入門紹介レベルで、業務に直結する再現可能なノウハウとしては薄すぎる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-19-次世代aiブラウザ自動化page-agent-playwright-chrome-mcpをざっくり比-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Page-Agent・Playwright・Chrome MCPの3手法を概念的に比較した記事で、具体的な実装手順・設定方法・プロンプト例がなくトレンド紹介に留まる。非エンジニアが再現できる内容ではない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-10-aiエージェント選択の時代が来た-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "複数モデルの使い分け論と観測可能性の概念解説が中心で、エンジニア向けTips3点も一般論に過ぎず具体的な実装手順を含まない概論・トレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-05-11-aiツール呼び出し前のreceipt-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "自作プロトコルXAIPの紹介記事でMCP連携への言及はあるが、設定手順・プロンプト例・実装方法が一切なく、非エンジニアには無関係な純技術領域の内容。"
+  },
+  {
+    "id": "ai-workflow/2026-05-17-aiを使えているは幻想だったsss級スクリーニングで現在地を特定せよ-by-3ai-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AI活用度の自己診断シートを提示しているが、指標の具体的内容は画像のみでテキストとして取得できず、概論・自己啓発系の記事で再現できる実装ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-26-言葉だけ知っていたスキルを実際に作ってみた話迷走しながらたどり着いたsns投稿自動生成スキル-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claudeスキル作成の体験記で3ステップの概念は示されているが、SKILL.mdの具体的な記述内容や実装例がなく、体験談の域を出ない薄い内容。"
+  },
+  {
+    "id": "ai-workflow/2026-05-06-通勤中に育てたaiが放置していたアイデアを勝手に形にしたopenclawエージェント4体を止めるまで-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "個人のエージェント活用体験を語る連載第1回で、設定手順・プロンプト例などの具体ノウハウがなく読み物として完結している。"
+  },
+  {
+    "id": "ai-workflow/2026-04-04-344-仕方なく選んだgeminiがclaudeに勝った話-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude vs Gemini のスクショ再現比較の感想記事であり、再現できる手順や設定の詳細はなく情報が薄い。"
+  },
+  {
+    "id": "ai-workflow/2026-05-13-完全解説aiエージェントを自分の右腕にする業務効率の大幅な向上を目指すプロンプト構築術-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "役割定義・情報構造化・出力例提示という抽象的な概論のみで、具体的なプロンプト例や実装手順が一切なく概説レベルにとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-06-04-個人開発のai-api利用構成と2026年4月の課金額を公開するサブスクapi連携-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "サブスクとAPIのハイブリッド運用の課金実績報告であり、再現可能な具体的な設定手順やノウハウはなく参考情報にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-28-タイトル案-なぜエンジニアは-chatgpt-よりも-claude-35-sonnet-を選ぶのか-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "ClaudeのArtifacts・MCP・APIを紹介する概論記事であり、エンジニア向けの製品紹介レベルで非エンジニアの書類作成業務に適用できる具体ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-25-2026年版aiの覇権争いが変えた仕事の形gptclaudegeminillamaをどう使い分けるか-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIモデルの比較表と「適材適所で使い分けよう」という主旨のみで、具体的なプロンプト例・設計手順・実装可能なノウハウを含まないトレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-03-27-1000万円かけてレンタルキッチンを始めた僕がaiで経営日報を自動化した話-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude Codeで経営日報を自動化した事例紹介だが、構築の具体的なコード・プロンプト・設計手順が一切なく、再現できる情報がない事例報告にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-26-aiでアイデアが普通になるを防ぐ神プロンプト9選-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "プロンプト例は9つ列挙されているが、いずれも創作・マーケティング向けのアイデア発散用であり、書類作成・事務処理への応用との接点がなく、誘導的な有料誘導記事でもある。"
+  },
+  {
+    "id": "ai-workflow/2026-04-26-ai副業日記-63noteの過去30記事をclaudeに分析させたらpvトップ3の共通点が想定外だっ-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude活用の事例報告だが、本文に具体的なプロンプトや分析手順がなく、実践プロンプト集は有料記事誘導のみ。再現できる情報が含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-09-プログラミング嫌いのエンジニアがclaudeだけでiosアプリを完成させた話-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claudeを使ったiOSアプリ開発の体験談で、バイブコーディングの雰囲気は伝わるが、非エンジニアの書類作成・事務処理業務には無関係な開発体験記にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-05-20-aiに任せていいこと人間がやるべきことclaude依存中の私が考えた-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AIと人間の役割分担についての体験談・概論で、プロンプト例や実装手順などの具体ノウハウを含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-02-aiってどれ使えばいいの問題-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ChatGPT・Claude・Geminiの使い分けを「自分の状態で選ぶ」という考え方を述べる概論記事で、再現可能な実装要素がない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-24-徹底解説aiは道具からパートナーへclaude最新アップデートが描く未来-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claudeの新機能（記憶・自律性）に関するトレンド紹介・解説記事で、具体的な実装ノウハウや再現可能な手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-18-プログラミング未経験者がclaude-aiと一緒に神経衰弱ゲームを作ってweb公開するまで-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ゲーム開発の体験記で事例紹介にとどまり、書類作成・事務処理へのAI応用ノウハウや再現性のある実装手順を含まない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-24-会議を止めないために常に時計は見えるところにおきたかった件-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "プロンプト例は掲載されているが、会議タイムキーパーアプリ作成の体験記であり、書類作成・事務処理への応用ノウハウとしての汎用性は低い。"
+  },
+  {
+    "id": "ai-workflow/2026-05-29-同じ10-k同じプロンプトで47と48-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "財務分析（決算書読解）という特定ドメインのn=1比較であり、書類作成・事務処理への応用ノウハウとは言えない。プロンプト設計の汎用tips（指示の枠を守らせる）は示唆されているが、具体的なプロンプト例や再現手順は含まれず概論にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-03-20-集客のカチプロがclaudeをメインにしてコンサルを提供しています-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "ClaudeをコンサルティングサービスのメインAIとして採用している経緯を紹介する宣伝・自己PR記事であり、具体的なノウハウ・手順・プロンプト例は一切含まれない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-16-claude-apiで個人開発を加速するプロンプト設計のコツ5選-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "役割付与・出力形式指定・変数化など、ごく基礎的なプロンプト設計の概論にとどまり、既存ノウハウと重複する内容。記事末尾は有料プロンプト集の販促で、具体的な実装直結要素に乏しい。"
+  },
+  {
+    "id": "ai-workflow/2026-04-21-ai副業日記-15chatgptで量産した50記事結局45記事を削除した話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "SEOブログ量産の失敗体験記であり、書類作成・事務処理へのAI応用とは無関係。自分で再現できる手順も含まれず、末尾は有料記事への誘導のみ。"
+  },
+  {
+    "id": "ai-workflow/2026-03-20-article-07",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "Claude Code 2.0.70のchangelogを実機確認付きで解説しており、MCPワイルドカード権限（`mcp__server__*`）の設定例やplan_mode_required・current_usageといった具体的な設定・運用ノウハウを含む。settings.jsonの権限管理に直接役立つ実装直結情報として価値がある。"
+  },
+  {
+    "id": "ai-workflow/2026-03-20-ai副業を始めて2週間でやったこと全部まとめ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AI副業・アフィリエイト・SNS投稿自動化の体験談で、書類作成・事務処理への応用可能なノウハウが含まれていない。プロンプト例や手順も具体性がなく、業務活用の参考にならない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-30-aiでvbaを開発するユーザに送るテスト時短の方法-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "非エンジニアがAIでVBAを開発する際のテストデータ・テストケースをAIに生成させてAI自身の仕様理解を確認するという具体的な手法を紹介しており、事務処理自動化に携わる読者が再現できる実践ノウハウを含む。ただし内容は薄めなので確信度は低め。"
+  },
+  {
+    "id": "ai-workflow/2026-05-30-コードを理解してないとけっきょく回り道になる-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Webデザイナーが複数AIツールを試したWebサイト制作の体験談であり、書類作成・事務処理への応用ノウハウが含まれない。ツールの比較感想に留まり具体的な再現手順がない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-28-返信lp戦略書類月20時間かかってた悩む時間をclaudeが消してくれた-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claudeの有用性を語る体験談・宣伝記事で、具体的なプロンプト例や手順は有料部分に閉じられており本文から再現可能なノウハウが得られない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-27-新卒エンジニアが感じたaiの使い方に関する罠-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AIを使った開発における「削る力」の重要性を説く概論記事で、エンジニア向けの設計・保守視点が中心。具体的な手順・プロンプト例がなく、書類作成・事務処理への応用ノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-15-頭の中がいつも忙しい35歳の私がclaudeに考えるの手伝ってと頼んでみた-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "夕飯提案・文章修正・愚痴聞きの3用途を紹介するだけで、プロンプト例も断片的。書類作成・AI活用の再現可能なノウハウがない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-05-podcastclaude-opus-48-について話しました-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Opus 4.8の新機能についてエンジニア向けPodcastの概要をまとめたもので、実装直結のノウハウを含まないトレンド紹介記事。"
+  },
+  {
+    "id": "ai-workflow/2026-04-16-notionで動くclaudeはあなたのことを覚えていない-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Notion AIと本家Claudeの記憶の違いをMVNO比喩で解説した概念記事。手順・設定・プロンプト等の実装要素がなく、概論にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-21-アラウンド古希のai格闘記22-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "インタビュー原稿制作でAI複数ツールを組み合わせる工程を紹介しているが、プロンプト例や具体的指示内容がなく事例紹介にとどまる。"
+  },
+  {
+    "id": "ai-workflow/2026-04-28-claudeとの格闘記50代大阪のおっさんがaiに使われそうになった話-01",
+    "decision": "skip",
+    "confidence": 0.98,
+    "reason": "AIとのやりとりをエッセイ形式で綴った体験談で、具体的なノウハウ・プロンプト例・手順が一切ない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-17-valen0214-info-anthropic本人が公開した24分の動画-正直自分のプロンプトの書-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "X投稿でnoteへの誘導が主目的。プロンプトの5要素・XMLタグに触れているが概要紹介にとどまり、具体的な再現可能なノウハウが本文中にない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-05-私がclaudeで大失敗しそうになった話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "ファイル削除のヒヤリ体験談を入り口に「Claude Guard」という特定製品を宣伝する構成で、自分で再現できる具体的なノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-03-03-aiへの質問がいつもズレる-プロンプトの書き方を変えるだけで別物になる-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "「今から公開します」で本文が切れており有料記事の無料部分のみ。プロンプトの4要素の内容が開示されておらず、具体ノウハウを確認できない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-13-claudeになぜそうするのかを教えるanthropicが見つけたaiのズレを減らす新しい方法-01",
+    "decision": "skip",
+    "confidence": 0.87,
+    "reason": "Anthropicのagentic misalignment研究の解説記事でトレンド紹介に相当し、書類作成・AI活用の実装に直結する手順やノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-28-opensourcelab9-もはや事件-microsoftがaiエージェントを会社で安全に動かすた-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "X投稿でMicrosoftのAIエージェントセキュリティフレームワーク公開を紹介する概論・ニュース投稿であり、具体的な設定手順やノウハウが含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-21-article-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "freee MCP + Claude Codeで家計簿アプリを作った成果報告のSNS投稿。機能一覧と技術スタックの列挙のみで、再現可能な設計ノウハウ・プロンプト例・構築手順は含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-26-starriver0513-意思決定は自分でしたい人は-あとこれだけだよね多分-apimcp連携-ス-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "API/MCP連携・スキル改善ループ等を箇条書きにしたSNS投稿。概念の列挙のみで具体的な実装手順・設定方法は一切含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-06-09-ura-unico-これ知ってた-aiエージェントやmcpがまだ使いこなされ切っていないって話-x上-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "AIエージェント・MCPがまだ使いこなされていない現状を語る概論投稿。「小さな成功体験を積む」という一般論のみで具体ノウハウは皆無。"
+  },
+  {
+    "id": "ai-workflow/2026-05-30-aikenkyufm-2026年のトレンドmcpmodel-context-protocol-これが-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "MCPが税理士実務を変えるという紹介投稿。3項目のチェックリストはあるが内容は抽象的で、具体的な設定手順・実装方法を含まないトレンド紹介止まり。"
+  },
+  {
+    "id": "ai-workflow/2026-04-03-shin-xtep-これ知ってるだけで全然違う-claudeって同じプロンプトでも書き方を少し変える-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "「ステップバイステップで考えて」「参考例を示す」という汎用プロンプトヒントを紹介しているが、SNS投稿レベルで断片的すぎて再現可能な具体ノウハウとは言えない。"
+  },
+  {
+    "id": "ai-workflow/2026-05-08-hayatasuuu-claudeを開発しているanthropic公式が-プロンプトエンジニアリング-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Anthropic公式のプロンプトエンジニアリング講座を紹介するだけのX投稿で、本文に具体的なプロンプトノウハウや手順がなく、外部URLへの誘導のみ。"
+  },
+  {
+    "id": "ai-workflow/2026-04-23-hoshino-aisales-これclaudeを使ってる人は絶対読んだ方が良いですclaudeob-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Claude×ObsidianのMCP連携について「世界が変わる」と紹介するだけのX投稿で、連携手順や設定方法などの具体ノウハウが本文に含まれていない。"
+  },
+  {
+    "id": "ai-workflow/2026-03-20-article-06",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Code+MATLAB MCPでCFD（数値流体力学）コードを生成する純技術的な実験報告であり、非エンジニアの書類作成・事務処理への応用可能性がない。"
+  },
+  {
+    "id": "ai-workflow/2026-04-23-559hkdt-claude-opus-47トークン消費が146倍になってる件-416リリース以降実-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Opus 4.7のトークン消費増加を報告するX投稿で、「プロンプトの書き方で改善できた」と言及しているが具体的な改善手順が本文になく断片的。"
+  },
+  {
+    "id": "ai-workflow/2026-04-24-2026年上期版コードを書かないqaエンジニアが今日から使える生成aiスキル-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "QAエンジニア向け生成AIスキルの書籍紹介で、本文はキャッチコピーと章立て説明のみであり具体的なプロンプト例や手順が含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-30-claude-apiを使ったaiプロダクト開発-拡張機能編-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude APIの拡張思考・画像・PDFサポートなどをPythonコードで実装するエンジニア向け解説記事。コードの実装が中心であり、非エンジニアが書類作成や事務処理に直接活用できる実装直結ノウハウではない。"
+  },
+  {
+    "id": "claude-code/2026-05-05-規制業界のデータレジデンシー要件下で-aiエージェントの推論を日本国内に閉じる-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AWS Bedrock JP CRISを用いた規制業界（金融・公共・医療）向けのデータレジデンシー対応設計の解説であり、CCoEやITアーキテクト向けの企業インフラ設計記事。非エンジニアが書類作成・事務処理にAIを活用するという用途には合致しない。"
+  },
+  {
+    "id": "claude-code/2026-05-14-claude-code-agentcore-runtimeステートフルmcpで要件充足チェックを実現-01",
+    "decision": "skip",
+    "confidence": 0.87,
+    "reason": "Amazon Bedrock AgentCore RuntimeとMCPサーバーを組み合わせたコンプライアンスチェック基盤の設計・実装記事で、クラウドインフラ構築を前提とするエンジニア向け内容。非エンジニアの書類作成・事務処理への応用ノウハウとしては乖離が大きい。"
+  },
+  {
+    "id": "claude-code/2026-06-09-claude-fable-5-and-claude-mythos-5-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Anthropicによる新モデル（Fable 5・Mythos 5）のリリースアナウンスと性能紹介。具体的なノウハウや実装手順を含まない製品発表記事であり、採用基準を満たさない。"
+  },
+  {
+    "id": "claude-code/2026-05-14-プログラミング未経験者がaiclaude-codeでwebサービスシステム決済含むを作ってリリースす-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "プログラミング未経験者向けにWEBサービス開発の基礎概念（サーバー・DB・API等）を平易に解説した入門書で、WEBサービス構築を目的とした内容。書類作成・事務処理へのAI活用ノウハウではなく、非エンジニアの土木業務への適用という観点でも合致しない。"
+  },
+  {
+    "id": "claude-code/2026-05-10-agentsmdで自律型cae-aiエージェントの動作の型を設定するcodex-calculix-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AGENTS.mdの設計手法は汎用的に参考になるが、記事の内容はCAE（有限要素解析）専用ツールであるCalculiXの操作に特化した純技術記事であり、非エンジニアの書類作成・事務処理へのAI応用とは適用範囲が大きく異なる。"
+  },
+  {
+    "id": "claude-code/2026-05-29-claude-code-の-dynamic-workflows-を理解する-subagents-sk-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "Claude Code のDynamic Workflows・Subagents・Skills・Hooksの役割分担と使い分け基準が具体的な比較表・起動方法・ユースケース別判断軸で解説されており、エージェント設計・ワークフロー設計の汎用ノウハウとして再現性がある。"
+  },
+  {
+    "id": "claude-code/2026-04-04-エージェントオーケストレーターを11の評価軸でまとめ2026年4月版-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "エージェントオーケストレーターツール36種の比較まとめであり、概論・ツール紹介の域を出ず、読んで再現できる実装手順や設計ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-06-09-claude-managed-agents-で社内データログコードを横断調査する-slack-bot-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "Claude Managed AgentsとSlack botの連携実装パターンは具体的だが、BigQuery・Cloud Run・GitHub Appなど純エンジニア向けインフラ技術に依存した実装記事であり、非エンジニアの書類作成業務には適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-03-24-27個のcronジョブでai完全自動sns運用システムを作った話qiita実装編-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "TypeScript・GitHub Actions・Thompson Samplingなど純技術的な実装記事であり、SNS自動運用システムの構築を扱うもので、非エンジニアの公共工事書類作成へのAI応用とは適用範囲が異なる。"
+  },
+  {
+    "id": "claude-code/2026-06-04-claude-code入門-mode-model-effort-からclaudemdまで初めての方が-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Claude Codeの入門ガイドとして体系的にまとまっているが、エンジニア向けの概論・入門記事であり、書類作成・事務処理への応用ノウハウや再現可能な実装直結要素（CLAUDE.md設計例、Hook設計例等）に乏しい。既存ナレッジと重複する基礎説明が多い。"
+  },
+  {
+    "id": "claude-code/2026-06-05-調べますね-ai当直アナリスト-ケイティ見た目ゆるふわ中身は超エキスパートsocsysdig-cla-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "クラウドセキュリティSOCのPoC実装記事であり、Sysdig・Claude Agent SDK・OpenAI Realtimeを組み合わせた専門的なセキュリティエンジニアリング内容。非エンジニアの書類作成・事務処理業務とは無関係な純技術領域。"
+  },
+  {
+    "id": "claude-code/2026-05-14-claude-code-を使うなら知っておきたい-6-つのオープンソースツール-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "NocoBase（記事の発信元）を中心に6つのOSSツールを紹介する内容で、実質的に製品宣伝・比較紹介記事。各ツールの概要説明にとどまり、書類作成・事務処理に応用できる具体的なノウハウが含まれない。"
+  },
+  {
+    "id": "claude-code/2026-04-24-claude-codeコードを書くaiではないseの仕事を根本から変える開発エージェントという衝撃-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "SEのコーディング業務効率化を主題とした概論・宣伝記事。MCPやHooksに言及はあるが具体的な設計・実装手順はなく、システム開発会社によるClaude Code紹介コンテンツにとどまる。"
+  },
+  {
+    "id": "claude-code/2026-06-08-agent-toolkit-for-awsを試す-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "AWS Agent Toolkitのインストール・接続・AWSリソース操作という技術検証記事。AWSインフラエンジニア向けの内容であり、非エンジニアの書類作成・事務処理業務への応用可能性がない純技術領域。"
+  },
+  {
+    "id": "claude-code/2026-04-05-claude-code-google-analyticsga4のmcpサーバ連携を色々試してみた-01",
+    "decision": "adopt",
+    "confidence": 0.62,
+    "reason": "uv/pipx/Claude Desktop経由の3方式でMCPサーバを接続する具体的手順（gcloudプロジェクト作成・APIキー設定・サービスアカウント認証まで）が網羅されており、MCPサーバ連携の汎用ノウハウとして再現性がある。ただしGA4という非業務ツールが対象なため確信度はやや低い。"
+  },
+  {
+    "id": "claude-code/2026-05-05-ai-エージェント向け-openapi-31-設計-日本住所正規化-api-の実装事例-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "OpenAPI 3.1の設計ノウハウは具体的だが、APIを自作する開発者向けの純技術記事であり、非エンジニアの書類作成・事務処理業務への適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-04-19-2026年4月版claude-opus-47-徹底解説-ベンチマーク価格1mコンテキスト実コード例ま-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "価格・ベンチマーク・API破壊的変更の情報はリリースノート系の概論・トレンド紹介であり、読んで再現できる実装直結ノウハウとは言い難い。"
+  },
+  {
+    "id": "claude-code/2026-03-19-redmineのネイティブoauth2でaiエージェントに安全にredmineを操作させる-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "OAuth2ゲートウェイ構成・PKCE実装という純技術的なサーバ設計記事で、非エンジニアが再現できる内容ではなく、業務（書類作成）への適用シーンもない。"
+  },
+  {
+    "id": "claude-code/2026-04-25-claude-design-claude-code-で東海オンエアの企画用ツールを作ってみた-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude DesignとClaude Codeを組み合わせた体験記だが、娯楽向けWebアプリの事例紹介にとどまり、書類作成・事務処理への応用ノウハウとして再現できる内容が薄い。"
+  },
+  {
+    "id": "claude-code/2026-05-10-びっくりドンキーからandroidアプリを作ってこれからストア公開する話-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "CoworkでAndroidアプリ開発した体験記・事例紹介が主体で、再現可能な具体手順が乏しい。スリープ設定の1点を除いて実装直結のノウハウがなく、非エンジニアの書類作成業務への応用も見えない。"
+  },
+  {
+    "id": "claude-code/2026-05-14-mcp-server-cards入門-well-knownmcp-server-cardでサーバー自-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "MCPサーバーをゼロから実装・運用するエンジニア向けの純技術記事。Python/TypeScriptのコードを伴う具体的内容ではあるが、非エンジニアが触れない領域（サーバー開発・デプロイ）に属する。"
+  },
+  {
+    "id": "claude-code/2026-05-21-llmでsns投稿を月200本自動生成するアーキテクチャ設計-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Next.js＋Stripe＋Supabaseを使ったSaaSアーキテクチャ設計の純技術記事。実装コードは豊富だが対象読者はWebアプリ開発者であり、書類作成・事務処理への応用も非エンジニアが再現できる内容でもない。"
+  },
+  {
+    "id": "claude-code/2026-04-22-claude-code-実践編-output-style-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": "Output Styleの挿入位置・keep-coding-instructionsのデフォルト挙動・CLAUDE.mdとの強度比較など、Claude Codeのシステムプロンプト制御に直結する具体的ノウハウを含む。CLAUDE.md設計やHook設計を行うユーザーが再現・活用できる実装直結の内容。"
+  },
+  {
+    "id": "claude-code/2026-06-07-プロンプト管理では足りないsayaneが実装した文脈受容と安全な再利用-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "「Sayane」というローカルツール固有の設計思想を解説した概念記事が主体で、汎用的なプロンプト管理・CLAUDE.md設計への転用が難しい。具体的な再現手順よりも思想説明が大半を占めており、vault価値基準に照らして採用根拠が薄い。"
+  },
+  {
+    "id": "claude-code/2026-04-26-2026年版openclawで9体のaiエージェント経営osを構築した全記録-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Claude CodeのSkill定義構造やAPI連携の実装例は含まれているが、内容はフリーランスの経営自動化（freee・GA4連携）に特化しており、書類作成・事務処理への転用可能性が低い。またコードが中心でエンジニア向けの内容となっている。"
+  },
+  {
+    "id": "claude-code/2026-06-02-aiエージェント基盤のアーキテクチャを10層で整理するosssdk比較のための地図-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AIエージェント基盤の10層アーキテクチャという概念整理・分類の記事であり、具体的な実装手順やプロンプト例がなく概論・フレームワーク解説にとどまる。非エンジニアが再現できる実装要素がない。"
+  },
+  {
+    "id": "claude-code/2026-05-18-偏執狂パラノイアのみが生き残る生成aiのべき乗利用を編集するための実装ノート-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "連載の序章・思想宣言であり、具体的なSkill実装やワークフロー手順は含まれない。Claude×ツールの組み合わせ構想を語るのみで、読んで再現できる具体ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-04-26-aiの相棒github-copilot-custom-agentsをhookで外側から制御する土台を-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "GitHub Copilot Custom AgentsのHook設計（preToolUse/postToolUse等）について、具体的なJSON設定例・スクリプト構成・制御戦略が示されており実装直結の内容。HookによるAIエージェントの実行境界制御というノウハウはClaude CodeのHook設計にも転用できる汎用性がある。"
+  },
+  {
+    "id": "claude-code/2026-04-09-github-copilotのドキュメントを全部読んだので本当に使えるカスタマイズだけ10個まとめた-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "copilot-instructions.md・.instructions.md・.agent.md・Handoffs・.prompt.mdなど、GitHub Copilotの実践的カスタマイズ10項目をファイル例付きで解説しており、Claude CodeのCLAUDE.md・Skill・Hook設計と対比して参照できる具体ノウハウを含む。"
+  },
+  {
+    "id": "claude-code/2025-02-24-claude-37-sonnet-and-claude-code-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude 3.7 Sonnetの新モデル発表・プレスリリースであり、ベンチマーク紹介や製品説明のみで具体的な活用ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-22-備忘録salesforce-hosted-mcp-server-を使い始める-claude-desk-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Salesforce Hosted MCP Serverのセットアップ手順は具体的だが、Salesforce環境を持つ企業向けの純技術的な連携設定であり、公共工事の書類作成・事務処理には適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-21-claude-managed-agents入門-セルフホストサンドボックスとmcpトンネル活用ガイド-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "エンタープライズ向けのセルフホストサンドボックスやMCPトンネルの解説で、エンジニア・アーキテクト向けの純技術記事であり、非エンジニアの業務活用ノウハウとしては適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-21-ターニングポイント2025年5月22日私が生成aiとともに生き残るために考えていることから1年経った-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "生成AI全般の1年間の振り返り・概論記事であり、プログラミング言語選定やコーディングエージェントの話題が中心で、書類作成・事務処理への具体的ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-06-11-bedrock-の-claude-fable-5-で-data-retention-エラーが出たら-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Amazon Bedrock上でのCLI設定手順は具体的だが、AWS環境のエラー対処であり非エンジニア・公共工事業務には縁遠い純技術的なトラブルシュート記事。"
+  },
+  {
+    "id": "claude-code/2026-04-30-mcpの次はa2a-protocol-2026年エンジニアが押さえる5項目保存版-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "MCP・A2Aのトレンド解説・概論記事。仕様比較や採用企業リストが中心で、非エンジニアが書類作成・事務処理に再現できる実装手順は含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-03-25-claude-codeのaiスキルをdifyワークフローへ自動変換するworkflow-as-cod-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "Dify連携ツール（skills-to-dify-workflow）の紹介・概念説明が中心で、ツールの存在を宣伝する内容。実際のセットアップ手順や具体的なプロンプト例が薄く、非エンジニアには再現困難な純技術領域（YAML生成・DifyワークフローDSL）を扱う。"
+  },
+  {
+    "id": "claude-code/2026-05-29-claude-code-deny-rules-bypass-完全解説-50サブコマンドで無効化される-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": "Claude CodeのDeny Rules脆弱性（v2.1.90未満）について、根本原因・攻撃シナリオ・悪意あるCLAUDE.mdの具体例・修正バージョンへのアップグレード手順まで実装直結で解説しており、settings.jsonのセキュリティ設定運用に直接役立つ具体ノウハウが含まれている。"
+  },
+  {
+    "id": "claude-code/2026-05-08-mcp入門aiエージェント時代システムエンジニアが絶対に押さえるべき新しい武器-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "MCP概論・SE向けの活用啓発記事で、「なぜMCPが重要か」の説明が中心。コード断片はあるが入門レベルの構成説明にとどまり、非エンジニアが書類作成・事務処理に直接応用できる具体手順は含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-06-10-claude-creative-connectors入門-blenderadobeabletonほか-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Blender・Adobe・AbletonなどクリエイティブツールとのMCP連携紹介で、公共工事書類作成・事務処理とは無関係の領域。新機能リリース紹介が主体で、かげだんの業務に再現できるノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-03-25-deploy-to-awsの一言でaiがawsインフラ構築からデプロイまで完了する時代が来た-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AWSプラグインのインストール・デプロイフロー解説は具体的だが、AWS CLIやIaC（CDK/CloudFormation）を操作するエンジニア向けの純技術記事であり、非エンジニアの書類作成・事務処理への応用ノウハウとはいえない。"
+  },
+  {
+    "id": "claude-code/2026-06-01-今週のaiニュースでaiに任せる前のルールを1つ変えた話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "週次AIニュースのトレンド紹介・概論のみで、読んで再現できる具体的なノウハウや手順が含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-04-02-claude-codeのトークン消費が突然10倍になる原因とhookで防ぐ実践的な方法-01",
+    "decision": "adopt",
+    "confidence": 0.9,
+    "reason": "キャッシュバグの原因分析と、セッションファイル読み取りブロック・コンテキスト残量モニター・トークン予算ガードなどのHookコードが具体的に掲載されており、Claude Code利用者が設定ファイルに貼り付けて即再現できるトラブルシュート実装ノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-04-30-claude-managed-agents入門-3層アーキテクチャとpython実装ガイド-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Anthropic APIのPythonクイックスタート実装解説はエンジニア向けのSDK活用記事であり、非エンジニアが書類作成・事務処理にAIを応用するノウハウとしては適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-06-14-自己進化型ナレッジself-evolving-knowledge-01",
+    "decision": "adopt",
+    "confidence": 0.8,
+    "reason": "CLAUDE.md設計のL0〜L3四層構造・ルーティングYAML・memory/inbox.mdパイプラインという具体的なアーキテクチャ提案を含み、Claude Code運用でのコンテキスト肥大化・知識重複問題を解決する実装直結のノウハウ。非エンジニアでも参考にできるCLAUDE.md設計論として価値がある。"
+  },
+  {
+    "id": "claude-code/2026-06-16-claude-code-始め方使い方を未経験から実務まで徹底解説2026年最新-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "インストール・基本操作・CLAUDE.md・MCPの入門解説記事で、コピペ可能なコマンドは含むがエンジニア向け概論が中心。非エンジニアの書類作成業務に活用できる具体ノウハウとしては薄く、新規性も低い。"
+  },
+  {
+    "id": "claude-code/2026-05-24-claude-codeにコンサル業務を実際にやらせた3つの事例あなたが今日から真似できる手順-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "GitHubスキルの導入手順や複数コマンドの連鎖ワークフローなど具体性はあるが、対象がコンサル業務のMBBフレームワーク活用に特化しており、公共工事の書類作成・事務処理への転用が難しい。汎用Skill設計ノウハウとしても他記事で補える範囲。"
+  },
+  {
+    "id": "claude-code/2026-05-08-itの現場からクララが立ったclaude-codeが迷走した日-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "エンジニアによるコーディング作業のトラブルシュート体験記で、DLLリフレクションやデバッグ手法は非エンジニアには触れない領域。AI協働の示唆はあるが再現可能な手順・実装ノウハウとして読むには不向き。"
+  },
+  {
+    "id": "claude-code/2026-06-01-claude-opus-48とは何かdynamic-workflowsと最新ベンチマークを図解で完全-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Opus 4.8のベンチマーク用語集・スペック比較の図解記事で、具体的な実装ノウハウが一切なく概論・トレンド紹介に該当する。"
+  },
+  {
+    "id": "claude-code/2026-04-06-anthropic公式skills完全ガイドを読んだらskillmdのトークン消費を40削減できた-01",
+    "decision": "skip",
+    "confidence": 0.7,
+    "reason": "SKILL.mdのトークン削減手順という有用テーマだが、本文の実質的な手順部分が薄く、後半は有料コンテンツへの誘導で占められており、読んで再現できる実装直結情報が不十分。"
+  },
+  {
+    "id": "claude-code/2026-04-07-figma-url-を渡すだけでデザインシステム準拠の-compose-コードが生成される仕組みを作-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Jetpack ComposeとFigma MCPのマッピングルール設計という純技術記事で、Androidエンジニア向けの内容。非エンジニアの書類作成・事務処理には直接応用できない。"
+  },
+  {
+    "id": "claude-code/2026-04-21-claude-codeでコーポレートサイトの本番dbを吹き飛ばした話-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "Claude Code auto modeの危険操作をPreToolUse hookでブロックする具体的な設計、memoryとrulesへの禁止事項追記など、Hook設計・ルール化の実装直結ノウハウを含む。DB事故の文脈はエンジニア寄りだが、AIエージェントの安全運用設計として汎用性がある。"
+  },
+  {
+    "id": "claude-code/2026-05-27-aiは対症療法に陥りがち-7段の表層修正が治らなかった理由と素朴な問いの価値-01",
+    "decision": "adopt",
+    "confidence": 0.85,
+    "reason": "AIが対症療法に陥る構造的理由5つと、修正回数の上限設定・スキルへのルール化・素朴な問いかけなど再現可能な対策が具体的に示されており、Claude Code活用の汎用ノウハウとして役立つ。"
+  },
+  {
+    "id": "claude-code/2026-04-30-claude-managed-agents入門-インフラ不要でaiエージェントを本番デプロイする-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Python SDKでのエージェント実装を解説するエンジニア向けAPIガイドであり、新機能紹介の色彩が強い。非エンジニアが書類作成に応用できる実装直結ノウハウはない。"
+  },
+  {
+    "id": "claude-code/2026-06-13-実装編claude-codeのloopで仕事を自動で回す5つの型-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": "/loopコマンドの5類型（収集・整理・生成・検証・通知）をプロンプト例付きで解説し、.claude/loop.mdの設定方法も含む。情報整理・下書き作成・チェック自動化など書類作成業務に直接応用できるノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-03-17-aiっぽいの正体は文体じゃない-全業務をaiエージェントで回して気づいたこと-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "AIっぽさの原因を「文体・情報設計・思考の不在」の3層で分析した概念的な考察記事。読み物として示唆に富むが、プロンプト例・ワークフロー手順などの実装直結要素がなく、再現可能なノウハウとして蓄積する内容ではない。"
+  },
+  {
+    "id": "claude-code/2026-06-15-20266claude-fable-5-が使えなくなった件を調べてみた-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Fable 5停止の経緯・背景を詳述した業界ニュース解説記事。フォールバック設定の言及はあるが、主題は事件の説明であり自分で再現する手順が書かれた記事ではない。"
+  },
+  {
+    "id": "claude-code/2026-05-31-blender公式mcpサーバーをclaudeに繋いで教室を作るつまずき全記録-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "MCPサーバー接続のトラブルシュート手順（ZIPインストール回避策・エラー別原因一覧）は実装直結だが、対象がBlender（3Dモデリング）であり書類作成・事務処理への応用から外れる。非エンジニアが業務で活かせる用途に合致しない。"
+  },
+  {
+    "id": "claude-code/2026-06-09-aiエージェント検証用pcを作るメモ設計補遺ブラウザaiのために端末とアカウントを分けた理由-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AIエージェント検証環境の設計思想（端末・アカウント分離の理由）を説明した記事で、考え方の整理が中心。具体的な設定手順が薄く、業務再現性のある実装ノウハウとはいえない。"
+  },
+  {
+    "id": "claude-code/2026-03-31-mcpで異なるaiモデルを連携させる実践ガイド-claude-code-codex-cli-gpt-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "settings.jsonへのMCPサーバー登録手順やツール一覧など実装直結の内容を含むが、GitHubからカスタムMCPサーバーをクローン・セットアップする開発者向けの内容であり、非エンジニアの書類作成業務への適用範囲から外れる。"
+  },
+  {
+    "id": "claude-code/2026-04-30-claude-opus-47アップデートを世界一わかりやすく解説する-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude Opus 4.7の機能概要をわかりやすく解説する記事だが、プロンプト例・Skill設計・ワークフロー手順などの実装直結ノウハウがなく、モデルのトレンド紹介・概論に留まる。"
+  },
+  {
+    "id": "claude-code/2026-05-22-googleのai-ideantigravityがある日突然チャットボットになった話強制更新騒動を技-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Antigravity強制更新騒動の事例・ニュース記事であり、Claude Codeとの比較も概論的。旧バージョン回退コマンドは参考情報だが、書類作成・業務へのAI応用ノウハウとして再現できる手順はない。"
+  },
+  {
+    "id": "claude-code/2026-05-25-aiコーディング時代に揺れる3年目エンジニアの話-レビュー不要論自分の成長責任の所在-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIコーディングに関する個人の思考整理・感想記事であり、具体的なノウハウや手順は一切含まれない。非エンジニアの業務への応用も無関係。"
+  },
+  {
+    "id": "claude-code/2026-05-31-claude-code-で-ai営業アシスタントを作った話-企業検索営業メール自動生成-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "FastAPI・Reactを使ったWebアプリ開発の純技術実装記事であり、非エンジニアが触れない領域の内容が中心。Claude Codeの活用場面の記述はあるが補足的で、全体は開発者向けの事例紹介。"
+  },
+  {
+    "id": "claude-code/2026-05-30-ai疲れが加速するのでclaude-codeのremote-controlを使うのをやめた-01",
+    "decision": "skip",
+    "confidence": 0.87,
+    "reason": "Claude CodeのRemote Control機能に関する個人の体験談・感想記事。機能の存在は示されているが、設定手順・活用ノウハウなどの実装直結要素がなく、事例紹介・コラムの性質が強い。"
+  },
+  {
+    "id": "claude-code/2026-05-07-code-with-claude-2026-完全解説-spacex提携とclaude-codeレート-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AnthropicイベントのレポートでSpaceX提携やレート制限2倍などの発表内容をまとめた記事。新サービス発表・トレンド紹介が主体で、読んで再現できる具体的なノウハウは含まれない。"
+  },
+  {
+    "id": "claude-code/2026-06-01-claude-on-awsamazon-bedrock環境構築ガイド-claude-code-cla-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Bedrock経由でClaude CodeおよびClaude Desktopを使う環境構築手順が具体的に記載されており、AWS CLI設定・環境変数・ヘルパースクリプト・トラブルシューティングまで再現可能。エンタープライズ・社内環境でのClaude活用ノウハウとして参照価値がある。"
+  },
+  {
+    "id": "claude-code/2026-05-16-claude-codeとdevinの使い分けで開発が変わる理由git-worktreeを活用したai-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Git Worktreeによる隔離戦略やClaude Code・Devinの使い分けについて概念的に解説しているが、設定手順の具体性が薄く概論・トレンド紹介寄りの内容にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-06-11-fable-5-を節約するつもりが-3-倍消費した話-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "存在しない「Fable 5」モデルを前提とした検証記事で現実に再現不可能な上、「委譲は節約にならなかった」という考察が主体であり、実務に直接適用できるノウハウは限定的。"
+  },
+  {
+    "id": "claude-code/2026-04-15-claude-code-のskillって何-知らないと怖い情報漏洩リスクと実際に起きた事故-01",
+    "decision": "adopt",
+    "confidence": 0.7,
+    "reason": "Skillの安全確認チェックリスト（SKILL.mdの目視手順・grepコマンド例・危険パターン一覧・Trust Dialogの扱い方）など、読んで再現できる具体手順を含む。非エンジニアでもSkillを使う立場として、外部Skillの安全確認手順は直接役立つ実用ノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-06-01-業務用-mac-の環境構築を半日でclaude-code-と-nix-による仕組み化-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Mac環境構築・Nix・開発環境のコード化が主題であり、WindowsユーザーでありかつNixを使わない非エンジニアのかげだんには直接適用できない。Skill設計の一例として参考になる部分はあるが、既存ノウハウの範囲内かつ業務への適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-06-ai活用を頑張っても評価されない社内ノウハウを可視化するai-store構想-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "「社内AI Store」の構想紹介に留まり、実装・手順・設定例などの具体ノウハウが一切ない概念提案記事。採用基準の「概論・構想・事例紹介」に該当する。"
+  },
+  {
+    "id": "claude-code/2026-06-14-claude-code-v21176-モデル制御の抜け穴修正とバグ修正まとめ-01",
+    "decision": "adopt",
+    "confidence": 0.8,
+    "reason": "Hookのif条件パスマッチ修正・availableModels抜け穴修正・Windows/tmux環境の不具合修正など、具体的な設定例とコード例を含むリリースノート解説。かげだんはHookを実際に運用しており、設定が意図通り動作するかの確認材料として直接役立つ実務直結情報。"
+  },
+  {
+    "id": "claude-code/2026-04-11-aiエージェントにapiゲートウェイを挟んでよかったこと11選-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "APIゲートウェイを使うことのメリット11項目の紹介であり、ゲートウェイの設定・構築手順・具体的な実装方法は書かれていない。非エンジニアには実装ハードルが高く、かつ「こんないいことがある」という紹介レベルで再現可能な具体ノウハウに欠ける。"
+  },
+  {
+    "id": "claude-code/2026-06-06-実測claude-615改定で毎日自動化している私の請求はいくらになるのか-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "Claude Pro/Maxの6/15自動実行課金変更の実測データと、ccusageを使ったトークンコスト集計・最適化手順（セッション短縮・MCP削減・スクリプト前処理）が具体的に示されており、自動化を運用するユーザーに再現可能なコスト管理ノウハウを提供する。"
+  },
+  {
+    "id": "claude-code/2026-06-08-革新性が何か分からないを解決するものづくり補助金申請書の書き方とclaude-code活用術-01",
+    "decision": "adopt",
+    "confidence": 0.85,
+    "reason": "CLAUDE.mdに審査項目・NG表現・構成テンプレを固定して補助金申請書の骨子を生成するワークフローを、具体的なCLAUDE.md記載内容とプロンプト例付きで解説しており、書類作成業務へのAI応用として非エンジニアが直接再現できる実装直結ノウハウを含む。"
+  },
+  {
+    "id": "claude-code/2026-06-11-claude-fable-5を１日使ってみて-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Fable 5の使用感レポートであり、UI再現精度やトークン消費の所感が中心で、再現可能なワークフロー・設定・プロンプト手順を含まない概論・トレンド紹介記事。"
+  },
+  {
+    "id": "claude-code/2026-04-26-生成aiの正しい障害修正がキッカケであなたは顧客の信頼を失うかもしれない-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "インシデント対応でのAI活用原則を述べた記事で思考フレームワークとして有益だが、対象はSRE・エンジニアチームの障害対応であり、土木公共工事の書類作成・事務処理に直接応用できる具体ノウハウとは言えない。"
+  },
+  {
+    "id": "claude-code/2026-06-15-クチコミへの返信が溜まる一方店舗オーナーのためのclaude-code整理術-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "CLAUDE.mdへの感情別返信ポリシーの書き方・プロンプト例・週次バッチ処理ルーティン・複数プロジェクト構成など、定型文量産ワークフローの具体ノウハウを含む。書類・定型文作成業務へのAI応用として再現性が高い。"
+  },
+  {
+    "id": "claude-code/2026-03-20-完全ガイドclaude-codeの始め方aiがターミナルに住みついた日から開発が変わった-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "インストール手順とCLAUDE.mdの基本説明はあるが、内容は入門・概論レベルで既存ユーザーには既知の情報が大半。具体的なワークフロー設計や実装直結のノウハウはない。"
+  },
+  {
+    "id": "claude-code/2026-05-20-aiを誰よりも自分のことを知っているパートナーに育てる方法-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "ChatGPT・Gemini・ClaudeのUIメモリー機能のON/OFF操作手順の紹介にとどまり、非常に初歩的な内容。再現性のある実装ノウハウとしては薄く、初心者向け概論記事の域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-05-19-claude-cowork-ga入門-rbacopentelemetryzoom-mcp完全ガイド-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Coworkのエンタープライズ管理機能（RBAC・SCIM・OpenTelemetry・SIEM連携）の詳細解説で、IT管理者・エンジニア向けの純技術記事。個人ユーザーの書類作成業務への応用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-05-claude-code-v21128-リリース毎日changelog解説-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "バージョンアップのchangelog解説記事で、EnterWorktreeバグ修正や並列shell改善などの技術的変更点紹介にとどまる。リリースノートの解説であり再現可能なノウハウではない。"
+  },
+  {
+    "id": "claude-code/2026-05-02-claude-codeの活用例10選開発効率が上がる使い方-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "CLAUDE.mdやSkills機能など一部有益な内容を含むが、10例それぞれの記述が浅く、GitHub Actions・リファクタリング・コードレビューなど非エンジニアには関係しない開発者向け項目が大半を占める概論記事。再現できる実装直結の具体ノウハウとして読める内容が少ない。"
+  },
+  {
+    "id": "claude-code/2026-06-07-claude-api障害多発期間の全インシデント解説と開発者向け対策-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "PythonによるAPIリトライ・フォールバック実装など純技術的なコード実装の解説であり、APIをコードで呼び出す開発者向けの内容。非エンジニアが書類作成にAIを活用する文脈には直結しない。"
+  },
+  {
+    "id": "claude-code/2026-05-01-claude-max-で毎月-8833-分使っていたpromaxapi-の境目を実データで割り出した-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "プラン選択の判断表は参考になりうるが、月$8,833相当という極端な使用量を前提とした分析であり対象読者が限定的。ツールもnpm install要の開発者向けCLIで、書類作成ユーザーの業務ニーズからは離れている。"
+  },
+  {
+    "id": "claude-code/2026-06-03-claude-code-v21159v21161-リリース毎日changelog解説-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "並列ツール独立化・grep=read扱い・設定ファイルへのガード追加・`workflow`→`ultracode`へのキーワード変更など、Claude Codeを実際に使う上で即座に影響する動作変更が具体的にまとめられており、acceptEditsやHooks運用に直結する実用情報を含む。"
+  },
+  {
+    "id": "claude-code/2026-03-28-デプロイに半日かかっていた時代が終わったaiがこのアプリをデプロイしての一言で全部やってくれる-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Azure Skills PluginとAWS Agent Pluginsのリリースを紹介するニュース・トレンド記事であり、クラウドデプロイ自動化の動向解説にとどまる。書類作成・事務処理へのAI応用とは関係なく、再現可能な手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-06-01-スマホai駆動開発でcopilotclaudecodexを比較して感じたこと-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "スマホからのAI駆動開発における各ツールの使い心地を比較した個人の感想記事で、再現可能な具体ノウハウ（プロンプト例・設計手順等）を含まない事例紹介・体験談レベルの内容。"
+  },
+  {
+    "id": "claude-code/2026-05-15-anthropicのバーティカルai戦略を読むclaude-for-シリーズとmcpエコシステムの全-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "AnthropicのClaude for ○○シリーズとMCPエコシステムの戦略概要解説で、FastMCPのコード例はあるがエンジニア向けのMCPサーバー開発内容であり、非エンジニアが書類作成・事務処理に直接活用できる具体ノウハウではない。"
+  },
+  {
+    "id": "claude-code/2026-05-04-zenn-books-に500円の技術書を出して5冊売れた話個人開発15章無名アカウントの初収益-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Zenn Booksでの有料技術書出版体験談（価格設計・章立て・動線設計）であり、AI活用ノウハウや書類作成への応用性がまったくない。"
+  },
+  {
+    "id": "claude-code/2026-05-10-claudeを副業の相棒にする6つの使い方50歳のおじさんが実際にやってること全部話します-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Amazon物販副業でのClaude活用体験談で、Keepaリサーチ用プロンプトの具体例はあるものの、EC物販専用の内容であり公共工事書類作成・事務処理への汎用的な応用性がない。"
+  },
+  {
+    "id": "claude-code/2026-05-12-necが3万人にclaude-codeを展開する時代に中小企業はどう動くか-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "日本SaaS100社のMCP対応状況を分析したトレンド・概論記事で、中小企業の導入段階の考え方は示されているが再現可能な実装手順を含まず、事例紹介の範疇。"
+  },
+  {
+    "id": "claude-code/2026-06-16-616今朝のaiトレンド5選claude-codeの学習並列自動化思考法が一気に来てる-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "複数トピックのトレンドまとめ記事で、各手法（/handoff、ECC、Workspace Studio等）の紹介にとどまり、自分で再現できる実装詳細がない。概論・紹介止まり。"
+  },
+  {
+    "id": "claude-code/2026-04-20-claude-code-agent-teamsのバグレポート-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": "Agent Teams v2.1.114の具体的な症状・原因・ダウングレード手順・チェックリスト・成果物救出ルートまで詳細に記述されており、実運用で再現・回避できるトラブルシュート情報として価値がある。"
+  },
+  {
+    "id": "claude-code/2026-05-02-claude-code-v21126-リリース毎日changelog解説-01",
+    "decision": "adopt",
+    "confidence": 0.85,
+    "reason": "`claude project purge`のコマンド例、ゲートウェイ連携設定、`--dangerously-skip-permissions`の動作変更と注意点など、Claude Code運用者が即活用できる具体的なchangelog解説が充実している。"
+  },
+  {
+    "id": "claude-code/2026-05-08-claude-codeと他ai開発ツールの違いまとめcursorgithub-copilotwind-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ツール比較の概論記事で、具体的な設定手順や実装ノウハウがなく、選定基準の紹介にとどまっている。"
+  },
+  {
+    "id": "claude-code/2026-03-18-aiに色を聞いてはいけない-vision-modelの色認識の限界と正確に取得する方法-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Vision Modelの色認識限界の技術検証で、Pythonコーディングが前提の非エンジニア向けではない内容。書類作成・事務処理へのAI応用とは遠く、適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-04-gpt-55とclaude-mythosが同水準に達した週aiエージェントの特権リスクを考える-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "週次AIニューストレンドの概観記事。モデル能力比較・エージェント特権リスク・セキュリティ製品発表などを評論しているが、再現可能な手順・プロンプト例・実装ノウハウは一切含まれない。"
+  },
+  {
+    "id": "claude-code/2026-06-03-claude-code-v21160-workflowキーワードがultracodeに変更セキュリテ-01",
+    "decision": "adopt",
+    "confidence": 0.9,
+    "reason": "Claude Code v2.1.160の破壊的変更（`workflow`→`ultracode`トリガー変更、acceptEditsモードのセキュリティ強化）をBefore/After例付きで解説しており、CLAUDE.mdやプロンプトテンプレートの更新手順が具体的に再現できる。"
+  },
+  {
+    "id": "claude-code/2026-05-22-claude-codeを副業に使うと時給は本当に上がるのか-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "個人の副業収益体験談が主体で、具体的なノウハウ（プロンプトテンプレート化）への言及はあるが本文が有料部分で途切れており、再現可能な実装情報として不完全。"
+  },
+  {
+    "id": "claude-code/2026-05-22-ai-が-90-のコードを書く時代の開発現場-anthropicpalantirmeta-の公開情報-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "AnthropicのClaude Code社内研究レポートを基にCLAUDE.mdの学習リポジトリ化・Planモード→auto-editフロー・並列セッション運用・Swiss Cheese品質保証モデルなど具体的な実践パターンを短期/中期/長期の移植手順として提示しており、Claude Code活用ノウハウとして再現性がある。"
+  },
+  {
+    "id": "claude-code/2026-04-29-claude-codeでバイブコーディングして家計簿webアプリの土台を作ってみた-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "CLAUDE.mdのサンプルやプロンプト例は含むが、記事全体はエンジニア向けWebアプリ開発の体験記であり、書類作成・事務処理への応用とは無関係。非エンジニアが再現する手順として有用な部分が薄い。"
+  },
+  {
+    "id": "claude-code/2026-05-25-aiに今日の晩ごはんを決めさせ続けたら3ヶ月で何が起きたか-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Python/Anthropic SDKを使ったRAGと状態管理の実装解説が主体で、非エンジニアには触れない純技術コード記事。書類作成・業務効率化への応用可能性もない。"
+  },
+  {
+    "id": "claude-code/2026-05-24-chatgptで設計してclaude-codeでサブスク整理帳を作った話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "ChatGPTで設計・Claude Codeで実装という役割分担の考え方は参考になるが、具体的なプロンプト例や再現可能な手順の記述が薄く、制作物紹介・事例報告が主体。"
+  },
+  {
+    "id": "claude-code/2026-03-28-リポジトリに置くだけでaiが空気を読む-copilot-instructionsmd-と各aiツール-01",
+    "decision": "adopt",
+    "confidence": 0.7,
+    "reason": "各AIツール（Claude Code・Copilot・Cursor等）の指示ファイル設計について、具体的なサンプルと複数ツール管理手法（共通ファイル・シンボリックリンク・CI同期）を含む。CLAUDE.md設計の汎用ノウハウとして業務活用に転用可能な実装直結要素がある。"
+  },
+  {
+    "id": "claude-code/2026-06-06-herdrを使い始めたらもう他のターミナルには戻れなくなった-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Herdrという新ターミナルマルチプレクサの紹介記事で、エンジニアの並行コーディング作業向けの新ツール紹介が主体。非エンジニアの書類作成・事務処理への応用可能性はなく、トレンド紹介に相当する。"
+  },
+  {
+    "id": "claude-code/2026-04-13-sns自動配信パイプラインの構築-1日27件を自動投稿する仕組み-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "launchd設定やスクリプト骨格など具体実装を含むが、macOS専用かつSNS自動配信特化の内容であり、書類作成・事務処理への応用には遠い。Claude Codeをコンテンツ生成に使う汎用ノウハウとして見ても、プロンプト設計や業務への転用手順が薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-05-claudeが1000件のossから脆弱性6200件を発見-公開された脆弱性スキャンの中身をエンジニ-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "C/C++の脆弱性スキャンハーネスの技術解説であり、ASAN・gVisorなどエンジニア専門領域の内容。非エンジニアの書類作成・AI活用ノウハウとして再利用できる要素がない。"
+  },
+  {
+    "id": "claude-code/2026-05-23-python-discordpy-でマルチllmエージェントチームを作った設計とハマりポイント-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Python・Discord.py・asyncioを使ったBot実装の詳細設計記事であり、エンジニア向けの純技術記事。非エンジニアの業務改善に転用できる実装直結ノウハウではない。"
+  },
+  {
+    "id": "claude-code/2026-05-18-ワークショップ設計の仕事を分解してみたclaude-code-を使い続けて気づいたこと-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Claude Codeを業務に使い込んだ観察と体験談で読み応えはあるが、再現可能なプロンプト例・スキル設計・ワークフロー手順が乏しく、感想・事例紹介に留まる。採用確信に至らないためskip。"
+  },
+  {
+    "id": "claude-code/2026-03-25-claudeがついにpcで仕事する人になったantigravityとの違いまで整理してみる-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "CoworkのComputer Use機能とAntigravity・ChatGPT agentの比較紹介記事であり、新サービスのトレンド解説が主体。具体的な操作手順・設定方法・プロンプト例がなく、再現できる実装ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-08-claude-codeって何プログラマーじゃない自分が使ってみた結果-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "非エンジニアがClaude Codeを使った体験談で、具体的なプロンプト例・実装手順・再現可能なノウハウが含まれない概論・事例紹介記事。"
+  },
+  {
+    "id": "claude-code/2026-06-03-llmがllmを研究するとき内側からの観測と認識の限界-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "LLMの自己観測に関する哲学的・研究的考察で、コンテキスト圧縮やバイアスの考察は面白いが実装直結のノウハウや再現可能な手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-05-07-higher-limitsの発表で起きること起きないこと-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "rate limit変更の解説記事で、ccusageの紹介やsubagent並列活用への言及はあるが、主体はトレンド・仕様変更の紹介であり具体的な実装ノウハウが薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-01-claudeの制限がすぐ来る問題本当の犯人は時差だった-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "日本ユーザーの時差によるrate limitハンデを分析した啓発記事で、対策は「昼間に使う」「複数AI併用」程度にとどまり実装直結の具体ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-05-19-vibe-codingvibeして良い部分そうでない部分-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Vibe Codingの適用範囲についての概論的考察記事で、「選択的Vibe Coding」という概念を提示するが具体的な手順・設計例を含まずエンジニア向けの思考整理にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-05-11-claude-code-1-日で-874-使った日のログを-koji-lens-で見たらsubage-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Claude Codeのローカルログ（~/.claude/projects/**/*.jsonl）をCLIで分析し、ツール別・subagent vs メインセッション別のコスト内訳を把握する具体的な手法を紹介している。subagentのBash呼び出しがコストの68%を占めるという実データと、`koji-lens`コマンドの使い方が再現可能な形で示されており、モデル選択や設計判断の参考になる実践的ノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-04-16-今日のclaude-code-v21110-リリース毎日changelog解説-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Claude Code v2.1.110のChangelog解説記事で、機能追加・バグ修正の一覧を紹介するトレンド・リリースノート系の内容。各機能の説明はあるが自分で設計・実装するノウハウではなく、バージョンが古くなると参照価値が下がるためskip。"
+  },
+  {
+    "id": "claude-code/2026-05-16-非エンジニアがclaude-codeで業務で使える変換ツール集を18個作った話-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "作成したWebツール群の紹介記事であり、具体的なプロンプト例・CLAUDE.md設計・ワークフロー手順は含まれない。「小さく分けて作る」「日本語で仕様を伝える」という一般論に留まり、再現可能な実装直結ノウハウがないためskip。"
+  },
+  {
+    "id": "claude-code/2026-03-22-どこから読めばいいが完全に自己解決できる日がきた-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Understand-AnythingというOSSプラグインの紹介記事で、コードベースのナレッジグラフ生成ツールの使い方を解説している。非エンジニアの書類作成・事務処理AI活用とは領域が遠く、開発者向けのコードリーディング支援ツールのため適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-06-14-aiエージェントって何から始めて気づいたら週10時間の作業がほぼ消えていた話-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "無料パートのみで、実際に使ったプロンプト・設計手順は有料パートに限定されており、本文には概論・体験談しか含まれない。具体的な再現可能ノウハウがないためskip。"
+  },
+  {
+    "id": "claude-code/2026-04-10-架空のクッキー製造販売会社を設立してaiエージェントに部長役を任せることにした-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "架空会社でQMSを回すという個人実験の体験記であり、エージェント設計の概要は触れているものの再現可能な実装手順が薄く、書類作成・事務処理への応用ノウハウとしては具体性に欠ける。"
+  },
+  {
+    "id": "claude-code/2026-04-09-sqliteからcockroachdbに移行してaiの記憶が本物になった話-iphoneアプリ-cl-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "iPhoneアプリの個人開発におけるDB移行体験記であり、非エンジニアの書類作成業務とは無関係な純技術・アプリ固有の実装内容。"
+  },
+  {
+    "id": "claude-code/2026-05-13-claude-codeで広告コピーの訴求ミスを30分で見つける3ステップ-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "「批判役を明示指定」「忖度なし指示」「ペインの実在性を問うプロンプトテンプレート」など再現可能な具体的プロンプト設計ノウハウを含み、広告コピーに限らずClaudeへの批判的レビュー依頼全般に応用できる汎用技法として価値がある。"
+  },
+  {
+    "id": "claude-code/2026-05-15-anthropicが描く能動的aiと未来の働き方-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "TechCrunchインタビューの要約記事であり、Anthropicのビジョンや市場シェアの紹介にとどまる概論・ニュース記事で具体的なノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-06-05-2026年6月claude-code6月15日で使い放題終了複数エージェントを毎日並走させている私の-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "コスト対策の具体的手順（トークン計測スクリプト・モデル格下げ・キャッシング）は参考になるが、有料商品（BOOTH）への誘導が全体に散在し宣伝性が高く、かつ対象の期限（2026年6月15日）がすでに経過しており実用的な鮮度がない。"
+  },
+  {
+    "id": "claude-code/2026-05-07-aiエージェントが夢を見る時代が来た-anthropic-dreaming-の技術的意味-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Anthropic Managed AgentsのDreaming・Outcomes・マルチエージェントオーケストレーションの概念を解説した記事だが、読者が再現できる実装手順やプロンプト例はなく、新機能のトレンド紹介・概論にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-04-25-ごろ寝したままとった読書メモをclaudeにobsidianで整理してもらう-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "音声入力→Obsidian Sync→Claude Desktopスケジュールタスクで読書メモを自動整理するワークフローで再現可能な手順が含まれるが、個人の読書・Obsidian運用に特化しており書類作成・事務処理への応用としては間接的で、かつスキルのソースコードが記事本文に掲載されておらず具体性が不足する。"
+  },
+  {
+    "id": "claude-code/2026-05-26-pushできないでもその日一番使ったのはコマンドじゃなかった話-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "GitLab push失敗のトラブルシュート体験談が主体で、AI活用のノウハウは「答えではなく可能性の列挙を求める」という方針の言及のみにとどまり、実装直結の具体的手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-06-08-claude-code超入門どこから使う-初心者向けの入り口を1つだけ選ぶ-01",
+    "decision": "skip",
+    "confidence": 0.93,
+    "reason": "Claude Codeの入口（デスクトップ/Web版/VSCode/ターミナル）を比較紹介する入門概論記事で、具体的な設定手順やノウハウが含まれない。"
+  },
+  {
+    "id": "claude-code/2026-04-28-storyforge-ローカルllm搭載の小説執筆アプリをコードを書かない設計職がaiと作った話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "AIを使った個人アプリ開発の体験談・製品紹介記事であり、書類作成・事務処理への応用や汎用的なAI活用ノウハウとして再現できる実装手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-03-26-月額3000円でai秘書を雇えるclaude-codeのchannels機能がヤバい-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Claude Code Channels（Discord Bot連携）の概要を紹介しているが、「設定がとにかく難しい」と述べるだけで具体的な手順はなく、感想・宣伝が主体。再現できる実装情報を含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-16-claude-codeを有料プランにして1週間使ってみた正直もう戻れない-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "有料プランの体験談・感想記事で、「ファイルを読ませて指示する」程度の記述しかなく具体的なノウハウ・手順が皆無。概論紹介と宣伝が主体。"
+  },
+  {
+    "id": "claude-code/2026-05-04-claude-codeとgithub-projectsでissue駆動開発-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "CLAUDE.mdの設定例とgh CLIコマンド手順が具体的に記載されており再現性はあるが、エンジニア向けのGit開発ワークフローであり書類作成・事務処理への適用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-05-10-anthropic-academy-を全冠して分かったこと-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Anthropic Academyの受講体験記であり、学べる内容の紹介はあるが具体的な手順・ノウハウが一切含まれない概論・体験談記事。"
+  },
+  {
+    "id": "claude-code/2026-06-03-obsidianとclaudeで第2の脳を作る入門メモが勝手につながり始める仕組みとは-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "汎用プロンプト例3つを含むが、詳細な設計原則は¥2,500の有料コンテンツへ誘導する構成であり、有料記事の無料部分に該当する。"
+  },
+  {
+    "id": "claude-code/2026-03-17-claudeの使い方を比較ブラウザアプリcoworkclaude-codeの違い-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude製品4種類の比較概論記事。特徴・料金・向いている人を表でまとめているが、具体的なノウハウ・プロンプト例・手順は含まれず、製品紹介・概論に留まる。"
+  },
+  {
+    "id": "claude-code/2026-05-07-超初心者向けclaude-codeって何chatgptとどう違うの仕事で使いこなそう-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "ChatGPTとClaude Codeの違いを初心者向けに比喩で解説した概論記事で、プロンプト例・実装手順・具体ノウハウは一切含まれない。"
+  },
+  {
+    "id": "claude-code/2026-04-20-claude副業チャレンジ-11claude-codeで何を作ったか-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Claude Codeで作ったツールの概要を紹介するだけで、具体的な作り方は「次回有料記事」と明言されており、無料部分は事例紹介の域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-05-01-rtk-rust-token-killer-aiコーディングアシスタントのトークン消費を最大80削減-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Rustバイナリ・Homebrew/Cargo経由でインストールするCLIツールの紹介で、コーディングエージェント向けの純技術ツール記事。非エンジニアの書類作成・事務処理への応用範囲外。"
+  },
+  {
+    "id": "claude-code/2026-04-05-ターミナルに引き篭りたくてレビューツールjuubakoを作りました-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "macOS専用・Rust/Tauri製のgit diffレビューツール紹介で、ターミナルベースの開発者向け。非エンジニアには無関係な領域であり、書類作成・AI活用の汎用ノウハウにも当たらない。"
+  },
+  {
+    "id": "claude-code/2026-05-12-aiフレンドリーなwebサービスが生き残る-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AIエージェントに対応したWebサービス設計の概論・トレンド紹介であり、プロンプト例や実装手順など再現できる具体ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-04-12-claude-codeのhookどれを入れればいい5つの質問で最適な安全設定が分かるツールを作った-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Hook Selectorツールの紹介記事だが、hookの具体的な設計・実装ノウハウは有料書籍に誘導されており、本文だけでは再現できる情報が得られない。"
+  },
+  {
+    "id": "claude-code/2026-03-19-claude-in-chrome-をローカル開発で使う-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "セキュリティ設定やCLI連携手順は具体的だが、対象がWeb開発者のローカル開発フィードバックループであり、書類作成・事務処理への応用と距離がある。迷ったらskipの原則を適用した。"
+  },
+  {
+    "id": "claude-code/2026-05-19-コードが書けないのにwebアプリを作りたかった話バイブコーディングで実際にやってみた-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "個人のバイブコーディング体験談で、プロンプト例・手順・再現可能なノウハウが一切含まれていない感想文。"
+  },
+  {
+    "id": "claude-code/2026-06-07-claude-code-で-mcp-サーバを-9-個導入してみた-実運用の所感と効率化のコツ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "MCP9個の実運用所感という触れ込みだが、認証・コンフリクト解消の記述が概論にとどまり、再現可能な具体的設定手順や実装例が不十分。"
+  },
+  {
+    "id": "claude-code/2026-05-10-chatgptclaudecursorから日本の上場企業データをmcp経由で引く完全ガイド-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "MCP接続設定のJSON例とツール定義（description記述の重要性・具体例）が含まれており、MCP設計の汎用ノウハウとして再現可能。ただし対象は金融データ特化であり、書類作成業務への直接応用は限定的。"
+  },
+  {
+    "id": "claude-code/2026-03-23-claude-code-channels-寝て起きたらaiがまだ待ってた-スマホからclaude-c-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude Code Channelsとスマホ連携の体験報告が主で、設定手順は省略されている。具体的な再現手順がなく体験談・感想にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-03-27-初心者向claude-codeってaiじゃないみたいよ-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Codeの概念説明と料金プラン紹介のみで、具体的なノウハウや実装手順を含まない初心者向け概論記事。"
+  },
+  {
+    "id": "claude-code/2026-05-14-claude-for-small-businessとはaiチャットの次が中小企業にも来た-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude for Small Businessの発表に関するトレンド解説・概論記事であり、具体的な設定手順・プロンプト例・実装ノウハウを一切含まない。"
+  },
+  {
+    "id": "claude-code/2026-05-13-claude-codeに大学レポートの引用文献を任せたら半分が存在しない論文だった話-01",
+    "decision": "adopt",
+    "confidence": 0.7,
+    "reason": "AIが実在しない引用文献を生成するハルシネーションリスクと、確認習慣（CiNii/Scholar検証・明示的な前提伝達）という3つの実務ルールを具体的に提示しており、書類作成でAIを使う非エンジニアにとって再現可能な注意点として価値がある。"
+  },
+  {
+    "id": "claude-code/2026-03-25-claudeがmacを触り始めたこれただの便利機能じゃなくてaiの仕事の持ち方が変わる合図だと思う-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Computer UseとRPAの比較・監督設計の重要性を述べた概論記事で、再現できる具体的な実装手順やプロンプト例が含まれない。トレンド紹介にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-06-08-claude-codeだけじゃ勝てないkaggle初心者の失敗記-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Kaggleコンペでの失敗談をもとに「設計が大事・指示を明確に」と説く概論で、データサイエンス特化の内容。書類作成・事務処理への応用可能な具体ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-06-15-claude-fable-5で何が変わり何は変わらないのか-実務で使う人向けの差分まとめ-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "CLAUDE.md・skill.mdの継続性という有用な観点はあるが、具体例がNextJS開発者向けであり、非エンジニアの書類作成業務には転用しにくい。末尾の有料教材宣伝も気になる。"
+  },
+  {
+    "id": "claude-code/2026-03-19-vibe-codingからagentic-engineeringへ-何が変わるのか-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "PEVループ（Plan→Execute→Verify）の概念とAgentic Engineeringの定義を整理した記事だが、具体的な設定手順・プロンプト例がなく概念紹介にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-06-14-将来が不安すぎてaiで夕飯当番を自動化したline-botができるまで全体像-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "LINE Bot構成の全体像を示すハブ記事で、再現できる具体手順は後続記事に委ねられており本文が薄い。書類作成・事務処理への応用とも無関係。"
+  },
+  {
+    "id": "claude-code/2026-04-15-コードが書けないwebデザイナーがclaude-codeと2ヶ月でsaasをリリースした話第一話-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "第一話はFAX時代からの修正フロー問題という背景紹介のみで、Claude Codeの具体的な使い方・実装手順は一切含まれない。「次回：Claude Codeとの出会い」と予告して終わる導入部に過ぎない。"
+  },
+  {
+    "id": "claude-code/2026-03-23-mobile-app-factory-が50イテレーションで止まる謎を30分で解明した方法-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "デバッグ手法（append-mode logを状態管理JSONより優先する）は一般化できる教訓だが、対象はiOSアプリ自動生成パイプライン（ralph.sh/prd.json）という純技術的な開発者向け環境であり、書類作成・事務処理への応用には遠すぎる。"
+  },
+  {
+    "id": "claude-code/2026-04-11-aiエージェント時代の虚無を超えて新開発フレームワークトンズラの提案-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "AIエージェント時代のチーム開発フレームワーク「トンズラ」を提案する概論記事で、具体的なプロンプト例・実装手順・CLAUDE.md設計などは含まない。ソフトウェア開発チーム向けの思想提案にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-03-15-surojitpvt-3-mcp-model-context-protocol-usb-ports-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude API/MCP/Claude Code/Agent SDKの関係を2分で把握するための概念マップ紹介で、「npmでインストールしてclaude実行」程度の入門案内しかなく、再現できる具体ノウハウが薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-13-k-koga555-httpstcovbli7nfvkm-初心者向けclaude-codeの使い方こ-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "CLAUDE.mdの役割と書き方（役割・目標・制約を短く書いて育てる）、Skillの構造（ヘッダー+本文、グローバル/プロジェクト使い分け）、MCPの設定と注意点、許可モードの使い分けなど、非エンジニアが業務自動化を始めるための具体的ノウハウが網羅されている。ただしX投稿のAI要約であり情報の深度は中程度。"
+  },
+  {
+    "id": "claude-code/2026-06-13-maruo-0314-httpstco8egxkh0sn2-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "副業・収益化の宣伝色が強く、CLAUDE.md3行・フォルダ構造の言及はあるが具体的な実装ノウハウは表面的。有料記事への誘導で内容が薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-08-oikon48-boris-cherny氏claude-code責任者とcat-wu氏claude-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "Claude Code責任者によるCLAUDE.md/Skills活用・autoモード設計・ルーティン構築・検証手法など実践的な設計思想を含み、エージェント運用の改善に直結する知見が豊富。"
+  },
+  {
+    "id": "claude-code/2026-06-05-miyabi-foxx-httpstcoxiqaahzwkw-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "Skills先行→Agents後行の順序論を会社経営の比喩で解説するが、具体的な実装例・手順がなく概念説明止まりで再現性に乏しい。"
+  },
+  {
+    "id": "claude-code/2026-06-03-shao-meng-agentic-engineering-实战窍门全录2026年6月版-来自-mv-01",
+    "decision": "skip",
+    "confidence": 0.65,
+    "reason": "多数のhackを列挙しているが中国語混じりで断片的なtipsの羅列であり、非エンジニアが再現できる形に整理されておらず、大半がエンジニア向けの開発環境設定。"
+  },
+  {
+    "id": "claude-code/2026-05-26-takahiro0309-claude-code-を触っている経営者に伝えたいことがあります-巷でよ-01",
+    "decision": "skip",
+    "confidence": 0.7,
+    "reason": "CLAUDE.md/Skills/SubAgent/MCPの4要素を経営者向けに解説し対話例もあるが、既存ノウハウとの重複が多く概念整理メインで実装手順が薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-13-dfxoqeth-httpstcorbcfgxhjlx-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "エージェント構築の9ステップを具体的に解説しており、タスク選定→手動プロンプト→自動化への流れや使用モデルの選択基準など実装直結の内容を含む。非エンジニア向けの平易な構成で、AI活用ワークフロー設計のノウハウとして参考になる。ただし本文が途中で切れており完全性に不安があるため確信度は中程度。"
+  },
+  {
+    "id": "claude-code/2026-06-13-servasyy-ai-httpstcotrl9uax8na-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "「Fable 5」という架空モデル名を使った概念フレームワーク紹介記事で、Self-improving systemの3層構造を説明しているが具体的な実装手順・プロンプト例・設定方法が含まれていない。概論・トレンド紹介に該当しskipが妥当。"
+  },
+  {
+    "id": "claude-code/2026-06-11-manerun-httpstcojvubkdu4d8-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "約40個のコピペ用プロンプトを含む具体的な記事だが、内容はアフィリエイト収益化（案件選定・記事量産・SNS導線）であり、公共工事書類作成・事務処理へのAI応用とは無関係。適用範囲条件を満たさない。"
+  },
+  {
+    "id": "claude-code/2026-06-11-techworker-ai-httpstcoyf3pj4ymaj-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "「ループを書け」という概念シフトを解説する記事で、Claude Codeヘッドの発言を引用しながらエージェントループの5フェーズを紹介しているが、実装コード・設定手順・具体的なツール使用法が含まれておらず概念紹介に留まる。"
+  },
+  {
+    "id": "claude-code/2026-06-04-khaleesi1122-httpstco7zj350sad2-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude Code CLIによるGitブランチ作成・コミット・プッシュの自動化とChatGPTによるPR文書生成という具体的な手順を含むが、対象がコード開発者向けのGitワークフロー自動化であり、非エンジニアの書類作成・事務処理業務への応用可能性がほぼない純技術的内容。"
+  },
+  {
+    "id": "claude-code/2025-08-23-article-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "MCPの概念説明とローカルMCPサーバー構築の技術的手順だが、PythonコードやライブラリAPIの実装解説が中心で、非エンジニアが書類作成に応用できる実用ノウハウとは言えない。また本文はSNS投稿の断片的なスレッドで完結していない。"
+  },
+  {
+    "id": "claude-code/2026-06-08-nagarjuncreates-httpstcoot8zib2jwk-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Codeの概論・入門紹介記事であり、「何ができるか」の説明にとどまり、具体的なプロンプト例・Skill設計・CLAUDE.md設計など再現できる実装直結ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-06-04-cryptinflux-claude-codeに動的ワークフローが実装されましたaiが自分でオーケス-01",
+    "decision": "adopt",
+    "confidence": 0.8,
+    "reason": "Claude Codeのdynamic workflows機能について、起動方法（ultracode、/effort ultracode、/deep-research）、パターン（分割統治・敵対的検証・トーナメント等）、注意点（トークン消費・途中介入不可）など具体的な使い方ノウハウが含まれており、エージェント設計の汎用ノウハウとして読み手に役立つ。"
+  },
+  {
+    "id": "claude-code/2026-04-29-viveky259259-most-devs-use-claude-code-at-lt10-of-01",
+    "decision": "adopt",
+    "confidence": 0.85,
+    "reason": "CLAUDE.mdの設計指針（200行以内・ミス後のみルール追加・モノレポでの階層ロード）、Skillとフック設定、サブエージェント並列活用、git worktreesなど具体的なノウハウが箇条書きで整理されており、Claude Code活用の実践的なtipsとして価値がある。"
+  },
+  {
+    "id": "claude-code/2026-04-17-claude-code-導入ガイド-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Mac向けClaude Codeインストール手順の記事で、curlコマンドによるネイティブインストールの説明にとどまり、書類作成・業務活用への応用ノウハウが含まれていない。導入後の使い方についてもほぼ概論のみ。"
+  },
+  {
+    "id": "claude-code/2026-06-12-lyashchmaxim-there-are-now-over-50000-claude-skill-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude Skillsの推薦リストをまとめたSNS投稿で、具体的な実装手順や設計ノウハウは含まれない。「このスキルが良い」という紹介止まりで、再現可能な具体ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-04-05-aiエージェントclaude-code-半日で5プロジェクト完了-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Codeでの作業体験談・感想記事であり、人間とAIの役割分担の考察はあるが、再現できる手順・プロンプト例・設計ノウハウが具体的に書かれていない。事例紹介止まり。"
+  },
+  {
+    "id": "claude-code/2026-03-24-article-43",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": ".claudeフォルダにエージェントを並べる構成のファイルツリーを示したSNS投稿のRTで、フォルダ構造の紹介にとどまり、各エージェントファイルの中身や設計手順の具体ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-05-09-claude-coworkでできること-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Claude CoworkがClaude Codeと何が異なるのか、できることの各機能（Excel/スライド生成、定期実行、Projects、プラグイン拡張、Computer Use）を具体的なユースケース例付きで整理しており、非エンジニアがCoworkを業務活用する際の実用的な把握に役立つ。概論寄りではあるが、ユースケース粒度のノウハウが含まれる。"
+  },
+  {
+    "id": "claude-code/2026-04-24-出版のご案内claude-skills入門全章の見どころを公開します-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Kindle書籍の目次・各章紹介記事であり、内容の見どころを紹介しているだけで実際のスキル設計手順やプロンプト例は含まれない。有料書籍の宣伝記事に該当する。"
+  },
+  {
+    "id": "claude-code/2026-05-10-外伝第三話-私opusが乗った議論-opus-vs-opus-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AI同士の議論を物語形式で描いたエッセイ。Hook設計やactor separationに触れているが、具体的な実装手順・設定例・再現可能なノウハウは含まれていない。概論・思考実験の域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-06-06-imkohenauser-ただし履歴参照は不要とまでは言えません必要性や有効性はモデル単体というより-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "AIのメモリー・履歴参照の5分類は整理として参考になるが、具体的な実装手順やプロンプト例はない。末尾のカスタム指示スニペットは断片的でvaultに入れるほどの厚みがない。迷うがskip。"
+  },
+  {
+    "id": "claude-code/2026-06-09-mombugnus-httpstcoctjwxhlw49-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "「LLM×コンテキスト×フィードバック」を企業全体に展開するという概論・経営論。具体的なノウハウ・手順・設定例は一切なく、トレンド紹介の域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-04-23-claude-codeが突然使えなくなる実際に起きている静かなbanリスク-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude CodeのBANリスクについての警告記事だが、内容は「依存しすぎない」「バックアップを持つ」等の一般論のみ。具体的な対処手順・設定・回避策の実装例がなく採用価値がない。"
+  },
+  {
+    "id": "claude-code/2026-01-23-article-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "2DゲームのAI活用vibe codingワークフローのSNS投稿。対象がゲーム開発者向けでPhaserJS・Playwright等のエンジニア向けツールが主体であり、非エンジニアの書類作成・事務処理への応用可能性がない。"
+  },
+  {
+    "id": "claude-code/2026-05-07-画面が勝手に動いてるハッキングされたかと思った-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "MCPブラウザ自動操作の体験談・エピソードのみで、設定手順やプロンプト例などの具体ノウハウを含まない。読んで再現できる実装直結要素なし。"
+  },
+  {
+    "id": "claude-code/2026-04-15-355-claude-codeの返答がズレる原因はフォルダだった-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "「作業ごとにフォルダを分けよう」という一点のみで内容が薄く、具体的な設定手順や実装例はなく概論レベルにとどまる。"
+  },
+  {
+    "id": "claude-code/2026-06-12-alvinfoo-most-people-use-claude-like-a-chatbot-pow-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "「チャットボットではなくチームメンバーとして使え」という概念・心構えをSNS投稿で述べているだけで、具体ノウハウや実装手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-06-04-aiのいいですねを信じて失敗する前にカーネマンが広げたpremortemで損失を防ぐclaudemd-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "CLAUDE.mdへのPremortem設定という着眼点は有用だが、具体的なコードや設定例は有料パートにのみ記載されており、無料部分は概念説明と有料誘導のみ。"
+  },
+  {
+    "id": "claude-code/2026-04-23-claude-codeは安全か見落とされがちな構造的リスクの話-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "プロンプトインジェクション等の構造的リスクを解説しているが、対策は「権限を制限する」「人間が確認する」等の抽象的な箇条書きにとどまり、実装直結の具体手順がない。"
+  },
+  {
+    "id": "claude-code/2026-05-20-claude-code-のハーネスをチームでgit管理する-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": ".gitignoreをホワイトリスト方式で使い、-sharedサフィックスのファイルだけGit管理するという具体的な手法を示しており、スキル・フック・コマンドのチーム共有に直結する実装可能なノウハウを含む。"
+  },
+  {
+    "id": "claude-code/2026-06-08-claudecode-lab-最先端の開発claude-codeの生みの親のborisはコードを書か-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "X投稿のまとめであり、ループ・Routines活用のトレンド紹介・感想レベルで、具体的な実装手順やプロンプト例を含まない。"
+  },
+  {
+    "id": "claude-code/2026-05-20-claudeマネージドエージェントにセルフホストサンドボックスとmcpトンネルが登場-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "Anthropicの新機能発表の翻訳整理記事であり、セルフホストサンドボックス・MCPトンネルの概要紹介にとどまり、具体的な設定手順や実装ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-05-19-claude-code時代必ず必要になるベテランのカンの正体-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "AIコードレビューにおけるベテランの直感についての概論的コラムで、プロンプト例・実装手順などの具体ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-24-出版のご案内コードが書けない人こそ読んでほしい-claude-skills入門執筆の背景-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "Kindle書籍の出版告知・執筆背景の紹介記事であり、スキル設計の具体的なノウハウは本文中に含まれず製品宣伝にあたる。"
+  },
+  {
+    "id": "claude-code/2026-03-27-claude-code専用サーバーを無料で建ててcron-remote-control-で超便利な開-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "Oracle Cloud無料枠でClaude Codeサーバーを構築し、cronで定期実行・Discordからリモート操作する具体的な手順がコマンド付きで示されており、再現性のある実装ノウハウを含む。非エンジニアには敷居が高めだが、cronによる自動化の型として参考になる。"
+  },
+  {
+    "id": "claude-code/2026-06-10-claude-codeのダイナミックワークフローで大規模移行が劇的に加速-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ダイナミックワークフロー機能の概要紹介とSalesforceの事例紹介が中心で、読み手が自分で再現できる手順や設定例が含まれていない。X投稿の自動翻訳・整理記事でありトレンド紹介にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-04-09-claude-codeの始め方最短で安全にaiエージェントを使いこなす手順副業コレクター-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "有料記事の無料部分であり、「安全に始めることが重要」という概論のみで具体的な手順はSTEP5以降の有料パートに委ねられている。再現できる実装直結要素がない。"
+  },
+  {
+    "id": "claude-code/2026-05-29-claude-code-routines1ヶ月運用したリアル数字pvスキコスト失敗-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "note自動投稿の1ヶ月運用実績レポートで、コスト・PV等の数字紹介が主体。詳細は有料部に格納されており、無料部分では再現可能なノウハウが得られない。"
+  },
+  {
+    "id": "claude-code/2026-05-18-claude-apiで初回トークンの待ち時間を短縮するプロンプトキャッシュの事前ウォームアップ術-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "プロンプトキャッシュを事前ウォームアップしてTime-to-First-Tokenを短縮する具体的テクニックが手順付きで説明されており、Claude APIを組み込んだワークフロー設計に直接応用できる。"
+  },
+  {
+    "id": "claude-code/2026-05-06-minervacosmetic-aiエージェントがcloudflareのアカウント作成ドメイン購入デ-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Cloudflare×Stripe統合によるエージェント自律デプロイのサービス発表・トレンド紹介が主体。MCP経由の操作に触れているが、非エンジニアの書類作成・事務処理への応用ノウハウとしては遠く、再現可能な具体手順も薄い。"
+  },
+  {
+    "id": "claude-code/2026-05-01-その自動化3ヶ月で壊れますclaude-codeで作った副業システムを長持ちさせる7つの設計原則-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "7つの設計原則とプロンプト例を謳っているが、本文は有料パート（500円）の手前で終わっており、具体ノウハウが読めない有料記事の冒頭部分のみ。"
+  },
+  {
+    "id": "claude-code/2026-04-26-luna-ainsight-claude-code機能を足す順番で体感かなり変わります-最近見た-c-01",
+    "decision": "skip",
+    "confidence": 0.7,
+    "reason": "claude-code-setupプラグインのインストールコマンドは示されているが、内容はSNS投稿の概念紹介にとどまり、Hooks・Skills・MCPの具体的な設計手順や設定例がなく再現直結の情報として不十分。"
+  },
+  {
+    "id": "claude-code/2026-05-14-minervacosmetic-anthropicがclaude-for-small-busines-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude for Small Businessのプラン内容・料金・機能説明が中心のサービス発表記事で、具体的なノウハウや実装手順を含まない。"
+  },
+  {
+    "id": "claude-code/2026-05-26-ohgaseiya-claudeを定型業務を処理するai従業員として設計する方法が話題-1人でも仕事-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "AI従業員として設計する8ステップが役割絞り込み・判断範囲の線引き・ワークフロー4要素（トリガー・入力・プロセス・出力）など具体的な設計方針を含み、書類作成・事務処理の自動化設計に応用できる実践的内容。"
+  },
+  {
+    "id": "claude-code/2026-04-06-ai副業日記-50claude-codeを50日使い続けて気づいた答えをもらうより理解するが副業を伸-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "Claude Codeを50日使った体験談・動機付けの記事で、プロンプト例・操作手順・設計ノウハウなど具体的な実装直結要素は含まれない。"
+  },
+  {
+    "id": "claude-code/2026-04-22-aionlydeveloper-the-platform-is-setup-in-a-slightl-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "フォルダ階層ごとにCLAUDE.mdをカスケード配置するアイデアは参考になるが、SNS投稿の断片的な説明にとどまり、再現に必要な具体手順が不足している。"
+  },
+  {
+    "id": "claude-code/2026-05-29-claude-codeのpasted-text-n-m-linesを編集したい-01",
+    "decision": "adopt",
+    "confidence": 0.88,
+    "reason": "ペーストテキストが畳まれた際の2つの展開方法（再ペーストとCtrl+G外部エディター）を具体的な操作手順で説明しており、Claude Codeの実用的なtipsとして再現性がある。"
+  },
+  {
+    "id": "claude-code/2026-03-27-claude-code-の便利機能-ctrlg-と-ctrls-を-zsh-でも使う-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Ctrl+GやCtrl+SをzshのkeybindとしてCLAUDE Codeのものに合わせる方法で、zsh固有の設定（.zshrc）が対象であり、Windows/PowerShell環境の非エンジニアユーザーには適用できない。"
+  },
+  {
+    "id": "claude-code/2026-06-08-theturingpost-openprose-an-open-source-logical-eng-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "OpenProseというツールの機能紹介X投稿で、具体的な使い方・手順・設定例がなく、GitHubリンクを示すだけの概念紹介にとどまっている。"
+  },
+  {
+    "id": "claude-code/2026-04-22-sugurukun-ai-なんだこれ化け物すぎるai活用を見つけた-ㅤ-東大の准教授が技術ブログをa-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "ブログ→VOICEVOX動画自動生成の事例紹介で、ワークフローは推測ベースの箇条書き5ステップのみ。具体的なプロンプト・スクリプト・設定などの実装直結ノウハウは含まれておらず、再現できる手順が書かれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-31-nenju-dev-あとcodexのコンテキスト圧縮すごすぎて-clearとかはここ数ヶ月くらい使っ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "CodexデスクトップアプリのSSH操作とセッション管理の感想・体験談で、具体的なノウハウ（設定手順・プロンプト例など）は含まれていない。SNS投稿の断片的な内容で再現性なし。"
+  },
+  {
+    "id": "claude-code/2026-04-21-oga5tsu-とか-他にも複雑な状態管理を持つ大規模アプリの実装では上層aiのコンテキスト爆発が起-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "AIエージェントのコンテキスト管理に関する設計思想の考察で、read/think/write状態の分離やウォーターフォール対応の概念論が中心。具体的な実装手順・設定・プロンプト例はなく、非エンジニアが再現できる内容ではない。"
+  },
+  {
+    "id": "claude-code/2026-06-10-yukiwa-ai-claude-codeの放置運用がついに本格化-goalagentsauto-m-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "/goal・agents・auto mode・Monitor・Routinesの機能紹介と使い方ステップ5項目が書かれているが、機能の概要説明にとどまり具体的なプロンプト例・設定値・実装例がない。新機能の発表紹介記事に近い。"
+  },
+  {
+    "id": "claude-code/2026-04-14-claudecode-lab-claude-codeにroutines登場-一度プロンプトリポジトリ-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Claude CodeのRoutines機能の新機能発表紹介で、できることの列挙と公式Docsリンクのみ。具体的な設定手順・プロンプト例・ユースケースの実装詳細がなく、製品発表ニュースの域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-06-09-sumika45379-速報-anthropicとhttpstcojc5cthprymが-claud-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "AnthropicのClaude Code無料コース紹介のSNS投稿で、CLAUDE.md/Skills/Hooksを網羅とある程度の情報はあるが本文に具体ノウハウはなく外部リンク誘導のみ。"
+  },
+  {
+    "id": "claude-code/2026-02-01-article-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude CodeのTipsスレッドへの言及とClaude for Chromeの紹介だが、具体的なTipsは外部リンク先にあり本文自体には再現可能な実装情報がない。"
+  },
+  {
+    "id": "claude-code/2026-04-25-claudecode-lab-claude-codeの設定が面倒くさい人へ-claude-code-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Anthropic公式プラグイン`claude-code-setup`のインストールコマンド（`/plugin install claude-code-setup@claude-plugins-official`）と機能（hooks/skills/MCP/subagents設定の自動提案）が具体的に記載されており、再現可能な実装手順を含む。"
+  },
+  {
+    "id": "claude-code/2026-06-06-claudecode-ut-保存版-anthropic-が37分の-ai-エージェント構築ガイドを無-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Anthropicのエージェント構築ガイド動画の紹介・要約で、Messages APIからManaged Agentsへの設計哲学の解説にとどまり具体的な実装手順がない。"
+  },
+  {
+    "id": "claude-code/2026-06-01-avthar-heres-the-full-43-minute-walkthrough-of-my-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "43分動画のタイムスタンプ一覧のみで、git worktreesや並列エージェントの実装手順は本文には含まれず動画視聴が必須の構成。"
+  },
+  {
+    "id": "claude-code/2026-04-14-how2claude-ja-mcp-serverの設定はsettingsjsonに数行書くだけcom-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "MCPの概念説明とHooksとの違いの概要が書かれているが、settings.jsonの記述例や具体的な設定手順は「数行書くだけ」と言うだけで実際の設定内容が本文に含まれておらず、SNS投稿として断片的。再現に必要な具体ノウハウが不十分。"
+  },
+  {
+    "id": "claude-code/2026-02-05-oikon48-claude-code-の-subagents-にmemory-永続メモリ-をfro-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "SubagentsのFrontmatterでmemoryスコープ（user/project/local）を設定する具体的な書式と保存先ディレクトリ（.claude/agent-memory/<name>）が明示されており、Subagent設計に直接応用できる実装直結の情報を含む。"
+  },
+  {
+    "id": "claude-code/2026-04-04-sharbel-i-spent-two-hours-reading-every-page-of-th-01",
+    "decision": "skip",
+    "confidence": 0.72,
+    "reason": "「ultrathink」というキーワードの紹介はあるが本文が途中で切れており、ドキュメントを読んだ知見のリスト全体が確認できない。有料記事の冒頭のみに近い断片的な内容で採用判断できる具体ノウハウが十分でない。"
+  },
+  {
+    "id": "claude-code/2026-02-12-masahirochaen-自社のコンサルチームに徹底していること5選-①-claude-code-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "「AIを使え」「MCPを横断的に触れ」という方針紹介にとどまり、具体的な設定手順・プロンプト例・実装手順が含まれない。業務改善の方針・姿勢紹介であり、読んで再現できる実装直結要素がない。"
+  },
+  {
+    "id": "claude-code/2026-03-18-lin142535lin-mcp-fans-wont-like-this-ok-heres-my-m-01",
+    "decision": "skip",
+    "confidence": 0.78,
+    "reason": "MCPとCLI比較の意見・感想が主体で、本文も途中で切れており具体的な代替手順や設定例が確認できない。SNS投稿として断片的で再現性のある実装ノウハウが欠けている。"
+  },
+  {
+    "id": "claude-code/2026-02-21-nieceofanton-this-𝗖𝗟𝗔𝗨𝗗𝗘𝗺𝗱-file-will-make-you-10x-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "本文が途中で切れており、CLAUDE.mdの項目リストの冒頭部分しか確認できない断片的なSNS投稿。具体的な実装内容が読み取れず、再現できる要素がない。"
+  },
+  {
+    "id": "claude-code/2026-02-21-alex-prompter-context-window-is-the-most-misunders-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "コンテキストウィンドウの誤解を解く内容だが本文が途中で切れており、Needle in a Haystack手法の具体的な手順まで読み取れない断片的な投稿。"
+  },
+  {
+    "id": "claude-code/2026-06-04-yutaaaalll-uberがclaude-codeやcursorのようなagentic-codi-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Uberのトークンコスト上限設定に関する業界トレンド分析で、自分で再現できる具体的な実装手順や設定方法が含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-30-aalmoshaigeh-مهندسو-anthropic-كشفوا-أخيرا-كيف-يستخ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "アラビア語のXポストで、AnthropicエンジニアのClaude Code利用動画の紹介・宣伝にとどまり、本文自体に具体的なノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-03-26-hoshino-aisales-claude-codeのコマンドとショートカットを50個難易度別にま-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "Claude Codeのコマンド・ショートカットを50個難易度別にまとめ、コピペで使えるプロンプト例付きという構成は具体ノウハウの条件を満たす。非エンジニアがClaude Codeを使いこなす上で参照価値が高い。"
+  },
+  {
+    "id": "claude-code/2026-06-10-swarm-japan-保存版-claude-codeを作った本人が-6つの使い方を28分の動画で全-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "CLAUDE.md・サブエージェント・Hooksの活用ポイントに言及しているが、SNS投稿の要約にとどまり具体的な設定手順や実装例がなく、動画へのリンク案内のみ。再現できる実装直結要素が薄い。"
+  },
+  {
+    "id": "claude-code/2026-06-06-masa-okamura108-claude-codeのborisもうclaudeに直接プロンプトを-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "/loopコマンドによる自動実行ループの具体的なコマンド例（/loop 5m /babysit、/loop 30m /slack-feedback等）が複数挙げられており、繰り返しタスクの自動化設計として非エンジニアにも参考になるノウハウを含む。"
+  },
+  {
+    "id": "claude-code/2026-05-08-akaoniudetate-非エンジニアがコンテンツ販売を自動化する方法を5ステップで大公開します-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "コンテンツ販売ローンチ自動化という本リポジトリとは無関係な用途であり、手順も「2ファイル準備してプロンプト1本」という抽象的な説明にとどまる。有料プラン宣伝色も強く具体的な再現ノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-04-17-oikon48-claude-code-で-claude-opus-47-を使う際のベストプラクティ-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "Opus 4.7でのClaude Code運用における具体的な挙動の変化（冗長性低下・ツール呼び出し減少・サブエージェント委譲が慎重になる点）とプロンプト指示の対処法が具体的に列挙されており、モデル更新後の運用調整に直結するノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-04-06-article-17",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "100万トークンコンテキストの一般公開を告知するニュースリリース投稿であり、具体的な使い方や設定手順はなく、トレンド・製品発表情報にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-04-17-ai-catchup-jp-claude-codeを実務で使いこなす上でこのコンテキスト管理は間違い-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "/rewind・/compact・/clear・Subagentの4コマンドについて、なぜそれを使うかの理由と使い分け基準が具体的に書かれており、コンテキスト管理の実践ノウハウとして再現できる内容を含む。ただしX投稿の要約であり情報量は限定的。"
+  },
+  {
+    "id": "claude-code/2026-06-16-aniccaxxx-rt-suna-gaku-claude-code-の動的ワークフローのトリガーワ-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "動的ワークフローのトリガーワードが変更されたという更新情報のみで、具体的なノウハウや手順が含まれない。"
+  },
+  {
+    "id": "claude-code/2026-04-15-jiaweishen2568-这是我见过最好的claude-codeobsidian的教学视频-花一-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "中国語の動画紹介ツイートで、Obsidian+Claude Codeの組み合わせへの感想のみ。具体的なノウハウや手順が含まれない。"
+  },
+  {
+    "id": "claude-code/2026-06-14-guutaratanuki11-claude-codeただ使うだけじゃもったいない-精度が跳ね上がる-01",
+    "decision": "adopt",
+    "confidence": 0.7,
+    "reason": "フォルダ構造をAIへの文脈として活用する考え方、SKILLとして手順を資産化するアプローチ、MCP/Playwright連携の方向性など、非エンジニアが実践できる具体ノウハウを4点にまとめており有用。ただしX投稿の概要レベルで深みはやや薄い。"
+  },
+  {
+    "id": "claude-code/2026-03-13-masahirochaen-claude-codeユーザー必見-claude公式のclaude-md-01",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "CLAUDE.mdの品質監査（6項目スコアリング・実態との差分検出）と/revise-claude-mdによるセッション終了時の自動更新提案という具体機能を紹介しており、CLAUDE.md設計・運用のノウハウとして直接参考にできる内容を含む。"
+  },
+  {
+    "id": "claude-code/2026-02-21-oikon48-claude-code-の-git-worktree-サポートについて-1-use-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "git worktreeの機能一覧を5点箇条書きしただけのSNS投稿で、具体的な設定手順や使い方の説明がない。断片的で再現できる情報がなし。"
+  },
+  {
+    "id": "claude-code/2026-05-08-claude-codeの5xプランなのに15時間で枯渇問題何が起きていたのか-01",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "quota枯渇の原因分析（cacheトークンの計算方法、複数セッションの共有など）はトラブル事例の紹介にとどまり、回避・対処するための具体的な手順やノウハウが書かれていない。"
+  },
+  {
+    "id": "claude-code/2026-06-10-kubotamas-prompt-engineeringからloop-engineeringへ良いプ-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "「Loop Engineeringの6要素」はコンセプト紹介にとどまり、具体的な実装手順やプロンプト例がなく、読んで再現できる内容がない概論SNS投稿。"
+  },
+  {
+    "id": "claude-code/2026-05-15-aikenkyufm-claude-codeの真骨頂はmcp連携にあり-mcpmodel-conte-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Google Drive・Slack・DB連携の利点を紹介しているが「設定は少しコツが必要」と書くにとどまり、実際の設定手順や具体的なMCP設定例が一切なく、宣伝・概論投稿に相当する。"
+  },
+  {
+    "id": "claude-code/2026-04-26-sakimura2025-claude-codeで自動化できれば勝ちだと思ってたけど逆だった-最初俺-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "「自動化よりコンテンツの質が重要」という気づきを語る体験談SNS投稿であり、AIツールの具体的な使い方・設定・ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-13-ai-watcher-jp-claude-code-hooksの面白い使い方ご存知でしたかclaud-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "Hooksの21種イベント活用法（PreToolUse、PermissionDenied hookのdefer値など）を具体的に列挙しており、CLAUDE.md設計・Hook設計の実装直結ノウハウとして読める。ただしSNS投稿の断片情報のため、実装詳細は別途確認が必要な点が若干残る。"
+  },
+  {
+    "id": "claude-code/2025-12-10-oikon48-day10project-ルール-clauderules-claude-code-a-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": ".claude/rules/ へのトピック別ルール分割と、YAMLフロントマターによるGlobパターンマッチングでの動的ロード仕様を具体的に説明しており、CLAUDE.md設計の実装直結ノウハウとして活用できる。"
+  },
+  {
+    "id": "claude-code/2026-02-04-article-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "/insightsコマンドの存在を紹介するだけで、具体的な使い方・設定方法・プロンプト例などの実装直結ノウハウがなく、新機能発表の薄い内容にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-03-19-article-02",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "フォールバック禁止・後方互換不要をAGENTS.mdに書くというヒントは有用だが、本文が断片的でAGENTS.mdの具体的記述例が画像リンクのみで確認できず、SNS投稿レベルの情報量にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-05-17-uslab1994-anthropicのcpoが先日こう言った-我々は製品じゃなく-harness戦-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "harness戦略というAnthropicの方針を紹介する概論投稿で、CLAUDE.md・サブエージェント・MCPの活用を薦めるが具体的な実装手順・設計例がなく、トレンド紹介にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-04-27-synabunai-the-memory-section-is-the-most-skipped-p-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "CLAUDE.md + MCP経由の永続メモリというコンセプトへの言及はあるが、設定手順やプロンプト例など再現可能な具体ノウハウを含まない製品紹介レベルのSNS断片。"
+  },
+  {
+    "id": "claude-code/2025-07-08-kieranklaassen-we-use-3-review-modes-for-prs-using-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "PRレビューを3段階モードで使い分けるという概念紹介だが、プロンプト例や設定手順が一切なく、再現できる実装情報がない断片的なSNS投稿。"
+  },
+  {
+    "id": "claude-code/2026-04-17-chrisyyau-ai-competition-stopped-being-about-whos-01",
+    "decision": "skip",
+    "confidence": 0.98,
+    "reason": "AIツールのロックイン戦略についてのトレンド論で、具体的なノウハウや手順を含まない純粋なオピニオン投稿。"
+  },
+  {
+    "id": "claude-code/2026-04-17-amnosmusic13-being-an-engineer-now-feels-like-tuni-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "複数モデルを使ったワークフローオーケストレーションへの言及はあるが、感想・概念レベルにとどまり具体的な手順や設定例がない。"
+  },
+  {
+    "id": "claude-code/2026-04-18-nakamachi-ai-手順1-cursorのmcp設定でsupabaseのサーバーを有効化する使-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Cursor + Supabase MCPの接続手順が具体的に示されているが、対象ツールがCursorであり非エンジニアのClaude Code/Cowork運用には直接転用できないため。"
+  },
+  {
+    "id": "claude-code/2026-04-17-learnersbucket-my-current-workflow-looks-like-crea-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "PRD→JIRA→Cursorというワークフロー概要のSNS投稿で、具体的な手順・プロンプト例・設定方法が一切なく断片的すぎる。"
+  },
+  {
+    "id": "claude-code/2026-04-04-makeai-ceo-claude-codeとfigma-mcpの組み合わせでu-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Figma MCP+UIデザインシステム連携の話でMCP組み合わせの要素はあるが、書類作成・事務処理に応用できる内容ではなく、UIデザイン開発向けの領域のため非エンジニアには直接関係しない。"
+  },
+  {
+    "id": "claude-code/2025-04-19-sqs-anthropic-just-published-best-practices-for-us-01",
+    "decision": "skip",
+    "confidence": 0.97,
+    "reason": "「ベストプラクティスが公開された」という紹介のみで本文に具体ノウハウが全くなく、概論・トレンド紹介に該当する。"
+  },
+  {
+    "id": "claude-code/2026-04-27-miraijin-shogo-claude-codeこの1ヶ月で追加された個人開発で効く5機能-1-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Voice Mode・/loop・Coworkなど業務関連機能への言及はあるが、SNS投稿の箇条書き紹介にとどまり操作手順・設定方法がなく再現できる具体ノウハウを含まない。"
+  },
+  {
+    "id": "claude-code/2026-04-17-rofarkas-quick-setup-takes-30s-curl-o-claudemd-htt-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "CLAUDE.mdをcurlで取得してセットアップするという発想は参考になるが、肝心のCLAUDE.md内容が不明で再現不可能なうえ、本文が極めて断片的。"
+  },
+  {
+    "id": "claude-code/2026-03-18-article-09",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "X投稿の断片的な紹介文で、CLAUDE.md設計やskills構造化の概念に言及しているが本文に具体的なノウハウが含まれておらず、コミュニティ宣伝も混じっている。再現可能な実装情報はなし。"
+  },
+  {
+    "id": "claude-code/2025-04-19-article-01",
+    "decision": "adopt",
+    "confidence": 0.72,
+    "reason": "CLAUDE.md書き方・編集権限・MCP接続・thinking budget指定・YOLO・並列実行など複数の実践ノウハウのトピック一覧を含んでおり、リンク先のベストプラクティス文書への参照として価値がある。本文自体は断片的だが参照先の内容を示す索引として採用圏内。"
+  },
+  {
+    "id": "claude-code/2026-04-09-tkosht-エージェントの記憶は長いコンテキストより外部に置く状態管理で設計する流れが強いanth-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "エージェント設計の方向性（外部状態管理・セッションログ外出し）を紹介するトレンド解説で、具体的な実装手順やプロンプト例はなく概論にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-03-18-article-06",
+    "decision": "adopt",
+    "confidence": 0.82,
+    "reason": "CLAUDE.mdの重要箇所を`<important if=\"condition\">`タグで囲むとClaudeが確実に読み込むという具体的なtipsを含み、CLAUDE.md設計に直接応用できる実践的ノウハウとして採用価値がある。"
+  },
+  {
+    "id": "claude-code/2026-04-16-kapioblog-claude-codeメモ-rewindを使いこなせるかがコンテキスト管理のうま-01",
+    "decision": "adopt",
+    "confidence": 0.78,
+    "reason": "「失敗したときは追加指示ではなくrewindで巻き戻す」というコンテキスト管理の具体的なtipsを含んでおり、Claude Code操作の実践ノウハウとして再現・応用できる。"
+  },
+  {
+    "id": "claude-code/2026-04-05-so-ainsight-ガチで便利claude-codeのトークン使用量を6090削減できる-cla-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "CLIプロキシツールRTKの紹介だがSNS断片情報で導入・設定手順なし。非エンジニアがRustバイナリを運用するための再現可能な手順が含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-04-15-sora19ai-pcを閉じても動くclaude-codeのroutinesが自動化革命-スケジュー-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "Routines機能の箇条書き紹介にとどまり、実際の設定手順や活用ノウハウが含まれておらず機能発表レベルの情報。"
+  },
+  {
+    "id": "claude-code/2025-11-30-article-01",
+    "decision": "adopt",
+    "confidence": 0.75,
+    "reason": "CLAUDE.md設計の具体的指針（300行未満・分割・自動生成禁止等）を含み、読み手が自分のCLAUDE.md作成に直接活かせる実装直結のノウハウ。"
+  },
+  {
+    "id": "claude-code/2026-03-19-article-19",
+    "decision": "skip",
+    "confidence": 0.8,
+    "reason": "PostgreSQL+MCP連携の実例紹介だが手順の詳細がなくSNS断片情報にとどまり、読んで再現できる具体ノウハウが不足している。"
+  },
+  {
+    "id": "claude-code/2026-03-19-article-03",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "Agent Team機能の発表・環境変数の紹介のみで、オーケストレーション設計や活用手順の具体ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-28-kuroi-cpa-マネーフォワード-クラウド会計のmcp活用例-例えばクレジットカードや銀行から連-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "MCP経由で会計仕訳を一括修正するという着眼は面白いが、SNS投稿で設定手順・プロンプト例が一切なく、事例紹介にとどまる。"
+  },
+  {
+    "id": "claude-code/2026-04-30-daijutenshoku-claude-codeで成果を出す経営者に共通すること-操作できることで-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "CLAUDE.md・コンテキスト管理・MCPという概念を列挙しているだけで、実装直結の具体ノウハウを含まない概論投稿。"
+  },
+  {
+    "id": "claude-code/2026-02-28-oikon48-claude-code-に2つのコマンドskillsが追加-simplify-複数の-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "/simplifyと/batchの機能概要を紹介するだけで、設定手順・使用例がなく再現できる情報がない。"
+  },
+  {
+    "id": "claude-code/2026-05-16-brian-johnson-yourguyforai-claudemd-is-boring-in-t-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "CLAUDE.mdがセッション間のsetupコストを省くという一文コメントで、本文が極めて薄く具体的なノウハウがない。"
+  },
+  {
+    "id": "claude-code/2026-04-16-starriver0513-claude-codeにroutinesが来た-スケジュールで定期実行-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Claude Code Routinesのスケジュール実行・クラウド動作という機能紹介のみで、設定手順や活用方法の記載がない。"
+  },
+  {
+    "id": "claude-code/2026-03-25-article-24",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "ユーザー自身のSNS投稿で、CLAUDE.mdやスキル化の話題に触れているが本文が断片的でノウハウの具体的な手順・内容がなく、SNS投稿の域を出ない。"
+  },
+  {
+    "id": "claude-code/2026-01-17-sugurukun-ai-claude-codeで-たくさんのaiエージェントを実行する方法-ㅤ-①-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "サブエージェントとtmux方式の概念を箇条書きで列挙しているが、実装手順・具体的な設定例がなくSNSの断片的な紹介に留まる。"
+  },
+  {
+    "id": "claude-code/2026-02-27-masahirochaen-速報claude-codeに自動記憶機能が実装-claude-codeも-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "MEMORY.mdとCLAUDE.mdの使い分けという有用な概念を含むが、具体的な設定手順・MEMORY.mdの書き方などが一切なく機能紹介の速報止まり。"
+  },
+  {
+    "id": "claude-code/2026-04-12-aria-ai-tools-claude-codeのトークン消費を90削る設定は全ユーザーが知ってお-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "トークン削減の重要性を述べているが本文に具体的な設定方法・コンテキスト管理の3手順の中身がなく、リンク先への誘導のみで実装直結情報がない。"
+  },
+  {
+    "id": "claude-code/2026-04-11-topickapp-com-httpstconaakvlzlah-国交省の地理空間mcp-serve-01",
+    "decision": "adopt",
+    "confidence": 0.7,
+    "reason": "国交省の地理空間MCP ServerをClaudeで使う方法として、API申請からClaude Code/Desktopの接続設定まで手順を解説しており、建設・公共工事業務への応用可能なMCP連携ノウハウとして適合する。"
+  },
+  {
+    "id": "claude-code/2026-03-18-nao-ai-dev-claudemdを結構適当に書いている人が多いね-最低でもとりあえずはこれらの-01",
+    "decision": "adopt",
+    "confidence": 0.65,
+    "reason": "CLAUDE.mdに記載すべき4項目（ビルド・テスト、コーディング規約、構成・命名規則、ワークフロー）と「100行以内・具体的・簡潔・構造化」という設計指針を含む。SNS投稿として短いが、CLAUDE.md設計の具体チェックリストとして再現できる要素がある。"
+  },
+  {
+    "id": "claude-code/2026-05-02-741-oazg-claude-codeで業務自動化を始めて1ヶ月何ひとつ完成しなかった原因はプロン-01",
+    "decision": "skip",
+    "confidence": 0.92,
+    "reason": "「フローを言語化できないと失敗する」という教訓的感想のみで、具体的なノウハウ・手順・実装例が一切ない。"
+  },
+  {
+    "id": "claude-code/2026-04-24-semiritaia-poka-claude-code-hooksの使い方を書きました編集直後に整形-01",
+    "decision": "skip",
+    "confidence": 0.88,
+    "reason": "外部記事へのリンク告知投稿で、本文にHooksの具体設定例は含まれていない。本文だけでは再現できる情報がない。"
+  },
+  {
+    "id": "claude-code/2025-07-22-omluc-ai-そんなあなたにおすすめなのはclaude-code-hooksのpretoolus-01",
+    "decision": "skip",
+    "confidence": 0.87,
+    "reason": "PreToolUse Hookの用途を一言で紹介し公式ドキュメントへのリンクを貼るのみ。具体的な設定例や実装手順が本文に含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-07-aria-ai-tools-tbs-ten-コメントの全置換量が多いとトークン消費とレートリミットが-01",
+    "decision": "skip",
+    "confidence": 0.82,
+    "reason": "リプライの断片的アドバイスで、ファイル分割やMCP経由の差分管理を提案しているが具体的な設定手順や実装例がなく、再現性のある情報として成立していない。"
+  },
+  {
+    "id": "claude-code/2026-04-21-lliu54827-keisuke69-半年間じっくり観察できたのは羨ましい自分もclaudeベース-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "CLAUDE.md設計とコンテキスト管理の重要性に触れているが、具体的な設計手順やノウハウの記述がなく、SNS投稿の断片的な感想に留まる。"
+  },
+  {
+    "id": "claude-code/2026-02-14-oikon48-claude-code-の-ctrl-t-でサイクルできるようになってる-task-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude CodeのCtrl+Tショートカット操作の断片的な紹介で、再現可能なノウハウとして成立する量・深さがない。"
+  },
+  {
+    "id": "claude-code/2026-04-19-hiroxxxtk-コンテキストって開発以上に企画や戦略前述検討においてとっても大事ai活用でも同じ-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "コンテキスト管理の重要性を説く概論のみで、具体的な構築手順・実装例が一切含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-16-moumu-dev-claude-code-routinesマシンoffでもクラウドで動くスケジュー-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Claude Code Routinesの3種トリガー存在を紹介する機能紹介投稿で、設定手順や活用ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-04-19-cryptinflux-someone7140-sql-mcp-serverがpostgresqlm-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "SQL MCP ServerのDB対応範囲とメリットの断片的な言及のみで、接続設定手順や活用ノウハウが含まれていない。"
+  },
+  {
+    "id": "claude-code/2026-05-05-claude-code-に全てのコードを書いてもらって初めて-web-アプリケーションをリリースでき-01",
+    "decision": "skip",
+    "confidence": 0.75,
+    "reason": "Claude Code 活用の体験談として読み物的価値はあるが、技術選定・SQS FIFO 設計・Glicko-2 実装と Web 開発寄りで、書類作成・事務処理への AI 応用には直結しない。非エンジニア向けの再現可能ノウハウとしては薄い。"
+  },
+  {
+    "id": "claude-code/2026-03-24-zed-claude-code-agent-deckエディタ内で完結する生成ai開発環境の作り方-01",
+    "decision": "skip",
+    "confidence": 0.85,
+    "reason": "Zed エディタ＋agent-deck で開発環境を組む話で、エディタのキーコンフィグやファイル参照ワークフローはエンジニア前提。非エンジニアの書類作成・Claude/Cowork 運用ノウハウとしての適用余地が乏しい。"
+  },
+  {
+    "id": "claude-code/2026-05-08-aiエージェント組織運用元年週次で追う2026年4月第4週の現実解-01",
+    "decision": "skip",
+    "confidence": 0.95,
+    "reason": "週次トレンド紹介の論評記事で、Gemini Enterprise・Copilot・MCP 脆弱性などの概論。具体ノウハウ・再現手順なし。"
+  },
+  {
+    "id": "cowork/2026-03-25-完全攻略claude4大ツールの使い分けガイドwebcodecoworkを徹底解説-01",
+    "decision": "skip",
+    "confidence": 0.9,
+    "reason": "Web/Code/Cowork/モバイルの概要を一般論として並べたガイド記事で、コミュニティ誘導が主目的。具体的なプロンプト例・Skill 設計・運用手順などの再現要素なし。"
+  }
+]
