@@ -2,6 +2,8 @@
 
 毎月、howto-kb 全カテゴリの蓄積を「vault 救い上げ」「archive 退避」「Supabase 整合」で整理する。
 
+棚卸しは Step 0 → 9 を月初〜月中に通しで実行する。score=3 予備プールは Step 5.5 (方法D) で Sonnet 二分化まで含めて毎月処理する。
+
 ## 目的
 
 - vault (`D:\Obsidian\kagedan-work\sources\web\`) に有益記事を救い上げる
@@ -100,10 +102,10 @@ python scripts/inventory_review.py \
 
 出力: `reviewed-{tag}-YYYY-MM-DD.json`
 
-### Step 5.5. 方法D：score=3 予備プールの最終判定（Sonnet 厳しめ二分化）
+### Step 5.5. 方法D：score=3 予備プールの最終判定（Sonnet 厳しめ二分化）【毎月必須】
 
 score=3 は Haiku 1次採点でボーダーラインに残った「業界事例・トレンド寄り」記事。
-かげだん手動では件数が多すぎる場合 (~100件以上)、Sonnet で adopt/skip 二分化する。
+**毎月の棚卸しでは Step 5 で出た pending_review を全カテゴリまとめて Sonnet で adopt/skip 二分化する**（規模に関わらず実施）。
 
 ```bash
 # 1. 全カテゴリの pending_review を集約してバッチ化
@@ -228,7 +230,11 @@ git commit -m "session: 月次棚卸し YYYY-MM 実行（...内訳...）"
 - index.json: 6.6MB → 3.7MB（44%削減）
 - Supabase orphan 4,378件削除 → index.json と完全一致
 
-## 方法D 実行記録 (2026-06-16)
+## 方法D 実行ログ
+
+毎月の実施結果を新しい順に追記する。
+
+### 2026-06-16
 
 score=3 予備プール 658件を Sonnet で再判定 (Workflow 並列、約4.5分)。
 
