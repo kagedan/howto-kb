@@ -33,7 +33,7 @@ CATEGORY_RULES = [
     ("antigravity", ["antigravity", "vscode拡張", "vscode extension"]),
     ("construction", [
         "土木", "建設", "施工", "工事", "配管", "水道", "下水", "公共工事",
-        "construction", "civil engineering", "infrastructure",
+        "construction", "civil engineering",
     ]),
 ]
 
@@ -62,8 +62,12 @@ TAG_MAP = {
 def detect_category(title, desc, default_cat):
     text = (title + " " + desc).lower()
     for cat, kws in CATEGORY_RULES:
-        if any(k.lower() in text for k in kws):
-            return cat
+        for kw in kws:
+            k = kw.lower()
+            # "cowork" は製品名。coworker/coworking 等の部分一致を避け単語一致にする
+            matched = re.search(r"\bcowork\b", text) if k == "cowork" else (k in text)
+            if matched:
+                return cat
     return default_cat
 
 

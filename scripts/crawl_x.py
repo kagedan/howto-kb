@@ -8,7 +8,7 @@ crawl_x.py - SocialData API 経由で X (Twitter) から新規記事を検出す
     1. config/x_queries.yaml から検索クエリ一覧を読み込む
     2. 各クエリで SocialData API を呼び出し、X投稿を検索
     3. スレッド・引用元・Articleを深掘りして情報を結合
-    4. user_timelines のユーザーのリポスト（RT）を収集
+    4. user_timelines のユーザーの本人投稿 / リポスト（RT）を収集
     5. index.json の既存URLと照合し、新規記事のみ抽出
     6. 新規記事の情報をJSON形式で標準出力に出力
 
@@ -503,13 +503,19 @@ def get_user_id(username: str) -> str:
     return data.get("id_str", "") or str(data.get("id", ""))
 
 
-def fetch_user_retweets(username: str, max_results: int = 10) -> list[dict]:
-    """ユーザーのタイムラインを取得し、リツイートのみ抽出する。
+def fetch_user_timeline(username: str, max_results: int = 10,
+                        include_own: bool = False,
+                        include_retweets: bool = True) -> list[dict]:
+    """ユーザーのタイムラインを取得し、本人投稿・リツイートを必要に応じて抽出する。
 
     /twitter/search の filter:nativeretweets は検索インデックスの制限で
     最近のネイティブRTを拾えないため、/twitter/user/{user_id}/tweets
-    エンドポイント経由でタイムラインを取得し retweeted_status を持つ
-    投稿だけを返す方式に変更。
+    エンドポイント経由でタイムラインを取得する方式を採る。
+
+    include_retweets: retweeted_status を持つRT投稿を含める（既存挙動）。
+    include_own:      本人のオリジナル投稿（RTでない）を含める。公式アカウント
+                      など「そのアカウント自身の発信」を集めたいとき用。
+                      他者への返信（セルフスレッド以外）はノイズになるため除外する。
     """
     user_id = get_user_id(username)
     if not user_id:
@@ -518,7 +524,7 @@ def fetch_user_retweets(username: str, max_results: int = 10) -> list[dict]:
 
     results: list[dict] = []
     cursor: str | None = None
-    # タイムラインは非RT投稿も混ざるため、必要件数より多めに取得して絞り込む
+    # タイムラインは対象外の投稿も混ざるため、必要件数より多めに取得して絞り込む
     page_budget = max(max_results * 4, 40)
 
     while len(results) < max_results:
@@ -533,9 +539,18 @@ def fetch_user_retweets(username: str, max_results: int = 10) -> list[dict]:
 
         for t in tweets:
             if t.get("retweeted_status"):
-                results.append(t)
-                if len(results) >= max_results:
-                    break
+                if not include_retweets:
+                    continue
+            else:
+                if not include_own:
+                    continue
+                # 他者への返信は除外（セルフスレッドは後段で起点へ正規化される）
+                reply_to = t.get("in_reply_to_user_id_str")
+                if reply_to and reply_to != user_id:
+                    continue
+            results.append(t)
+            if len(results) >= max_results:
+                break
 
         cursor = data.get("next_cursor")
         page_budget -= len(tweets)
@@ -633,14 +648,15 @@ def main():
             all_new.append(entry)
             existing_urls.add(entry["url"])
 
-    # --- ユーザータイムライン（RT収集） ---
+    # --- ユーザータイムライン（本人投稿 / RT収集） ---
     for ut in user_timelines:
         username = ut.get("username", "")
         if not username:
             continue
 
         include_retweets = ut.get("include_retweets", True)
-        if not include_retweets:
+        include_own = ut.get("include_own_posts", False)
+        if not include_retweets and not include_own:
             continue
 
         category_default = ut.get("category_default", "ai-workflow")
@@ -651,15 +667,24 @@ def main():
         if multiplier > 1:
             timeline_max = timeline_max * 2
 
-        print(f'Fetching RT: @{username} (最大{timeline_max}件)', file=sys.stderr)
-        tweets = fetch_user_retweets(username, max_results=timeline_max)
+        kinds = []
+        if include_own:
+            kinds.append("本人投稿")
+        if include_retweets:
+            kinds.append("RT")
+        print(f'Fetching timeline: @{username} ({"+".join(kinds)}, 最大{timeline_max}件)',
+              file=sys.stderr)
+        tweets = fetch_user_timeline(username, max_results=timeline_max,
+                                     include_own=include_own,
+                                     include_retweets=include_retweets)
         print(f"  Found {len(tweets)} results", file=sys.stderr)
 
         for tweet in tweets:
-            # RTの場合、元ツイートを深掘り
+            # RTの場合は元ツイートを深掘り、本人投稿はそのまま扱う
             rt_source = tweet.get("retweeted_status")
-            target = rt_source if rt_source else tweet
-            # スレッドの起点に正規化（ぶら下がりの途中/末尾をRTしていても起点として扱う）
+            is_rt = bool(rt_source)
+            target = rt_source if is_rt else tweet
+            # スレッドの起点に正規化（ぶら下がりの途中/末尾でも起点として扱う）
             target = normalize_to_thread_root(target)
 
             tweet_url = f"https://x.com/{target.get('user', {}).get('screen_name', '')}/status/{target.get('id_str', '')}"
@@ -674,8 +699,9 @@ def main():
             entry = enrich_and_format(target)
             entry["default_category"] = category_default
             entry["date_collected"] = today
-            entry["query"] = f"RT @{username}"
-            entry["is_retweet"] = True
+            entry["query"] = f"RT @{username}" if is_rt else f"@{username}"
+            if is_rt:
+                entry["is_retweet"] = True
             all_new.append(entry)
             existing_urls.add(entry["url"])
 

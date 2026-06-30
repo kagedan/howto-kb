@@ -34,7 +34,7 @@ CATEGORY_RULES = [
     ]),
     ("construction", [
         "土木", "建設", "施工", "工事", "配管", "水道", "下水", "公共工事",
-        "construction", "civil engineering", "infrastructure",
+        "construction", "civil engineering",
         "ict施工", "施工管理", "建設現場",
     ]),
 ]
@@ -70,8 +70,12 @@ TAG_MAP = {
 def detect_category(title: str, description: str, default_category: str) -> str:
     text = (title + " " + description).lower()
     for cat, keywords in CATEGORY_RULES:
-        if any(kw.lower() in text for kw in keywords):
-            return cat
+        for kw in keywords:
+            k = kw.lower()
+            # "cowork" は製品名。coworker/coworking 等の部分一致を避け単語一致にする
+            matched = re.search(r"\bcowork\b", text) if k == "cowork" else (k in text)
+            if matched:
+                return cat
     return default_category
 
 
