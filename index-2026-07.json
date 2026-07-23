@@ -1,7 +1,1661 @@
 {
-  "last_updated": "2026-07-23T06:11:38+09:00",
-  "total_count": 2561,
+  "last_updated": "2026-07-24T06:12:06+09:00",
+  "total_count": 2670,
   "articles": [
+    {
+      "id": "ai-workflow/2026-07-23-1-issue-1-branch-1-worktree-1-agentで始めるai並列開発-01",
+      "title": "1 Issue = 1 Branch = 1 worktree = 1 Agentで始めるAI並列開発",
+      "url": "https://zenn.dev/nnku/articles/a6853f753a333c",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "AI-agent",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-1-issue-1-branch-1-worktree-1-agentで始めるai並列開発-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-ai-エージェントの安全装置をプロンプトではなく構造で作る-01",
+      "title": "AI エージェントの安全装置を、プロンプトではなく構造で作る",
+      "url": "https://zenn.dev/mk0bayashi/articles/2624f1f26e36d5",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "MCP",
+        "API",
+        "AI-agent",
+        "LLM",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-ai-エージェントの安全装置をプロンプトではなく構造で作る-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aiに書かせたコードが翌日自分で読めなかった話-01",
+      "title": "AIに書かせたコードが、翌日自分で読めなかった話",
+      "url": "https://qiita.com/smohammadi/items/c2a4975b83a967ba3055",
+      "source": "qiita",
+      "category": "ai-workflow",
+      "tags": [
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aiに書かせたコードが翌日自分で読めなかった話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aiはなぜ既存理論へ回収したがるのか-b13ノードとをめぐる対話の記録-01",
+      "title": "AIはなぜ既存理論へ回収したがるのか — B13ノードと√をめぐる対話の記録",
+      "url": "https://zenn.dev/morc_b13/articles/041e6660ad314c",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "GPT",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aiはなぜ既存理論へ回収したがるのか-b13ノードとをめぐる対話の記録-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aiエージェントの運用をモデルが変わっても壊れない形にする-01",
+      "title": "AIエージェントの運用を「モデルが変わっても壊れない」形にする",
+      "url": "https://zenn.dev/guardrailops/articles/12074dcee028e4",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aiエージェントの運用をモデルが変わっても壊れない形にする-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aws-ai-leagueを自身のaws環境で試す-community-editionの全体像-01",
+      "title": "AWS AI Leagueを自身のAWS環境で試す ─ Community Editionの全体像",
+      "url": "https://zenn.dev/nttdata_tech/articles/402acac4a19180",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "MCP",
+        "API",
+        "AI-agent",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aws-ai-leagueを自身のaws環境で試す-community-editionの全体像-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aws-summit-japan-2026から見るaiエージェントのセキュリティガバナンス-01",
+      "title": "AWS Summit Japan 2026から見る、AIエージェントのセキュリティ・ガバナンス",
+      "url": "https://zenn.dev/nttdata_tech/articles/4bc069bcb74185",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "AI-agent",
+        "LLM",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aws-summit-japan-2026から見るaiエージェントのセキュリティガバナンス-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-aws-summit-japan-2026から見るamazon-bedrock-agentcoreの-01",
+      "title": "AWS Summit Japan 2026から見る、Amazon Bedrock AgentCoreの現在地",
+      "url": "https://zenn.dev/nttdata_tech/articles/6974d54cff91b0",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "MCP",
+        "API",
+        "AI-agent",
+        "LLM",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-aws-summit-japan-2026から見るamazon-bedrock-agentcoreの-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-claudeacodemy-sns画像に日本語を入れたらになったという問題私も数日そのままにしていま-01",
+      "title": "@Claudeacodemy: SNS画像に日本語を入れたら□になった」という問題、私も数日そのままにしていました。原因はresvg-jsへのフォントパ",
+      "url": "https://x.com/Claudeacodemy/status/2080273300240945263",
+      "source": "x",
+      "category": "ai-workflow",
+      "tags": [
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-claudeacodemy-sns画像に日本語を入れたらになったという問題私も数日そのままにしていま-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-claudeが口に出す前の思考を読むanthropicのj-lens-01",
+      "title": "Claudeが口に出す前の思考を読む、AnthropicのJ-lens",
+      "url": "https://zenn.dev/okssusucha/articles/20260707-anthropic-jlens-global-workspace",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "LLM",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-claudeが口に出す前の思考を読むanthropicのj-lens-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-doroase-excel-ビジネスai活用チャレンジ-aiで業務効率化できないかをテーマに実際の仕-01",
+      "title": "@doroase_EXCEL: #ビジネスAI活用チャレンジ 💡「AIで業務効率化できないか？」をテーマに、実際の仕事で徹底検証。 面談資料の添削から",
+      "url": "https://x.com/doroase_EXCEL/status/2080278101880360967",
+      "source": "x",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-doroase-excel-ビジネスai活用チャレンジ-aiで業務効率化できないかをテーマに実際の仕-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-fujitech-ai-mcpとapiってどう使い分ける-apiは使う側が仕様通りにリクエストを組み-01",
+      "title": "@fujitech_ai: MCPとAPIってどう使い分ける? APIは、使う側が仕様通りにリクエストを組み立ててコードを書く仕組み。ツールが10",
+      "url": "https://x.com/fujitech_ai/status/2080231177831809284",
+      "source": "x",
+      "category": "ai-workflow",
+      "tags": [
+        "MCP",
+        "API",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-fujitech-ai-mcpとapiってどう使い分ける-apiは使う側が仕様通りにリクエストを組み-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-llmエージェントの自己進化ループはなぜ禁止令ばかり生み出すのか-01",
+      "title": "LLMエージェントの自己進化ループはなぜ「禁止令」ばかり生み出すのか？",
+      "url": "https://qiita.com/memorylakeai/items/e635ebc67b15d92b86e8",
+      "source": "qiita",
+      "category": "ai-workflow",
+      "tags": [
+        "prompt-engineering",
+        "AI-agent",
+        "LLM",
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-llmエージェントの自己進化ループはなぜ禁止令ばかり生み出すのか-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-minimax-m27入門-自己進化aiがswe-pro-56を達成するmoeコーディングエージェン-01",
+      "title": "MiniMax M2.7入門 — 自己進化AIがSWE-Pro 56%を達成するMoEコーディングエージェント",
+      "url": "https://zenn.dev/kai_kou/articles/250-minimax-m27-self-evolving-agent-guide",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "AI-agent",
+        "LLM",
+        "OpenAI",
+        "GPT",
+        "Python"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-minimax-m27入門-自己進化aiがswe-pro-56を達成するmoeコーディングエージェン-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-node-ai-dev-httpstco6jrg49le7p-01",
+      "title": "@node_ai_dev: https://t.co/6Jrg49le7p",
+      "url": "https://x.com/node_ai_dev/status/2080167631706116520",
+      "source": "x",
+      "category": "ai-workflow",
+      "tags": [
+        "GPT",
+        "Python",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-node-ai-dev-httpstco6jrg49le7p-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-takeshiyonese-rt-bambooincubator-士業の生成ai入門-予約特典動画出-01",
+      "title": "@TakeshiYonese: RT @bambooincubator: 🔥#士業の生成AI入門 予約特典動画出演者紹介① 🔥 トップバッターは弁理士辻",
+      "url": "https://x.com/TakeshiYonese/status/2080219633639133443",
+      "source": "x",
+      "category": "ai-workflow",
+      "tags": [
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-takeshiyonese-rt-bambooincubator-士業の生成ai入門-予約特典動画出-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-コードを書いたことがなかったうちが2日でbuild-weekに出た話-01",
+      "title": "コードを書いたことがなかったうちが、2日でBuild Weekに出た話",
+      "url": "https://zenn.dev/factory_mo/articles/buildweek-article-zenn-1",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "OpenAI",
+        "GPT",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-コードを書いたことがなかったうちが2日でbuild-weekに出た話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-体験安全コストをトレードオフにしない美容医療-ai相談の設計と実装フロントエンド編-01",
+      "title": "体験・安全・コストをトレードオフにしない、「美容医療 AI相談」の設計と実装（フロントエンド編）",
+      "url": "https://zenn.dev/tribeau/articles/72c9278da55a3b",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "LLM",
+        "GPT",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-体験安全コストをトレードオフにしない美容医療-ai相談の設計と実装フロントエンド編-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-永続メモリ層結局どう実装するか-索引スキーマと判定基準を全部書く-01",
+      "title": "永続メモリ層、結局どう実装するか — 索引スキーマと判定基準を全部書く",
+      "url": "https://zenn.dev/mameresearcher/articles/ai-agent-memory-schema-concrete",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "AI-agent",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-永続メモリ層結局どう実装するか-索引スキーマと判定基準を全部書く-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-複数ファイルで一貫性が崩れるaiコーディングツールのコンテキスト認識で何が変わるか-01",
+      "title": "複数ファイルで一貫性が崩れる——AIコーディングツールの「コンテキスト認識」で何が変わるか",
+      "url": "https://qiita.com/smohammadi/items/ae567d3596720c532b39",
+      "source": "qiita",
+      "category": "ai-workflow",
+      "tags": [
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-複数ファイルで一貫性が崩れるaiコーディングツールのコンテキスト認識で何が変わるか-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-23-電車での雑談からai秘書とのブログづくりが始まった-01",
+      "title": "電車での雑談から、AI秘書とのブログづくりが始まった",
+      "url": "https://zenn.dev/keizoh53/articles/ai-secretary-blog-workflow",
+      "source": "zenn",
+      "category": "ai-workflow",
+      "tags": [
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-23-電車での雑談からai秘書とのブログづくりが始まった-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-2026年版chrome拡張機能とは導入方法とai学習におすすめの便利な拡張機能9選-01",
+      "title": "【2026年版】Chrome拡張機能とは？導入方法とAI学習におすすめの便利な拡張機能9選",
+      "url": "https://note.com/yukiko48/n/n5510ebeef848",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-2026年版chrome拡張機能とは導入方法とai学習におすすめの便利な拡張機能9選-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-30日で73兆トークンmetaの社内ランキングが燃え尽きた話-01",
+      "title": "30日で73兆トークン。Metaの社内ランキングが燃え尽きた話",
+      "url": "https://note.com/glad_daphne1995/n/n7ed055563b3d",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-30日で73兆トークンmetaの社内ランキングが燃え尽きた話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-3時間以上が当たり前だったタスクが30分にaiの使い方をひとつ変えた周りと差がつく記録-01",
+      "title": "3時間以上が当たり前だったタスクが30分に。──AIの使い方を「ひとつ」変えた、周りと差がつく記録",
+      "url": "https://note.com/proper_drake154/n/nde5fef3f3003",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-3時間以上が当たり前だったタスクが30分にaiの使い方をひとつ変えた周りと差がつく記録-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-aiに自分の水見式をさせてみた-aiの能力ではなくaiを率いる側の能力を測る-01",
+      "title": "AIに自分の水見式をさせてみた ―AIの能力ではなく、AIを率いる側の能力を測る",
+      "url": "https://note.com/aicreatekun/n/n3992b9080059",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-aiに自分の水見式をさせてみた-aiの能力ではなくaiを率いる側の能力を測る-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-ai動画のキャラなぜ勝手に容姿が変わるのかgoogle-flowで実際にハマった話-01",
+      "title": "AI動画のキャラ、なぜ勝手に容姿が変わるのか?Google Flowで実際にハマった話",
+      "url": "https://note.com/open_weasel5659/n/n5cd339f44003",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-ai動画のキャラなぜ勝手に容姿が変わるのかgoogle-flowで実際にハマった話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-ai量産チャンネルが収益化を失う時代に映像と音声にaiを使わない理由-01",
+      "title": "AI量産チャンネルが収益化を失う時代に──映像と音声にAIを使わない理由",
+      "url": "https://note.com/offgrid_metal/n/nc5fadc6f5686",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-ai量産チャンネルが収益化を失う時代に映像と音声にaiを使わない理由-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-anthropicclaudeの音声機能が進化日常業務を音声で完結できる時代が到来-01",
+      "title": "Anthropic「Claude」の音声機能が進化！日常業務を音声で完結できる時代が到来",
+      "url": "https://note.com/2wd/n/na7298eddb2d6",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-anthropicclaudeの音声機能が進化日常業務を音声で完結できる時代が到来-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-chatgptに課金し続けた私が無料で同じことをできると気づいた話-01",
+      "title": "ChatGPTに課金し続けた私が、無料で同じことをできると気づいた話",
+      "url": "https://note.com/ai_sidejob_note/n/n42176c0e2786",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-chatgptに課金し続けた私が無料で同じことをできると気づいた話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-chatgptは検索エンジンではない考える相棒になる時代-01",
+      "title": "ChatGPTは検索エンジンではない。『考える相棒』になる時代",
+      "url": "https://note.com/tarou_wakamatsu/n/n582d261d31c9",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-chatgptは検索エンジンではない考える相棒になる時代-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-claudeが小さな会社向けに15の業務フローを発表仕事はどう変わる-01",
+      "title": "Claudeが小さな会社向けに15の業務フローを発表。仕事はどう変わる？",
+      "url": "https://note.com/suzakijunichi/n/n782b20f7424f",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "cowork",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-claudeが小さな会社向けに15の業務フローを発表仕事はどう変わる-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-fxゴールドxauusdai分析ai相場分析ラボ-ai分析体験2026年7月23日13時41分頃同日-01",
+      "title": "FX、ゴールド(XAUUSD)AI分析。AI相場分析ラボ-AI分析体験2026年7月23日13時41分頃＋同日19時19分頃＋同日22時32分頃。分析分-",
+      "url": "https://note.com/jazzy_moose6481/n/ne79f2a5a0c11",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-fxゴールドxauusdai分析ai相場分析ラボ-ai分析体験2026年7月23日13時41分頃同日-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-lineスタンプの透過処理をline-stamp-corepyに一元化した-01",
+      "title": "LINEスタンプの透過処理をline_stamp_core.pyに一元化した",
+      "url": "https://note.com/claute_colo0514/n/nebd0dfcb8f78",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-lineスタンプの透過処理をline-stamp-corepyに一元化した-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-note質問箱はじめました今さら聞けないaiのことにすべて答えます-01",
+      "title": "【note質問箱はじめました】今さら聞けないAIのことに、すべて答えます。",
+      "url": "https://note.com/ai_misaki339/n/n606612906320",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-note質問箱はじめました今さら聞けないaiのことにすべて答えます-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-sf小説余火よびか-第4話-01",
+      "title": "SF小説『余火（よびか）』 第4話",
+      "url": "https://note.com/gau_g202602/n/n9e5896414afe",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-sf小説余火よびか-第4話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-これがai-これが頼れる相棒claudeのモデル使い分けを覚えた日-01",
+      "title": "これがAI? これが頼れる相棒?｜Claudeの「モデル使い分け」を覚えた日",
+      "url": "https://note.com/ai_heisou/n/n5a8a3793b8ee",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-これがai-これが頼れる相棒claudeのモデル使い分けを覚えた日-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-にーとai戦記23思考停止-01",
+      "title": "にーとAI戦記(23)思考停止？",
+      "url": "https://note.com/jyugemu008/n/nf6b24f0ff9ab",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-にーとai戦記23思考停止-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-保存版プロンプトの型を知っているのに使えない人へai禁止seが現場の失敗から学んだ実践テンプレート-01",
+      "title": "【保存版】プロンプトの型を知っているのに使えない人へ。AI禁止SEが現場の失敗から学んだ実践テンプレート",
+      "url": "https://note.com/fancy_flax9202/n/ne48dae1d6fde",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "API",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-保存版プロンプトの型を知っているのに使えない人へai禁止seが現場の失敗から学んだ実践テンプレート-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-単振り子の運動方程式を無限級数で解く-taylor解とsympy数値解の比較-01",
+      "title": "単振り子の運動方程式を無限級数で解く ―― Taylor解とSymPy数値解の比較",
+      "url": "https://qiita.com/arairuca/items/7ced9d0587c1c695c215",
+      "source": "qiita",
+      "category": "ai-workflow",
+      "tags": [
+        "Python",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-単振り子の運動方程式を無限級数で解く-taylor解とsympy数値解の比較-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-吉野家ドラクエコラボが終わった褒めた直後に印象が変わった話早朝5時のai実験室-61-01",
+      "title": "吉野家ドラクエコラボが終わった。褒めた直後に、印象が変わった話。｜早朝5時のAI実験室 #61",
+      "url": "https://note.com/putan/n/nac96cf69c89a",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-吉野家ドラクエコラボが終わった褒めた直後に印象が変わった話早朝5時のai実験室-61-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-四柱推命ai10社比較-01",
+      "title": "🔮四柱推命AI10社比較",
+      "url": "https://note.com/tori_ai_chat_log/n/n8944b02c1d9c",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-四柱推命ai10社比較-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-在宅で働きたいだけなのになぜかうまくいかない私が3大aiに本を書かせて比較してみた話-01",
+      "title": "在宅で働きたいだけなのに、なぜかうまくいかない私が、3大AIに「本を書かせて」比較してみた話",
+      "url": "https://note.com/mute_allium4951/n/n7be4f0f7f699",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "Gemini",
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-在宅で働きたいだけなのになぜかうまくいかない私が3大aiに本を書かせて比較してみた話-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-完全チェックリストaiメンタルケアで30日で心の消耗を半分にする30項目共働きママがイライラ落ち込み-01",
+      "title": "【完全チェックリスト】AI×メンタルケアで30日で「心の消耗」を半分にする30項目｜共働きママがイライラ・落ち込み・自己嫌悪を手放した方法【2026年版】",
+      "url": "https://note.com/honoka_shiraishi/n/n9d088eaab8a7",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-完全チェックリストaiメンタルケアで30日で心の消耗を半分にする30項目共働きママがイライラ落ち込み-01.md"
+    },
+    {
+      "id": "ai-workflow/2026-07-24-本気で業務を仕組み化したい人以外は読まないでくださいaiを単なるツールから優秀な右腕に変える現場で実-01",
+      "title": "【本気で業務を仕組み化したい人以外は読まないでください】AIを「単なるツール」から「優秀な右腕」に変える、現場で実証された仕組み化の全貌",
+      "url": "https://note.com/noble_whale8814/n/ne7425a10e763",
+      "source": "note",
+      "category": "ai-workflow",
+      "tags": [
+        "GPT",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/ai-workflow/2026-07-24-本気で業務を仕組み化したい人以外は読まないでくださいaiを単なるツールから優秀な右腕に変える現場で実-01.md"
+    },
+    {
+      "id": "claude-code/2026-04-28-dev-claude-for-creative-work-01",
+      "title": "[dev] Claude for Creative Work",
+      "url": "https://www.anthropic.com/news/claude-for-creative-work-dev",
+      "source": "anthropic",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "API",
+        "LLM",
+        "Python",
+        "anthropic"
+      ],
+      "date_published": "2026-04-28",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-04-28-dev-claude-for-creative-work-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-22-claude-codeの能力を極限まで引き出すカスタムsubagents設計と拡張プラグイン活用ガイ-01",
+      "title": "Claude Codeの能力を極限まで引き出す：カスタムSubagents設計と拡張プラグイン活用ガイド",
+      "url": "https://zenn.dev/ququla89/articles/claude-code-subagents-and-plugins-guide",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "prompt-engineering",
+        "AI-agent",
+        "OpenAI",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-22",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-22-claude-codeの能力を極限まで引き出すカスタムsubagents設計と拡張プラグイン活用ガイ-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-290時間のマークアップを150時間に短縮した話claude-code活用の実践記録-01",
+      "title": "290時間のマークアップを150時間に短縮した話——Claude Code活用の実践記録",
+      "url": "https://zenn.dev/mukuil_blog/articles/f90662ade9c37b",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "VSCode",
+        "JavaScript",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-290時間のマークアップを150時間に短縮した話claude-code活用の実践記録-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-aiskillacademy-claude-codeから動画編集ソフトを一切開かずに目の部分だけをア-01",
+      "title": "@AIskillacademy: Claude Codeから動画編集ソフトを一切開かずに、目の部分だけをアニメ風に差し替えた事例が話題です。使われていたの",
+      "url": "https://x.com/AIskillacademy/status/2080397799812988943",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-aiskillacademy-claude-codeから動画編集ソフトを一切開かずに目の部分だけをア-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-aiエージェントに作法を配ると失敗は減るのか-01",
+      "title": "AIエージェントに「作法」を配ると、失敗は減るのか",
+      "url": "https://zenn.dev/njomote/articles/9cefd39e65b23d",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "AI-agent",
+        "LLM",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-aiエージェントに作法を配ると失敗は減るのか-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-aiレビューのブロックを100prで測ったら70prはno-verifyで通り抜けていた-01",
+      "title": "AIレビューのブロックを100PRで測ったら、70PRはno-verifyで通り抜けていた",
+      "url": "https://zenn.dev/kenimo49/articles/ai-review-block-100pr-70-noverify-3month",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "API",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-aiレビューのブロックを100prで測ったら70prはno-verifyで通り抜けていた-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-building-state-based-shipping-compliance-logic-for-01",
+      "title": "Building State-Based Shipping Compliance Logic for Hemp E-Commerce on WooCommerce",
+      "url": "https://qiita.com/quintecbd/items/c0365c676d4cfc4c6a9f",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "MCP",
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-building-state-based-shipping-compliance-logic-for-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claude-code-21217でsubagentのネストがデフォルト無効になっていた-01",
+      "title": "Claude Code 2.1.217でSubAgentのネストがデフォルト無効になっていた",
+      "url": "https://zenn.dev/arakawaaa/articles/2fec700785443a",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "AI-agent",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claude-code-21217でsubagentのネストがデフォルト無効になっていた-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claude-code-openrouter-無料モデルコスト0で自走するaiコーディング環境を3ス-01",
+      "title": "Claude Code × OpenRouter 無料モデル：コスト$0で自走するAIコーディング環境を3ステップで構築する",
+      "url": "https://qiita.com/locallab/items/8c69ac03862e7f396322",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "API",
+        "OpenAI",
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claude-code-openrouter-無料モデルコスト0で自走するaiコーディング環境を3ス-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claude-code-v21218code-review-がバックグラウンド化毎日changelo-01",
+      "title": "Claude Code v2.1.218｜/code-review がバックグラウンド化｜毎日Changelog解説",
+      "url": "https://qiita.com/moha0918_/items/6375e58106fbc7c4c42d",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "AI-agent",
+        "qiita"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claude-code-v21218code-review-がバックグラウンド化毎日changelo-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claude-code-の-settingsjson-を棚卸ししたら許可ルールの9割が消せた-01",
+      "title": "Claude Code の settings.json を棚卸ししたら、許可ルールの9割が消せた",
+      "url": "https://zenn.dev/kuzzken/articles/5c73122da6b93b",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claude-code-の-settingsjson-を棚卸ししたら許可ルールの9割が消せた-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claude-codeの使い方ガイド-01",
+      "title": "Claude Codeの使い方ガイド",
+      "url": "https://qiita.com/m_yukio/items/0247125fd25d6f909fd9",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "MCP",
+        "prompt-engineering",
+        "API",
+        "AI-agent"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claude-codeの使い方ガイド-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claudeai-voice-mode-now-runs-on-claudes-more-capab-01",
+      "title": "@claudeai: Voice mode now runs on Claude's more capable models and reac",
+      "url": "https://x.com/claudeai/status/2080376094939603366",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claudeai-voice-mode-now-runs-on-claudes-more-capab-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-claudecode-aca-httpstcosdo3rtehzj-01",
+      "title": "@ClaudeCode_aca: https://t.co/sDO3RTehzj",
+      "url": "https://x.com/ClaudeCode_aca/status/2080233892322439420",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-claudecode-aca-httpstcosdo3rtehzj-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-coldemailchris-if-i-was-starting-cold-email-from-0-01",
+      "title": "@coldemailchris: If I was starting cold email from 0 and wanted take it serio",
+      "url": "https://x.com/coldemailchris/status/2080366885355278617",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "API",
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-coldemailchris-if-i-was-starting-cold-email-from-0-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-cypenguintech-codex-daily-brief-20260724-今日のトップ3-1-01",
+      "title": "@CyPenguinTech: 📰 #Codex Daily Brief - 2026/07/24 🔥 今日のトップ3 1. Codexアプリ26.7",
+      "url": "https://x.com/CyPenguinTech/status/2080397803218768291",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "OpenAI",
+        "GPT",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-cypenguintech-codex-daily-brief-20260724-今日のトップ3-1-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-cyrilxbt-httpstcosrwjelmxdl-01",
+      "title": "@cyrilXBT: https://t.co/SrWJeLMXDl",
+      "url": "https://x.com/cyrilXBT/status/2080397292339704294",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-cyrilxbt-httpstcosrwjelmxdl-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-degen-calls-sol-karpathys-one-note-method-gets-muc-01",
+      "title": "@Degen_calls_sol: KARPATHY'S ONE-NOTE METHOD GETS MUCH MORE POWERFUL WHEN YOU",
+      "url": "https://x.com/Degen_calls_sol/status/2080396516376695015",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "AI-agent",
+        "LLM",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-degen-calls-sol-karpathys-one-note-method-gets-muc-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-hrkmain-設定探しがプロジェクト診断に変わるclaude-code公式setup-plugin-01",
+      "title": "@hrkmain: 設定探しが、プロジェクト診断に変わる。Claude Code公式setup pluginがコードを見てhooks・ski",
+      "url": "https://x.com/hrkmain/status/2080289202097528872",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-hrkmain-設定探しがプロジェクト診断に変わるclaude-code公式setup-plugin-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-is-kimi-k3-really-better-than-gpt-56-and-claude-fa-01",
+      "title": "Is Kimi K3 Really Better Than GPT 5.6 and Claude Fable 5",
+      "url": "https://zenn.dev/neotechpark/articles/e1c9c8849f9be2",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "prompt-engineering",
+        "API",
+        "AI-agent",
+        "GPT",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-is-kimi-k3-really-better-than-gpt-56-and-claude-fa-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-kakeruaix-httpstcoclgd8edchc-01",
+      "title": "@kakeruaix: https://t.co/ClGd8EDCHC",
+      "url": "https://x.com/kakeruaix/status/2080269598839181400",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-kakeruaix-httpstcoclgd8edchc-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-karpachoq-40-people-paid-99-every-dayvbecause-this-01",
+      "title": "@karpachoq: 40 PEOPLE PAID $99 EVERY DAYVBECAUSE THIS APP SAVED 3 HOURS",
+      "url": "https://x.com/karpachoq/status/2080397758176079954",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-karpachoq-40-people-paid-99-every-dayvbecause-this-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-kawai-design-claude-codeを使っているのに-毎回同じ説明をしている-答えがye-01",
+      "title": "@kawai_design: Claude Codeを使っているのに、 毎回同じ説明をしている？ 答えがYESなら、まだ中級者の 使い方になっていま",
+      "url": "https://x.com/kawai_design/status/2080238998770086063",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "MCP",
+        "API",
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-kawai-design-claude-codeを使っているのに-毎回同じ説明をしている-答えがye-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-kawai-design-httpstcompqrlaj9lf-01",
+      "title": "@kawai_design: https://t.co/MPqRlAJ9lf",
+      "url": "https://x.com/kawai_design/status/2080229698685259882",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "MCP",
+        "API",
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-kawai-design-httpstcompqrlaj9lf-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-keitaro-aigc-httpstcoqpxurc33ci-01",
+      "title": "@keitaro_aigc: https://t.co/QpXURC33cI",
+      "url": "https://x.com/keitaro_aigc/status/2080397810349093162",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "API",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-keitaro-aigc-httpstcoqpxurc33ci-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-markdown-がエージェントの足を引っ張る日肥大化への打ち手open-knowledge-for-01",
+      "title": "Markdown がエージェントの足を引っ張る日——肥大化への打ち手、Open Knowledge Format",
+      "url": "https://zenn.dev/m2lab/articles/okf-markdown-agent-bloat",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "CLAUDE-md",
+        "MCP",
+        "API",
+        "AI-agent",
+        "LLM",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-markdown-がエージェントの足を引っ張る日肥大化への打ち手open-knowledge-for-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-mastra-youtube-解説-agents-hour今週のaiニュースまとめ2026年7月22-01",
+      "title": "[Mastra YouTube 解説] Agents Hour：今週のAIニュースまとめ（2026年7月22日）",
+      "url": "https://zenn.dev/shiromizuj/articles/e563d0feeaace7",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "API",
+        "AI-agent",
+        "LLM",
+        "OpenAI",
+        "Gemini"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-mastra-youtube-解説-agents-hour今週のaiニュースまとめ2026年7月22-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-mori-tenshoku-httpstcof2gye1nhet-01",
+      "title": "@mori_tenshoku: https://t.co/f2gYE1nhet",
+      "url": "https://x.com/mori_tenshoku/status/2080386427066397046",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "Gemini",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-mori-tenshoku-httpstcof2gye1nhet-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-n0n4m34u-rt-lunarresearcher-anthropic-engineer-sto-01",
+      "title": "@N0N4M34U: RT @LunarResearcher: Anthropic engineer: Stop using Claude",
+      "url": "https://x.com/N0N4M34U/status/2080397445251608907",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "AI-agent",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-n0n4m34u-rt-lunarresearcher-anthropic-engineer-sto-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-noel-ai-lab-httpstcoar9jyqkqqn-01",
+      "title": "@noel_ai_lab: https://t.co/Ar9jYqKQqN",
+      "url": "https://x.com/noel_ai_lab/status/2080238223872368912",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "AI-agent",
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-noel-ai-lab-httpstcoar9jyqkqqn-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-penginadaafi-2026年最新版-claude-codeyoutubeコミュニティ投稿-成-01",
+      "title": "@penginadaafi: 2026年最新版 Claude Code×YouTubeコミュニティ投稿 成約率を上げる自動化5選 ア〇アフィ収益はシ",
+      "url": "https://x.com/penginadaafi/status/2080237355911496059",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-penginadaafi-2026年最新版-claude-codeyoutubeコミュニティ投稿-成-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-sliver-mcpサーバーを起動しclaude-codeと連携して公式11ツールを検証する-01",
+      "title": "Sliver MCPサーバーを起動し、Claude Codeと連携して公式11ツールを検証する",
+      "url": "https://zenn.dev/cyberheatradar/articles/e8826b67839181",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "prompt-engineering",
+        "API",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-sliver-mcpサーバーを起動しclaude-codeと連携して公式11ツールを検証する-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-sugurukun-ai-anthropicが公開してる-claudeのユースケース74選が手厚すぎ-01",
+      "title": "@SuguruKun_ai: Anthropicが公開してる 「Claudeのユースケース74選」が手厚すぎて神だった。 ㅤ Claude / Cla",
+      "url": "https://x.com/SuguruKun_ai/status/2080212039201644550",
+      "source": "x",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-sugurukun-ai-anthropicが公開してる-claudeのユースケース74選が手厚すぎ-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-using-llms-to-secure-source-codeを継続的に実行するanthropic-01",
+      "title": "「Using LLMs to secure source code」を継続的に実行する——Anthropicの手法を実装した記録",
+      "url": "https://zenn.dev/ryokkon/articles/8b62e221fc9ac3",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "prompt-engineering",
+        "API",
+        "AI-agent",
+        "LLM"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-using-llms-to-secure-source-codeを継続的に実行するanthropic-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-プラグインとスキルとは-違いと使い分けを非エンジニア向けに-01",
+      "title": "プラグインとスキルとは？ 違いと使い分けを非エンジニア向けに",
+      "url": "https://zenn.dev/shun_producer/articles/plugins-vs-skills",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-プラグインとスキルとは-違いと使い分けを非エンジニア向けに-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-完了しましたを信じるなaiエージェントに実結果の再取得を強制する検証ゲート-01",
+      "title": "「完了しました」を信じるな。AIエージェントに実結果の再取得を強制する検証ゲート",
+      "url": "https://zenn.dev/maronsan/articles/genchi-completion-verification-gate",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "prompt-engineering",
+        "API",
+        "AI-agent",
+        "LLM"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-完了しましたを信じるなaiエージェントに実結果の再取得を強制する検証ゲート-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-完了しましたを信じるなaiエージェントに実結果の再取得を強制する検証ゲート-02",
+      "title": "「完了しました」を信じるな。AIエージェントに実結果の再取得を強制する検証ゲート",
+      "url": "https://qiita.com/maronsan611/items/834063939b32aceb4f2d",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "prompt-engineering",
+        "API",
+        "AI-agent",
+        "LLM"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-完了しましたを信じるなaiエージェントに実結果の再取得を強制する検証ゲート-02.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-斜め読みしやすいコードをaiに吐かせる-01",
+      "title": "斜め読みしやすいコードをAIに吐かせる",
+      "url": "https://zenn.dev/primenumber/articles/readable-code-written-by-ai",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "CLAUDE-md",
+        "API",
+        "TypeScript",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-斜め読みしやすいコードをaiに吐かせる-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-自分一人で複数のaiを使うためのagent-memory-serverを作った-01",
+      "title": "自分一人で複数のAIを使うためのAgent Memory Serverを作った",
+      "url": "https://zenn.dev/kscscafe/articles/01806e80749455",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "API",
+        "AI-agent",
+        "Python",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-自分一人で複数のaiを使うためのagent-memory-serverを作った-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-複数のaiに足りないのは賢さではなく共有コンテキストだった-01",
+      "title": "複数のAIに足りないのは、賢さではなく共有コンテキストだった",
+      "url": "https://zenn.dev/veripsa/articles/multi-ai-agents-need-shared-context",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "AI-agent",
+        "OpenAI",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-複数のaiに足りないのは賢さではなく共有コンテキストだった-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-23-開発しているだけで進捗が更新されるlinear-claude-code-githubで作る開発フロー-01",
+      "title": "開発しているだけで進捗が更新される。Linear × Claude Code × GitHubで作る開発フロー",
+      "url": "https://zenn.dev/explaza/articles/500ded8ea67252",
+      "source": "zenn",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "API",
+        "AI-agent",
+        "zenn"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-23-開発しているだけで進捗が更新されるlinear-claude-code-githubで作る開発フロー-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-aiエージェント設計完全ガイド①-graph-engineering入門-01",
+      "title": "AIエージェント設計完全ガイド①-Graph Engineering入門",
+      "url": "https://qiita.com/miyaguchi_kioku/items/9ae9d000049641beacbe",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "prompt-engineering",
+        "AI-agent",
+        "OpenAI",
+        "GPT",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-aiエージェント設計完全ガイド①-graph-engineering入門-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-aiエージェント設計完全ガイド②-graph-engineering入門-01",
+      "title": "AIエージェント設計完全ガイド②-Graph Engineering入門",
+      "url": "https://qiita.com/miyaguchi_kioku/items/35fcff7d0724df1aa52a",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "prompt-engineering",
+        "AI-agent",
+        "OpenAI",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-aiエージェント設計完全ガイド②-graph-engineering入門-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-aiエージェント設計完全ガイド③-graph-engineering実践-01",
+      "title": "AIエージェント設計完全ガイド③-Graph Engineering実践",
+      "url": "https://qiita.com/miyaguchi_kioku/items/fd52ca8cb9dd08b4b582",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "prompt-engineering",
+        "AI-agent",
+        "OpenAI",
+        "JavaScript",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-aiエージェント設計完全ガイド③-graph-engineering実践-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-aiエージェント設計完全ガイド④-claude-codeで実践するdynamic-workflows-01",
+      "title": "AIエージェント設計完全ガイド④-Claude Codeで実践するDynamic Workflows",
+      "url": "https://qiita.com/miyaguchi_kioku/items/c8a026693719f7d9bdf3",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "MCP",
+        "prompt-engineering",
+        "API",
+        "AI-agent"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-aiエージェント設計完全ガイド④-claude-codeで実践するdynamic-workflows-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-claude-anthropic-関連ニュースまとめ2026-07-24-01",
+      "title": "Claude / Anthropic 関連ニュースまとめ（2026-07-24）",
+      "url": "https://qiita.com/homhom44/items/cf3b8986a965465f169e",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "cowork",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-claude-anthropic-関連ニュースまとめ2026-07-24-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-saas-禁止の会社でも使える今週ヤバいタスク出してと-ai-に頼める-todo-管理をmarkdo-01",
+      "title": "SaaS 禁止の会社でも使える。「今週ヤバいタスク出して」と AI に頼める TODO 管理を、Markdown だけで作ってみた",
+      "url": "https://qiita.com/t-tonton/items/98dd419a8400c09e46a8",
+      "source": "qiita",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "MCP",
+        "API",
+        "AI-agent",
+        "qiita"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-saas-禁止の会社でも使える今週ヤバいタスク出してと-ai-に頼める-todo-管理をmarkdo-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-初心者向けclaude-codeの導入方法完全ガイドインストールから初回起動まで-01",
+      "title": "【初心者向け】Claude Codeの導入方法完全ガイド〜インストールから初回起動まで〜",
+      "url": "https://note.com/pc_mania/n/nf67090a3fc06",
+      "source": "note",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-初心者向けclaude-codeの導入方法完全ガイドインストールから初回起動まで-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-動画編集ほぼ全部claude-codeに任せてます毎日投稿3言語字幕3000人チャンネルの裏側-01",
+      "title": "動画編集、ほぼ全部Claude Codeに任せてます。──毎日投稿×3言語字幕、3,000人チャンネルの裏側",
+      "url": "https://note.com/offgrid_metal/n/nf36b7c8a9a98",
+      "source": "note",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-動画編集ほぼ全部claude-codeに任せてます毎日投稿3言語字幕3000人チャンネルの裏側-01.md"
+    },
+    {
+      "id": "claude-code/2026-07-24-超深掘り完全版ai個人開発3dプリンター電子工作cgを全部つなげる経営学部生だいきの実践ロードマップ-01",
+      "title": "【超深掘り完全版】AI×個人開発×3Dプリンター×電子工作×CGを全部つなげる｜経営学部生だいきの実践ロードマップ(ツール・手順・失敗例まで全部書く)",
+      "url": "https://note.com/daiki_acc_it/n/n1fd4a8de0410",
+      "source": "note",
+      "category": "claude-code",
+      "tags": [
+        "claude-code",
+        "CLAUDE-md",
+        "API",
+        "Python",
+        "note"
+      ],
+      "date_published": "2026-07-24",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/claude-code/2026-07-24-超深掘り完全版ai個人開発3dプリンター電子工作cgを全部つなげる経営学部生だいきの実践ロードマップ-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-aiで職場環境の課題を早期検知大東建託が予防型内部監査ツール導入-01",
+      "title": "AIで職場環境の課題を早期検知、大東建託が予防型内部監査ツール導入",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news114.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-aiで職場環境の課題を早期検知大東建託が予防型内部監査ツール導入-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-akichan-jpn-最新aiニュースopenaiが中小企業向けchatgpt-for-small-01",
+      "title": "@akichan_jpn: 【最新AIニュース】OpenAIが中小企業向け「ChatGPT for small businesses program",
+      "url": "https://x.com/akichan_jpn/status/2080391773646705138",
+      "source": "x",
+      "category": "construction",
+      "tags": [
+        "OpenAI",
+        "GPT",
+        "construction",
+        "construction-mgmt",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-akichan-jpn-最新aiニュースopenaiが中小企業向けchatgpt-for-small-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-compalyze-723の資金調達業務提携-資金調達-アスエネ株式会社-httpstcojjttx-01",
+      "title": "@compalyze: 【7/23の資金調達・業務提携】 📷 資金調達 ■ アスエネ株式会社 https://t.co/jjTtxoKZ6C",
+      "url": "https://x.com/compalyze/status/2080369889177719236",
+      "source": "x",
+      "category": "construction",
+      "tags": [
+        "construction",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-compalyze-723の資金調達業務提携-資金調達-アスエネ株式会社-httpstcojjttx-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-hukugyootaku-2027年の株と稼げそうなのはaiでどうやってますとの事ですがまず2027-01",
+      "title": "@hukugyootaku: 2027年の株と稼げそうなのはAIでどうやってます？との事ですが。まず2027年の博報堂と野村総研の未来年表を見る。",
+      "url": "https://x.com/hukugyootaku/status/2080289925778514254",
+      "source": "x",
+      "category": "construction",
+      "tags": [
+        "construction",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-hukugyootaku-2027年の株と稼げそうなのはaiでどうやってますとの事ですがまず2027-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-kensetsuaisuite-昨日の長雨対策に続き今回は台風通過後の安全点検aiに台風通過後の〇〇-01",
+      "title": "@kensetsuaisuite: 昨日の長雨対策に続き、今回は台風通過後の安全点検。AIに『台風通過後の〇〇工事現場における安全点検リストを優先度順に作成",
+      "url": "https://x.com/kensetsuaisuite/status/2080396760477024425",
+      "source": "x",
+      "category": "construction",
+      "tags": [
+        "construction-mgmt",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-kensetsuaisuite-昨日の長雨対策に続き今回は台風通過後の安全点検aiに台風通過後の〇〇-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-revitの単純作業をaiが肩代わり-arentのbim用aiエージェントが大規模刷新-01",
+      "title": "Revitの単純作業をAIが肩代わり ArentのBIM用「AIエージェント」が大規模刷新",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news118.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "AI-agent",
+        "construction",
+        "construction-mgmt",
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-revitの単純作業をaiが肩代わり-arentのbim用aiエージェントが大規模刷新-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-インターフォンにai感染症予測が届く-パナソニックewのまちベルが進化-01",
+      "title": "インターフォンにAI感染症予測が届く パナソニックEWの「まちベル」が進化",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news121.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-インターフォンにai感染症予測が届く-パナソニックewのまちベルが進化-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-デジタルが現場に届かない-建設dxの死角ラストワンマイルをどう埋めるかbonx解説-01",
+      "title": "デジタルが現場に届かない？ 建設DXの死角「ラストワンマイル」をどう埋めるか【BONX解説】",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/27/news012.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "construction",
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-デジタルが現場に届かない-建設dxの死角ラストワンマイルをどう埋めるかbonx解説-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-ドコモ発robotsが始動異なるロボットを統合制御するフィジカルaiを開発-01",
+      "title": "ドコモ発「ROBOTS」が始動、異なるロボットを統合制御するフィジカルAIを開発",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news107.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "civil-engineering",
+        "construction",
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-ドコモ発robotsが始動異なるロボットを統合制御するフィジカルaiを開発-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-安田建設が簡単後付けのドローン装備提案汎用機が点検専用に早変わり-01",
+      "title": "安田建設が“簡単後付け”のドローン装備提案、汎用機が点検専用に早変わり",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news077.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "civil-engineering",
+        "construction",
+        "piping",
+        "construction-mgmt",
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-安田建設が簡単後付けのドローン装備提案汎用機が点検専用に早変わり-01.md"
+    },
+    {
+      "id": "construction/2026-07-23-熊谷組新基幹システムで電子契約請求率999を達成-01",
+      "title": "熊谷組、新基幹システムで電子契約／請求率99.9％を達成",
+      "url": "https://built.itmedia.co.jp/bt/articles/2607/23/news082.html",
+      "source": "rss",
+      "category": "construction",
+      "tags": [
+        "construction",
+        "rss"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/construction/2026-07-23-熊谷組新基幹システムで電子契約請求率999を達成-01.md"
+    },
+    {
+      "id": "cowork/2026-07-23-k920-claude-coworkの新機能record-a-skill-pc画面を録画しながら普段-01",
+      "title": "@K920_: Claude Coworkの新機能「Record a skill」、 PC画面を録画しながら普段の業務をやって見せるだけ",
+      "url": "https://x.com/K920_/status/2080222180844187874",
+      "source": "x",
+      "category": "cowork",
+      "tags": [
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/cowork/2026-07-23-k920-claude-coworkの新機能record-a-skill-pc画面を録画しながら普段-01.md"
+    },
+    {
+      "id": "cowork/2026-07-23-kurousa-drop365-httpstcotjhyhnml2u-01",
+      "title": "@kurousa_drop365: https://t.co/tjHYhNmL2U",
+      "url": "https://x.com/kurousa_drop365/status/2080271437496221698",
+      "source": "x",
+      "category": "cowork",
+      "tags": [
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/cowork/2026-07-23-kurousa-drop365-httpstcotjhyhnml2u-01.md"
+    },
+    {
+      "id": "cowork/2026-07-23-nukegala83-httpstcodx8z3jrcd4-01",
+      "title": "@nukegala83: https://t.co/dx8z3jRCd4",
+      "url": "https://x.com/nukegala83/status/2080241562173513812",
+      "source": "x",
+      "category": "cowork",
+      "tags": [
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/cowork/2026-07-23-nukegala83-httpstcodx8z3jrcd4-01.md"
+    },
+    {
+      "id": "cowork/2026-07-23-tez-dyson-rt-shota7180-claude-coworkのrecord-a-skil-01",
+      "title": "@tez_dyson: RT @shota7180: Claude Coworkの「Record a Skill」を使えば、操作手順を録画するだ",
+      "url": "https://x.com/tez_dyson/status/2080254887716102402",
+      "source": "x",
+      "category": "cowork",
+      "tags": [
+        "cowork",
+        "x"
+      ],
+      "date_published": "2026-07-23",
+      "date_collected": "2026-07-24",
+      "file_path": "articles/cowork/2026-07-23-tez-dyson-rt-shota7180-claude-coworkのrecord-a-skil-01.md"
+    },
     {
       "id": "ai-workflow/2026-07-21-ai-モダナイゼーションで要件権限検証を分離する-01",
       "title": "AI モダナイゼーションで要件・権限・検証を分離する",
