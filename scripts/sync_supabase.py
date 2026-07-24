@@ -18,6 +18,13 @@ import sys
 import requests
 from pathlib import Path
 
+# Windows環境でのcp932文字化け対策
+os.environ.setdefault("PYTHONUTF8", "1")
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8")
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = REPO_ROOT / "index.json"
 STATE_PATH = Path(__file__).resolve().parent / ".sync_state.json"
